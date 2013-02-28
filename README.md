@@ -7,7 +7,7 @@ To build the profile, run:
 
 For a copy of the project ready for development tasks you could try:
 
-  drush make --working-copy --no-gitinfofile --prepare-install https://gist.github.com/petercossey/0824dc6da7f817c5c670/raw/e997f85be2c2d99bd42a503bd4689c2521a74ada/build-openfutures.make /path/to/wwwroot
+  drush make --working-copy --no-gitinfofile --prepare-install https://gist.github.com/petercossey/0824dc6da7f817c5c670/raw/f3d93a0971bfa94af898870864fa611885bbf2ca/build-openfutures.make /path/to/wwwroot
 
 
 Installing
