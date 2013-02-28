@@ -6,8 +6,27 @@
 function openfutures_install() {
   // Any themes without keys here will get numeric keys and so will be enabled,
   // but not placed into variables.
-  theme_enable(array('seven'));
-  variable_set('theme_default', 'seven');
+  theme_enable(array('zen', 'seven'));
+  variable_set('theme_default', 'zen');
   variable_set('admin_theme', 'seven');
   variable_set('node_admin_theme', '1');
+
+  // Create some user menu links
+  $link1 = array(
+    'link_title' => st('Log in'),
+    'link_path' => 'user/login',
+    'menu_name' => 'user-menu',
+  );
+  $link2 = array(
+    'link_title' => st('Register'),
+    'link_path' => 'user/register',
+    'menu_name' => 'user-menu',
+  );
+  $links = array($link1, $link2);
+  foreach ($links as $item) {
+    menu_link_save($item);
+  }
+
+  // Update the menu router information.
+  menu_rebuild();
 }
