@@ -1,0 +1,11 @@
+name = Library Location
+description = Configuration and settings for location feature.
+core = 7.x
+package = Open Futures
+version = 7.x-3.0
+project = library_location
+dependencies[] = features
+dependencies[] = library_site
+dependencies[] = taxonomy
+features[features_api][] = api:1
+features[taxonomy][] = location

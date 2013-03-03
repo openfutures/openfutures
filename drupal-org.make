@@ -25,17 +25,20 @@ projects[backup_migrate][version] = 2.4
 projects[date][subdir] = contrib
 projects[date][version] = 2.6
 
-projects[date_popup_authored][subdir] = contrib
-projects[date_popup_authored][version] = 1.1
-
 projects[entity][subdir] = contrib
 projects[entity][version] = 1.0
 
 projects[fences][subdir] = contrib
 projects[fences][version] = 1.0
 
+projects[field_group][subdir] = contrib
+projects[field_group][version] = 1.1
+
 projects[jquery_update][subdir] = contrib
 projects[jquery_update][version] = 2.3
+
+projects[languagefield][subdir] = contrib
+projects[languagefield][version] = 1.1
 
 projects[libraries][subdir] = contrib
 projects[libraries][version] = 2.0
@@ -48,6 +51,9 @@ projects[module_filter][version] = 1.7
 
 projects[simplified_menu_admin][subdir] = contrib
 projects[simplified_menu_admin][version] = 1.0-beta2
+
+projects[url][subdir] = contrib
+projects[url][version] = 1.0
 
 ; Themes =====================================================================
 
