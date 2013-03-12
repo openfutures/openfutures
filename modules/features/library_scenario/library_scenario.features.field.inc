@@ -66,7 +66,7 @@ function library_scenario_field_default_fields() {
       'fences_wrapper' => 'div',
       'field_name' => 'body',
       'label' => 'Description',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'display_summary' => 1,
         'text_processing' => '1',
@@ -80,81 +80,7 @@ function library_scenario_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '1',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-scenario-field_scenario_attachment'.
-  $fields['node-scenario-field_scenario_attachment'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_scenario_attachment',
-      'foreign keys' => array(
-        'fid' => array(
-          'columns' => array(
-            'fid' => 'fid',
-          ),
-          'table' => 'file_managed',
-        ),
-      ),
-      'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'file',
-      'settings' => array(
-        'display_default' => 1,
-        'display_field' => 1,
-        'uri_scheme' => 'public',
-      ),
-      'translatable' => '0',
-      'type' => 'file',
-    ),
-    'field_instance' => array(
-      'bundle' => 'scenario',
-      'deleted' => '0',
-      'description' => 'Upload the resource if shareable.',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'file',
-          'settings' => array(),
-          'type' => 'file_default',
-          'weight' => 3,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'fences_wrapper' => 'div',
-      'field_name' => 'field_scenario_attachment',
-      'label' => 'Attachment',
-      'required' => 0,
-      'settings' => array(
-        'description_field' => 0,
-        'file_directory' => '',
-        'file_extensions' => 'pdf txt doc docx',
-        'max_filesize' => '',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'file',
-        'settings' => array(
-          'progress_indicator' => 'bar',
-        ),
-        'type' => 'file_generic',
-        'weight' => '1',
+        'weight' => '2',
       ),
     ),
   );
@@ -224,7 +150,7 @@ function library_scenario_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '11',
+        'weight' => '9',
       ),
     ),
   );
@@ -282,7 +208,7 @@ function library_scenario_field_default_fields() {
       'fences_wrapper' => 'div',
       'field_name' => 'field_scenario_creator',
       'label' => 'Creator',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'text_processing' => '0',
         'user_register_form' => FALSE,
@@ -294,7 +220,7 @@ function library_scenario_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '6',
+        'weight' => '7',
       ),
     ),
   );
@@ -357,7 +283,7 @@ function library_scenario_field_default_fields() {
       'entity_type' => 'node',
       'fences_wrapper' => 'div',
       'field_name' => 'field_scenario_date',
-      'label' => 'Date',
+      'label' => 'Publish Date',
       'required' => 0,
       'settings' => array(
         'default_value' => 'now',
@@ -378,7 +304,7 @@ function library_scenario_field_default_fields() {
           'year_range' => '-3:+3',
         ),
         'type' => 'date_popup',
-        'weight' => '8',
+        'weight' => '10',
       ),
     ),
   );
@@ -459,7 +385,7 @@ function library_scenario_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '10',
+        'weight' => '6',
       ),
     ),
   );
@@ -535,68 +461,7 @@ function library_scenario_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '13',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-scenario-field_scenario_link'.
-  $fields['node-scenario-field_scenario_link'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_scenario_link',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'locked' => '0',
-      'module' => 'url',
-      'settings' => array(),
-      'translatable' => '0',
-      'type' => 'url',
-    ),
-    'field_instance' => array(
-      'bundle' => 'scenario',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => 'A link to the resource on the web.',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'url',
-          'settings' => array(
-            'nofollow' => FALSE,
-            'trim_length' => 80,
-          ),
-          'type' => 'url_default',
-          'weight' => 4,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'fences_wrapper' => 'div',
-      'field_name' => 'field_scenario_link',
-      'label' => 'Link',
-      'required' => 0,
-      'settings' => array(
-        'title_fetch' => 0,
-        'title_field' => 0,
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'url',
-        'settings' => array(
-          'size' => '60',
-        ),
-        'type' => 'url_external',
-        'weight' => '0',
+        'weight' => '12',
       ),
     ),
   );
@@ -671,7 +536,7 @@ function library_scenario_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'taxonomy_autocomplete',
-        'weight' => '9',
+        'weight' => '4',
       ),
     ),
   );
@@ -729,7 +594,7 @@ function library_scenario_field_default_fields() {
       'fences_wrapper' => 'div',
       'field_name' => 'field_scenario_publisher',
       'label' => 'Publisher',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'text_processing' => '0',
         'user_register_form' => FALSE,
@@ -741,7 +606,7 @@ function library_scenario_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '7',
+        'weight' => '8',
       ),
     ),
   );
@@ -811,7 +676,68 @@ function library_scenario_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '12',
+        'weight' => '13',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-scenario-field_scenario_source'.
+  $fields['node-scenario-field_scenario_source'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_scenario_source',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'url',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'url',
+    ),
+    'field_instance' => array(
+      'bundle' => 'scenario',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'A link to the resource on the web.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'url',
+          'settings' => array(
+            'nofollow' => FALSE,
+            'trim_length' => 80,
+          ),
+          'type' => 'url_default',
+          'weight' => 14,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'fences_wrapper' => 'div',
+      'field_name' => 'field_scenario_source',
+      'label' => 'URL',
+      'required' => 1,
+      'settings' => array(
+        'title_fetch' => 0,
+        'title_field' => 0,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'url',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'url_external',
+        'weight' => '1',
       ),
     ),
   );
@@ -874,7 +800,7 @@ function library_scenario_field_default_fields() {
       'fences_wrapper' => 'div',
       'field_name' => 'field_scenario_subject',
       'label' => 'Subject and Keywords',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
@@ -886,7 +812,7 @@ function library_scenario_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'taxonomy_autocomplete',
-        'weight' => '2',
+        'weight' => '5',
       ),
     ),
   );
@@ -950,7 +876,7 @@ function library_scenario_field_default_fields() {
       'fences_wrapper' => 'div',
       'field_name' => 'field_scenario_time',
       'label' => 'Time Horizon',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'default_value' => 'now',
         'default_value2' => 'same',
@@ -1037,7 +963,7 @@ function library_scenario_field_default_fields() {
       'fences_wrapper' => 'div',
       'field_name' => 'field_type',
       'label' => 'Type',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
@@ -1046,7 +972,7 @@ function library_scenario_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '5',
+        'weight' => '11',
       ),
     ),
   );
@@ -1062,16 +988,14 @@ function library_scenario_field_default_fields() {
   t('An entity primarily responsible for making the resource. Examples include a person, an organization, or a service.');
   t('An entity responsible for making contributions to the resource. Examples include a person, an organization, or a service.');
   t('An entity responsible for making the resource available. Examples include a person, an organization, or a service.');
-  t('Attachment');
   t('Contributor');
   t('Creator');
-  t('Date');
   t('Description');
   t('Image');
   t('Information about rights held in and over the resource. Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.');
   t('Language');
-  t('Link');
   t('Location');
+  t('Publish Date');
   t('Publisher');
   t('Rights');
   t('Subject and Keywords');
@@ -1080,7 +1004,7 @@ function library_scenario_field_default_fields() {
   t('Time Horizon');
   t('Type');
   t('Typically, date will be associated with the creation or availability of the resource; for example, when it was published.');
-  t('Upload the resource if shareable.');
+  t('URL');
 
   return $fields;
 }

@@ -49,6 +49,12 @@ projects[menu_block][version] = 2.3
 projects[module_filter][subdir] = contrib
 projects[module_filter][version] = 1.7
 
+projects[panels][subdir] = contrib
+projects[panels][version] = 3.3
+
+projects[panelizer][subdir] = contrib
+projects[panelizer][version] = 3.1
+
 projects[simplified_menu_admin][subdir] = contrib
 projects[simplified_menu_admin][version] = 1.0-beta2
 

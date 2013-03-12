@@ -19,11 +19,10 @@ dependencies[] = number
 dependencies[] = options
 dependencies[] = path
 dependencies[] = search
-dependencies[] = shortcut
 dependencies[] = taxonomy
-dependencies[] = toolbar
 
 ; Contrib
+dependencies[] = admin_menu
 dependencies[] = backup_migrate
 dependencies[] = coder
 dependencies[] = coder_review
@@ -46,6 +45,7 @@ dependencies[] = libraries
 dependencies[] = menu_block
 dependencies[] = module_filter
 dependencies[] = page_manager
+dependencies[] = panels
 dependencies[] = simplified_menu_admin
 dependencies[] = strongarm
 dependencies[] = views
