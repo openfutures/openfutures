@@ -37,38 +37,7 @@ ul li.leaf {
  */
 
 li a.active {
-  color: #000;
-}
-
-/*
- * Navigation bar
- */
-
-#navigation {
-  /* overflow: hidden; */ /* Sometimes you want to prevent overlapping with main div. */
-
-  .block {
-    margin-bottom: 0;
-  }
-
-  .block-menu .block-title,
-  .block-menu-block .block-title {
-    @include element-invisible();
-  }
-
-  ul.links, /* Main menu and secondary menu links */
-  ul.menu { /* Menu block links */
-    margin: 0;
-    padding: 0;
-    text-align: left; /* LTR */
-
-    li { /* A simple method to get navigation links to appear in one line. */
-      float: left; /* LTR */
-      padding: 0 10px 0 0; /* LTR */
-      list-style-type: none;
-      list-style-image: none;
-    }
-  }
+  color: #222222;
 }
 
 .region-navigation {
@@ -79,10 +48,32 @@ li a.active {
  */
 
 #main-menu {
+  font-size: $h5-font-size;
+  border-left: 1px solid $rule-color;
+  float: left;
+  margin-top: 2em;
+  margin-left: 1em;
+  padding-left: 1em;
+
+  a {
+    text-decoration: none;
+    color: $text-color
+  }
+
+  li.first {
+    a.active,
+    a:hover {
+      color: $brand-color-primary;
+    }
+  }
 }
 
 #secondary-menu {
-  float: right; /* LTR */
+  // float: right; /* LTR */
+  position: absolute;
+  right: 0;
+  bottom: 0.77em;
+  text-align: right;
 }
 
 /*

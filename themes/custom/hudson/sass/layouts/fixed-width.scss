@@ -14,9 +14,9 @@
 
 // We are going to create a 980px wide, 5 column grid with 20px gutters between
 // columns (applied as 10px of left/right padding on each column).
-$zen-column-count:  5;
+$zen-column-count:  12;
 $zen-gutter-width:  20px;
-$zen-grid-width:    980px;
+$zen-grid-width:    960px;
 
 
 // IE6-7 don't support box-sizing: border-box. We can fix this in 1 of 2 ways:
@@ -55,7 +55,6 @@ $zen-auto-include-item-base: false;
 
 #header,
 #content,
-#navigation,
 .region-sidebar-first,
 .region-sidebar-second,
 #footer {
@@ -73,62 +72,15 @@ $zen-auto-include-item-base: false;
 }
 
 /*
- * Navigation bar
- */
-
-#main {
-  padding-top: 3em; /* Move all the children of #main down to make room. */
-  position: relative;
-}
-#navigation {
-  position: absolute;
-  top: 0; /* Move the navbar up inside #main's padding. */
-  height: 3em;
-  width: $zen-grid-width - $zen-gutter-width;
-}
-
-/*
- * The layout when there is only one sidebar, the left one.
+ * The layout when there is only one sidebar.
  */
 
 .sidebar-first {
-  #content { /* Span 4 columns, starting in 2nd column from left. */
-    @include zen-grid-item(4, 2);
+  #content { /* Span 6 columns, starting in 4th column from left. */
+    @include zen-grid-item(9, 1);
   }
 
   .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
-    @include zen-grid-item(1, 1);
-  }
-}
-
-/*
- * The layout when there is only one sidebar, the right one.
- */
-
-.sidebar-second {
-  #content { /* Span 4 columns, starting in 1st column from left. */
-    @include zen-grid-item(4, 1);
-  }
-
-  .region-sidebar-second { /* Span 1 column, starting in 5th column from left. */
-    @include zen-grid-item(1, 5);
-  }
-}
-
-/*
- * The layout when there are two sidebars.
- */
-
-.two-sidebars {
-  #content { /* Span 3 columns, starting in 2nd column from left. */
-    @include zen-grid-item(3, 2);
-  }
-
-  .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
-    @include zen-grid-item(1, 1);
-  }
-
-  .region-sidebar-second { /* Span 1 column, starting in 5th column from left. */
-    @include zen-grid-item(1, 5);
+    @include zen-grid-item(3, 10);
   }
 }

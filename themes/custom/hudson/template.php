@@ -110,15 +110,13 @@
  * @param $hook
  *   The name of the template being rendered ("maintenance_page" in this case.)
  */
-/* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess_maintenance_page(&$variables, $hook) {
-  // When a variable is manipulated or added in preprocess_html or
-  // preprocess_page, that same work is probably needed for the maintenance page
-  // as well, so we can just re-use those functions to do that work here.
-  STARTERKIT_preprocess_html($variables, $hook);
-  STARTERKIT_preprocess_page($variables, $hook);
-}
-// */
+// function STARTERKIT_preprocess_maintenance_page(&$variables, $hook) {
+//   // When a variable is manipulated or added in preprocess_html or
+//   // preprocess_page, that same work is probably needed for the maintenance page
+//   // as well, so we can just re-use those functions to do that work here.
+//   STARTERKIT_preprocess_html($variables, $hook);
+//   STARTERKIT_preprocess_page($variables, $hook);
+// }
 
 /**
  * Override or insert variables into the html templates.
@@ -146,11 +144,29 @@ function STARTERKIT_preprocess_html(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-/* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess_page(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
+function hudson_preprocess_page(&$variables, $hook) {
+  // Work around a perculier bug/feature(?) in Drupal 7 which incorrectly sets
+  // the page title to "User account" for all three of these pages.
+  if (arg(0) === 'user') {
+
+    // We need to fix the breadcrumbs at these paths too.
+    $breadcrumb = array();
+    $breadcrumb[] = l('Home', '<front>');
+
+    if (arg(1) === 'login' || arg(1) == '') {
+      drupal_set_title(t('User login'));
+      drupal_set_breadcrumb($breadcrumb);
+    }
+    if (arg(1) === 'password') {
+      drupal_set_title(t('Request new password'));
+      drupal_set_breadcrumb($breadcrumb);
+    }
+    if (arg(1) === 'register') {
+      drupal_set_title(t('Create new account'));
+      drupal_set_breadcrumb($breadcrumb);
+    }
+  }
 }
-// */
 
 /**
  * Override or insert variables into the node templates.
@@ -224,3 +240,69 @@ function STARTERKIT_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+
+/**
+ * Return a themed breadcrumb trail.
+ *
+ * @param $variables
+ *   - title: An optional string to be used as a navigational heading to give
+ *     context for breadcrumb links to screen-reader users.
+ *   - title_attributes_array: Array of HTML attributes for the title. It is
+ *     flattened into a string within the theme function.
+ *   - breadcrumb: An array containing the breadcrumb links.
+ * @return
+ *   A string containing the breadcrumb output.
+ */
+function hudson_breadcrumb($variables) {
+  $breadcrumb = $variables['breadcrumb'];
+  $output = '';
+
+  // Determine if we are to display the breadcrumb.
+  $show_breadcrumb = theme_get_setting('zen_breadcrumb');
+  if ($show_breadcrumb == 'yes' || $show_breadcrumb == 'admin' && arg(0) == 'admin') {
+
+    // Optionally get rid of the homepage link.
+    $show_breadcrumb_home = theme_get_setting('zen_breadcrumb_home');
+    if (!$show_breadcrumb_home) {
+      array_shift($breadcrumb);
+    }
+
+    // Return the breadcrumb with separators.
+    if (!empty($breadcrumb)) {
+      $zen_breadcrumb_separator = theme_get_setting('zen_breadcrumb_separator');
+      $breadcrumb_separator = '<span class="separator">&nbsp;' . $zen_breadcrumb_separator . '&nbsp;</span>';
+      $trailing_separator = $title = '';
+      if (theme_get_setting('zen_breadcrumb_title')) {
+        $item = menu_get_item();
+        if (!empty($item['tab_parent'])) {
+          // If we are on a non-default tab, use the tab's title.
+          $breadcrumb[] = check_plain($item['title']);
+        }
+        else {
+          $breadcrumb[] = drupal_get_title();
+        }
+      }
+      elseif (theme_get_setting('zen_breadcrumb_trailing')) {
+        $trailing_separator = $breadcrumb_separator;
+      }
+
+      // Provide a navigational heading to give context for breadcrumb links to
+      // screen-reader users.
+      if (empty($variables['title'])) {
+        $variables['title'] = t('You are here');
+      }
+      // Unless overridden by a preprocess function, make the heading invisible.
+      if (!isset($variables['title_attributes_array']['class'])) {
+        $variables['title_attributes_array']['class'][] = 'element-invisible';
+      }
+
+      // Build the breadcrumb trail.
+      $output = '<nav class="breadcrumb" role="navigation">';
+      $output .= '<h2' . drupal_attributes($variables['title_attributes_array']) . '>' . $variables['title'] . '</h2>';
+      $output .= '<ol><li>' . implode($breadcrumb_separator . '</li><li>', $breadcrumb) . $trailing_separator . '</li></ol>';
+      $output .= '</nav>';
+    }
+  }
+
+  return $output;
+}

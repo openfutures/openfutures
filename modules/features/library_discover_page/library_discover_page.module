@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Library Discover Page feature.
+ */
+
+include_once 'library_discover_page.features.inc';

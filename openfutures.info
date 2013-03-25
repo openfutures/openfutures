@@ -23,6 +23,7 @@ dependencies[] = taxonomy
 
 ; Contrib
 dependencies[] = admin_menu
+dependencies[] = admin_menu_toolbar
 dependencies[] = backup_migrate
 dependencies[] = coder
 dependencies[] = coder_review
@@ -56,3 +57,5 @@ dependencies[] = url
 dependencies[] = library_site
 dependencies[] = library_page
 dependencies[] = library_scenario
+dependencies[] = library_discover_page
+dependencies[] = library_engage_page

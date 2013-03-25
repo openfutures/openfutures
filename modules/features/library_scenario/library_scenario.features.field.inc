@@ -50,7 +50,7 @@ function library_scenario_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 0,
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -125,7 +125,7 @@ function library_scenario_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 8,
+          'weight' => '8',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -195,7 +195,7 @@ function library_scenario_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 6,
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -271,7 +271,7 @@ function library_scenario_field_default_fields() {
             'multiple_to' => '',
           ),
           'type' => 'date_default',
-          'weight' => 9,
+          'weight' => '9',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -286,7 +286,7 @@ function library_scenario_field_default_fields() {
       'label' => 'Publish Date',
       'required' => 0,
       'settings' => array(
-        'default_value' => 'now',
+        'default_value' => 'blank',
         'default_value2' => 'same',
         'default_value_code' => '',
         'default_value_code2' => '',
@@ -297,11 +297,11 @@ function library_scenario_field_default_fields() {
         'module' => 'date',
         'settings' => array(
           'increment' => '15',
-          'input_format' => 'm/d/Y - H:i:s',
+          'input_format' => 'd/m/Y - H:i:s',
           'input_format_custom' => '',
-          'label_position' => 'above',
+          'label_position' => 'none',
           'text_parts' => array(),
-          'year_range' => '-3:+3',
+          'year_range' => '-100:+0',
         ),
         'type' => 'date_popup',
         'weight' => '10',
@@ -352,7 +352,7 @@ function library_scenario_field_default_fields() {
             'image_style' => '',
           ),
           'type' => 'image',
-          'weight' => 11,
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -439,7 +439,7 @@ function library_scenario_field_default_fields() {
             ),
           ),
           'type' => 'language_default',
-          'weight' => 13,
+          'weight' => '12',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -511,7 +511,7 @@ function library_scenario_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 10,
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -581,7 +581,7 @@ function library_scenario_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 7,
+          'weight' => '7',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -651,7 +651,7 @@ function library_scenario_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 12,
+          'weight' => '11',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -711,7 +711,7 @@ function library_scenario_field_default_fields() {
             'trim_length' => 80,
           ),
           'type' => 'url_default',
-          'weight' => 14,
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -787,7 +787,7 @@ function library_scenario_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 1,
+          'weight' => '4',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -863,7 +863,7 @@ function library_scenario_field_default_fields() {
             'multiple_to' => '',
           ),
           'type' => 'date_default',
-          'weight' => 2,
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -878,7 +878,7 @@ function library_scenario_field_default_fields() {
       'label' => 'Time Horizon',
       'required' => 0,
       'settings' => array(
-        'default_value' => 'now',
+        'default_value' => 'blank',
         'default_value2' => 'same',
         'default_value_code' => '',
         'default_value_code2' => '',
@@ -889,9 +889,9 @@ function library_scenario_field_default_fields() {
         'module' => 'date',
         'settings' => array(
           'increment' => 15,
-          'input_format' => 'm/d/Y - H:i:s',
+          'input_format' => 'd/m/Y - H:i:s',
           'input_format_custom' => '',
-          'label_position' => 'above',
+          'label_position' => 'none',
           'text_parts' => array(),
           'year_range' => '-3:+3',
         ),
@@ -950,7 +950,7 @@ function library_scenario_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 5,
+          'weight' => '10',
         ),
         'teaser' => array(
           'label' => 'above',

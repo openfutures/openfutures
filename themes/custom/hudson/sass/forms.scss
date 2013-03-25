@@ -5,6 +5,55 @@
 
 @import "base";
 
+/**
+ * Some form defaults in addition to those provided in normalize.css
+ */
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  display: inline-block;
+  height: 1.5em;
+  padding: 4px 6px;
+  margin-bottom: 0.77em;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: $text-color-secondary;
+  vertical-align: middle;
+  border-radius: 4px;
+}
+
 
 .form-item { /* Wrapper for a form element (or group of form elements) and its label */
   margin: 1.5em 0;
@@ -18,6 +67,7 @@
   label { /* The label for a form element */
     display: block;
     font-weight: bold;
+    margin-bottom: 0.38em
   }
 
   label.option { /* The label for a radio button or checkbox */
@@ -26,7 +76,7 @@
   }
 
   .form-required { /* The part of the label that indicates a required field */
-    color: #c00;
+    color: $text-color-secondary;
   }
 
   .description { /* The descriptive help text (separate from the label) */
