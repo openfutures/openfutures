@@ -5,3 +5,22 @@
  */
 
 include_once 'library_engage_page.features.inc';
+
+/**
+ * Implement a custom bundle for the Fieldable Panel Pane entity
+ */
+function library_engage_page_entity_info_alter(&$entity_info) {
+  $entity_info['fieldable_panels_pane']['bundles']['image_feature'] = array(
+    'label' => t('Image Feature'),
+    'pane category' => t('Entities'),
+    'pane top level' => FALSE, // set to true to make this show as a top level icon
+    // 'pane icon' => '/path/to/custom/icon/for/this/pane.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      // Note that this has all _ replaced with - from the bundle name.
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/image-feature',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+}
