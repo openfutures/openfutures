@@ -19,11 +19,11 @@ dependencies[] = number
 dependencies[] = options
 dependencies[] = path
 dependencies[] = search
-dependencies[] = shortcut
 dependencies[] = taxonomy
-dependencies[] = toolbar
 
 ; Contrib
+dependencies[] = admin_menu
+dependencies[] = admin_menu_toolbar
 dependencies[] = backup_migrate
 dependencies[] = coder
 dependencies[] = coder_review
@@ -34,22 +34,31 @@ dependencies[] = date
 dependencies[] = date_api
 dependencies[] = date_popup
 dependencies[] = date_views
-dependencies[] = date_popup_authored
 dependencies[] = devel
 dependencies[] = diff
 dependencies[] = entity
 dependencies[] = features
 dependencies[] = fences
+dependencies[] = field_group
+dependencies[] = fieldable_panels_panes
 dependencies[] = jquery_update
+dependencies[] = languagefield
 dependencies[] = libraries
 dependencies[] = menu_block
 dependencies[] = module_filter
+dependencies[] = node_vertical_tab_elements
 dependencies[] = page_manager
+dependencies[] = panels
 dependencies[] = simplified_menu_admin
 dependencies[] = strongarm
 dependencies[] = views
 dependencies[] = views_ui
+dependencies[] = url
 
 ; Features
 dependencies[] = library_site
 dependencies[] = library_page
+dependencies[] = library_scenario
+dependencies[] = library_discover_page
+dependencies[] = library_engage_page
+dependencies[] = library_contribute_page

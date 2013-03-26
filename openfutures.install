@@ -6,8 +6,8 @@
 function openfutures_install() {
   // Any themes without keys here will get numeric keys and so will be enabled,
   // but not placed into variables.
-  theme_enable(array('zen', 'seven'));
-  variable_set('theme_default', 'zen');
+  theme_enable(array('hudson', 'seven'));
+  variable_set('theme_default', 'hudson');
   variable_set('admin_theme', 'seven');
   variable_set('node_admin_theme', '1');
 
