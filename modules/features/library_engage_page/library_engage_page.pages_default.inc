@@ -59,12 +59,18 @@ function library_engage_page_default_page_manager_pages() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'flexible';
+  $display->layout = 'onethreetwo';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
       'center' => NULL,
+      'top' => NULL,
+      'col1' => NULL,
+      'col2' => NULL,
+      'col3' => NULL,
+      'left' => NULL,
+      'right' => NULL,
     ),
   );
   $display->cache = array();
