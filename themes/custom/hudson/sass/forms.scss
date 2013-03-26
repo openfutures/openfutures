@@ -43,15 +43,43 @@ input[type="url"],
 input[type="search"],
 input[type="tel"],
 input[type="color"] {
+  @include border-radius(4px);
   display: inline-block;
   height: 1.5em;
   padding: 4px 6px;
   margin-bottom: 0.77em;
-  font-size: 14px;
+  // font-size: 14px;
   line-height: 1.5em;
   color: $text-color-secondary;
   vertical-align: middle;
-  border-radius: 4px;
+}
+
+select,
+textarea {
+  height: auto;
+}
+
+select {
+  background-color: $bg-color-dark;
+}
+
+textarea {
+  resize: none;
+}
+
+fieldset.form-wrapper {
+  @include border-radius(4px);
+  margin: 1em 0;
+
+  .fieldset-legend {
+    font-weight: bold;
+  }
+}
+
+/* fix margin for node edit form text-filter fieldset */
+fieldset.form-wrapper.filter-wrapper {
+  @include border-top-radius(0);
+  margin: 0;
 }
 
 
@@ -61,7 +89,7 @@ input[type="color"] {
   input.error,
   textarea.error,
   select.error { /* Highlight the form elements that caused a form submission error */
-    border: 1px solid #c00;
+    border: 1px solid $brand-color-highlight;
   }
 
   label { /* The label for a form element */
@@ -90,6 +118,7 @@ input[type="color"] {
 }
 
 .form-submit { /* The submit button */
+  margin-right: 1em;
 }
 
 .container-inline {
@@ -198,4 +227,40 @@ form {
 
 td.menu-disabled {
   background: #ccc;
+}
+
+
+/*
+ * Autocomplete throbber
+ */
+html.js input.form-autocomplete {
+  background-image: url(../images/hudson-throbber.gif);
+  background-position: 100% -1px;
+}
+
+html.js input.throbbing {
+  background-image: url(../images/hudson-throbber.gif);
+  background-position: 100% -29px;
+}
+
+/*
+ * Node form defaults
+ */
+.field-name-body {
+  textarea.text-full {
+    @include border-bottom-radius(0);
+  }
+}
+.form-field-type-image {
+  @include border-radius(4px);
+  background-color: $bg-color-dark;
+  border: 1px solid $bg-color-dark;
+  padding: 0 1.5em;
+}
+
+.ajax-progress .throbber {
+  background: transparent url(../images/hudson-throbber.gif) no-repeat 0px -29px;
+  height: 29px;
+  margin: 2px;
+  width: 29px;
 }

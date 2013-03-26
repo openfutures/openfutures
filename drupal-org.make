@@ -49,6 +49,9 @@ projects[menu_block][version] = 2.3
 projects[module_filter][subdir] = contrib
 projects[module_filter][version] = 1.7
 
+projects[node_vertical_tab_elements][subdir] = contrib
+projects[node_vertical_tab_elements][version] = 3.0
+
 projects[panels][subdir] = contrib
 projects[panels][version] = 3.3
 

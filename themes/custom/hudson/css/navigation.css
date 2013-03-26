@@ -44,18 +44,24 @@ li a.active {
   margin-left: 1em;
   padding-left: 1em;
 }
-/* line 58, ../sass/navigation.scss */
-#main-menu a {
+/* line 59, ../sass/navigation.scss */
+#main-menu a:link,
+#main-menu a:visited {
   text-decoration: none;
   color: #222222;
 }
 /* line 65, ../sass/navigation.scss */
+#main-menu a:hover,
+#main-menu a.active {
+  color: #14cc9e;
+}
+/* line 71, ../sass/navigation.scss */
 #main-menu li.first a.active,
 #main-menu li.first a:hover {
   color: #ff8800;
 }
 
-/* line 71, ../sass/navigation.scss */
+/* line 77, ../sass/navigation.scss */
 #secondary-menu {
   position: absolute;
   right: 0;

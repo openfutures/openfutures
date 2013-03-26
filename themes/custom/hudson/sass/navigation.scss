@@ -55,9 +55,15 @@ li a.active {
   margin-left: 1em;
   padding-left: 1em;
 
-  a {
+  a:link,
+  a:visited {
     text-decoration: none;
     color: $text-color
+  }
+
+  a:hover,
+  a.active {
+    color: $brand-color-secondary;
   }
 
   li.first {

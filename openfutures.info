@@ -45,6 +45,7 @@ dependencies[] = languagefield
 dependencies[] = libraries
 dependencies[] = menu_block
 dependencies[] = module_filter
+dependencies[] = node_vertical_tab_elements
 dependencies[] = page_manager
 dependencies[] = panels
 dependencies[] = simplified_menu_admin

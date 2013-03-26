@@ -306,3 +306,42 @@ function hudson_breadcrumb($variables) {
 
   return $output;
 }
+
+/**
+ * Modify form elements on the scenario node form.
+ */
+function hudson_form_scenario_node_form_alter(&$form, &$form_state, $form_id) {
+  // Modification for the form with the given form ID goes here. For example, if
+  // FORM_ID is "user_register_form" this code would run only on the user
+  // registration form.
+  // kpr($form);
+  // kpr($form);
+
+  // Add a checkbox to registration form about agreeing to terms of use.
+  // $form['terms_of_use'] = array(
+  //   '#type' => 'checkbox',
+  //   '#title' => t("I agree with the website's terms and conditions."),
+  //   '#required' => TRUE,
+  // );
+  // $form['#redirect'] = 'node/add/scenario';
+
+  // http://drupal.org/node/1074616#comment-6118900
+}
+
+/**
+ * Nullify the default Drupal textarea resize JS
+ */
+function hudson_textarea($variables) {
+  $element = $variables['element'];
+  element_set_attributes($element, array('id', 'name', 'cols', 'rows'));
+  _form_set_class($element, array('form-textarea'));
+
+  $wrapper_attributes = array(
+    'class' => array('form-textarea-wrapper'),
+  );
+
+  $output = '<div' . drupal_attributes($wrapper_attributes) . '>';
+  $output .= '<textarea' . drupal_attributes($element['#attributes']) . '>' . check_plain($element['#value']) . '</textarea>';
+  $output .= '</div>';
+  return $output;
+}

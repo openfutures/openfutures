@@ -139,7 +139,7 @@ h2.block-title, /* Block title */
 h2.title, /* Comment section heading */
 h2.comment-form, /* Comment form heading */
 h3.title { /* Comment title */
-  margin: 0;
+  margin: 1em 0 0 0;
 }
 
 tr.even { /* Some tables have rows marked even or odd. */
@@ -153,6 +153,8 @@ tr.odd {
 div.messages { /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */
   margin: 1.5em 0; /* Drupal core uses "6px 0" margin */
   border-radius: 4px;
+  padding-left: 60px;
+  padding-bottom: 30px;
 
   ul {
     margin-top: 0;
@@ -161,21 +163,30 @@ div.messages { /* Important messages (status, warning, and error) for the user. 
 }
 
 div.status { /* Normal priority messages */
+  background-image: url(../images/glyphicons/glyphicons_198_ok.png);
+  border-color: $rule-color;
+  color: $text-color-secondary;
+  background-color: $bg-color-light;
+  background-position: 15px 15px;
 }
 
 div.warning,
 tr.warning { /* Medium priority messages */
   /* border: 1px solid #f0c020; */ /* Drupal core uses: 1px solid #f0c020 */
-  background-image: url(../images/glyphicons_078_warning_sign.png);
+  background-image: url(../images/glyphicons/glyphicons_078_warning_sign.png);
   border-color: $rule-color;
   color: $text-color-secondary;
   background-color: $bg-color-light;
   background-position: 15px 15px;
-  padding-left: 60px;
 }
 
 div.error,
 tr.error { /* High priority messages. See also the .error declaration below. */
+  background-image: url(../images/glyphicons/glyphicons_197_remove.png);
+  border-color: $rule-color;
+  color: $text-color-secondary;
+  background-color: $bg-color-light;
+  background-position: 15px 15px;
 }
 
 .error { /* Errors that are separate from div.messages status messages. */
