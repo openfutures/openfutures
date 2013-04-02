@@ -137,3 +137,49 @@
   content: ",";
   color: #999999;
 }
+
+/* line 110, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-item-title,
+.page-node-edit .node-scenario-form .form-item-title {
+  font-size: 1.23em;
+  margin-bottom: 0;
+}
+/* line 116, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-item-title input,
+.page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-source input,
+.page-node-edit .node-scenario-form .form-item-title input,
+.page-node-edit .node-scenario-form .form-field-name-field-scenario-source input {
+  width: 100%;
+  height: 2.12em;
+  box-sizing: border-box;
+}
+/* line 122, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-source .form-wrapper,
+.page-node-edit .node-scenario-form .form-field-name-field-scenario-source .form-wrapper {
+  margin-top: 0;
+}
+/* line 126, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-actions,
+.page-node-edit .node-scenario-form .form-actions {
+  margin-top: 2em;
+  padding: 1em;
+  font-size: 1.23em;
+  border: 1px solid transparent;
+  background: #eeeeee;
+  border-radius: 4px;
+}
+/* line 134, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-actions input[type="submit"],
+.page-node-edit .node-scenario-form .form-actions input[type="submit"] {
+  margin-bottom: 1em;
+}
+/* line 139, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form div.vertical-tabs,
+.page-node-edit .node-scenario-form div.vertical-tabs {
+  margin-top: 2em;
+}
+/* line 143, ../sass/nodes.scss */
+.page-node-add-scenario div.messages,
+.page-node-edit div.messages {
+  margin-bottom: 0;
+}

@@ -16,4 +16,11 @@
 // Place your code here.
 
 
+// jQuery to run once document is loaded.
+// $(document).ready(function() {
+//   // alert('jabanaga');
+//   $('.page-node-add-scenario .messages').fadeOut(1000, 'linear');
+// });
+
+
 })(jQuery, Drupal, this, this.document);

@@ -146,3 +146,29 @@ $zen-auto-include-item-base: false;
     @include zen-grid-item(3, 10);
   }
 }
+
+/*
+ * The layout for the eight-four template
+ */
+.no-sidebars.panel-layout-eightfour {
+  .panel-left,
+  .panel-right {
+    @include zen-grid-item-base();
+  }
+
+  #preface {
+    @include zen-grid-item(12, 1);
+  }
+
+  #content {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container()
+  }
+  .panel-left {
+    @include zen-clear(both);
+    @include zen-grid-item(8, 1);
+  }
+  .panel-right {
+    @include zen-grid-item(4, 9);
+  }
+}

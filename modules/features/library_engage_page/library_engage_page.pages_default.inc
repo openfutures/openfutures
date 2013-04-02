@@ -186,7 +186,7 @@ function library_engage_page_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => 'Submit new scenario link',
       'title' => '',
-      'body' => '<a class="action submit-scenario">Submit new scenario</a>',
+      'body' => '<a href="/node/add/scenario" class="action submit-scenario">Submit new scenario</a>',
       'format' => 'full_html',
       'substitute' => TRUE,
     );

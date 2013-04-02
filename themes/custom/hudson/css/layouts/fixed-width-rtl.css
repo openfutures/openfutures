@@ -175,3 +175,46 @@
   margin-right: 720px;
   margin-left: -960px;
 }
+
+/*
+ * The layout for the eight-four template
+ */
+/* line 155, ../../sass/layouts/fixed-width.scss */
+.no-sidebars.panel-layout-eightfour .panel-left,
+.no-sidebars.panel-layout-eightfour .panel-right {
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 0 !important;
+  word-wrap: break-word;
+}
+/* line 159, ../../sass/layouts/fixed-width.scss */
+.no-sidebars.panel-layout-eightfour #preface {
+  float: right;
+  width: 940px;
+  margin-right: 0px;
+  margin-left: -960px;
+}
+/* line 163, ../../sass/layouts/fixed-width.scss */
+.no-sidebars.panel-layout-eightfour #content {
+  float: right;
+  width: 940px;
+  margin-right: 0px;
+  margin-left: -960px;
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 167, ../../sass/layouts/fixed-width.scss */
+.no-sidebars.panel-layout-eightfour .panel-left {
+  clear: both;
+  float: right;
+  width: 620px;
+  margin-right: 0px;
+  margin-left: -640px;
+}
+/* line 171, ../../sass/layouts/fixed-width.scss */
+.no-sidebars.panel-layout-eightfour .panel-right {
+  float: right;
+  width: 300px;
+  margin-right: 640px;
+  margin-left: -960px;
+}
