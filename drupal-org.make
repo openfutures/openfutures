@@ -61,6 +61,9 @@ projects[panels][version] = 3.3
 projects[panelizer][subdir] = contrib
 projects[panelizer][version] = 3.1
 
+projects[r4032login][subdir] = contrib
+projects[r4032login][version] = 1.5
+
 projects[simplified_menu_admin][subdir] = contrib
 projects[simplified_menu_admin][version] = 1.0-beta2
 

@@ -218,3 +218,71 @@
   margin-right: 640px;
   margin-left: -960px;
 }
+
+/*
+ * The layout for the eight-four-two template
+ */
+/* line 184, ../../sass/layouts/fixed-width.scss */
+.no-sidebars.panel-layout-eightfourtwo .panel-main-col,
+.no-sidebars.panel-layout-eightfourtwo .panel-side-col,
+.no-sidebars.panel-layout-eightfourtwo .panel-left,
+.no-sidebars.panel-layout-eightfourtwo .panel-right,
+.no-sidebars.panel-layout-eightfourtwo .panel-bottom {
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 0 !important;
+  word-wrap: break-word;
+}
+/* line 188, ../../sass/layouts/fixed-width.scss */
+.no-sidebars.panel-layout-eightfourtwo #preface {
+  float: right;
+  width: 940px;
+  margin-right: 0px;
+  margin-left: -960px;
+}
+/* line 192, ../../sass/layouts/fixed-width.scss */
+.no-sidebars.panel-layout-eightfourtwo #content {
+  float: right;
+  width: 940px;
+  margin-right: 0px;
+  margin-left: -960px;
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 196, ../../sass/layouts/fixed-width.scss */
+.no-sidebars.panel-layout-eightfourtwo .panel-main-col {
+  float: right;
+  width: 620px;
+  margin-right: 0px;
+  margin-left: -640px;
+}
+/* line 199, ../../sass/layouts/fixed-width.scss */
+.no-sidebars.panel-layout-eightfourtwo .panel-side-col {
+  float: right;
+  width: 300px;
+  margin-right: 640px;
+  margin-left: -960px;
+}
+/* line 202, ../../sass/layouts/fixed-width.scss */
+.no-sidebars.panel-layout-eightfourtwo .panel-left {
+  clear: right;
+  float: right;
+  width: 300px;
+  margin-right: 0px;
+  margin-left: -320px;
+}
+/* line 206, ../../sass/layouts/fixed-width.scss */
+.no-sidebars.panel-layout-eightfourtwo .panel-right {
+  float: right;
+  width: 300px;
+  margin-right: 320px;
+  margin-left: -640px;
+}
+/* line 209, ../../sass/layouts/fixed-width.scss */
+.no-sidebars.panel-layout-eightfourtwo .panel-bottom {
+  clear: right;
+  float: right;
+  width: 620px;
+  margin-right: 0px;
+  margin-left: -640px;
+}

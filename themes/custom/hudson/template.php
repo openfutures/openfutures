@@ -319,6 +319,8 @@ function hudson_form_scenario_node_form_alter(&$form, &$form_state, $form_id) {
   // registration form.
   // kpr($form);
   // kpr($form);
+  // drupal_set_message('template form alter firing');
+  // kpr($form);
 
   // Add a checkbox to registration form about agreeing to terms of use.
   // $form['terms_of_use'] = array(

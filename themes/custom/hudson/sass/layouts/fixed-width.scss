@@ -172,3 +172,42 @@ $zen-auto-include-item-base: false;
     @include zen-grid-item(4, 9);
   }
 }
+
+/*
+ * The layout for the eight-four-two template
+ */
+.no-sidebars.panel-layout-eightfourtwo {
+  .panel-main-col,
+  .panel-side-col,
+  .panel-left,
+  .panel-right,
+  .panel-bottom {
+    @include zen-grid-item-base();
+  }
+
+  #preface {
+    @include zen-grid-item(12, 1);
+  }
+
+  #content {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container()
+  }
+  .panel-main-col {
+    @include zen-grid-item(8, 1);
+  }
+  .panel-side-col {
+    @include zen-grid-item(4, 9);
+  }
+  .panel-left {
+    @include zen-clear(left);
+    @include zen-grid-item(4, 1);
+  }
+  .panel-right {
+    @include zen-grid-item(4, 5);
+  }
+  .panel-bottom {
+    @include zen-clear(left);
+    @include zen-grid-item(8, 1);
+  }
+}
