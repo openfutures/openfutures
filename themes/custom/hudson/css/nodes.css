@@ -53,6 +53,38 @@
 /* line 43, ../sass/nodes.scss */
 .node-teaser {
   /* A node displayed as teaser */
+  border-bottom: solid 1px #cccccc;
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+}
+/* line 48, ../sass/nodes.scss */
+.node-teaser .node-title {
+  font-size: 13px;
+  margin: 0;
+}
+/* line 52, ../sass/nodes.scss */
+.node-teaser .field-name-body {
+  margin-bottom: 1em;
+}
+/* line 55, ../sass/nodes.scss */
+.node-teaser .field-name-body p {
+  margin-top: 0;
+}
+/* line 59, ../sass/nodes.scss */
+.node-teaser span.field-label {
+  display: inline-block;
+  padding: 0;
+  color: #999999;
+}
+/* line 64, ../sass/nodes.scss */
+.node-teaser .field-label-inline {
+  display: inline-block;
+}
+/* line 67, ../sass/nodes.scss */
+.node-teaser .links.inline {
+  display: block;
+  margin: 0;
+  text-align: right;
 }
 
 /*
@@ -60,23 +92,23 @@
  * it is. If you create a new content type called "my-custom-type", it will
  * receive a "node-my-custom-type" class.
  */
-/* line 52, ../sass/nodes.scss */
+/* line 80, ../sass/nodes.scss */
 .node-page {
   /* Page content node */
 }
 
-/* line 55, ../sass/nodes.scss */
+/* line 83, ../sass/nodes.scss */
 .node-article {
   /* Article content node */
 }
 
-/* line 58, ../sass/nodes.scss */
+/* line 86, ../sass/nodes.scss */
 .node-unpublished {
   /* Unpublished nodes */
   /* background-color: #fff4f4; */
   /* Drupal core uses a #fff4f4 background */
 }
-/* line 61, ../sass/nodes.scss */
+/* line 89, ../sass/nodes.scss */
 .node-unpublished p.unpublished {
   /* The word "Unpublished" displayed underneath the content. */
   height: 0;
@@ -89,4 +121,19 @@
   text-transform: uppercase;
   text-align: center;
   word-wrap: break-word;
+}
+
+/* line 94, ../sass/nodes.scss */
+.node-scenario {
+  /* Scenario content node */
+}
+
+/* line 97, ../sass/nodes.scss */
+.node-scenario.node-teaser .field-label + .field-name-field-scenario-subject:before {
+  content: none;
+}
+/* line 100, ../sass/nodes.scss */
+.node-scenario.node-teaser .field-name-field-scenario-subject:before {
+  content: ",";
+  color: #999999;
 }

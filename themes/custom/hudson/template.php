@@ -126,15 +126,18 @@
  * @param $hook
  *   The name of the template being rendered ("html" in this case.)
  */
-/* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess_html(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
+function hudson_preprocess_html(&$variables, $hook) {
 
   // The body tag's classes are controlled by the $classes_array variable. To
   // remove a class from $classes_array, use array_diff().
   //$variables['classes_array'] = array_diff($variables['classes_array'], array('class-to-remove'));
+
+  // Add a class to the body tag with the specific panel layout
+  if ($panel_page = panels_get_current_page_display()) {
+    // Set body class for the name of the panel page layout.
+    $variables['classes_array'][] = 'panel-layout-' . str_replace('_', '-', $panel_page->layout);
+  }
 }
-// */
 
 /**
  * Override or insert variables into the page templates.

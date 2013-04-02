@@ -5,6 +5,7 @@ core = 7.x
 php = 5.3
 
 ; Core modules.
+dependencies[] = block
 dependencies[] = comment
 dependencies[] = contact
 dependencies[] = contextual
@@ -52,6 +53,7 @@ dependencies[] = panels
 dependencies[] = simplified_menu_admin
 dependencies[] = strongarm
 dependencies[] = views
+dependencies[] = views_content
 dependencies[] = views_ui
 dependencies[] = url
 

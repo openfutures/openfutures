@@ -78,3 +78,72 @@ li a.active {
  * Drupal core has limited ways in which it can display its menus. To get around
  * these limitations, see http://drupal.org/project/menu_block
  */
+/*
+ * Call to action button styling
+ */
+/* line 106, ../sass/navigation.scss */
+.action-large {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  display: block;
+  border: solid 1px #cccccc;
+  text-align: center;
+  padding: 1.23em 0 1.85em 0;
+  cursor: pointer;
+}
+/* line 114, ../sass/navigation.scss */
+.action-large h3 {
+  margin: 0;
+}
+/* line 118, ../sass/navigation.scss */
+.action-large p {
+  margin: 0.85em 0 0 0;
+  font-size: 15.99px;
+  color: #999999;
+  font-weight: bold;
+}
+
+/* line 126, ../sass/navigation.scss */
+a.action-large:hover {
+  text-decoration: none;
+}
+
+/* line 130, ../sass/navigation.scss */
+a.action-large.discover {
+  border-color: #ff8800;
+}
+
+/* line 133, ../sass/navigation.scss */
+a.action-large.contribute {
+  border-color: #14cc9e;
+}
+
+/* line 136, ../sass/navigation.scss */
+a.action-large.improve {
+  border-color: #0678be;
+}
+
+/* line 140, ../sass/navigation.scss */
+a.action {
+  display: block;
+  text-align: center;
+  font-size: 15.99px;
+  padding: 0.5em;
+  color: white;
+  font-weight: bold;
+  background-color: #222222;
+}
+
+/* line 150, ../sass/navigation.scss */
+a.action:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 154, ../sass/navigation.scss */
+a.action.submit-scenario {
+  background-color: #14cc9e;
+}

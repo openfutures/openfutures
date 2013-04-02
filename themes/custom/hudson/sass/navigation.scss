@@ -98,3 +98,59 @@ li a.active {
 
 .block-menu-block {
 }
+
+
+/*
+ * Call to action button styling
+ */
+.action-large {
+  @include border-radius(20px);
+  display: block;
+  border: solid 1px $rule-color;
+  text-align: center;
+  padding: 1.23em 0 1.85em 0;
+  cursor:pointer;
+
+  h3 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0.85em 0 0 0;
+    font-size: $h5-font-size;
+    color: $text-color-tertiary;
+    font-weight: bold;
+  }
+}
+
+a.action-large:hover {
+  text-decoration: none;
+}
+
+a.action-large.discover {
+  border-color: $brand-color-primary;
+}
+a.action-large.contribute {
+  border-color: $brand-color-secondary;
+}
+a.action-large.improve {
+  border-color: $brand-color-tertiary;
+}
+
+a.action {
+  display: block;
+  text-align: center;
+  font-size: $h5-font-size;
+  padding: 0.5em;
+  // box-sizing: content-box;
+  color: $text-color-reverse;
+  font-weight: bold;
+  background-color: $text-color;
+}
+a.action:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+a.action.submit-scenario {
+  background-color: $brand-color-secondary;
+}

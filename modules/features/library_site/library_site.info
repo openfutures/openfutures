@@ -16,6 +16,7 @@ dependencies[] = system
 dependencies[] = taxonomy
 dependencies[] = user
 features[features_api][] = api:1
+features[filter][] = full_html
 features[user_permission][] = access administration pages
 features[user_permission][] = access content
 features[user_permission][] = access site in maintenance mode

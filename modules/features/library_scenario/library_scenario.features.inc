@@ -15,6 +15,13 @@ function library_scenario_ctools_plugin_api() {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function library_scenario_views_api() {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_node_info().
  */
 function library_scenario_node_info() {

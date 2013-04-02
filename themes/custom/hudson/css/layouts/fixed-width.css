@@ -24,8 +24,9 @@
 /*
  * Apply the shared properties of grid items in a single, efficient ruleset.
  */
-/* line 60, ../../sass/layouts/fixed-width.scss */
+/* line 61, ../../sass/layouts/fixed-width.scss */
 #header,
+#preface,
 #content,
 .region-sidebar-first,
 .region-sidebar-second,
@@ -58,17 +59,113 @@
 /*
  * The layout when there is only one sidebar.
  */
-/* line 79, ../../sass/layouts/fixed-width.scss */
-.sidebar-first #content {
-  /* Span 6 columns, starting in 4th column from left. */
+/* line 80, ../../sass/layouts/fixed-width.scss */
+.sidebar-first #preface {
   float: left;
   width: 700px;
   margin-left: 0px;
   margin-right: -720px;
 }
-/* line 83, ../../sass/layouts/fixed-width.scss */
+/* line 84, ../../sass/layouts/fixed-width.scss */
+.sidebar-first #content {
+  clear: left;
+  float: left;
+  width: 700px;
+  margin-left: 0px;
+  margin-right: -720px;
+}
+/* line 89, ../../sass/layouts/fixed-width.scss */
 .sidebar-first .region-sidebar-first {
-  /* Span 1 column, starting in 1st column from left. */
+  float: right;
+  width: 220px;
+  margin-right: 0px;
+  margin-left: -240px;
+}
+
+/*
+ * The layout when there is no sidebar.
+ */
+/* line 100, ../../sass/layouts/fixed-width.scss */
+.no-sidebars #preface,
+.no-sidebars #content {
+  clear: both;
+  float: left;
+  width: 940px;
+  margin-left: 0px;
+  margin-right: -960px;
+}
+
+/*
+ * The layout for the one-three-two template
+ */
+/* line 115, ../../sass/layouts/fixed-width.scss */
+.no-sidebars.panel-layout-onethreetwo .panel-top-row,
+.no-sidebars.panel-layout-onethreetwo .panel-ternary-col1,
+.no-sidebars.panel-layout-onethreetwo .panel-ternary-col2,
+.no-sidebars.panel-layout-onethreetwo .panel-ternary-col3,
+.no-sidebars.panel-layout-onethreetwo .panel-binary-left,
+.no-sidebars.panel-layout-onethreetwo .panel-binary-right {
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 0 !important;
+  word-wrap: break-word;
+}
+/* line 119, ../../sass/layouts/fixed-width.scss */
+.no-sidebars.panel-layout-onethreetwo #preface {
+  float: left;
+  width: 940px;
+  margin-left: 0px;
+  margin-right: -960px;
+}
+/* line 123, ../../sass/layouts/fixed-width.scss */
+.no-sidebars.panel-layout-onethreetwo #content {
+  float: left;
+  width: 940px;
+  margin-left: 0px;
+  margin-right: -960px;
+  padding-left: 0;
+  padding-right: 0;
+}
+/* line 127, ../../sass/layouts/fixed-width.scss */
+.no-sidebars.panel-layout-onethreetwo .panel-top-row {
+  clear: both;
+  float: left;
+  width: 940px;
+  margin-left: 0px;
+  margin-right: -960px;
+}
+/* line 131, ../../sass/layouts/fixed-width.scss */
+.no-sidebars.panel-layout-onethreetwo .panel-ternary-col1 {
+  clear: both;
+  float: left;
+  width: 300px;
+  margin-left: 0px;
+  margin-right: -320px;
+}
+/* line 135, ../../sass/layouts/fixed-width.scss */
+.no-sidebars.panel-layout-onethreetwo .panel-ternary-col2 {
+  float: left;
+  width: 300px;
+  margin-left: 320px;
+  margin-right: -640px;
+}
+/* line 138, ../../sass/layouts/fixed-width.scss */
+.no-sidebars.panel-layout-onethreetwo .panel-ternary-col3 {
+  float: left;
+  width: 300px;
+  margin-left: 640px;
+  margin-right: -960px;
+}
+/* line 141, ../../sass/layouts/fixed-width.scss */
+.no-sidebars.panel-layout-onethreetwo .panel-binary-left {
+  clear: both;
+  float: left;
+  width: 700px;
+  margin-left: 0px;
+  margin-right: -720px;
+}
+/* line 145, ../../sass/layouts/fixed-width.scss */
+.no-sidebars.panel-layout-onethreetwo .panel-binary-right {
   float: left;
   width: 220px;
   margin-left: 720px;
