@@ -3,3 +3,16 @@
  * @file
  * Drupal needs this blank file.
  */
+
+/**
+ * Modify form elements on the scenario node form.
+ */
+function library_site_form_user_register_form_alter(&$form, &$form_state, $form_id) {
+
+  // Add a checkbox to registration form about agreeing to terms of use.
+  $form['terms_of_use'] = array(
+    '#type' => 'checkbox',
+    '#title' => t("I agree with the website's <a href=\"/terms\">terms and conditions</a>."),
+    '#required' => TRUE,
+  );
+}

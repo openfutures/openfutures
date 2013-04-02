@@ -87,7 +87,7 @@ function library_engage_page_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => 'Discover call to action',
       'title' => '',
-      'body' => '<a class="action-large discover">
+      'body' => '<a href="/discover" class="action-large discover">
 <h3>Discover</h3>
 <p>Find scenarios for your project</p>
 </a>',
@@ -114,7 +114,7 @@ function library_engage_page_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => 'Contribute call to action',
       'title' => '',
-      'body' => '<a class="action-large contribute">
+      'body' => '<a href="/contribute" class="action-large contribute">
 <h3>Contribute</h3>
 <p>Add new scenarios to the Library</p>
 </a>',
