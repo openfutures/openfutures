@@ -122,6 +122,9 @@ li a.active {
     font-weight: bold;
   }
 }
+a.action-large {
+  color: $text-color;
+}
 
 a.action-large:hover {
   text-decoration: none;

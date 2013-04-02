@@ -106,27 +106,32 @@ li a.active {
   font-weight: bold;
 }
 
-/* line 126, ../sass/navigation.scss */
+/* line 125, ../sass/navigation.scss */
+a.action-large {
+  color: #222222;
+}
+
+/* line 129, ../sass/navigation.scss */
 a.action-large:hover {
   text-decoration: none;
 }
 
-/* line 130, ../sass/navigation.scss */
+/* line 133, ../sass/navigation.scss */
 a.action-large.discover {
   border-color: #ff8800;
 }
 
-/* line 133, ../sass/navigation.scss */
+/* line 136, ../sass/navigation.scss */
 a.action-large.contribute {
   border-color: #14cc9e;
 }
 
-/* line 136, ../sass/navigation.scss */
+/* line 139, ../sass/navigation.scss */
 a.action-large.improve {
   border-color: #0678be;
 }
 
-/* line 140, ../sass/navigation.scss */
+/* line 143, ../sass/navigation.scss */
 a.action {
   display: block;
   text-align: center;
@@ -137,13 +142,13 @@ a.action {
   background-color: #222222;
 }
 
-/* line 150, ../sass/navigation.scss */
+/* line 153, ../sass/navigation.scss */
 a.action:hover {
   text-decoration: none;
   cursor: pointer;
 }
 
-/* line 154, ../sass/navigation.scss */
+/* line 157, ../sass/navigation.scss */
 a.action.submit-scenario {
   background-color: #14cc9e;
 }
