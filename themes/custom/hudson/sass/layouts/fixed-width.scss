@@ -53,9 +53,9 @@ $zen-auto-include-item-base: false;
  */
 // See the note about $zen-auto-include-item-base above.
 
+/* #content has been taken out */
 #header,
 #preface,
-#content,
 .region-sidebar-first,
 .region-sidebar-second,
 #footer {
@@ -95,7 +95,11 @@ $zen-auto-include-item-base: false;
  * The layout when there is no sidebar.
  */
 
-.no-sidebars {
+.no-sidebars.page-discover {
+  #content {
+    @include zen-grid-item-base();
+  }
+
   #preface,
   #content {
     @include zen-clear(both);
@@ -107,6 +111,7 @@ $zen-auto-include-item-base: false;
  * The layout for the one-three-two template
  */
 .no-sidebars.panel-layout-onethreetwo {
+  #content,
   .panel-top-row,
   .panel-ternary-col1,
   .panel-ternary-col2,
@@ -160,10 +165,10 @@ $zen-auto-include-item-base: false;
     @include zen-grid-item(12, 1);
   }
 
-  #content {
-    @include zen-grid-item(12, 1);
-    @include zen-nested-container()
-  }
+  // #content {
+  //   @include zen-grid-item(12, 1);
+  //   @include zen-nested-container()
+  // }
   .panel-left {
     @include zen-clear(both);
     @include zen-grid-item(8, 1);
@@ -189,15 +194,16 @@ $zen-auto-include-item-base: false;
     @include zen-grid-item(12, 1);
   }
 
-  #content {
-    @include zen-grid-item(12, 1);
-    @include zen-nested-container()
-  }
+  // #content {
+  //   // @include zen-grid-item(12, 1);
+  //   @include zen-nested-container()
+  // }
   .panel-main-col {
+    @include zen-clear(both);
     @include zen-grid-item(8, 1);
   }
   .panel-side-col {
-    @include zen-grid-item(4, 9);
+    @include zen-grid-item(4, 1, right);
   }
   .panel-left {
     @include zen-clear(left);
