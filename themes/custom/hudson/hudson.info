@@ -42,6 +42,7 @@ stylesheets[all][] = css/comments.css
 stylesheets[all][] = css/forms.css
 stylesheets[all][] = css/fields.css
 stylesheets[all][] = css/print.css
+stylesheets[all][] = http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600
 
 ; Optionally add some JavaScripts to your theme.
 

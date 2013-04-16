@@ -17,9 +17,9 @@ function library_scenario_default_page_manager_handlers() {
   $handler->task = 'node_edit';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -28;
+  $handler->weight = -30;
   $handler->conf = array(
-    'title' => 'Add scenario',
+    'title' => 'Add scenario quick',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
@@ -47,6 +47,15 @@ function library_scenario_default_page_manager_handlers() {
             ),
           ),
           'context' => 'argument_node_edit_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'path_visibility',
+          'settings' => array(
+            'visibility_setting' => '1',
+            'paths' => 'node/add/scenario/quick',
+          ),
+          'context' => 'empty',
           'not' => FALSE,
         ),
       ),
@@ -179,7 +188,7 @@ function library_scenario_default_page_manager_handlers() {
     $pane->configuration = array(
       'admin_title' => 'Switch to expanded form',
       'title' => '',
-      'body' => '<a href="/node/add/scenario/expanded">Switch to expanded form</a>',
+      'body' => '<a href="/node/add/scenario">Switch to expanded form</a>',
       'format' => 'full_html',
       'substitute' => 1,
     );
@@ -229,14 +238,23 @@ function library_scenario_default_page_manager_handlers() {
   $handler->handler = 'panel_context';
   $handler->weight = -29;
   $handler->conf = array(
-    'title' => 'Add scenario plus',
+    'title' => 'Add scenario',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
     'css_id' => '',
     'css' => '',
-    'contexts' => array(),
+    'contexts' => array(
+      0 => array(
+        'identifier' => 'User',
+        'keyword' => 'user',
+        'name' => 'user',
+        'type' => 'current',
+        'uid' => '',
+        'id' => 1,
+      ),
+    ),
     'relationships' => array(),
     'access' => array(
       'plugins' => array(
@@ -248,18 +266,6 @@ function library_scenario_default_page_manager_handlers() {
             ),
           ),
           'context' => 'argument_node_edit_1',
-          'not' => FALSE,
-        ),
-        1 => array(
-          'name' => 'php',
-          'settings' => array(
-            'description' => 'Check for expanded in path',
-            'php' => 'if (arg(3) === \'expanded\') {
-  return true;
-} else {
-  return false;
-}',
-          ),
           'not' => FALSE,
         ),
       ),
@@ -509,30 +515,6 @@ function library_scenario_default_page_manager_handlers() {
     $display->panels['right'][1] = 'new-15';
     $pane = new stdClass();
     $pane->pid = 'new-16';
-    $pane->panel = 'right';
-    $pane->type = 'entity_form_field';
-    $pane->subtype = 'node:field_type';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => '',
-      'formatter' => '',
-      'context' => 'argument_node_edit_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-16'] = $pane;
-    $display->panels['right'][2] = 'new-16';
-    $pane = new stdClass();
-    $pane->pid = 'new-17';
     $pane->panel = 'side';
     $pane->type = 'node_form_buttons';
     $pane->subtype = 'node_form_buttons';
@@ -551,10 +533,10 @@ function library_scenario_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-17'] = $pane;
-    $display->panels['side'][0] = 'new-17';
+    $display->content['new-16'] = $pane;
+    $display->panels['side'][0] = 'new-16';
     $pane = new stdClass();
-    $pane->pid = 'new-18';
+    $pane->pid = 'new-17';
     $pane->panel = 'side';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -563,7 +545,7 @@ function library_scenario_default_page_manager_handlers() {
     $pane->configuration = array(
       'admin_title' => 'Switch to simple form',
       'title' => '',
-      'body' => '<a href="/node/add/scenario">Switch to simple form</a>',
+      'body' => '<a href="/node/add/scenario/quick">Switch to quick form</a>',
       'format' => 'full_html',
       'substitute' => 0,
     );
@@ -575,8 +557,44 @@ function library_scenario_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
+    $display->content['new-17'] = $pane;
+    $display->panels['side'][1] = 'new-17';
+    $pane = new stdClass();
+    $pane->pid = 'new-18';
+    $pane->panel = 'side';
+    $pane->type = 'views';
+    $pane->subtype = 'user_scenarios';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 0,
+      'nodes_per_page' => '6',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'default',
+      'context' => array(
+        0 => 'context_user_1.uid',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
     $display->content['new-18'] = $pane;
-    $display->panels['side'][1] = 'new-18';
+    $display->panels['side'][2] = 'new-18';
     $pane = new stdClass();
     $pane->pid = 'new-19';
     $pane->panel = 'side';
@@ -597,10 +615,10 @@ function library_scenario_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
     $display->content['new-19'] = $pane;
-    $display->panels['side'][2] = 'new-19';
+    $display->panels['side'][3] = 'new-19';
     $pane = new stdClass();
     $pane->pid = 'new-20';
     $pane->panel = 'side';
@@ -621,10 +639,10 @@ function library_scenario_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 4;
     $pane->locks = array();
     $display->content['new-20'] = $pane;
-    $display->panels['side'][3] = 'new-20';
+    $display->panels['side'][4] = 'new-20';
     $pane = new stdClass();
     $pane->pid = 'new-21';
     $pane->panel = 'side';
@@ -645,10 +663,10 @@ function library_scenario_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 5;
     $pane->locks = array();
     $display->content['new-21'] = $pane;
-    $display->panels['side'][4] = 'new-21';
+    $display->panels['side'][5] = 'new-21';
     $pane = new stdClass();
     $pane->pid = 'new-22';
     $pane->panel = 'side';
@@ -669,10 +687,10 @@ function library_scenario_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 6;
     $pane->locks = array();
     $display->content['new-22'] = $pane;
-    $display->panels['side'][5] = 'new-22';
+    $display->panels['side'][6] = 'new-22';
     $pane = new stdClass();
     $pane->pid = 'new-23';
     $pane->panel = 'side';
@@ -693,10 +711,34 @@ function library_scenario_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 6;
+    $pane->position = 7;
     $pane->locks = array();
     $display->content['new-23'] = $pane;
-    $display->panels['side'][6] = 'new-23';
+    $display->panels['side'][7] = 'new-23';
+    $pane = new stdClass();
+    $pane->pid = 'new-24';
+    $pane->panel = 'side';
+    $pane->type = 'entity_form_field';
+    $pane->subtype = 'node:field_type';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => '',
+      'formatter' => '',
+      'context' => 'argument_node_edit_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 8;
+    $pane->locks = array();
+    $display->content['new-24'] = $pane;
+    $display->panels['side'][8] = 'new-24';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

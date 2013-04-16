@@ -13,17 +13,17 @@ function library_scenario_taxonomy_default_vocabularies() {
       'name' => 'Subject',
       'machine_name' => 'subject',
       'description' => 'Keywords that describe the topic of the content of a resource.',
-      'hierarchy' => '0',
+      'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => '0',
+      'weight' => 0,
     ),
     'type' => array(
       'name' => 'Type',
       'machine_name' => 'type',
       'description' => 'The nature or genre of a resource.',
-      'hierarchy' => '0',
+      'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => '0',
+      'weight' => 0,
     ),
   );
 }

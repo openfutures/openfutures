@@ -152,3 +152,71 @@ a.action:hover {
 a.action.submit-scenario {
   background-color: #14cc9e;
 }
+
+/*
+ * Discover page display mode buttons
+ */
+/* line 165, ../sass/navigation.scss */
+.display-mode {
+  float: right;
+  width: 114px;
+}
+/* line 169, ../sass/navigation.scss */
+.display-mode ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 174, ../sass/navigation.scss */
+.display-mode ul li:first-child {
+  margin-left: 0;
+}
+/* line 177, ../sass/navigation.scss */
+.display-mode ul li:first-child a {
+  background-position: 7px 7px;
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+/* line 185, ../sass/navigation.scss */
+.display-mode ul li:last-child a {
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+/* line 191, ../sass/navigation.scss */
+.display-mode ul li {
+  float: left;
+  margin-left: -1px;
+}
+/* line 195, ../sass/navigation.scss */
+.display-mode ul li a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  padding: 6px;
+  border: 1px solid #dddddd;
+  background: #eeeeee url("../images/glyphicons/glyphicons_114_list.png") 6px 6px no-repeat;
+}
+/* line 203, ../sass/navigation.scss */
+.display-mode ul li a span {
+  display: none;
+}
+/* line 208, ../sass/navigation.scss */
+.display-mode ul li a.active {
+  background-color: #fefefe;
+}
+/* line 212, ../sass/navigation.scss */
+.display-mode ul li a.mode-timeline {
+  background-image: url("../images/glyphicons/glyphicons_045_calendar.png");
+}
+/* line 217, ../sass/navigation.scss */
+.display-mode ul li a.mode-map {
+  background-image: url("../images/glyphicons/glyphicons_370_globe_af.png");
+}
