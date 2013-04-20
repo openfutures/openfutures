@@ -141,7 +141,7 @@ function library_engage_page_default_page_manager_pages() {
     $pane->configuration = array(
       'admin_title' => 'Improve call to action',
       'title' => '',
-      'body' => '<a class="action-large improve">
+      'body' => '<a href="/improve" class="action-large improve">
 <h3>Improve</h3>
 <p>Add metadata to existing scenarios</p>
 </a>',

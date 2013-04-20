@@ -70,3 +70,4 @@ dependencies[] = library_scenario
 dependencies[] = library_discover_page
 dependencies[] = library_engage_page
 dependencies[] = library_contribute_page
+dependencies[] = library_improve_page

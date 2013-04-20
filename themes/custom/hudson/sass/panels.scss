@@ -1,0 +1,49 @@
+/**
+ * @file
+ * Panels Styling
+ *
+ * Styling for custom pages
+ */
+
+@import "base";
+
+
+/*
+ * Improve page.
+ */
+
+.page-improve {
+  .pane-views-panes {
+    .pane-title {
+      font-size: $h5-font-size;
+      border-bottom: solid 1px $rule-color;
+      padding-bottom: 0.5em;
+      margin-bottom: 0.5em;
+    }
+
+    .view-header {
+      margin-bottom: 1em;
+    }
+  }
+
+  .panel-row-top { /* top row region */
+    .pane-title {
+      font-weight: normal;
+    }
+
+    .pane-title,
+    .field-name-field-image-feature-text,
+    .field-name-field-image-feature-image {
+      width: 50%;
+      float: left;
+    }
+
+    .field-name-field-image-feature-text {
+      clear: left;
+
+      p {
+        margin-top: 0;
+      }
+    }
+  }
+}

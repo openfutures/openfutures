@@ -13,9 +13,9 @@ function library_location_taxonomy_default_vocabularies() {
       'name' => 'Location',
       'machine_name' => 'location',
       'description' => 'A place name or geographic area that represents the specific spatial coverage of a resource.',
-      'hierarchy' => '0',
+      'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => '0',
+      'weight' => 0,
     ),
   );
 }
