@@ -2,6 +2,7 @@ name = Library Improve Page
 description = Configuration and settings for the improve landing page.
 core = 7.x
 package = Open Futures
+php = 5.2.4
 version = 7.x-3.0
 project = library_improve_page
 dependencies[] = library_scenario

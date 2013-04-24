@@ -17,6 +17,9 @@ function library_scenario_form_scenario_node_form_alter(&$form, &$form_state, $f
  * Custom function on submission of scenario node form
  */
 function _library_scenario_submit($form, &$form_state) {
+  // Before we redirect what's the path we're coming from?
+  $path = arg();
+  $redirect = implode('/', $path);
   // redirect to either default or expanded scenario add form
-  $form_state['redirect'] = 'node/add/scenario';
+  $form_state['redirect'] = $redirect;
 }

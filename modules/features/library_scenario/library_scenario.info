@@ -55,6 +55,7 @@ features[field_instance][] = node-scenario-field_type
 features[node][] = scenario
 features[page_manager_handlers][] = node_edit_panel_context
 features[page_manager_handlers][] = node_edit_panel_context_2
+features[page_manager_handlers][] = node_edit_panel_context_3
 features[taxonomy][] = subject
 features[taxonomy][] = type
 features[user_permission][] = create scenario content

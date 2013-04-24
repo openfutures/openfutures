@@ -39,13 +39,13 @@ function library_discover_page_default_page_manager_pages() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'page_discover_landing_page_panel_context';
+  $handler->name = 'page_discover_landing_page_panel_context_3';
   $handler->task = 'page';
   $handler->subtask = 'discover_landing_page';
   $handler->handler = 'panel_context';
-  $handler->weight = -28;
+  $handler->weight = -30;
   $handler->conf = array(
-    'title' => 'List display',
+    'title' => 'Map display',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
@@ -55,6 +55,17 @@ function library_discover_page_default_page_manager_pages() {
     'contexts' => array(),
     'relationships' => array(),
     'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'path_visibility',
+          'settings' => array(
+            'visibility_setting' => '1',
+            'paths' => 'discover/map',
+          ),
+          'context' => 'empty',
+          'not' => FALSE,
+        ),
+      ),
       'logic' => 'and',
     ),
   );
@@ -64,12 +75,11 @@ function library_discover_page_default_page_manager_pages() {
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
-      'center' => NULL,
       'middle' => NULL,
     ),
   );
   $display->cache = array();
-  $display->title = 'Discover scenarios';
+  $display->title = '';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -84,9 +94,9 @@ function library_discover_page_default_page_manager_pages() {
       'title' => '',
       'body' => '<div class="display-mode">
 <ul>
-<li><a class="active mode-list" href="/discover" title="List display mode"><span class="label">list</span></a></li>
+<li><a class="mode-list" href="/discover" title="List display mode"><span class="label">list</span></a></li>
 <li><a class="mode-timeline" href="/discover/timeline" title="Timeline display mode"><span class="label">timeline</span></a></li>
-<li><a class="mode-map" href="/discover/map" title="Map display mode"><span class="label">map</span></a></li>
+<li><a class="active mode-map" href="/discover/map" title="Map display mode"><span class="label">map</span></a></li>
 </ul>
 </div>',
       'format' => 'full_html',
@@ -106,7 +116,7 @@ function library_discover_page_default_page_manager_pages() {
     $pane->pid = 'new-2';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'browse_scenarios-panel_pane_1';
+    $pane->subtype = 'map_scenarios-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -121,7 +131,7 @@ function library_discover_page_default_page_manager_pages() {
     $display->content['new-2'] = $pane;
     $display->panels['middle'][1] = 'new-2';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = '0';
+  $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $handler = new stdClass();
@@ -231,13 +241,13 @@ function library_discover_page_default_page_manager_pages() {
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'page_discover_landing_page_panel_context_3';
+  $handler->name = 'page_discover_landing_page_panel_context';
   $handler->task = 'page';
   $handler->subtask = 'discover_landing_page';
   $handler->handler = 'panel_context';
-  $handler->weight = -30;
+  $handler->weight = -28;
   $handler->conf = array(
-    'title' => 'Map display',
+    'title' => 'List display',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
@@ -247,17 +257,6 @@ function library_discover_page_default_page_manager_pages() {
     'contexts' => array(),
     'relationships' => array(),
     'access' => array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'path_visibility',
-          'settings' => array(
-            'visibility_setting' => '1',
-            'paths' => 'discover/map',
-          ),
-          'context' => 'empty',
-          'not' => FALSE,
-        ),
-      ),
       'logic' => 'and',
     ),
   );
@@ -267,11 +266,12 @@ function library_discover_page_default_page_manager_pages() {
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
+      'center' => NULL,
       'middle' => NULL,
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = 'Discover scenarios';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -286,9 +286,9 @@ function library_discover_page_default_page_manager_pages() {
       'title' => '',
       'body' => '<div class="display-mode">
 <ul>
-<li><a class="mode-list" href="/discover" title="List display mode"><span class="label">list</span></a></li>
+<li><a class="active mode-list" href="/discover" title="List display mode"><span class="label">list</span></a></li>
 <li><a class="mode-timeline" href="/discover/timeline" title="Timeline display mode"><span class="label">timeline</span></a></li>
-<li><a class="active mode-map" href="/discover/map" title="Map display mode"><span class="label">map</span></a></li>
+<li><a class="mode-map" href="/discover/map" title="Map display mode"><span class="label">map</span></a></li>
 </ul>
 </div>',
       'format' => 'full_html',
@@ -308,7 +308,7 @@ function library_discover_page_default_page_manager_pages() {
     $pane->pid = 'new-6';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'map_scenarios-panel_pane_1';
+    $pane->subtype = 'browse_scenarios-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -323,7 +323,7 @@ function library_discover_page_default_page_manager_pages() {
     $display->content['new-6'] = $pane;
     $display->panels['middle'][1] = 'new-6';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-5';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['discover_landing_page'] = $page;

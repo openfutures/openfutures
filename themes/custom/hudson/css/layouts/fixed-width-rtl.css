@@ -15,7 +15,7 @@
 /*
  * Center the page.
  */
-/* line 43, ../../sass/layouts/fixed-width.scss */
+/* line 43, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 #page,
 .region-bottom {
   /* If you want to make the page a fixed width and centered in the viewport,
@@ -29,7 +29,7 @@
  * Apply the shared properties of grid items in a single, efficient ruleset.
  */
 /* #content has been taken out */
-/* line 61, ../../sass/layouts/fixed-width.scss */
+/* line 61, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 #header,
 #preface,
 .region-sidebar-first,
@@ -44,7 +44,7 @@
 /*
  * Containers for grid items and flow items.
  */
-/* line 52, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+/* line 52, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 #header:before, #header:after,
 #main:before,
 #main:after,
@@ -53,7 +53,7 @@
   content: "";
   display: table;
 }
-/* line 56, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+/* line 56, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
 #header:after,
 #main:after,
 #footer:after {
@@ -63,14 +63,14 @@
 /*
  * The layout when there is only one sidebar.
  */
-/* line 80, ../../sass/layouts/fixed-width.scss */
+/* line 80, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .sidebar-first #preface {
   float: right;
   width: 700px;
   margin-right: 0px;
   margin-left: -720px;
 }
-/* line 84, ../../sass/layouts/fixed-width.scss */
+/* line 84, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .sidebar-first #content {
   clear: right;
   float: right;
@@ -78,7 +78,7 @@
   margin-right: 0px;
   margin-left: -720px;
 }
-/* line 89, ../../sass/layouts/fixed-width.scss */
+/* line 89, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .sidebar-first .region-sidebar-first {
   float: left;
   width: 220px;
@@ -89,14 +89,14 @@
 /*
  * The layout when there is no sidebar.
  */
-/* line 99, ../../sass/layouts/fixed-width.scss */
+/* line 99, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .no-sidebars.page-discover #content {
   padding-left: 10px;
   padding-right: 10px;
   border: 0 !important;
   word-wrap: break-word;
 }
-/* line 104, ../../sass/layouts/fixed-width.scss */
+/* line 104, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .no-sidebars.page-discover #preface,
 .no-sidebars.page-discover #content {
   clear: both;
@@ -109,7 +109,7 @@
 /*
  * The layout for the one-three-two template
  */
-/* line 120, ../../sass/layouts/fixed-width.scss */
+/* line 120, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .no-sidebars.panel-layout-onethreetwo #content,
 .no-sidebars.panel-layout-onethreetwo .panel-top-row,
 .no-sidebars.panel-layout-onethreetwo .panel-ternary-col1,
@@ -122,14 +122,14 @@
   border: 0 !important;
   word-wrap: break-word;
 }
-/* line 124, ../../sass/layouts/fixed-width.scss */
+/* line 124, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .no-sidebars.panel-layout-onethreetwo #preface {
   float: right;
   width: 940px;
   margin-right: 0px;
   margin-left: -960px;
 }
-/* line 128, ../../sass/layouts/fixed-width.scss */
+/* line 128, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .no-sidebars.panel-layout-onethreetwo #content {
   float: right;
   width: 940px;
@@ -138,7 +138,7 @@
   padding-left: 0;
   padding-right: 0;
 }
-/* line 132, ../../sass/layouts/fixed-width.scss */
+/* line 132, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .no-sidebars.panel-layout-onethreetwo .panel-top-row {
   clear: both;
   float: right;
@@ -146,7 +146,7 @@
   margin-right: 0px;
   margin-left: -960px;
 }
-/* line 136, ../../sass/layouts/fixed-width.scss */
+/* line 136, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .no-sidebars.panel-layout-onethreetwo .panel-ternary-col1 {
   clear: both;
   float: right;
@@ -154,21 +154,21 @@
   margin-right: 0px;
   margin-left: -320px;
 }
-/* line 140, ../../sass/layouts/fixed-width.scss */
+/* line 140, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .no-sidebars.panel-layout-onethreetwo .panel-ternary-col2 {
   float: right;
   width: 300px;
   margin-right: 320px;
   margin-left: -640px;
 }
-/* line 143, ../../sass/layouts/fixed-width.scss */
+/* line 143, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .no-sidebars.panel-layout-onethreetwo .panel-ternary-col3 {
   float: right;
   width: 300px;
   margin-right: 640px;
   margin-left: -960px;
 }
-/* line 146, ../../sass/layouts/fixed-width.scss */
+/* line 146, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .no-sidebars.panel-layout-onethreetwo .panel-binary-left {
   clear: both;
   float: right;
@@ -176,7 +176,7 @@
   margin-right: 0px;
   margin-left: -720px;
 }
-/* line 150, ../../sass/layouts/fixed-width.scss */
+/* line 150, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .no-sidebars.panel-layout-onethreetwo .panel-binary-right {
   float: right;
   width: 220px;
@@ -187,7 +187,7 @@
 /*
  * The layout for the eight-four template
  */
-/* line 160, ../../sass/layouts/fixed-width.scss */
+/* line 160, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .no-sidebars.panel-layout-eightfour .panel-left,
 .no-sidebars.panel-layout-eightfour .panel-right {
   padding-left: 10px;
@@ -195,14 +195,14 @@
   border: 0 !important;
   word-wrap: break-word;
 }
-/* line 164, ../../sass/layouts/fixed-width.scss */
+/* line 164, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .no-sidebars.panel-layout-eightfour #preface {
   float: right;
   width: 940px;
   margin-right: 0px;
   margin-left: -960px;
 }
-/* line 172, ../../sass/layouts/fixed-width.scss */
+/* line 172, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .no-sidebars.panel-layout-eightfour .panel-left {
   clear: both;
   float: right;
@@ -210,7 +210,7 @@
   margin-right: 0px;
   margin-left: -640px;
 }
-/* line 176, ../../sass/layouts/fixed-width.scss */
+/* line 176, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .no-sidebars.panel-layout-eightfour .panel-right {
   float: right;
   width: 300px;
@@ -221,7 +221,7 @@
 /*
  * The layout for the eight-four-two template
  */
-/* line 189, ../../sass/layouts/fixed-width.scss */
+/* line 189, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .no-sidebars.panel-layout-eightfourtwo .panel-main-col,
 .no-sidebars.panel-layout-eightfourtwo .panel-side-col,
 .no-sidebars.panel-layout-eightfourtwo .panel-left,
@@ -232,14 +232,14 @@
   border: 0 !important;
   word-wrap: break-word;
 }
-/* line 193, ../../sass/layouts/fixed-width.scss */
+/* line 193, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .no-sidebars.panel-layout-eightfourtwo #preface {
   float: right;
   width: 940px;
   margin-right: 0px;
   margin-left: -960px;
 }
-/* line 201, ../../sass/layouts/fixed-width.scss */
+/* line 201, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .no-sidebars.panel-layout-eightfourtwo .panel-main-col {
   clear: both;
   float: right;
@@ -247,14 +247,14 @@
   margin-right: 0px;
   margin-left: -640px;
 }
-/* line 205, ../../sass/layouts/fixed-width.scss */
+/* line 205, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .no-sidebars.panel-layout-eightfourtwo .panel-side-col {
   float: left;
   width: 300px;
   margin-left: 0px;
   margin-right: -320px;
 }
-/* line 208, ../../sass/layouts/fixed-width.scss */
+/* line 208, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .no-sidebars.panel-layout-eightfourtwo .panel-left {
   clear: right;
   float: right;
@@ -262,14 +262,14 @@
   margin-right: 0px;
   margin-left: -320px;
 }
-/* line 212, ../../sass/layouts/fixed-width.scss */
+/* line 212, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .no-sidebars.panel-layout-eightfourtwo .panel-right {
   float: right;
   width: 300px;
   margin-right: 320px;
   margin-left: -640px;
 }
-/* line 215, ../../sass/layouts/fixed-width.scss */
+/* line 215, /home/peter/local_httpd/openfutures.local/src/openfutures-7.x-3.x/profiles/openfutures/themes/custom/hudson/sass/layouts/fixed-width.scss */
 .no-sidebars.panel-layout-eightfourtwo .panel-bottom {
   clear: right;
   float: right;

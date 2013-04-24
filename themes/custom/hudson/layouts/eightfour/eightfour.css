@@ -27,7 +27,7 @@
 
 .panel-eightfour .panel-right .pane-views-panes table td {
   vertical-align: top;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
 }
 
 .panel-eightfour .panel-right .pane-views-panes table td.views-field-view-node,

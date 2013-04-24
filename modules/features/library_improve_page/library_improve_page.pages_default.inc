@@ -17,7 +17,18 @@ function library_improve_page_default_page_manager_pages() {
   $page->admin_description = 'A landing page for helpers.';
   $page->path = 'improve';
   $page->access = array();
-  $page->menu = array();
+  $page->menu = array(
+    'type' => 'normal',
+    'title' => 'Improve',
+    'name' => 'main-menu',
+    'weight' => '2',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
   $page->arguments = array();
   $page->conf = array(
     'admin_paths' => FALSE,

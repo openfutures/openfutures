@@ -28,3 +28,38 @@
 .panel-eightfourtwo .form-field-type-image input[type="submit"] {
   margin-bottom: 1em;
 }
+
+/**
+ * "Your scenarios" table.
+ */
+.panel-eightfourtwo .panel-side-col .pane-user-scenarios {
+  margin-top: 2em;
+}
+
+.panel-eightfourtwo .panel-side-col .pane-user-scenarios .pane-title {
+  font-size: 1.23em;
+  margin: 0 0 0.625em 0;
+  padding-bottom: 0.625em;
+  border-bottom: solid 1px #ccc;
+}
+
+.panel-eightfourtwo .panel-side-col .pane-user-scenarios table,
+.panel-eightfourtwo .panel-side-col .pane-user-scenarios tbody {
+  margin: 0;
+  border: none;
+}
+
+.panel-eightfourtwo .panel-side-col .pane-user-scenarios table {
+  width: 100%;
+  color: #555;
+}
+
+.panel-eightfourtwo .panel-side-col .pane-user-scenarios table td {
+  vertical-align: top;
+  padding-bottom: 0.5em;
+}
+
+.panel-eightfourtwo .panel-side-col .pane-user-scenarios table td.views-field-view-node,
+.panel-eightfourtwo .panel-side-col .pane-user-scenarios table td.views-field-edit-node {
+  padding-left: 1em;
+}

@@ -7,6 +7,45 @@
 
 @import "base";
 
+/*
+ * Contribute page.
+ */
+
+.page-contribute {
+  .center-wrapper {
+    clear: both;
+  }
+
+  .pane-bundle-image-feature {
+    .pane-title {
+      font-weight: normal;
+    }
+
+    .pane-title,
+    .field-name-field-image-feature-text,
+    .field-name-field-image-feature-image {
+      width: 50%;
+      float: left;
+    }
+
+    .field-name-field-image-feature-text {
+      clear: left;
+
+      p {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .panel-col-first,
+  .panel-col,
+  .panel-col-last {
+    .pane-title {
+      font-size: $h5-font-size;
+    }
+  }
+
+}
 
 /*
  * Improve page.

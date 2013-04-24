@@ -72,6 +72,13 @@ li a.active {
       color: $brand-color-primary;
     }
   }
+
+  li.last {
+    a.active,
+    a:hover {
+      color: $link-color;
+    }
+  }
 }
 
 #secondary-menu {
@@ -156,6 +163,71 @@ a.action:hover {
 }
 a.action.submit-scenario {
   background-color: $brand-color-secondary;
+}
+
+/*
+ * Add scenario edit mode buttons
+ */
+.no-sidebars.panel-layout-eightfourtwo .panel-side-col,
+.no-sidebars.panel-layout-eightfour .panel-right {
+  position: relative;
+}
+
+.edit-mode {
+  position: absolute;
+  top: 0;
+  right: 10px;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li:first-child {
+      margin-left: 0;
+
+      a {
+        background-position: 7px 7px;
+        @include border-top-left-radius(4px);
+        @include border-bottom-left-radius(4px);
+      }
+    }
+
+    li:last-child {
+      a {
+        @include border-top-right-radius(4px);
+        @include border-bottom-right-radius(4px);
+      }
+    }
+
+    li {
+      float: left;
+      margin-left: -1px;
+
+      a {
+        display: block;
+        width: 24px;
+        height: 24px;
+        padding: 6px;
+        border: 1px solid $rule-color-light;
+        background: $bg-color-dark url('../images/glyphicons/glyphicons_030_pencil.png') 6px 6px no-repeat;
+
+        span {
+          display: none;
+        }
+      }
+
+      a.active {
+        background-color: $bg-color-light;
+      }
+
+      a.mode-expanded {
+        // background: transparent url('../images/glyphicons/glyphicons_370_globe_af.png') 4px 4px no-repeat;
+        background-image: url('../images/glyphicons/glyphicons_280_settings.png');
+      }
+
+    }
+  }
 }
 
 
