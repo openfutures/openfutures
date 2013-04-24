@@ -67,18 +67,33 @@
   clear: both;
 }
 /* line 62, ../sass/views-styles.scss */
+.page-discover .views-exposed-widgets .views-exposed-widget {
+  margin-bottom: 1em;
+}
+/* line 68, ../sass/views-styles.scss */
+.page-discover .views-exposed-widgets .views-widget-filter-keys,
+.page-discover .views-exposed-widgets .views-widget-filter-field_scenario_subject_tid,
+.page-discover .views-exposed-widgets .views-widget-filter-field_scenario_location_tid {
+  width: 20em;
+}
+/* line 72, ../sass/views-styles.scss */
 .page-discover .views-exposed-widgets .form-type-textfield input[type="text"] {
   width: 18em;
+  margin-bottom: 0.5em;
 }
-/* line 66, ../sass/views-styles.scss */
+/* line 77, ../sass/views-styles.scss */
 .page-discover .views-exposed-widgets .form-type-date-text input[type="text"] {
   width: 12em;
 }
-/* line 70, ../sass/views-styles.scss */
+/* line 81, ../sass/views-styles.scss */
 .page-discover .views-exposed-widgets .views-widget-filter-date_filter {
   clear: left;
 }
-/* line 75, ../sass/views-styles.scss */
+/* line 85, ../sass/views-styles.scss */
+.page-discover .views-exposed-widgets .description {
+  font-size: 10.998px;
+}
+/* line 90, ../sass/views-styles.scss */
 .page-discover .widget-button-collection {
   width: 281px;
   float: right;
@@ -89,13 +104,13 @@
   border-radius: 4px;
   margin: 1em 0 1em 0;
 }
-/* line 86, ../sass/views-styles.scss */
+/* line 101, ../sass/views-styles.scss */
 .page-discover .widget-button-collection .views-exposed-widget {
   padding: 0;
   float: none;
   display: inline-block;
 }
-/* line 91, ../sass/views-styles.scss */
+/* line 106, ../sass/views-styles.scss */
 .page-discover .widget-button-collection .views-exposed-widget input.form-submit {
   margin-top: 0;
   margin-right: 1em;

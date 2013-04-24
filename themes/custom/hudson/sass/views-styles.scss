@@ -59,8 +59,19 @@
 
   .views-exposed-widgets {
 
+    .views-exposed-widget {
+      margin-bottom: 1em;
+    }
+
+    .views-widget-filter-keys,
+    .views-widget-filter-field_scenario_subject_tid,
+    .views-widget-filter-field_scenario_location_tid {
+      width: 20em;
+    }
+
     .form-type-textfield input[type="text"] {
       width: 18em;
+      margin-bottom: 0.5em;
     }
 
     .form-type-date-text input[type="text"] {
@@ -69,6 +80,10 @@
 
     .views-widget-filter-date_filter {
       clear: left;
+    }
+
+    .description {
+      font-size: $small-font-size;
     }
   }
 

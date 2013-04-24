@@ -84,6 +84,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['keys']['exposed'] = TRUE;
   $handler->display->display_options['filters']['keys']['expose']['operator_id'] = 'keys_op';
   $handler->display->display_options['filters']['keys']['expose']['label'] = 'Keyword search';
+  $handler->display->display_options['filters']['keys']['expose']['description'] = 'Enter keywords and terms to search by.';
   $handler->display->display_options['filters']['keys']['expose']['operator'] = 'keys_op';
   $handler->display->display_options['filters']['keys']['expose']['identifier'] = 'keys';
   $handler->display->display_options['filters']['keys']['expose']['remember_roles'] = array(
@@ -100,6 +101,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['field_scenario_subject_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['operator_id'] = 'field_scenario_subject_tid_op';
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['label'] = 'Subjects';
+  $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['description'] = 'Enter subjects and topics to filter scenarios by.';
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['operator'] = 'field_scenario_subject_tid_op';
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['identifier'] = 'field_scenario_subject_tid';
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['multiple'] = TRUE;
@@ -118,6 +120,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['field_scenario_location_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['operator_id'] = 'field_scenario_location_tid_op';
   $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['label'] = 'Location';
+  $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['description'] = 'Separate multiple place names with a comma.';
   $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['operator'] = 'field_scenario_location_tid_op';
   $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['identifier'] = 'field_scenario_location_tid';
   $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['multiple'] = TRUE;
