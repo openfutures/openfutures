@@ -15,3 +15,36 @@ function library_discover_page_form_alter(&$form, $form_state, $form_id) {
     // dpm($form);
   }
 }
+
+function library_discover_page_leaflet_map_info() {
+  return array(
+    'Custom OSM Mapnik' =>
+    array(
+      'label' => 'Custom OSM Mapnik',
+      'description' => t('Modified Leaflet default map.'),
+      'settings' => array(
+        'zoom' => 0,
+        'minZoom' => 0,
+        'maxZoom' => 5,
+        'dragging' => TRUE,
+        'touchZoom' => TRUE,
+        'scrollWheelZoom' => TRUE,
+        'doubleClickZoom' => TRUE,
+        'zoomControl' => TRUE,
+        'attributionControl' => TRUE,
+        'trackResize' => TRUE,
+        'fadeAnimation' => TRUE,
+        'zoomAnimation' => TRUE,
+        'closePopupOnClick' => TRUE,
+      ),
+      'layers' => array(
+        'earth' => array(
+          'urlTemplate' => 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+          'options' => array(
+            'attribution' => 'OSM Mapnik'
+          )
+        ),
+      ),
+    ),
+  );
+}
