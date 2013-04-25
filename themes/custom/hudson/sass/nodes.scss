@@ -101,6 +101,16 @@
     content: ",";
     color: $text-color-tertiary;
   }
+  .body-missing {
+    margin: 0 0 1em 0;
+    color: $text-color-tertiary;
+
+    a:link,
+    a:visited {
+      color: $text-color-tertiary;
+      font-style: italic;
+    }
+  }
   // .field-name-field-scenario-subject
 }
 
