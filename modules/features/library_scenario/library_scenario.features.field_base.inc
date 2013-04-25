@@ -329,13 +329,13 @@ function library_scenario_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_scenario_time'
-  $field_bases['field_scenario_time'] = array(
+  // Exported field_base: 'field_scenario_time_horizon'
+  $field_bases['field_scenario_time_horizon'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_scenario_time',
+    'field_name' => 'field_scenario_time_horizon',
     'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
@@ -356,7 +356,7 @@ function library_scenario_field_default_field_bases() {
       'tz_handling' => 'none',
     ),
     'translatable' => 0,
-    'type' => 'date',
+    'type' => 'datetime',
   );
 
   // Exported field_base: 'field_type'

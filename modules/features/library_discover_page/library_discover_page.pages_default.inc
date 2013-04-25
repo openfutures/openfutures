@@ -79,7 +79,7 @@ function library_discover_page_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = 'Discover scenarios';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -177,7 +177,7 @@ function library_discover_page_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = 'Discover scenarios';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -213,17 +213,11 @@ function library_discover_page_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-4';
     $pane->panel = 'middle';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'timeline_scenarios-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'test content',
-      'title' => '',
-      'body' => 'timeline display',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -235,7 +229,7 @@ function library_discover_page_default_page_manager_pages() {
     $display->content['new-4'] = $pane;
     $display->panels['middle'][1] = 'new-4';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-4';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $handler = new stdClass();

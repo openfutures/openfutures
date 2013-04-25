@@ -141,11 +141,13 @@ function library_improve_page_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'scenario' => 'scenario',
   );
-  /* Filter criterion: Content: Time Horizon -  start date (field_scenario_time) */
-  $handler->display->display_options['filters']['field_scenario_time_value']['id'] = 'field_scenario_time_value';
-  $handler->display->display_options['filters']['field_scenario_time_value']['table'] = 'field_data_field_scenario_time';
-  $handler->display->display_options['filters']['field_scenario_time_value']['field'] = 'field_scenario_time_value';
-  $handler->display->display_options['filters']['field_scenario_time_value']['operator'] = 'empty';
+  /* Filter criterion: Content: Time Horizon -  start date (field_scenario_time_horizon) */
+  $handler->display->display_options['filters']['field_scenario_time_horizon_value']['id'] = 'field_scenario_time_horizon_value';
+  $handler->display->display_options['filters']['field_scenario_time_horizon_value']['table'] = 'field_data_field_scenario_time_horizon';
+  $handler->display->display_options['filters']['field_scenario_time_horizon_value']['field'] = 'field_scenario_time_horizon_value';
+  $handler->display->display_options['filters']['field_scenario_time_horizon_value']['operator'] = 'empty';
+  $handler->display->display_options['filters']['field_scenario_time_horizon_value']['granularity'] = 'year';
+  $handler->display->display_options['filters']['field_scenario_time_horizon_value']['form_type'] = 'date_text';
   $handler->display->display_options['path'] = 'improve/time';
 
   /* Display: Descriptions pane */
@@ -202,16 +204,11 @@ function library_improve_page_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['label'] = '';
-  $handler->display->display_options['fields']['edit_node']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['edit_node']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['edit_node']['alter']['prefix'] = '(';
+  $handler->display->display_options['fields']['edit_node']['alter']['suffix'] = ')';
   $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['edit_node']['text'] = 'edit';
-  /* Field: Global: Custom text */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '([edit_node])';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
 
   /* Display: Locations pane */
   $handler = $view->new_display('panel_pane', 'Locations pane', 'panel_pane_2');
@@ -265,16 +262,11 @@ function library_improve_page_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['label'] = '';
-  $handler->display->display_options['fields']['edit_node']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['edit_node']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['edit_node']['alter']['prefix'] = '(';
+  $handler->display->display_options['fields']['edit_node']['alter']['suffix'] = ')';
   $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['edit_node']['text'] = 'edit';
-  /* Field: Global: Custom text */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '([edit_node])';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -352,15 +344,11 @@ function library_improve_page_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['label'] = '';
   $handler->display->display_options['fields']['edit_node']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['edit_node']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['edit_node']['alter']['prefix'] = '(';
+  $handler->display->display_options['fields']['edit_node']['alter']['suffix'] = ')';
   $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['edit_node']['text'] = 'edit';
-  /* Field: Global: Custom text */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '([edit_node])';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -377,12 +365,13 @@ function library_improve_page_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'scenario' => 'scenario',
   );
-  /* Filter criterion: Content: Time Horizon -  start date (field_scenario_time) */
-  $handler->display->display_options['filters']['field_scenario_time_value']['id'] = 'field_scenario_time_value';
-  $handler->display->display_options['filters']['field_scenario_time_value']['table'] = 'field_data_field_scenario_time';
-  $handler->display->display_options['filters']['field_scenario_time_value']['field'] = 'field_scenario_time_value';
-  $handler->display->display_options['filters']['field_scenario_time_value']['operator'] = 'empty';
-  $handler->display->display_options['filters']['field_scenario_time_value']['granularity'] = 'year';
+  /* Filter criterion: Content: Time Horizon -  start date (field_scenario_time_horizon) */
+  $handler->display->display_options['filters']['field_scenario_time_horizon_value']['id'] = 'field_scenario_time_horizon_value';
+  $handler->display->display_options['filters']['field_scenario_time_horizon_value']['table'] = 'field_data_field_scenario_time_horizon';
+  $handler->display->display_options['filters']['field_scenario_time_horizon_value']['field'] = 'field_scenario_time_horizon_value';
+  $handler->display->display_options['filters']['field_scenario_time_horizon_value']['operator'] = 'empty';
+  $handler->display->display_options['filters']['field_scenario_time_horizon_value']['granularity'] = 'year';
+  $handler->display->display_options['filters']['field_scenario_time_horizon_value']['form_type'] = 'date_text';
   $export['improve_scenarios'] = $view;
 
   return $export;

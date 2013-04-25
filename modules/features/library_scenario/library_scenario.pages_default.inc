@@ -483,7 +483,7 @@ function library_scenario_default_page_manager_handlers() {
     $pane->pid = 'new-14';
     $pane->panel = 'main';
     $pane->type = 'entity_form_field';
-    $pane->subtype = 'node:field_scenario_time';
+    $pane->subtype = 'node:field_scenario_time_horizon';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -1003,7 +1003,7 @@ function library_scenario_default_page_manager_handlers() {
     $pane->pid = 'new-32';
     $pane->panel = 'main';
     $pane->type = 'entity_form_field';
-    $pane->subtype = 'node:field_scenario_time';
+    $pane->subtype = 'node:field_scenario_time_horizon';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(

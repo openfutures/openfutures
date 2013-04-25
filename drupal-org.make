@@ -83,6 +83,9 @@ projects[simplified_menu_admin][version] = 1.0-beta2
 projects[url][subdir] = contrib
 projects[url][version] = 1.0
 
+projects[views_timelinejs][subdir] = contrib
+projects[views_timelinejs][revision] = b9308d0fe7a8576e15bbb63680501561dbbf3248
+
 ; Themes =====================================================================
 
 projects[zen][subdir] = base
@@ -100,3 +103,13 @@ libraries[leaflet][directory_name] = leaflet
 libraries[leaflet_markercluster][download][type] = file
 libraries[leaflet_markercluster][download][url] = https://github.com/Leaflet/Leaflet.markercluster/archive/master.zip
 libraries[leaflet_markercluster][directory_name] = leaflet_markercluster
+
+libraries[leaflet][download][type] = "git"
+libraries[leaflet][download][url] = "https://github.com/CloudMade/Leaflet.git"
+libraries[leaflet][download][revision] = "ae7561ec6b60ca376229193c06d90097536a034b"
+libraries[leaflet][directory_name] = "leaflet"
+
+
+libraries[timeline][download][type] = "file"
+libraries[timeline][download][url] = "https://github.com/VeriteCo/TimelineJS/archive/master.zip"
+libraries[timeline][directory_name] = "timeline"
