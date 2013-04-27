@@ -53,8 +53,9 @@ $zen-auto-include-item-base: false;
  */
 // See the note about $zen-auto-include-item-base above.
 
+/* #content has been taken out */
 #header,
-#content,
+#preface,
 .region-sidebar-first,
 .region-sidebar-second,
 #footer {
@@ -76,11 +77,143 @@ $zen-auto-include-item-base: false;
  */
 
 .sidebar-first {
-  #content { /* Span 6 columns, starting in 4th column from left. */
+  #preface {
     @include zen-grid-item(9, 1);
   }
 
-  .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
+  #content {
+    @include zen-clear(left);
+    @include zen-grid-item(9, 1);
+  }
+
+  .region-sidebar-first {
+    @include zen-grid-item(3, 1, right);
+  }
+}
+
+/*
+ * The layout when there is no sidebar.
+ */
+
+.no-sidebars.page-discover {
+  #content {
+    @include zen-grid-item-base();
+  }
+
+  #preface,
+  #content {
+    @include zen-clear(both);
+    @include zen-grid-item(12, 1);
+  }
+}
+
+/*
+ * The layout for the one-three-two template
+ */
+.no-sidebars.panel-layout-onethreetwo {
+  #content,
+  .panel-top-row,
+  .panel-ternary-col1,
+  .panel-ternary-col2,
+  .panel-ternary-col3,
+  .panel-binary-left,
+  .panel-binary-right {
+    @include zen-grid-item-base();
+  }
+
+  #preface {
+    @include zen-grid-item(12, 1);
+  }
+
+  #content {
+    @include zen-grid-item(12, 1);
+    @include zen-nested-container()
+  }
+  .panel-top-row {
+    @include zen-clear(both);
+    @include zen-grid-item(12, 1);
+  }
+  .panel-ternary-col1 {
+    @include zen-clear(both);
+    @include zen-grid-item(4, 1);
+  }
+  .panel-ternary-col2 {
+    @include zen-grid-item(4, 5);
+  }
+  .panel-ternary-col3 {
+    @include zen-grid-item(4, 9);
+  }
+  .panel-binary-left {
+    @include zen-clear(both);
+    @include zen-grid-item(9, 1);
+  }
+  .panel-binary-right {
     @include zen-grid-item(3, 10);
+  }
+}
+
+/*
+ * The layout for the eight-four template
+ */
+.no-sidebars.panel-layout-eightfour {
+  .panel-left,
+  .panel-right {
+    @include zen-grid-item-base();
+  }
+
+  #preface {
+    @include zen-grid-item(12, 1);
+  }
+
+  // #content {
+  //   @include zen-grid-item(12, 1);
+  //   @include zen-nested-container()
+  // }
+  .panel-left {
+    @include zen-clear(both);
+    @include zen-grid-item(8, 1);
+  }
+  .panel-right {
+    @include zen-grid-item(4, 9);
+  }
+}
+
+/*
+ * The layout for the eight-four-two template
+ */
+.no-sidebars.panel-layout-eightfourtwo {
+  .panel-main-col,
+  .panel-side-col,
+  .panel-left,
+  .panel-right,
+  .panel-bottom {
+    @include zen-grid-item-base();
+  }
+
+  #preface {
+    @include zen-grid-item(12, 1);
+  }
+
+  // #content {
+  //   // @include zen-grid-item(12, 1);
+  //   @include zen-nested-container()
+  // }
+  .panel-main-col {
+    @include zen-clear(both);
+    @include zen-grid-item(8, 1);
+  }
+  .panel-side-col {
+    @include zen-grid-item(4, 1, right);
+  }
+  .panel-left {
+    @include zen-clear(left);
+    @include zen-grid-item(4, 1);
+  }
+  .panel-right {
+    @include zen-grid-item(4, 5);
+  }
+  .panel-bottom {
+    @include zen-clear(left);
+    @include zen-grid-item(8, 1);
   }
 }

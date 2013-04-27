@@ -126,15 +126,18 @@
  * @param $hook
  *   The name of the template being rendered ("html" in this case.)
  */
-/* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess_html(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
+function hudson_preprocess_html(&$variables, $hook) {
 
   // The body tag's classes are controlled by the $classes_array variable. To
   // remove a class from $classes_array, use array_diff().
   //$variables['classes_array'] = array_diff($variables['classes_array'], array('class-to-remove'));
+
+  // Add a class to the body tag with the specific panel layout
+  if ($panel_page = panels_get_current_page_display()) {
+    // Set body class for the name of the panel page layout.
+    $variables['classes_array'][] = 'panel-layout-' . str_replace('_', '-', $panel_page->layout);
+  }
 }
-// */
 
 /**
  * Override or insert variables into the page templates.
@@ -176,10 +179,7 @@ function hudson_preprocess_page(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("node" in this case.)
  */
-/* -- Delete this line if you want to use this function
-function STARTERKIT_preprocess_node(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
-
+function hudson_preprocess_node(&$variables, $hook) {
   // Optionally, run node-type-specific preprocess functions, like
   // STARTERKIT_preprocess_node_page() or STARTERKIT_preprocess_node_story().
   $function = __FUNCTION__ . '_' . $variables['node']->type;
@@ -187,7 +187,28 @@ function STARTERKIT_preprocess_node(&$variables, $hook) {
     $function($variables, $hook);
   }
 }
-// */
+
+/**
+ * Override or insert variables into the scenario node templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered ("node" in this case.)
+ */
+function hudson_preprocess_node_scenario(&$vars, $hook) {
+  $node = $vars['node'];
+
+  // Add call to action for scenarios missing body text
+  if ($vars['view_mode'] == 'teaser' && empty($vars['body'])) {
+    $markup = array(
+      '#markup' => t("Improve this scenario by !edit.", array('!edit' => l(t('adding a description'), "node/$node->nid/edit"))),
+      '#prefix' => '<p class="body-missing">',
+      '#suffix' => '</p>',
+    );
+    $vars['content']['body'] = $markup;
+  }
+}
 
 /**
  * Override or insert variables into the comment templates.
@@ -315,6 +336,8 @@ function hudson_form_scenario_node_form_alter(&$form, &$form_state, $form_id) {
   // FORM_ID is "user_register_form" this code would run only on the user
   // registration form.
   // kpr($form);
+  // kpr($form);
+  // drupal_set_message('template form alter firing');
   // kpr($form);
 
   // Add a checkbox to registration form about agreeing to terms of use.

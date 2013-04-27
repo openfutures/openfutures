@@ -46,6 +46,7 @@ $h3-font-size: 1.85 * $base-font-size;
 $h4-font-size: 1.38 * $base-font-size;
 $h5-font-size: 1.23 * $base-font-size;
 $h6-font-size: 1    * $base-font-size;
+$small-font-size: 0.846 * $base-font-size;
 
 // The following font family declarations are based on the Microsoft core web
 // fonts which are common fonts available on most computer systems. The DejaVu
@@ -85,8 +86,10 @@ $font-monospace:   $courier;
 $text-color: #222222;
 $text-color-secondary: #555555;
 $text-color-tertiary: #999999;
+$text-color-reverse: #ffffff;
 $heading-color: #222222;
 $rule-color: #cccccc;
+$rule-color-light: #dddddd;
 $link-color: #0678be;
 $brand-color-primary: #ff8800;
 $brand-color-secondary: #14cc9e;
@@ -95,6 +98,7 @@ $brand-color-highlight: #40f9ff;
 $bg-color: #f9f9f9;
 $bg-color-light: #fefefe;
 $bg-color-dark: #eeeeee;
+$bg-color-darker: #cccccc;
 
 // The amount lists, blockquotes and comments are indented.
 $indent-amount: 30px;

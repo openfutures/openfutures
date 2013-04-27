@@ -15,7 +15,11 @@ function openfutures_install_tasks() {
   $tasks = array(
     'openfutures_create_taxonomy_terms' => array(
       'display_name' => st('Create taxonomy terms'),
-      'type' => 'normal', // the default
+      'type' => 'normal',
+    ),
+    'openfutures_create_profile_nodes' => array(
+      'display_name' => st('Create profile content'),
+      'type' => 'normal',
     ),
   );
   return $tasks;
@@ -31,6 +35,31 @@ function openfutures_create_taxonomy_terms() {
   // Create terms to the Type vocab, http://dublincore.org/documents/dcmi-type-vocabulary/#H7
   $terms_dcmitype = _openfutures_dcmitype_terms();
   _openfutures_save_terms($terms_dcmitype, 'type');
+}
+
+/**
+ * Install task: Create profile content.
+ *
+ * This is a place we can create node content for things like terms and
+ * conditions.
+ */
+function openfutures_create_profile_nodes() {
+  $node = new stdClass();
+  $node->type = 'web_page';
+  node_object_prepare($node);
+  $node->title = 'Terms & Conditions';
+  $node->language = LANGUAGE_NONE;
+  $node->body[LANGUAGE_NONE][0]['value'] = 'Please update your terms and conditions content.';
+  $node->body[LANGUAGE_NONE][0]['format'] = 'plain_text';
+  $node->uid = 1;
+  node_save($node);
+  drupal_set_message('my node got done: '.$node->nid);
+  // Set the alias to /terms
+  $path = array(
+    'source' => 'node/' . $node->nid,
+    'alias' => 'terms',
+  );
+  path_save($path);
 }
 
 /**

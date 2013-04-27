@@ -41,11 +41,13 @@ stylesheets[all][] = css/nodes.css
 stylesheets[all][] = css/comments.css
 stylesheets[all][] = css/forms.css
 stylesheets[all][] = css/fields.css
+stylesheets[all][] = css/panels.css
 stylesheets[all][] = css/print.css
+stylesheets[all][] = http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600
 
 ; Optionally add some JavaScripts to your theme.
 
-;scripts[] = js/script.js
+scripts[] = js/script.js
 
 ; This section lists the regions defined in Zen's default page.tpl.php and
 ; maintenance-page.tpl.php files. The name in brackets is the machine name of

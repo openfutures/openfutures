@@ -76,23 +76,6 @@
 <!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html <?php print $html_attributes . $rdf_namespaces; ?>><!--<![endif]-->
 
 <head profile="<?php print $grddl_profile; ?>">
-  <!-- Begin: Custom fonts -->
-  <script type="text/javascript">
-  WebFontConfig = {
-    google: { families: [ 'Open+Sans:400italic,600italic,400,600:latin' ] }
-  };
-  (function() {
-    var wf = document.createElement('script');
-    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-    wf.type = 'text/javascript';
-    wf.async = 'true';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(wf, s);
-  })();
-  </script>
-  <!-- End: Custom fonts -->
-
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
 

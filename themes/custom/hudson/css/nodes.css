@@ -53,6 +53,38 @@
 /* line 43, ../sass/nodes.scss */
 .node-teaser {
   /* A node displayed as teaser */
+  border-bottom: solid 1px #cccccc;
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+}
+/* line 48, ../sass/nodes.scss */
+.node-teaser .node-title {
+  font-size: 13px;
+  margin: 0;
+}
+/* line 52, ../sass/nodes.scss */
+.node-teaser .field-name-body {
+  margin-bottom: 1em;
+}
+/* line 55, ../sass/nodes.scss */
+.node-teaser .field-name-body p {
+  margin-top: 0;
+}
+/* line 59, ../sass/nodes.scss */
+.node-teaser span.field-label {
+  display: inline-block;
+  padding: 0;
+  color: #999999;
+}
+/* line 64, ../sass/nodes.scss */
+.node-teaser .field-label-inline {
+  display: inline-block;
+}
+/* line 67, ../sass/nodes.scss */
+.node-teaser .links.inline {
+  display: block;
+  margin: 0;
+  text-align: right;
 }
 
 /*
@@ -60,23 +92,23 @@
  * it is. If you create a new content type called "my-custom-type", it will
  * receive a "node-my-custom-type" class.
  */
-/* line 52, ../sass/nodes.scss */
+/* line 80, ../sass/nodes.scss */
 .node-page {
   /* Page content node */
 }
 
-/* line 55, ../sass/nodes.scss */
+/* line 83, ../sass/nodes.scss */
 .node-article {
   /* Article content node */
 }
 
-/* line 58, ../sass/nodes.scss */
+/* line 86, ../sass/nodes.scss */
 .node-unpublished {
   /* Unpublished nodes */
   /* background-color: #fff4f4; */
   /* Drupal core uses a #fff4f4 background */
 }
-/* line 61, ../sass/nodes.scss */
+/* line 89, ../sass/nodes.scss */
 .node-unpublished p.unpublished {
   /* The word "Unpublished" displayed underneath the content. */
   height: 0;
@@ -89,4 +121,76 @@
   text-transform: uppercase;
   text-align: center;
   word-wrap: break-word;
+}
+
+/* line 94, ../sass/nodes.scss */
+.node-scenario {
+  /* Scenario content node */
+}
+
+/* line 97, ../sass/nodes.scss */
+.node-scenario.node-teaser .field-label + .field-name-field-scenario-subject:before {
+  content: none;
+}
+/* line 100, ../sass/nodes.scss */
+.node-scenario.node-teaser .field-name-field-scenario-subject:before {
+  content: ",";
+  color: #999999;
+}
+/* line 104, ../sass/nodes.scss */
+.node-scenario.node-teaser .body-missing {
+  margin: 0 0 1em 0;
+  color: #999999;
+}
+/* line 109, ../sass/nodes.scss */
+.node-scenario.node-teaser .body-missing a:link,
+.node-scenario.node-teaser .body-missing a:visited {
+  color: #999999;
+  font-style: italic;
+}
+
+/* line 120, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-item-title,
+.page-node-edit .node-scenario-form .form-item-title {
+  font-size: 1.23em;
+  margin-bottom: 0;
+}
+/* line 126, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-item-title input,
+.page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-source input,
+.page-node-edit .node-scenario-form .form-item-title input,
+.page-node-edit .node-scenario-form .form-field-name-field-scenario-source input {
+  width: 100%;
+  height: 2.12em;
+  box-sizing: border-box;
+}
+/* line 132, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-source .form-wrapper,
+.page-node-edit .node-scenario-form .form-field-name-field-scenario-source .form-wrapper {
+  margin-top: 0;
+}
+/* line 136, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-actions,
+.page-node-edit .node-scenario-form .form-actions {
+  margin-top: 3em;
+  padding: 1em;
+  font-size: 1.23em;
+  border: 1px solid transparent;
+  background: #eeeeee;
+  border-radius: 4px;
+}
+/* line 144, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-actions input[type="submit"],
+.page-node-edit .node-scenario-form .form-actions input[type="submit"] {
+  margin-bottom: 1em;
+}
+/* line 149, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form div.vertical-tabs,
+.page-node-edit .node-scenario-form div.vertical-tabs {
+  margin-top: 2em;
+}
+/* line 153, ../sass/nodes.scss */
+.page-node-add-scenario div.messages,
+.page-node-edit div.messages {
+  margin-bottom: 0;
 }

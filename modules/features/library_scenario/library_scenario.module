@@ -5,3 +5,24 @@
  */
 
 include_once 'library_scenario.features.inc';
+
+/**
+ * Implement hook_form_FORM_ID_alter(&$form, &$form_state, $form_id)
+ */
+function library_scenario_form_scenario_node_form_alter(&$form, &$form_state, $form_id) {
+  $form['actions']['submit']['#submit'][] = '_library_scenario_submit';
+}
+
+/**
+ * Custom function on submission of scenario node form
+ */
+function _library_scenario_submit($form, &$form_state) {
+  // Before we redirect what's the path we're coming from?
+  $path = arg();
+  if ($path[1] == "add") {
+    $redirect = implode('/', $path);
+    // redirect to either default or expanded scenario add form
+    $form_state['redirect'] = $redirect;
+  }
+
+}

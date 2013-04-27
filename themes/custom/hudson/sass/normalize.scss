@@ -214,6 +214,8 @@ h1 {
   /* Sets 1 unit of vertical rhythm on the top and bottom margins. */
   @include leader(1, $h1-font-size);
   @include trailer(1, $h1-font-size);
+
+  font-weight: normal;
 }
 
 h2 {

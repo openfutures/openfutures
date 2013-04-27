@@ -60,8 +60,13 @@ li a.active {
 #main-menu li.first a:hover {
   color: #ff8800;
 }
+/* line 78, ../sass/navigation.scss */
+#main-menu li.last a.active,
+#main-menu li.last a:hover {
+  color: #0678be;
+}
 
-/* line 77, ../sass/navigation.scss */
+/* line 84, ../sass/navigation.scss */
 #secondary-menu {
   position: absolute;
   right: 0;
@@ -78,3 +83,216 @@ li a.active {
  * Drupal core has limited ways in which it can display its menus. To get around
  * these limitations, see http://drupal.org/project/menu_block
  */
+/*
+ * Call to action button styling
+ */
+/* line 113, ../sass/navigation.scss */
+.action-large {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  display: block;
+  border: solid 1px #cccccc;
+  text-align: center;
+  padding: 1.23em 0 1.85em 0;
+  cursor: pointer;
+}
+/* line 121, ../sass/navigation.scss */
+.action-large h3 {
+  margin: 0;
+}
+/* line 125, ../sass/navigation.scss */
+.action-large p {
+  margin: 0.85em 0 0 0;
+  font-size: 15.99px;
+  color: #999999;
+  font-weight: bold;
+}
+
+/* line 132, ../sass/navigation.scss */
+a.action-large {
+  color: #222222;
+}
+
+/* line 136, ../sass/navigation.scss */
+a.action-large:hover {
+  text-decoration: none;
+}
+
+/* line 140, ../sass/navigation.scss */
+a.action-large.discover {
+  border-color: #ff8800;
+}
+
+/* line 143, ../sass/navigation.scss */
+a.action-large.contribute {
+  border-color: #14cc9e;
+}
+
+/* line 146, ../sass/navigation.scss */
+a.action-large.improve {
+  border-color: #0678be;
+}
+
+/* line 150, ../sass/navigation.scss */
+a.action {
+  display: block;
+  text-align: center;
+  font-size: 15.99px;
+  padding: 0.5em;
+  color: white;
+  font-weight: bold;
+  background-color: #222222;
+}
+
+/* line 160, ../sass/navigation.scss */
+a.action:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 164, ../sass/navigation.scss */
+a.action.submit-scenario {
+  background-color: #14cc9e;
+}
+
+/*
+ * Add scenario edit mode buttons
+ */
+/* line 172, ../sass/navigation.scss */
+.no-sidebars.panel-layout-eightfourtwo .panel-side-col,
+.no-sidebars.panel-layout-eightfour .panel-right {
+  position: relative;
+}
+
+/* line 176, ../sass/navigation.scss */
+.edit-mode {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+/* line 181, ../sass/navigation.scss */
+.edit-mode ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 186, ../sass/navigation.scss */
+.edit-mode ul li:first-child {
+  margin-left: 0;
+}
+/* line 189, ../sass/navigation.scss */
+.edit-mode ul li:first-child a {
+  background-position: 7px 7px;
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+/* line 197, ../sass/navigation.scss */
+.edit-mode ul li:last-child a {
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+/* line 203, ../sass/navigation.scss */
+.edit-mode ul li {
+  float: left;
+  margin-left: -1px;
+}
+/* line 207, ../sass/navigation.scss */
+.edit-mode ul li a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  padding: 6px;
+  border: 1px solid #dddddd;
+  background: #eeeeee url("../images/glyphicons/glyphicons_030_pencil.png") 6px 6px no-repeat;
+}
+/* line 215, ../sass/navigation.scss */
+.edit-mode ul li a span {
+  display: none;
+}
+/* line 220, ../sass/navigation.scss */
+.edit-mode ul li a.active {
+  background-color: #fefefe;
+}
+/* line 224, ../sass/navigation.scss */
+.edit-mode ul li a.mode-expanded {
+  background-image: url("../images/glyphicons/glyphicons_280_settings.png");
+}
+
+/*
+ * Discover page display mode buttons
+ */
+/* line 237, ../sass/navigation.scss */
+.display-mode {
+  float: right;
+  width: 114px;
+}
+/* line 241, ../sass/navigation.scss */
+.display-mode ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 246, ../sass/navigation.scss */
+.display-mode ul li:first-child {
+  margin-left: 0;
+}
+/* line 249, ../sass/navigation.scss */
+.display-mode ul li:first-child a {
+  background-position: 7px 7px;
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+/* line 257, ../sass/navigation.scss */
+.display-mode ul li:last-child a {
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+/* line 263, ../sass/navigation.scss */
+.display-mode ul li {
+  float: left;
+  margin-left: -1px;
+}
+/* line 267, ../sass/navigation.scss */
+.display-mode ul li a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  padding: 6px;
+  border: 1px solid #dddddd;
+  background: #eeeeee url("../images/glyphicons/glyphicons_114_list.png") 6px 6px no-repeat;
+}
+/* line 275, ../sass/navigation.scss */
+.display-mode ul li a span {
+  display: none;
+}
+/* line 280, ../sass/navigation.scss */
+.display-mode ul li a.active {
+  background-color: #fefefe;
+}
+/* line 284, ../sass/navigation.scss */
+.display-mode ul li a.mode-timeline {
+  background-image: url("../images/glyphicons/glyphicons_045_calendar.png");
+}
+/* line 289, ../sass/navigation.scss */
+.display-mode ul li a.mode-map {
+  background-image: url("../images/glyphicons/glyphicons_370_globe_af.png");
+}

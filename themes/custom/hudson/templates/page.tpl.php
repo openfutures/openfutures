@@ -136,8 +136,7 @@
   </header>
 
   <div id="main">
-
-    <div id="content" class="column" role="main">
+    <div id="preface">
       <?php print render($page['highlighted']); ?>
       <?php print $breadcrumb; ?>
       <a id="main-content"></a>
@@ -152,6 +151,9 @@
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
+    </div>
+
+    <div id="content" class="column" role="main">
       <?php print render($page['content']); ?>
       <?php print $feed_icons; ?>
     </div><!-- /#content -->

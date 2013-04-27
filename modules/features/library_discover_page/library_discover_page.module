@@ -5,3 +5,46 @@
  */
 
 include_once 'library_discover_page.features.inc';
+
+/**
+ * Implements hook_form_alter().
+ * @see http://drupal.org/node/1079826 for more information on this code.
+ */
+function library_discover_page_form_alter(&$form, $form_state, $form_id) {
+  if ($form_id == 'views_exposed_form' && $form_state['view']->name == 'browse_scenarios') {
+    // dpm($form);
+  }
+}
+
+function library_discover_page_leaflet_map_info() {
+  return array(
+    'Custom OSM Mapnik' =>
+    array(
+      'label' => 'Custom OSM Mapnik',
+      'description' => t('Modified Leaflet default map.'),
+      'settings' => array(
+        'zoom' => 0,
+        'minZoom' => 0,
+        'maxZoom' => 5,
+        'dragging' => TRUE,
+        'touchZoom' => TRUE,
+        'scrollWheelZoom' => TRUE,
+        'doubleClickZoom' => TRUE,
+        'zoomControl' => TRUE,
+        'attributionControl' => TRUE,
+        'trackResize' => TRUE,
+        'fadeAnimation' => TRUE,
+        'zoomAnimation' => TRUE,
+        'closePopupOnClick' => TRUE,
+      ),
+      'layers' => array(
+        'earth' => array(
+          'urlTemplate' => 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+          'options' => array(
+            'attribution' => 'OSM Mapnik'
+          )
+        ),
+      ),
+    ),
+  );
+}

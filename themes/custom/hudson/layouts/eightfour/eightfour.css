@@ -1,0 +1,36 @@
+/**
+ * @file
+ * Eight Four layout styling
+ */
+
+.panel-eightfour .panel-right .pane-views-panes {
+  margin-top: 2em;
+}
+
+.panel-eightfour .panel-right .pane-views-panes .pane-title {
+  font-size: 1.23em;
+  margin: 0 0 0.625em 0;
+  padding-bottom: 0.625em;
+  border-bottom: solid 1px #ccc;
+}
+
+.panel-eightfour .panel-right .pane-views-panes table,
+.panel-eightfour .panel-right .pane-views-panes tbody {
+  margin: 0;
+  border: none;
+}
+
+.panel-eightfour .panel-right .pane-views-panes table {
+  width: 100%;
+  color: #555;
+}
+
+.panel-eightfour .panel-right .pane-views-panes table td {
+  vertical-align: top;
+  padding-bottom: 0.5em;
+}
+
+.panel-eightfour .panel-right .pane-views-panes table td.views-field-view-node,
+.panel-eightfour .panel-right .pane-views-panes table td.views-field-edit-node {
+  padding-left: 1em;
+}

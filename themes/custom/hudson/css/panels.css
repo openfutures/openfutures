@@ -1,0 +1,76 @@
+/**
+ * @file
+ * Panels Styling
+ *
+ * Styling for custom pages
+ */
+/*
+ * Contribute page.
+ */
+/* line 15, ../sass/panels.scss */
+.page-contribute .center-wrapper {
+  clear: both;
+}
+/* line 20, ../sass/panels.scss */
+.page-contribute .pane-bundle-image-feature .pane-title {
+  font-weight: normal;
+}
+/* line 26, ../sass/panels.scss */
+.page-contribute .pane-bundle-image-feature .pane-title,
+.page-contribute .pane-bundle-image-feature .field-name-field-image-feature-text,
+.page-contribute .pane-bundle-image-feature .field-name-field-image-feature-image {
+  width: 50%;
+  float: left;
+}
+/* line 31, ../sass/panels.scss */
+.page-contribute .pane-bundle-image-feature .field-name-field-image-feature-text {
+  clear: left;
+}
+/* line 34, ../sass/panels.scss */
+.page-contribute .pane-bundle-image-feature .field-name-field-image-feature-text p {
+  margin-top: 0;
+}
+/* line 43, ../sass/panels.scss */
+.page-contribute .panel-col-first .pane-title,
+.page-contribute .panel-col .pane-title,
+.page-contribute .panel-col-last .pane-title {
+  font-size: 15.99px;
+}
+
+/*
+ * Improve page.
+ */
+/* line 56, ../sass/panels.scss */
+.page-improve .pane-views-panes .pane-title {
+  font-size: 15.99px;
+  border-bottom: solid 1px #cccccc;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+}
+/* line 63, ../sass/panels.scss */
+.page-improve .pane-views-panes .view-header {
+  margin-bottom: 1em;
+}
+/* line 68, ../sass/panels.scss */
+.page-improve .panel-row-top {
+  /* top row region */
+}
+/* line 69, ../sass/panels.scss */
+.page-improve .panel-row-top .pane-title {
+  font-weight: normal;
+}
+/* line 75, ../sass/panels.scss */
+.page-improve .panel-row-top .pane-title,
+.page-improve .panel-row-top .field-name-field-image-feature-text,
+.page-improve .panel-row-top .field-name-field-image-feature-image {
+  width: 50%;
+  float: left;
+}
+/* line 80, ../sass/panels.scss */
+.page-improve .panel-row-top .field-name-field-image-feature-text {
+  clear: left;
+}
+/* line 83, ../sass/panels.scss */
+.page-improve .panel-row-top .field-name-field-image-feature-text p {
+  margin-top: 0;
+}
