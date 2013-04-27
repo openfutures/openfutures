@@ -231,7 +231,7 @@ function library_improve_page_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['inline'] = array(
     'title' => 'title',
-    'nothing' => 'nothing',
+    'edit_node' => 'edit_node',
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
@@ -312,7 +312,7 @@ function library_improve_page_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['inline'] = array(
     'title' => 'title',
-    'nothing' => 'nothing',
+    'edit_node' => 'edit_node',
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
@@ -343,7 +343,6 @@ function library_improve_page_views_default_views() {
   $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
   $handler->display->display_options['fields']['edit_node']['label'] = '';
-  $handler->display->display_options['fields']['edit_node']['exclude'] = TRUE;
   $handler->display->display_options['fields']['edit_node']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['edit_node']['alter']['prefix'] = '(';
   $handler->display->display_options['fields']['edit_node']['alter']['suffix'] = ')';

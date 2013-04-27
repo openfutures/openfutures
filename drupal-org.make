@@ -20,6 +20,9 @@ projects[admin_menu][version] = 3.0-rc4
 projects[backup_migrate][subdir] = contrib
 projects[backup_migrate][version] = 2.5
 
+projects[captcha][subdir] = contrib
+projects[captcha][version] = 1.0-beta2
+
 projects[date][subdir] = contrib
 projects[date][version] = 2.6
 
@@ -76,6 +79,9 @@ projects[panelizer][version] = 3.1
 
 projects[r4032login][subdir] = contrib
 projects[r4032login][version] = 1.5
+
+projects[recaptcha][subdir] = contrib
+projects[recaptcha][version] = 1.9
 
 projects[simplified_menu_admin][subdir] = contrib
 projects[simplified_menu_admin][version] = 1.0-beta2
