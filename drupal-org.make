@@ -29,6 +29,12 @@ projects[date][version] = 2.6
 projects[entity][subdir] = contrib
 projects[entity][version] = 1.0
 
+projects[feeds][subdir] = contrib
+projects[feeds][version] = 2.0-alpha8
+
+projects[feeds_tamper][subdir] = contrib
+projects[feeds_tamper][version] = 1.0-beta4
+
 projects[fences][subdir] = contrib
 projects[fences][version] = 1.0
 
@@ -46,6 +52,9 @@ projects[geofield][version] = 1.1
 
 projects[geophp][subdir] = contrib
 projects[geophp][version] = 1.7
+
+projects[job_scheduler][subdir] = contrib
+projects[job_scheduler][version] = 2.0-alpha3
 
 projects[jquery_update][subdir] = contrib
 projects[jquery_update][version] = 2.3
