@@ -49,7 +49,7 @@ function library_import_feeds_importer_default() {
           ),
           1 => array(
             'source' => 'source',
-            'target' => 'url',
+            'target' => 'field_scenario_source',
             'unique' => 0,
           ),
           2 => array(
