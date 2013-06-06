@@ -31,6 +31,7 @@ projects[entity][version] = 1.0
 
 projects[feeds][subdir] = contrib
 projects[feeds][version] = 2.0-alpha8
+projects[feeds][patch][] = "https://drupal.org/files/2013238-1-feeds-url-module-support.patch"
 
 projects[feeds_tamper][subdir] = contrib
 projects[feeds_tamper][version] = 1.0-beta4

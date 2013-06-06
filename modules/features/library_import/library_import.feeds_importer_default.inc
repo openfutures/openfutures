@@ -49,8 +49,8 @@ function library_import_feeds_importer_default() {
           ),
           1 => array(
             'source' => 'source',
-            'target' => 'field_scenario_source',
-            'unique' => 0,
+            'target' => 'field_scenario_source:value',
+            'unique' => FALSE,
           ),
           2 => array(
             'source' => 'description',
