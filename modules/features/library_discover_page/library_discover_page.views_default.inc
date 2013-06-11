@@ -639,6 +639,11 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['date_filter_1']['date_fields'] = array(
     'field_data_field_scenario_time_horizon.field_scenario_time_horizon_value2' => 'field_data_field_scenario_time_horizon.field_scenario_time_horizon_value2',
   );
+  /* Filter criterion: Content: Time Horizon -  start date (field_scenario_time_horizon) */
+  $handler->display->display_options['filters']['field_scenario_time_horizon_value']['id'] = 'field_scenario_time_horizon_value';
+  $handler->display->display_options['filters']['field_scenario_time_horizon_value']['table'] = 'field_data_field_scenario_time_horizon';
+  $handler->display->display_options['filters']['field_scenario_time_horizon_value']['field'] = 'field_scenario_time_horizon_value';
+  $handler->display->display_options['filters']['field_scenario_time_horizon_value']['operator'] = 'not empty';
 
   /* Display: Timeline scenario pane */
   $handler = $view->new_display('panel_pane', 'Timeline scenario pane', 'panel_pane_1');

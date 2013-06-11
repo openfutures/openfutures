@@ -201,6 +201,26 @@ function library_improve_page_default_page_manager_pages() {
     $pane->locks = array();
     $display->content['new-3'] = $pane;
     $display->panels['3'][0] = 'new-3';
+    $pane = new stdClass();
+    $pane->pid = 'new-4';
+    $pane->panel = 'center';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'fpid:3';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'view_mode' => 'full',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-4'] = $pane;
+    $display->panels['center'][0] = 'new-4';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
