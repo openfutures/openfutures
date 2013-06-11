@@ -96,6 +96,12 @@ projects[recaptcha][version] = 1.9
 projects[simplified_menu_admin][subdir] = contrib
 projects[simplified_menu_admin][version] = 1.0-beta2
 
+projects[token][subdir] = contrib
+projects[token][version] = 1.5
+
+projects[token_filter][subdir] = contrib
+projects[token_filter][version] = 1.1
+
 projects[url][subdir] = contrib
 projects[url][version] = 1.0
 

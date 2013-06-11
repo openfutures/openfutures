@@ -32,6 +32,7 @@ function library_scenario_user_default_permissions() {
   $permissions['delete own scenario content'] = array(
     'name' => 'delete own scenario content',
     'roles' => array(
+      'authenticated user' => 'authenticated user',
       'editor' => 'editor',
     ),
     'module' => 'node',
