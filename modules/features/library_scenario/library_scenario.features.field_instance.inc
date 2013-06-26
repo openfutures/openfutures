@@ -546,7 +546,7 @@ function library_scenario_field_default_field_instances() {
   $field_instances['node-scenario-field_scenario_time_horizon'] = array(
     'bundle' => 'scenario',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Choose between a single target year or a time range for the scenario time horizon.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -649,6 +649,7 @@ function library_scenario_field_default_field_instances() {
   t('An entity responsible for making contributions to the resource. Examples include a person, an organization, or a service.');
   t('An entity responsible for making the resource available. Examples include a person, an organization, or a service.');
   t('Attachment');
+  t('Choose between a single target year or a time range for the scenario time horizon.');
   t('Contributor');
   t('Creator');
   t('Description');
