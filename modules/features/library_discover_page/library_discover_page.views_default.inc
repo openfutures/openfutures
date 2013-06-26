@@ -170,6 +170,27 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['date_filter_3']['date_fields'] = array(
     'field_data_field_scenario_time_horizon.field_scenario_time_horizon_value2' => 'field_data_field_scenario_time_horizon.field_scenario_time_horizon_value2',
   );
+  /* Filter criterion: Date: Date (node) */
+  $handler->display->display_options['filters']['date_filter']['id'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['table'] = 'node';
+  $handler->display->display_options['filters']['date_filter']['field'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['operator'] = 'between';
+  $handler->display->display_options['filters']['date_filter']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['date_filter']['expose']['operator_id'] = 'date_filter_op';
+  $handler->display->display_options['filters']['date_filter']['expose']['label'] = 'Publish date';
+  $handler->display->display_options['filters']['date_filter']['expose']['description'] = 'Find scenarios published within a date range';
+  $handler->display->display_options['filters']['date_filter']['expose']['operator'] = 'date_filter_op';
+  $handler->display->display_options['filters']['date_filter']['expose']['identifier'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['date_filter']['granularity'] = 'month';
+  $handler->display->display_options['filters']['date_filter']['form_type'] = 'date_text';
+  $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
+    'field_data_field_scenario_date.field_scenario_date_value' => 'field_data_field_scenario_date.field_scenario_date_value',
+  );
 
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
