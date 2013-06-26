@@ -185,7 +185,7 @@ function library_scenario_field_default_field_instances() {
   $field_instances['node-scenario-field_scenario_date'] = array(
     'bundle' => 'scenario',
     'deleted' => 0,
-    'description' => 'Typically, date will be associated with the creation or availability of the resource; for example, when it was published.',
+    'description' => 'Typically, publish date will be associated with the creation or availability of the resource; for example, when it was published.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -224,13 +224,13 @@ function library_scenario_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'increment' => 15,
-        'input_format' => 'd/m/Y - H:i:s',
+        'input_format' => 'Y-m-d H:i:s',
         'input_format_custom' => '',
         'label_position' => 'none',
         'text_parts' => array(),
         'year_range' => '-100:+0',
       ),
-      'type' => 'date_popup',
+      'type' => 'date_text',
       'weight' => 11,
     ),
   );
@@ -664,7 +664,7 @@ function library_scenario_field_default_field_instances() {
   t('The nature or genre of the content of the resource. If the resource you are adding is a group of materials like a set of scenarios use “Collection”.');
   t('Time Horizon');
   t('Type');
-  t('Typically, date will be associated with the creation or availability of the resource; for example, when it was published.');
+  t('Typically, publish date will be associated with the creation or availability of the resource; for example, when it was published.');
   t('URL');
 
   return $field_instances;
