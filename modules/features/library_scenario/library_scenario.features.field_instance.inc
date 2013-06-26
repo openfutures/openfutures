@@ -56,6 +56,49 @@ function library_scenario_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-scenario-field_scenario_attachment'
+  $field_instances['node-scenario-field_scenario_attachment'] = array(
+    'bundle' => 'scenario',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 15,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_scenario_attachment',
+    'label' => 'Attachment',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'txt doc docx pdf',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 6,
+    ),
+  );
+
   // Exported field_instance: 'node-scenario-field_scenario_contributor'
   $field_instances['node-scenario-field_scenario_contributor'] = array(
     'bundle' => 'scenario',
@@ -326,7 +369,7 @@ function library_scenario_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
@@ -495,7 +538,7 @@ function library_scenario_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 6,
+      'weight' => 5,
     ),
   );
 
@@ -549,7 +592,7 @@ function library_scenario_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_text',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -605,6 +648,7 @@ function library_scenario_field_default_field_instances() {
   t('An entity primarily responsible for making the resource. Examples include a person, an organization, or a service.');
   t('An entity responsible for making contributions to the resource. Examples include a person, an organization, or a service.');
   t('An entity responsible for making the resource available. Examples include a person, an organization, or a service.');
+  t('Attachment');
   t('Contributor');
   t('Creator');
   t('Description');
