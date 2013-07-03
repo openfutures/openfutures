@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the admin module.
+ */
+
+/**
+ * Do some stuff when the scenario module is enabled.
+ */
+function library_scenario_enable() {
+  // Rebuild features ala http://drupal.org/node/981248#comment-6162034
+  features_rebuild();
+
+  // Create some taxonomy terms for the Rights vocab
+  $rights = array('All rights reserved', 'Some rights reserved', 'Public domain');
+
+  if ($vocab = taxonomy_vocabulary_machine_name_load('rights')) {
+    foreach ($rights as $name) {
+      $term = new stdClass();
+      $term->vid = $vocab->vid;
+      $term->name = $name;
+      taxonomy_term_save($term);
+    }
+  } else {
+    // Vocab isn't able to be loaded (yet)... send a message to the user.
+    drupal_set_message("The Library scenario module failed to create terms in the Rights vocabulary.", $type = 'warning', $repeat = TRUE);
+  }
+}
