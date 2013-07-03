@@ -56,6 +56,49 @@ function library_scenario_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-scenario-field_scenario_attachment'
+  $field_instances['node-scenario-field_scenario_attachment'] = array(
+    'bundle' => 'scenario',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 15,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_scenario_attachment',
+    'label' => 'Attachment',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'txt doc docx pdf',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 6,
+    ),
+  );
+
   // Exported field_instance: 'node-scenario-field_scenario_contributor'
   $field_instances['node-scenario-field_scenario_contributor'] = array(
     'bundle' => 'scenario',
@@ -142,7 +185,7 @@ function library_scenario_field_default_field_instances() {
   $field_instances['node-scenario-field_scenario_date'] = array(
     'bundle' => 'scenario',
     'deleted' => 0,
-    'description' => 'Typically, date will be associated with the creation or availability of the resource; for example, when it was published.',
+    'description' => 'Typically, publish date will be associated with the creation or availability of the resource; for example, when it was published.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -181,13 +224,13 @@ function library_scenario_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'increment' => 15,
-        'input_format' => 'd/m/Y - H:i:s',
+        'input_format' => 'Y-m-d H:i:s',
         'input_format_custom' => '',
         'label_position' => 'none',
         'text_parts' => array(),
         'year_range' => '-100:+0',
       ),
-      'type' => 'date_popup',
+      'type' => 'date_text',
       'weight' => 11,
     ),
   );
@@ -326,7 +369,7 @@ function library_scenario_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
@@ -376,20 +419,20 @@ function library_scenario_field_default_field_instances() {
     'bundle' => 'scenario',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Information about rights held in and over the resource. Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.',
+    'description' => 'Choose an option that best matches the rights description of the work.',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 11,
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
@@ -398,16 +441,13 @@ function library_scenario_field_default_field_instances() {
     'label' => 'Rights',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
       'weight' => 14,
     ),
   );
@@ -495,7 +535,7 @@ function library_scenario_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 6,
+      'weight' => 5,
     ),
   );
 
@@ -503,7 +543,7 @@ function library_scenario_field_default_field_instances() {
   $field_instances['node-scenario-field_scenario_time_horizon'] = array(
     'bundle' => 'scenario',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Choose between a single target year or a time range for the scenario time horizon.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -549,7 +589,7 @@ function library_scenario_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_text',
-      'weight' => 4,
+      'weight' => 3,
     ),
   );
 
@@ -605,11 +645,13 @@ function library_scenario_field_default_field_instances() {
   t('An entity primarily responsible for making the resource. Examples include a person, an organization, or a service.');
   t('An entity responsible for making contributions to the resource. Examples include a person, an organization, or a service.');
   t('An entity responsible for making the resource available. Examples include a person, an organization, or a service.');
+  t('Attachment');
+  t('Choose an option that best matches the rights description of the work.');
+  t('Choose between a single target year or a time range for the scenario time horizon.');
   t('Contributor');
   t('Creator');
   t('Description');
   t('Image');
-  t('Information about rights held in and over the resource. Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.');
   t('Language');
   t('Location');
   t('Publish Date');
@@ -620,7 +662,7 @@ function library_scenario_field_default_field_instances() {
   t('The nature or genre of the content of the resource. If the resource you are adding is a group of materials like a set of scenarios use “Collection”.');
   t('Time Horizon');
   t('Type');
-  t('Typically, date will be associated with the creation or availability of the resource; for example, when it was published.');
+  t('Typically, publish date will be associated with the creation or availability of the resource; for example, when it was published.');
   t('URL');
 
   return $field_instances;

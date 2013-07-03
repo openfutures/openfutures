@@ -9,7 +9,7 @@ function openfutures_install() {
   theme_enable(array('hudson', 'seven'));
   variable_set('theme_default', 'hudson');
   variable_set('admin_theme', 'seven');
-  variable_set('node_admin_theme', '1');
+  // variable_set('node_admin_theme', '1');
 
   // Create some user menu links
   $link1 = array(
