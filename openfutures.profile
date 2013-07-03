@@ -79,6 +79,9 @@ function openfutures_setup_ui() {
   // Update hudson theme settings
   $theme_settings = _openfutures_get_theme_settings();
   variable_set('theme_hudson_settings', $theme_settings);
+
+  // Turn on our custom node edit form
+  variable_set('page_manager_node_edit_disabled', FALSE);
 }
 
 /**
