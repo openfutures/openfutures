@@ -419,20 +419,20 @@ function library_scenario_field_default_field_instances() {
     'bundle' => 'scenario',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Information about rights held in and over the resource. Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.',
+    'description' => 'Choose an option that best matches the rights description of the work.',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 11,
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
@@ -441,16 +441,13 @@ function library_scenario_field_default_field_instances() {
     'label' => 'Rights',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
       'weight' => 14,
     ),
   );
@@ -649,12 +646,12 @@ function library_scenario_field_default_field_instances() {
   t('An entity responsible for making contributions to the resource. Examples include a person, an organization, or a service.');
   t('An entity responsible for making the resource available. Examples include a person, an organization, or a service.');
   t('Attachment');
+  t('Choose an option that best matches the rights description of the work.');
   t('Choose between a single target year or a time range for the scenario time horizon.');
   t('Contributor');
   t('Creator');
   t('Description');
   t('Image');
-  t('Information about rights held in and over the resource. Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.');
   t('Language');
   t('Location');
   t('Publish Date');

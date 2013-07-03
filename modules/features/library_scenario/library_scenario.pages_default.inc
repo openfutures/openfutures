@@ -714,7 +714,7 @@ function library_scenario_default_page_manager_handlers() {
     $pane->pid = 'new-23';
     $pane->panel = 'side';
     $pane->type = 'entity_form_field';
-    $pane->subtype = 'node:field_scenario_date';
+    $pane->subtype = 'node:field_scenario_rights';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -738,7 +738,7 @@ function library_scenario_default_page_manager_handlers() {
     $pane->pid = 'new-24';
     $pane->panel = 'side';
     $pane->type = 'entity_form_field';
-    $pane->subtype = 'node:field_scenario_rights';
+    $pane->subtype = 'node:field_scenario_date';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -1229,7 +1229,7 @@ function library_scenario_default_page_manager_handlers() {
     $pane->pid = 'new-41';
     $pane->panel = 'side';
     $pane->type = 'entity_form_field';
-    $pane->subtype = 'node:field_scenario_date';
+    $pane->subtype = 'node:field_scenario_rights';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -1253,7 +1253,7 @@ function library_scenario_default_page_manager_handlers() {
     $pane->pid = 'new-42';
     $pane->panel = 'side';
     $pane->type = 'entity_form_field';
-    $pane->subtype = 'node:field_scenario_rights';
+    $pane->subtype = 'node:field_scenario_date';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
