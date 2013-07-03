@@ -26,4 +26,12 @@ function library_scenario_enable() {
     // Vocab isn't able to be loaded (yet)... send a message to the user.
     drupal_set_message("The Library scenario module failed to create terms in the Rights vocabulary.", $type = 'warning', $repeat = TRUE);
   }
+
+  // We need to change some of the time horizon field elements using string overrides
+  $locale_custom_strings_en = array(
+    '' => array(
+      'Show End Date' => 'Use range of years'
+    )
+  );
+  variable_set('locale_custom_strings_en', $locale_custom_strings_en);
 }

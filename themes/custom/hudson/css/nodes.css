@@ -184,12 +184,45 @@
 .page-node-edit .node-scenario-form .form-actions input[type="submit"] {
   margin-bottom: 1em;
 }
-/* line 149, ../sass/nodes.scss */
+/* line 150, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-time-horizon .date-float,
+.page-node-edit .node-scenario-form .form-field-name-field-scenario-time-horizon .date-float {
+  float: right;
+  width: 30%;
+  text-align: right;
+}
+/* line 155, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-time-horizon .start-date-wrapper,
+.page-node-edit .node-scenario-form .form-field-name-field-scenario-time-horizon .start-date-wrapper {
+  float: left;
+  clear: none;
+  width: 25%;
+}
+/* line 160, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-time-horizon .end-date-wrapper,
+.page-node-edit .node-scenario-form .form-field-name-field-scenario-time-horizon .end-date-wrapper {
+  float: left;
+  clear: none;
+  width: 30%;
+}
+/* line 165, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-time-horizon .end-date-wrapper label,
+.page-node-edit .node-scenario-form .form-field-name-field-scenario-time-horizon .end-date-wrapper label {
+  margin: 1em 0;
+  float: left;
+}
+/* line 169, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-time-horizon .end-date-wrapper .date-padding,
+.page-node-edit .node-scenario-form .form-field-name-field-scenario-time-horizon .end-date-wrapper .date-padding {
+  width: 70%;
+  float: left;
+}
+/* line 176, ../sass/nodes.scss */
 .page-node-add-scenario .node-scenario-form div.vertical-tabs,
 .page-node-edit .node-scenario-form div.vertical-tabs {
   margin-top: 2em;
 }
-/* line 153, ../sass/nodes.scss */
+/* line 180, ../sass/nodes.scss */
 .page-node-add-scenario div.messages,
 .page-node-edit div.messages {
   margin-bottom: 0;
