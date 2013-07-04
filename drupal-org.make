@@ -108,6 +108,9 @@ projects[url][version] = 1.0
 projects[views_timelinejs][subdir] = contrib
 projects[views_timelinejs][revision] = b9308d0fe7a8576e15bbb63680501561dbbf3248
 
+projects[webform][subdir] = contrib
+projects[webform][version] = 4.0-alpha8
+
 ; Themes =====================================================================
 
 projects[zen][subdir] = base
