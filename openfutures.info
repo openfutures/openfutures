@@ -83,3 +83,4 @@ dependencies[] = library_engage_page
 dependencies[] = library_contribute_page
 dependencies[] = library_improve_page
 dependencies[] = library_import
+dependencies[] = library_trouble_tickets

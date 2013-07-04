@@ -1,0 +1,91 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the library trouble tickets
+ * module.
+ */
+
+/**
+ * Do some stuff when the scenario module is enabled.
+ */
+function library_trouble_tickets_enable() {
+  // Rebuild features ala http://drupal.org/node/981248#comment-6162034
+  // I think we need this so the webform module can get jiggy with the webform node type.
+  features_rebuild();
+
+  // Create a new webform node called 'Trouble ticket form'
+  if (node_type_load('webform')) {
+    $node = new stdClass();
+    $node->title = 'Trouble ticket form';
+    $node->type = 'webform';
+    node_object_prepare($node);
+    $node->language = LANGUAGE_NONE; // Or e.g. 'en' if locale is enabled
+    $node->body[LANGUAGE_NONE][0]['value'] = 'Report a technical problem with the Open Futures website.';
+    $node->body[LANGUAGE_NONE][0]['format'] = 'plain_text';
+    $node->uid = 1;
+
+    // Generate some components to our webform
+    $components = array();
+
+    // Issue title form element
+    $components[] = array(
+      'form_key' => 'title',
+      'name' => 'Title',
+      'type' => 'textfield',
+      'extra' => array(
+        'description' => 'Make your title descriptive and concise.',
+        'title_display' => 'none',
+        'placeholder' => 'Title',
+        'maxlength' => '255',
+      ),
+      'required' => '1',
+      'weight' => '0',
+      'pid' => '0',
+      'value' => '',
+    );
+
+    // Issue description form element
+    $components[] = array(
+      'form_key' => 'description',
+      'name' => 'Description',
+      'type' => 'textarea',
+      'extra' => array(
+        'description' => 'Please report one issue per ticket.',
+        'title_display' => 'none',
+        'rows' => '3',
+        'placeholder' => 'Leave a comment',
+        'maxlength' => '255',
+      ),
+      'required' => '0',
+      'weight' => '1',
+      'pid' => '0',
+      'value' => '',
+    );
+
+    // Setup the webform specific configuration.
+    $webform = array(
+      'confirmation' => 'Trouble ticket submitted successfully.',
+      'redirect_url' => '<confirmation>',
+      'status' => '1',
+      'block' => '1',
+      'teaser' => '1',
+      'allow_draft' => '1',
+      'submit_notice' => '1',
+      'submit_text' => 'Submit issue',
+      'roles' => array(
+        0 => '2',
+      ),
+      'components' => $components, // Add the components we put together previously
+    );
+
+    $node->webform = $webform;
+    node_save($node);
+    drupal_set_message('Trouble ticket webform created at nid:'.$node->nid);
+
+    variable_set('library_trouble_tickets_node', $node->nid); // just in case we want to delete this later or do other stuff.
+
+  }
+
+
+}
