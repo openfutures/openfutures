@@ -95,7 +95,7 @@ function library_scenario_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -136,7 +136,7 @@ function library_scenario_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -177,7 +177,7 @@ function library_scenario_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -231,7 +231,51 @@ function library_scenario_field_default_field_instances() {
         'year_range' => '-100:+0',
       ),
       'type' => 'date_text',
-      'weight' => 11,
+      'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance: 'node-scenario-field_scenario_global'
+  $field_instances['node-scenario-field_scenario_global'] = array(
+    'bundle' => 'scenario',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 17,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'fences_wrapper' => 'div',
+    'field_name' => 'field_scenario_global',
+    'label' => 'Global coverage',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 6,
     ),
   );
 
@@ -282,7 +326,7 @@ function library_scenario_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -328,7 +372,7 @@ function library_scenario_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 13,
+      'weight' => 14,
     ),
   );
 
@@ -356,7 +400,7 @@ function library_scenario_field_default_field_instances() {
     'entity_type' => 'node',
     'fences_wrapper' => 'div',
     'field_name' => 'field_scenario_location',
-    'label' => 'Location',
+    'label' => 'Place name',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -369,7 +413,7 @@ function library_scenario_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -410,7 +454,7 @@ function library_scenario_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -448,7 +492,7 @@ function library_scenario_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 14,
+      'weight' => 15,
     ),
   );
 
@@ -535,7 +579,7 @@ function library_scenario_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -631,7 +675,7 @@ function library_scenario_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 
@@ -651,9 +695,10 @@ function library_scenario_field_default_field_instances() {
   t('Creator');
   t('Description');
   t('Enter the target year for the scenario. Use range of years to enter a start and end target range.');
+  t('Global coverage');
   t('Image');
   t('Language');
-  t('Location');
+  t('Place name');
   t('Publish Date');
   t('Publisher');
   t('Rights');

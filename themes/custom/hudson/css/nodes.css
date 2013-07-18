@@ -217,12 +217,27 @@
   width: 70%;
   float: left;
 }
-/* line 176, ../sass/nodes.scss */
+/* line 177, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .group-location .form-field-prefix,
+.page-node-edit .node-scenario-form .group-location .form-field-prefix {
+  margin-top: 0;
+}
+/* line 180, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .group-location .form-field-name-field-scenario-location .form-item,
+.page-node-edit .node-scenario-form .group-location .form-field-name-field-scenario-location .form-item {
+  margin-bottom: 0;
+}
+/* line 183, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .group-location .form-field-name-field-scenario-global .form-item,
+.page-node-edit .node-scenario-form .group-location .form-field-name-field-scenario-global .form-item {
+  margin-top: 0;
+}
+/* line 188, ../sass/nodes.scss */
 .page-node-add-scenario .node-scenario-form div.vertical-tabs,
 .page-node-edit .node-scenario-form div.vertical-tabs {
   margin-top: 2em;
 }
-/* line 180, ../sass/nodes.scss */
+/* line 192, ../sass/nodes.scss */
 .page-node-add-scenario div.messages,
 .page-node-edit div.messages {
   margin-bottom: 0;
