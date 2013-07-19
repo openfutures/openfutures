@@ -17,13 +17,14 @@ function library_trouble_tickets_enable() {
   // Create a new webform node called 'Trouble ticket form'
   if (node_type_load('webform')) {
     $node = new stdClass();
-    $node->title = 'Trouble ticket form';
+    $node->title = 'Report new issue';
     $node->type = 'webform';
     node_object_prepare($node);
     $node->language = LANGUAGE_NONE; // Or e.g. 'en' if locale is enabled
     $node->body[LANGUAGE_NONE][0]['value'] = 'Report a technical problem with the Open Futures website.';
     $node->body[LANGUAGE_NONE][0]['format'] = 'plain_text';
     $node->uid = 1;
+    $node->comment = '1';
 
     // Generate some components to our webform
     $components = array();
@@ -51,7 +52,7 @@ function library_trouble_tickets_enable() {
       'name' => 'Description',
       'type' => 'textarea',
       'extra' => array(
-        'description' => 'Please report one issue per ticket.',
+        'description' => 'Please report one issue per submission.',
         'title_display' => 'none',
         'rows' => '3',
         'placeholder' => 'Leave a comment',
@@ -65,7 +66,7 @@ function library_trouble_tickets_enable() {
 
     // Setup the webform specific configuration.
     $webform = array(
-      'confirmation' => 'Trouble ticket submitted successfully.',
+      'confirmation' => 'Issue submitted successfully.',
       'redirect_url' => '<confirmation>',
       'status' => '1',
       'block' => '1',
@@ -81,6 +82,12 @@ function library_trouble_tickets_enable() {
 
     $node->webform = $webform;
     node_save($node);
+    // Set the alias to /terms
+    $path = array(
+      'source' => 'node/' . $node->nid,
+      'alias' => 'help/report-issue',
+    );
+    path_save($path);
     drupal_set_message('Trouble ticket webform created at nid:'.$node->nid);
 
     variable_set('library_trouble_tickets_node', $node->nid); // just in case we want to delete this later or do other stuff.
