@@ -64,7 +64,10 @@ projects[languagefield][subdir] = contrib
 projects[languagefield][version] = 1.1
 
 projects[leaflet][subdir] = contrib
-projects[leaflet][version] = 1.0-beta2
+projects[leaflet][version] = 1.0-beta3
+
+; Leaflet stack got broken somewhere along the way. https://drupal.org/node/1954942#comment-7643639
+projects[leaflet][patch][] = "https://drupal.org/files/leaflet-fix_leaflet_library_location-1954942-11_0.patch"
 
 projects[leaflet_markercluster][subdir] = contrib
 projects[leaflet_markercluster][version] = 1.0-beta1
@@ -128,18 +131,12 @@ projects[rubik][subdir] = base
 ; Libraries ==================================================================
 
 libraries[leaflet][download][type] = file
-libraries[leaflet][download][url] = https://github.com/Leaflet/Leaflet/archive/v0.5.1.zip
+libraries[leaflet][download][url] = http://leaflet-cdn.s3.amazonaws.com/build/leaflet-0.6.3.zip
 libraries[leaflet][directory_name] = leaflet
 
 libraries[leaflet_markercluster][download][type] = file
 libraries[leaflet_markercluster][download][url] = https://github.com/Leaflet/Leaflet.markercluster/archive/master.zip
 libraries[leaflet_markercluster][directory_name] = leaflet_markercluster
-
-libraries[leaflet][download][type] = "git"
-libraries[leaflet][download][url] = "https://github.com/CloudMade/Leaflet.git"
-libraries[leaflet][download][revision] = "ae7561ec6b60ca376229193c06d90097536a034b"
-libraries[leaflet][directory_name] = "leaflet"
-
 
 libraries[timeline][download][type] = "file"
 libraries[timeline][download][url] = "https://github.com/VeriteCo/TimelineJS/archive/master.zip"
