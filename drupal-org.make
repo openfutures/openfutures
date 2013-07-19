@@ -72,6 +72,12 @@ projects[leaflet_markercluster][version] = 1.0-beta1
 projects[libraries][subdir] = contrib
 projects[libraries][version] = 2.1
 
+projects[mailsystem][subdir] = contrib
+projects[mailsystem][version] = 2.34
+
+projects[mandrill][subdir] = contrib
+projects[mandrill][version] = 1.4
+
 projects[menu_block][subdir] = contrib
 projects[menu_block][version] = 2.3
 

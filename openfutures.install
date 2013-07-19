@@ -29,6 +29,7 @@ function openfutures_install() {
 
   // Update the menu router information.
   menu_rebuild();
+
 }
 
 /**

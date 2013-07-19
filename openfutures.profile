@@ -23,7 +23,12 @@ function openfutures_install_tasks() {
     ),
     'openfutures_setup_ui' => array(
       'display_name' => st('Setup UI'),
-      'type' => 'normal')
+      'type' => 'normal',
+    ),
+    'openfutures_setup_mail' => array(
+      'display_name' => st('Setup Mail'),
+      'type' => 'normal',
+    ),
   );
   return $tasks;
 }
@@ -82,6 +87,29 @@ function openfutures_setup_ui() {
 
   // Turn on our custom node edit form
   variable_set('page_manager_node_edit_disabled', FALSE);
+}
+
+/**
+ * Install task: Setup Mail
+ *
+ * Can't setup mail vars in .install for some reason.
+ */
+function openfutures_setup_mail() {
+  // Setup mail options
+  $mail_vars = array(
+    'update_notify_emails' => array('info@openfutures.net'),
+    'site_mail' => 'info@openfutures.net',
+    'mail_system' => array(
+      'default-system' => 'MandrillMailSystem',
+      'mandrill_test' => 'MandrillMailSystem'
+    ),
+    'mandrill_api_key' => '4jADr1uN9GJaAvJettmS_w',
+  );
+
+  // Save mail options
+  foreach ($mail_vars as $var => $value) {
+    variable_set($var, $value);
+  }
 }
 
 /**
