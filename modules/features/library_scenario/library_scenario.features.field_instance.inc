@@ -642,7 +642,7 @@ function library_scenario_field_default_field_instances() {
     'bundle' => 'scenario',
     'default_value' => array(
       0 => array(
-        'tid' => 11,
+        'tid' => 14,
       ),
     ),
     'deleted' => 0,
