@@ -501,7 +501,7 @@ function library_scenario_field_default_field_instances() {
     'bundle' => 'scenario',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'A link to the resource on the web.',
+    'description' => 'A link to the resource on the web. Make sure you include the full URL including "http://".',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -683,7 +683,7 @@ function library_scenario_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('A graphical representation of the scenario content to be used for thumbnails and other visual representations.');
   t('A language of the resource.');
-  t('A link to the resource on the web.');
+  t('A link to the resource on the web. Make sure you include the full URL including "http://".');
   t('A place name or geographic area that represents the specific spatial coverage of the scenario.');
   t('An account of the content of the resource. Description may include but is not limited to: an abstract, table of contents or a free-text account of the content.');
   t('An entity primarily responsible for making the resource. Examples include a person, an organization, or a service.');
