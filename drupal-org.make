@@ -40,7 +40,10 @@ projects[fences][subdir] = contrib
 projects[fences][version] = 1.0
 
 projects[field_group][subdir] = contrib
-projects[field_group][version] = 1.1
+; projects[field_group][version] = 1.1
+projects[field_group][revision] = c90651e80a8c4d3495dfd8476eaf83b6cd38175f
+; https://drupal.org/node/1278618 Panels integration for field groups on the node edit form.
+projects[field_group][patch][] = "https://drupal.org/files/1278618_field_group_panels-48.patch"
 
 projects[fieldable_panels_panes][subdir] = contrib
 projects[fieldable_panels_panes][version] = 1.4
@@ -139,5 +142,5 @@ libraries[leaflet_markercluster][download][url] = https://github.com/Leaflet/Lea
 libraries[leaflet_markercluster][directory_name] = leaflet_markercluster
 
 libraries[timeline][download][type] = "file"
-libraries[timeline][download][url] = "https://github.com/VeriteCo/TimelineJS/archive/master.zip"
+libraries[timeline][download][url] = "https://github.com/VeriteCo/TimelineJS/archive/v2.25.zip"
 libraries[timeline][directory_name] = "timeline"

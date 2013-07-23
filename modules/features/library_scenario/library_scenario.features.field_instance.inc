@@ -99,47 +99,6 @@ function library_scenario_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-scenario-field_scenario_contributor'
-  $field_instances['node-scenario-field_scenario_contributor'] = array(
-    'bundle' => 'scenario',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'An entity responsible for making contributions to the resource. Examples include a person, an organization, or a service.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 8,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 12,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_scenario_contributor',
-    'label' => 'Contributor',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 11,
-    ),
-  );
-
   // Exported field_instance: 'node-scenario-field_scenario_creator'
   $field_instances['node-scenario-field_scenario_creator'] = array(
     'bundle' => 'scenario',
@@ -687,11 +646,9 @@ function library_scenario_field_default_field_instances() {
   t('A place name or geographic area that represents the specific spatial coverage of the scenario.');
   t('An account of the content of the resource. Description may include but is not limited to: an abstract, table of contents or a free-text account of the content.');
   t('An entity primarily responsible for making the resource. Examples include a person, an organization, or a service.');
-  t('An entity responsible for making contributions to the resource. Examples include a person, an organization, or a service.');
   t('An entity responsible for making the resource available. Examples include a person, an organization, or a service.');
   t('Attachment');
   t('Choose an option that best matches the rights description of the work.');
-  t('Contributor');
   t('Creator');
   t('Description');
   t('Enter the target year for the scenario. Use range of years to enter a start and end target range.');
