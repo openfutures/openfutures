@@ -9,6 +9,9 @@
 
 @import "base";
 
+* {
+  @include box-sizing(border-box);
+}
 
 /*
  * Body

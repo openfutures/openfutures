@@ -210,8 +210,8 @@ a.action.submit-scenario {
 /* line 207, ../sass/navigation.scss */
 .edit-mode ul li a {
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 36px;
+  height: 36px;
   padding: 6px;
   border: 1px solid #dddddd;
   background: #eeeeee url("../images/glyphicons/glyphicons_030_pencil.png") 6px 6px no-repeat;
@@ -274,8 +274,8 @@ a.action.submit-scenario {
 /* line 267, ../sass/navigation.scss */
 .display-mode ul li a {
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 36px;
+  height: 36px;
   padding: 6px;
   border: 1px solid #dddddd;
   background: #eeeeee url("../images/glyphicons/glyphicons_114_list.png") 6px 6px no-repeat;

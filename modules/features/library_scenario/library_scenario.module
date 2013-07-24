@@ -6,6 +6,8 @@
 
 include_once 'library_scenario.features.inc';
 
+define('DISCOVER_SCENARIOS_TEXT_FORM', 'views-exposed-form-browse-scenarios-discover-mode-list');
+
 /**
  * Implement hook_form_FORM_ID_alter(&$form, &$form_state, $form_id)
  */
@@ -26,6 +28,63 @@ function library_scenario_form_scenario_node_form_alter(&$form, &$form_state, $f
 
   // Redirect back to node add form to streamline content authoring experience.
   $form['actions']['submit']['#submit'][] = '_library_scenario_submit';
+}
+
+/**
+ * Implement hook_form_FORM_ID_alter(&$form, &$form_state, $form_id)
+ */
+function library_scenario_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
+  // Changes to search/filter form for Browse Scenarios view.
+  if ($form['#id'] == DISCOVER_SCENARIOS_TEXT_FORM) {
+    $form['keys']['#attributes']['placeholder'] = t('Enter terms...');
+    $keys_filter_submit = $form['submit'];
+    $keys_filter_submit['#id'] = 'edit-submit-browse-scenarios2';
+    $keys_filter_submit['#value'] = t('Search');
+    $form['keys']['#suffix'] = drupal_render($keys_filter_submit);
+    $form['items_per_page']['#title'] = t('Items per page: ');
+    $items_per_page = $form['items_per_page'];
+    unset($form['items_per_page']);
+    $form['items_per_page'] = array(
+      '#type' => 'item',
+      '#title' => t('Options'),
+      '#attributes' => array('class' => array('form-item-options')),
+      'items_per_page_item' => $items_per_page,
+    );
+  }
+}
+
+/**
+ * Alter the date text field form elements being used in the views exposed filters
+ *
+ * The #id's we're altering include: edit-date-filter-1-min, edit-date-filter-1-max
+ */
+function library_scenario_date_text_process_alter(&$element, &$form_state, $context) {
+  // Let's modify the edit-date-filter-1-min date field element.
+  if ($element['#id'] == 'edit-date-filter-1-min') {
+    $element['#title'] = t('Start year: ');
+    $element['date']['#size'] = 4;
+    $element['date']['#attributes']['placeholder'] = 'YYYY';
+    unset($element['date']['#description']);
+  }
+  if ($element['#id'] == 'edit-date-filter-1-max') {
+    $element['#title'] = t('to: ');
+    $element['date']['#size'] = 4;
+    $element['date']['#attributes']['placeholder'] = 'YYYY';
+    unset($element['date']['#description']);
+  }
+  if ($element['#id'] == 'edit-date-filter-min') {
+    $element['#title'] = t('Start year: ');
+    $element['date']['#size'] = 4;
+    $element['date']['#attributes']['placeholder'] = 'YYYY';
+    unset($element['date']['#description']);
+  }
+  if ($element['#id'] == 'edit-date-filter-max') {
+    $element['#title'] = t('to: ');
+    $element['date']['#size'] = 4;
+    $element['date']['#attributes']['placeholder'] = 'YYYY';
+    unset($element['date']['#description']);
+  }
+
 }
 
 /**

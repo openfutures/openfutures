@@ -45,13 +45,19 @@ input[type="tel"],
 input[type="color"] {
   @include border-radius(4px);
   display: inline-block;
-  height: 1.5em;
   padding: 4px 6px;
   margin-bottom: 0.77em;
   // font-size: 14px;
   line-height: 1.5em;
   color: $text-color-secondary;
   vertical-align: middle;
+}
+
+input[type="submit"] {
+  display: inline-block;
+  padding: 2px 6px;
+  margin-bottom: 0.77em;
+  line-height: 1.5em;
 }
 
 select,
