@@ -27,6 +27,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Update';
   $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
@@ -84,7 +85,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['keys']['exposed'] = TRUE;
   $handler->display->display_options['filters']['keys']['expose']['operator_id'] = 'keys_op';
   $handler->display->display_options['filters']['keys']['expose']['label'] = 'Search';
-  $handler->display->display_options['filters']['keys']['expose']['description'] = 'Search scenario title and description text.';
+  $handler->display->display_options['filters']['keys']['expose']['description'] = 'Full text search for scenario titles and descriptions.';
   $handler->display->display_options['filters']['keys']['expose']['operator'] = 'keys_op';
   $handler->display->display_options['filters']['keys']['expose']['identifier'] = 'keys';
   $handler->display->display_options['filters']['keys']['expose']['remember_roles'] = array(
@@ -101,7 +102,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['field_scenario_subject_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['operator_id'] = 'field_scenario_subject_tid_op';
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['label'] = 'Keywords and Subjects';
-  $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['description'] = 'Enter terms to filter by scenario keyword and subject.';
+  $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['description'] = 'Separate multiple subjects with a comma.';
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['operator'] = 'field_scenario_subject_tid_op';
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['identifier'] = 'field_scenario_subject_tid';
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['multiple'] = TRUE;
@@ -138,7 +139,8 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['date_filter_1']['group'] = 1;
   $handler->display->display_options['filters']['date_filter_1']['exposed'] = TRUE;
   $handler->display->display_options['filters']['date_filter_1']['expose']['operator_id'] = 'date_filter_1_op';
-  $handler->display->display_options['filters']['date_filter_1']['expose']['label'] = 'Time Horizon';
+  $handler->display->display_options['filters']['date_filter_1']['expose']['label'] = 'Filter by time horizon';
+  $handler->display->display_options['filters']['date_filter_1']['expose']['description'] = 'Displays all scenarios with a time horizon within the range specified.';
   $handler->display->display_options['filters']['date_filter_1']['expose']['operator'] = 'date_filter_1_op';
   $handler->display->display_options['filters']['date_filter_1']['expose']['identifier'] = 'date_filter_1';
   $handler->display->display_options['filters']['date_filter_1']['expose']['remember_roles'] = array(
@@ -160,7 +162,8 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['date_filter']['group'] = 1;
   $handler->display->display_options['filters']['date_filter']['exposed'] = TRUE;
   $handler->display->display_options['filters']['date_filter']['expose']['operator_id'] = 'date_filter_op';
-  $handler->display->display_options['filters']['date_filter']['expose']['label'] = 'Publish Date';
+  $handler->display->display_options['filters']['date_filter']['expose']['label'] = 'Filter by publish date';
+  $handler->display->display_options['filters']['date_filter']['expose']['description'] = 'Displays all scenarios with a publish date between the range specified.';
   $handler->display->display_options['filters']['date_filter']['expose']['operator'] = 'date_filter_op';
   $handler->display->display_options['filters']['date_filter']['expose']['identifier'] = 'date_filter';
   $handler->display->display_options['filters']['date_filter']['expose']['remember_roles'] = array(
@@ -175,8 +178,9 @@ function library_discover_page_views_default_views() {
   );
 
   /* Display: Content pane */
-  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  $handler = $view->new_display('panel_pane', 'Content pane', 'discover_mode_list');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;
@@ -206,6 +210,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Update';
   $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -293,8 +298,8 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['keys']['group'] = 1;
   $handler->display->display_options['filters']['keys']['exposed'] = TRUE;
   $handler->display->display_options['filters']['keys']['expose']['operator_id'] = 'keys_op';
-  $handler->display->display_options['filters']['keys']['expose']['label'] = 'Keyword search';
-  $handler->display->display_options['filters']['keys']['expose']['description'] = 'Enter keywords and terms to search by.';
+  $handler->display->display_options['filters']['keys']['expose']['label'] = 'Search';
+  $handler->display->display_options['filters']['keys']['expose']['description'] = 'Full text search for scenario titles and descriptions.';
   $handler->display->display_options['filters']['keys']['expose']['operator'] = 'keys_op';
   $handler->display->display_options['filters']['keys']['expose']['identifier'] = 'keys';
   $handler->display->display_options['filters']['keys']['expose']['remember_roles'] = array(
@@ -311,8 +316,8 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['field_scenario_subject_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_scenario_subject_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['operator_id'] = 'field_scenario_subject_tid_op';
-  $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['label'] = 'Subjects';
-  $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['description'] = 'Enter subjects and topics to filter scenarios by.';
+  $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['label'] = 'Filter by subject';
+  $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['description'] = 'Separate multiple subjects with a comma.';
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['operator'] = 'field_scenario_subject_tid_op';
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['identifier'] = 'field_scenario_subject_tid';
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['multiple'] = TRUE;
@@ -330,7 +335,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['tid']['group'] = 1;
   $handler->display->display_options['filters']['tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['tid']['expose']['operator_id'] = 'tid_op';
-  $handler->display->display_options['filters']['tid']['expose']['label'] = 'Location';
+  $handler->display->display_options['filters']['tid']['expose']['label'] = 'Filter by location';
   $handler->display->display_options['filters']['tid']['expose']['description'] = 'Separate multiple place names with a comma.';
   $handler->display->display_options['filters']['tid']['expose']['operator'] = 'tid_op';
   $handler->display->display_options['filters']['tid']['expose']['identifier'] = 'tid';
@@ -351,6 +356,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['date_filter']['exposed'] = TRUE;
   $handler->display->display_options['filters']['date_filter']['expose']['operator_id'] = 'date_filter_op';
   $handler->display->display_options['filters']['date_filter']['expose']['label'] = 'Time Horizon';
+  $handler->display->display_options['filters']['date_filter']['expose']['description'] = 'Displays all scenarios with a time horizon within the range specified.';
   $handler->display->display_options['filters']['date_filter']['expose']['operator'] = 'date_filter_op';
   $handler->display->display_options['filters']['date_filter']['expose']['identifier'] = 'date_filter';
   $handler->display->display_options['filters']['date_filter']['expose']['remember_roles'] = array(
@@ -373,7 +379,8 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['date_filter_1']['group'] = 1;
   $handler->display->display_options['filters']['date_filter_1']['exposed'] = TRUE;
   $handler->display->display_options['filters']['date_filter_1']['expose']['operator_id'] = 'date_filter_1_op';
-  $handler->display->display_options['filters']['date_filter_1']['expose']['label'] = 'Publish Date';
+  $handler->display->display_options['filters']['date_filter_1']['expose']['label'] = 'Filter by publish date';
+  $handler->display->display_options['filters']['date_filter_1']['expose']['description'] = 'Displays all scenarios with a publish date between the range specified.';
   $handler->display->display_options['filters']['date_filter_1']['expose']['operator'] = 'date_filter_1_op';
   $handler->display->display_options['filters']['date_filter_1']['expose']['identifier'] = 'date_filter_1';
   $handler->display->display_options['filters']['date_filter_1']['expose']['remember_roles'] = array(
@@ -400,7 +407,8 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['field_location_point_lon']['group'] = 1;
 
   /* Display: Discover Map Pane */
-  $handler = $view->new_display('panel_pane', 'Discover Map Pane', 'panel_pane_1');
+  $handler = $view->new_display('panel_pane', 'Discover Map Pane', 'discover_mode_map');
+  $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['inherit_panels_path'] = '1';
   $export['map_scenarios'] = $view;
 
@@ -421,6 +429,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Update';
   $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -556,8 +565,8 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['keys']['group'] = 1;
   $handler->display->display_options['filters']['keys']['exposed'] = TRUE;
   $handler->display->display_options['filters']['keys']['expose']['operator_id'] = 'keys_op';
-  $handler->display->display_options['filters']['keys']['expose']['label'] = 'Keyword search';
-  $handler->display->display_options['filters']['keys']['expose']['description'] = 'Enter keywords and terms to search by.';
+  $handler->display->display_options['filters']['keys']['expose']['label'] = 'Search';
+  $handler->display->display_options['filters']['keys']['expose']['description'] = 'Full text search for scenario titles and descriptions.';
   $handler->display->display_options['filters']['keys']['expose']['operator'] = 'keys_op';
   $handler->display->display_options['filters']['keys']['expose']['identifier'] = 'keys';
   $handler->display->display_options['filters']['keys']['expose']['remember_roles'] = array(
@@ -573,8 +582,8 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['field_scenario_subject_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_scenario_subject_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['operator_id'] = 'field_scenario_subject_tid_op';
-  $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['label'] = 'Subjects';
-  $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['description'] = 'Enter subjects and topics to filter scenarios by.';
+  $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['label'] = 'Filter by subject';
+  $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['description'] = 'Separate multiple subjects with a comma.';
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['operator'] = 'field_scenario_subject_tid_op';
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['identifier'] = 'field_scenario_subject_tid';
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['multiple'] = TRUE;
@@ -592,7 +601,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['field_scenario_location_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_scenario_location_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['operator_id'] = 'field_scenario_location_tid_op';
-  $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['label'] = 'Location';
+  $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['label'] = 'Filter by location';
   $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['description'] = 'Separate multiple place names with a comma.';
   $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['operator'] = 'field_scenario_location_tid_op';
   $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['identifier'] = 'field_scenario_location_tid';
@@ -615,7 +624,8 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['date_filter']['operator'] = 'between';
   $handler->display->display_options['filters']['date_filter']['exposed'] = TRUE;
   $handler->display->display_options['filters']['date_filter']['expose']['operator_id'] = 'date_filter_op';
-  $handler->display->display_options['filters']['date_filter']['expose']['label'] = 'Time Horizon';
+  $handler->display->display_options['filters']['date_filter']['expose']['label'] = 'Filter by time horizon';
+  $handler->display->display_options['filters']['date_filter']['expose']['description'] = 'Displays all scenarios with a time horizon within the range specified.';
   $handler->display->display_options['filters']['date_filter']['expose']['operator'] = 'date_filter_op';
   $handler->display->display_options['filters']['date_filter']['expose']['identifier'] = 'date_filter';
   $handler->display->display_options['filters']['date_filter']['expose']['remember_roles'] = array(
@@ -636,7 +646,8 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['date_filter_1']['operator'] = 'between';
   $handler->display->display_options['filters']['date_filter_1']['exposed'] = TRUE;
   $handler->display->display_options['filters']['date_filter_1']['expose']['operator_id'] = 'date_filter_1_op';
-  $handler->display->display_options['filters']['date_filter_1']['expose']['label'] = 'Publish Date';
+  $handler->display->display_options['filters']['date_filter_1']['expose']['label'] = 'Filter by publish date';
+  $handler->display->display_options['filters']['date_filter_1']['expose']['description'] = 'Displays all scenarios with a publish date between the range specified.';
   $handler->display->display_options['filters']['date_filter_1']['expose']['operator'] = 'date_filter_1_op';
   $handler->display->display_options['filters']['date_filter_1']['expose']['identifier'] = 'date_filter_1';
   $handler->display->display_options['filters']['date_filter_1']['expose']['remember_roles'] = array(
@@ -651,8 +662,9 @@ function library_discover_page_views_default_views() {
   );
 
   /* Display: Timeline scenario pane */
-  $handler = $view->new_display('panel_pane', 'Timeline scenario pane', 'panel_pane_1');
+  $handler = $view->new_display('panel_pane', 'Timeline scenario pane', 'discover_mode_time');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;
