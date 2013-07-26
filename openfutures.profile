@@ -163,7 +163,7 @@ function _openfutures_get_theme_settings() {
     'toggle_main_menu' => 1,
     'toggle_secondary_menu' => 1,
     'default_logo' => 0,
-    'logo_path' => 'profiles/openfutures/themes/custom/hudson/images/openfutures-custom-logo.png',
+    'logo_path' => 'profiles/openfutures/themes/custom/hudson/images/openfutures-logo-scalable.svg',
     'logo_upload' => NULL,
     'default_favicon' => 1,
     'favicon_path' => NULL,

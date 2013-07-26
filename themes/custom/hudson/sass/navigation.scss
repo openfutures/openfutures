@@ -47,13 +47,29 @@ li a.active {
  * Main menu and Secondary menu links
  */
 
-#main-menu {
+#site-main-menu {
   font-size: $h5-font-size;
   border-left: 1px solid $rule-color;
   float: left;
   margin-top: 2em;
   margin-left: 1em;
   padding-left: 1em;
+
+  .block-title {
+    display: none;
+  }
+
+  .menu {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+  }
+
+  ul li {
+    display: inline;
+    list-style-type: none;
+    padding: 0 1em 0 0;
+  }
 
   a:link,
   a:visited {
@@ -81,12 +97,26 @@ li a.active {
   }
 }
 
-#secondary-menu {
+#site-user-menu {
   // float: right; /* LTR */
   position: absolute;
   right: 0;
   bottom: 0.77em;
   text-align: right;
+
+  .block-title {
+    display: none;
+  }
+  .menu {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+  }
+  ul li {
+    display: inline;
+    list-style-type: none;
+    padding: 0 1em 0 0;
+  }
 }
 
 /*
@@ -224,71 +254,6 @@ a.action.submit-scenario {
       a.mode-expanded {
         // background: transparent url('../images/glyphicons/glyphicons_370_globe_af.png') 4px 4px no-repeat;
         background-image: url('../images/glyphicons/glyphicons_280_settings.png');
-      }
-
-    }
-  }
-}
-
-
-/*
- * Discover page display mode buttons
- */
-.display-mode {
-  float: right;
-  width: 114px;
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    li:first-child {
-      margin-left: 0;
-
-      a {
-        background-position: 7px 7px;
-        @include border-top-left-radius(4px);
-        @include border-bottom-left-radius(4px);
-      }
-    }
-
-    li:last-child {
-      a {
-        @include border-top-right-radius(4px);
-        @include border-bottom-right-radius(4px);
-      }
-    }
-
-    li {
-      float: left;
-      margin-left: -1px;
-
-      a {
-        display: block;
-        width: 36px;
-        height: 36px;
-        padding: 6px;
-        border: 1px solid $rule-color-light;
-        background: $bg-color-dark url('../images/glyphicons/glyphicons_114_list.png') 6px 6px no-repeat;
-
-        span {
-          display: none;
-        }
-      }
-
-      a.active {
-        background-color: $bg-color-light;
-      }
-
-      a.mode-timeline {
-        // background: transparent url('../images/glyphicons/glyphicons_045_calendar.png') 4px 4px no-repeat;
-        background-image: url('../images/glyphicons/glyphicons_045_calendar.png');
-      }
-
-      a.mode-map {
-        // background: transparent url('../images/glyphicons/glyphicons_370_globe_af.png') 4px 4px no-repeat;
-        background-image: url('../images/glyphicons/glyphicons_370_globe_af.png');
       }
 
     }

@@ -23,7 +23,7 @@ function library_scenario_default_page_manager_handlers() {
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
+    'body_classes_to_add' => 'scenario-edit-quick',
     'css_id' => '',
     'css' => '',
     'contexts' => array(
@@ -271,7 +271,7 @@ function library_scenario_default_page_manager_handlers() {
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
+    'body_classes_to_add' => 'scenario-edit-expanded',
     'css_id' => '',
     'css' => '',
     'contexts' => array(
@@ -804,7 +804,7 @@ function library_scenario_default_page_manager_handlers() {
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
+    'body_classes_to_add' => 'scenario-edit-expanded',
     'css_id' => '',
     'css' => '',
     'contexts' => array(

@@ -162,14 +162,18 @@
 .page-node-edit .node-scenario-form .form-field-name-field-scenario-source input {
   width: 100%;
   height: 2.12em;
-  box-sizing: border-box;
 }
-/* line 132, ../sass/nodes.scss */
+/* line 131, ../sass/nodes.scss */
 .page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-source .form-wrapper,
 .page-node-edit .node-scenario-form .form-field-name-field-scenario-source .form-wrapper {
   margin-top: 0;
 }
-/* line 136, ../sass/nodes.scss */
+/* line 135, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .field-type-text-with-summary .filter-wrapper,
+.page-node-edit .node-scenario-form .field-type-text-with-summary .filter-wrapper {
+  padding: 0.5em 0;
+}
+/* line 139, ../sass/nodes.scss */
 .page-node-add-scenario .node-scenario-form .form-actions,
 .page-node-edit .node-scenario-form .form-actions {
   margin-top: 3em;
@@ -179,66 +183,72 @@
   background: #eeeeee;
   border-radius: 4px;
 }
-/* line 144, ../sass/nodes.scss */
+/* line 147, ../sass/nodes.scss */
 .page-node-add-scenario .node-scenario-form .form-actions input[type="submit"],
 .page-node-edit .node-scenario-form .form-actions input[type="submit"] {
   margin-bottom: 1em;
 }
-/* line 150, ../sass/nodes.scss */
+/* line 153, ../sass/nodes.scss */
 .page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-time-horizon .date-float,
 .page-node-edit .node-scenario-form .form-field-name-field-scenario-time-horizon .date-float {
   float: right;
   width: 30%;
   text-align: right;
 }
-/* line 155, ../sass/nodes.scss */
+/* line 158, ../sass/nodes.scss */
 .page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-time-horizon .start-date-wrapper,
 .page-node-edit .node-scenario-form .form-field-name-field-scenario-time-horizon .start-date-wrapper {
   float: left;
   clear: none;
   width: 25%;
 }
-/* line 160, ../sass/nodes.scss */
+/* line 163, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-time-horizon .container-inline-date .form-item, .page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-time-horizon .container-inline-date .form-item input,
+.page-node-edit .node-scenario-form .form-field-name-field-scenario-time-horizon .container-inline-date .form-item,
+.page-node-edit .node-scenario-form .form-field-name-field-scenario-time-horizon .container-inline-date .form-item input {
+  width: 100%;
+}
+/* line 166, ../sass/nodes.scss */
 .page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-time-horizon .end-date-wrapper,
 .page-node-edit .node-scenario-form .form-field-name-field-scenario-time-horizon .end-date-wrapper {
   float: left;
   clear: none;
   width: 30%;
 }
-/* line 165, ../sass/nodes.scss */
+/* line 171, ../sass/nodes.scss */
 .page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-time-horizon .end-date-wrapper label,
 .page-node-edit .node-scenario-form .form-field-name-field-scenario-time-horizon .end-date-wrapper label {
   margin: 1em 0;
   float: left;
 }
-/* line 169, ../sass/nodes.scss */
+/* line 175, ../sass/nodes.scss */
 .page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-time-horizon .end-date-wrapper .date-padding,
 .page-node-edit .node-scenario-form .form-field-name-field-scenario-time-horizon .end-date-wrapper .date-padding {
   width: 70%;
   float: left;
 }
-/* line 177, ../sass/nodes.scss */
+/* line 183, ../sass/nodes.scss */
 .page-node-add-scenario .node-scenario-form .group-location .form-field-prefix,
 .page-node-edit .node-scenario-form .group-location .form-field-prefix {
   margin-top: 0;
 }
-/* line 180, ../sass/nodes.scss */
+/* line 186, ../sass/nodes.scss */
 .page-node-add-scenario .node-scenario-form .group-location .form-field-name-field-scenario-location .form-item,
 .page-node-edit .node-scenario-form .group-location .form-field-name-field-scenario-location .form-item {
   margin-bottom: 0;
 }
-/* line 183, ../sass/nodes.scss */
+/* line 189, ../sass/nodes.scss */
 .page-node-add-scenario .node-scenario-form .group-location .form-field-name-field-scenario-global .form-item,
 .page-node-edit .node-scenario-form .group-location .form-field-name-field-scenario-global .form-item {
   margin-top: 0;
 }
-/* line 188, ../sass/nodes.scss */
+/* line 195, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-attachment fieldset.form-wrapper,
+.page-node-edit .node-scenario-form .form-field-name-field-scenario-attachment fieldset.form-wrapper {
+  margin: 0;
+}
+/* line 200, ../sass/nodes.scss */
 .page-node-add-scenario .node-scenario-form div.vertical-tabs,
 .page-node-edit .node-scenario-form div.vertical-tabs {
   margin-top: 2em;
-}
-/* line 192, ../sass/nodes.scss */
-.page-node-add-scenario div.messages,
-.page-node-edit div.messages {
-  margin-bottom: 0;
 }

@@ -106,25 +106,25 @@ function library_discover_page_date_text_process_alter(&$element, &$form_state, 
   // Let's modify the edit-date-filter-1-min date field element.
   if ($element['#id'] == 'edit-date-filter-1-min') {
     $element['#title'] = t('Start year: ');
-    $element['date']['#size'] = 4;
+    $element['date']['#size'] = 2;
     $element['date']['#attributes']['placeholder'] = 'YYYY';
     unset($element['date']['#description']);
   }
   if ($element['#id'] == 'edit-date-filter-1-max') {
     $element['#title'] = t('to: ');
-    $element['date']['#size'] = 4;
+    $element['date']['#size'] = 2;
     $element['date']['#attributes']['placeholder'] = 'YYYY';
     unset($element['date']['#description']);
   }
   if ($element['#id'] == 'edit-date-filter-min') {
     $element['#title'] = t('Start year: ');
-    $element['date']['#size'] = 4;
+    $element['date']['#size'] = 2;
     $element['date']['#attributes']['placeholder'] = 'YYYY';
     unset($element['date']['#description']);
   }
   if ($element['#id'] == 'edit-date-filter-max') {
     $element['#title'] = t('to: ');
-    $element['date']['#size'] = 4;
+    $element['date']['#size'] = 2;
     $element['date']['#attributes']['placeholder'] = 'YYYY';
     unset($element['date']['#description']);
   }
