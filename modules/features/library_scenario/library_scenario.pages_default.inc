@@ -235,7 +235,7 @@ function library_scenario_default_page_manager_handlers() {
     $pane->pid = 'new-7';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
-    $pane->subtype = 'user_scenarios-panel_pane_1';
+    $pane->subtype = 'user_scenarios-table_list';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -609,28 +609,14 @@ function library_scenario_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-19';
     $pane->panel = 'side';
-    $pane->type = 'views';
-    $pane->subtype = 'user_scenarios';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'user_scenarios-table_list';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '6',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'default',
       'context' => array(
-        0 => 'context_user_1.uid',
+        0 => 'context_user_1',
       ),
-      'override_title' => 0,
-      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -1104,28 +1090,14 @@ function library_scenario_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-36';
     $pane->panel = 'side';
-    $pane->type = 'views';
-    $pane->subtype = 'user_scenarios';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'user_scenarios-table_list';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '6',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'default',
       'context' => array(
-        0 => 'context_user_1.uid',
+        0 => 'context_user_1',
       ),
-      'override_title' => 0,
-      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(

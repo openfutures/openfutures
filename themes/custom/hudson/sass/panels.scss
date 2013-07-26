@@ -20,34 +20,6 @@
     .container-inline-date .form-item input {
       width: 100%;
     }
-
-    /* "Your scenarios" table. */
-    .pane-user-scenarios {
-      margin-top: 2em;
-    }
-    .pane-user-scenarios .pane-title {
-      font-size: 1.23em;
-      margin: 0 0 0.625em 0;
-      padding-bottom: 0.625em;
-      border-bottom: solid 1px #ccc;
-    }
-    .pane-user-scenarios table,
-    .pane-user-scenarios tbody {
-      margin: 0;
-      border: none;
-    }
-    .pane-user-scenarios table {
-      width: 100%;
-      color: #555;
-    }
-    .pane-user-scenarios table td {
-      vertical-align: top;
-      padding-bottom: 0.5em;
-    }
-    .pane-user-scenarios table td.views-field-view-node,
-    .pane-user-scenarios table td.views-field-edit-node {
-      padding-left: 1em;
-    }
   }
 
   .form-field-name-field-scenario-time fieldset,
@@ -61,6 +33,34 @@
   .form-type-managed-file  input[type="submit"] {
     margin-bottom: 1em;
   }
+}
+
+/* "Your scenarios" table. */
+.pane-user-scenarios-table-list {
+  margin-top: 2em;
+}
+.pane-user-scenarios-table-list .pane-title {
+  font-size: 1.23em;
+  margin: 0 0 0.625em 0;
+  padding-bottom: 0.625em;
+  border-bottom: solid 1px #ccc;
+}
+.pane-user-scenarios-table-list table,
+.pane-user-scenarios-table-list tbody {
+  margin: 0;
+  border: none;
+}
+.pane-user-scenarios-table-list table {
+  width: 100%;
+  color: #555;
+}
+.pane-user-scenarios-table-list table td {
+  vertical-align: top;
+  padding-bottom: 0.5em;
+}
+.pane-user-scenarios-table-list table td.views-field-view-node,
+.pane-user-scenarios-table-list table td.views-field-edit-node {
+  padding-left: 1em;
 }
 
 /*

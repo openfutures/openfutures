@@ -7,10 +7,6 @@
 /*
  * Node edit page ==============================================================
  */
-/* line 14, ../sass/panels.scss */
-.scenario-edit-expanded .eightfourtwo-side {
-  /* "Your scenarios" table. */
-}
 /* line 15, ../sass/panels.scss */
 .scenario-edit-expanded .eightfourtwo-side .form-field-type-text input {
   width: 100%;
@@ -20,49 +16,56 @@
 .scenario-edit-expanded .eightfourtwo-side .container-inline-date .form-item input {
   width: 100%;
 }
-/* line 25, ../sass/panels.scss */
-.scenario-edit-expanded .eightfourtwo-side .pane-user-scenarios {
-  margin-top: 2em;
-}
-/* line 28, ../sass/panels.scss */
-.scenario-edit-expanded .eightfourtwo-side .pane-user-scenarios .pane-title {
-  font-size: 1.23em;
-  margin: 0 0 0.625em 0;
-  padding-bottom: 0.625em;
-  border-bottom: solid 1px #ccc;
-}
-/* line 35, ../sass/panels.scss */
-.scenario-edit-expanded .eightfourtwo-side .pane-user-scenarios table,
-.scenario-edit-expanded .eightfourtwo-side .pane-user-scenarios tbody {
-  margin: 0;
-  border: none;
-}
-/* line 39, ../sass/panels.scss */
-.scenario-edit-expanded .eightfourtwo-side .pane-user-scenarios table {
-  width: 100%;
-  color: #555;
-}
-/* line 43, ../sass/panels.scss */
-.scenario-edit-expanded .eightfourtwo-side .pane-user-scenarios table td {
-  vertical-align: top;
-  padding-bottom: 0.5em;
-}
-/* line 48, ../sass/panels.scss */
-.scenario-edit-expanded .eightfourtwo-side .pane-user-scenarios table td.views-field-view-node,
-.scenario-edit-expanded .eightfourtwo-side .pane-user-scenarios table td.views-field-edit-node {
-  padding-left: 1em;
-}
-/* line 54, ../sass/panels.scss */
+/* line 26, ../sass/panels.scss */
 .scenario-edit-expanded .form-field-name-field-scenario-time fieldset,
 .scenario-edit-expanded .form-field-name-field-scenario-time input[type="text"] {
   width: 100%;
 }
-/* line 61, ../sass/panels.scss */
+/* line 33, ../sass/panels.scss */
 .scenario-edit-expanded .form-field-type-image input[type="file"],
 .scenario-edit-expanded .form-field-type-image input[type="submit"],
 .scenario-edit-expanded .form-type-managed-file input[type="file"],
 .scenario-edit-expanded .form-type-managed-file input[type="submit"] {
   margin-bottom: 1em;
+}
+
+/* "Your scenarios" table. */
+/* line 39, ../sass/panels.scss */
+.pane-user-scenarios-table-list {
+  margin-top: 2em;
+}
+
+/* line 42, ../sass/panels.scss */
+.pane-user-scenarios-table-list .pane-title {
+  font-size: 1.23em;
+  margin: 0 0 0.625em 0;
+  padding-bottom: 0.625em;
+  border-bottom: solid 1px #ccc;
+}
+
+/* line 49, ../sass/panels.scss */
+.pane-user-scenarios-table-list table,
+.pane-user-scenarios-table-list tbody {
+  margin: 0;
+  border: none;
+}
+
+/* line 53, ../sass/panels.scss */
+.pane-user-scenarios-table-list table {
+  width: 100%;
+  color: #555;
+}
+
+/* line 57, ../sass/panels.scss */
+.pane-user-scenarios-table-list table td {
+  vertical-align: top;
+  padding-bottom: 0.5em;
+}
+
+/* line 62, ../sass/panels.scss */
+.pane-user-scenarios-table-list table td.views-field-view-node,
+.pane-user-scenarios-table-list table td.views-field-edit-node {
+  padding-left: 1em;
 }
 
 /*
