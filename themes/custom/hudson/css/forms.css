@@ -225,9 +225,13 @@ html.js #user-login-form li.openid-link,
   margin-top: 1.5em;
 }
 
-/* line 189, ../sass/forms.scss */
+/* line 191, ../sass/forms.scss */
 #user-login ul {
   margin: 1.5em 0;
+}
+/* line 194, ../sass/forms.scss */
+#user-login .form-item-name {
+  margin-top: 0;
 }
 
 /*
@@ -236,7 +240,7 @@ html.js #user-login-form li.openid-link,
  * We overrode these styles in normalize.css, but restore them for the admin
  * section of the site.
  */
-/* line 201, ../sass/forms.scss */
+/* line 207, ../sass/forms.scss */
 form th {
   text-align: left;
   /* LTR */
@@ -244,15 +248,15 @@ form th {
   /* LTR */
   border-bottom: 3px solid #ccc;
 }
-/* line 207, ../sass/forms.scss */
+/* line 213, ../sass/forms.scss */
 form tbody {
   border-top: 1px solid #ccc;
 }
-/* line 211, ../sass/forms.scss */
+/* line 217, ../sass/forms.scss */
 form tr.even {
   background-color: #fff;
 }
-/* line 215, ../sass/forms.scss */
+/* line 221, ../sass/forms.scss */
 form table .item-list ul {
   margin: 0;
 }
@@ -260,7 +264,7 @@ form table .item-list ul {
 /*
  * Drupal core wrongly puts this in system.menus.css. Since we override that, add it back.
  */
-/* line 234, ../sass/forms.scss */
+/* line 240, ../sass/forms.scss */
 td.menu-disabled {
   background: #ccc;
 }
@@ -268,13 +272,13 @@ td.menu-disabled {
 /*
  * Autocomplete throbber
  */
-/* line 242, ../sass/forms.scss */
+/* line 248, ../sass/forms.scss */
 html.js input.form-autocomplete {
   background-image: url(../images/hudson-throbber.gif);
   background-position: 100% -1px;
 }
 
-/* line 247, ../sass/forms.scss */
+/* line 253, ../sass/forms.scss */
 html.js input.throbbing {
   background-image: url(../images/hudson-throbber.gif);
   background-position: 100% -29px;
@@ -283,7 +287,7 @@ html.js input.throbbing {
 /*
  * Node form defaults
  */
-/* line 256, ../sass/forms.scss */
+/* line 262, ../sass/forms.scss */
 .field-name-body textarea.text-full {
   -moz-border-radius-bottomleft: 0;
   -webkit-border-bottom-left-radius: 0;
@@ -293,7 +297,7 @@ html.js input.throbbing {
   border-bottom-right-radius: 0;
 }
 
-/* line 260, ../sass/forms.scss */
+/* line 266, ../sass/forms.scss */
 .form-field-type-image {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -305,7 +309,7 @@ html.js input.throbbing {
   padding: 0 1.5em;
 }
 
-/* line 267, ../sass/forms.scss */
+/* line 273, ../sass/forms.scss */
 .ajax-progress .throbber {
   background: transparent url(../images/hudson-throbber.gif) no-repeat 0px -29px;
   height: 29px;

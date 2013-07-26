@@ -14,9 +14,9 @@
 
 // We are going to create a 980px wide, 5 column grid with 20px gutters between
 // columns (applied as 10px of left/right padding on each column).
-$zen-column-count:  12;
-$zen-gutter-width:  20px;
-$zen-grid-width:    960px;
+// $zen-column-count:  12;
+// $zen-gutter-width:  20px;
+// $zen-grid-width:    960px;
 
 
 // IE6-7 don't support box-sizing: border-box. We can fix this in 1 of 2 ways:
@@ -26,12 +26,12 @@ $zen-grid-width:    960px;
 //   $box-sizing-polyfill-path: "/path/to/boxsizing.htc";
 // - Use the same CSS unit for grid width and gutter width (use px for both or
 //   use % for both, etc.) and set the box-sizing variable to content-box.
-     $zen-box-sizing: content-box;
+     // $zen-box-sizing: border-box;
 
 
 // You can generate more efficient CSS if you manually apply the
 // zen-grid-item-base mixin to all grid items from within a single ruleset.
-$zen-auto-include-item-base: false;
+// $zen-auto-include-item-base: false;
 // $zen-auto-include-flow-item-base: false;
 
 
@@ -39,14 +39,12 @@ $zen-auto-include-item-base: false;
  * Center the page.
  */
 
-#page,
-.region-bottom {
-  /* If you want to make the page a fixed width and centered in the viewport,
-   * this is the standards-compliant way to do that. */
-  margin-left: auto;
-  margin-right: auto;
-  width: $zen-grid-width;
-}
+// #page,
+// .region-bottom {
+//   margin-left: auto;
+//   margin-right: auto;
+//   width: $zen-grid-width;
+// }
 
 /*
  * Apply the shared properties of grid items in a single, efficient ruleset.
@@ -54,166 +52,20 @@ $zen-auto-include-item-base: false;
 // See the note about $zen-auto-include-item-base above.
 
 /* #content has been taken out */
-#header,
-#preface,
-.region-sidebar-first,
-.region-sidebar-second,
-#footer {
-  @include zen-grid-item-base();
-}
+// #header,
+// #preface,
+// .region-sidebar-first,
+// .region-sidebar-second,
+// #footer {
+//   @include zen-grid-item-base();
+// }
 
 /*
  * Containers for grid items and flow items.
  */
 
-#header,
-#main,
-#footer {
-  @include zen-grid-container();
-}
-
-/*
- * The layout when there is only one sidebar.
- */
-
-.sidebar-first {
-  #preface {
-    @include zen-grid-item(9, 1);
-  }
-
-  #content {
-    @include zen-clear(left);
-    @include zen-grid-item(9, 1);
-  }
-
-  .region-sidebar-first {
-    @include zen-grid-item(3, 1, right);
-  }
-}
-
-/*
- * The layout when there is no sidebar.
- */
-
-.no-sidebars.page-discover {
-  #content {
-    @include zen-grid-item-base();
-  }
-
-  #preface,
-  #content {
-    @include zen-clear(both);
-    @include zen-grid-item(12, 1);
-  }
-}
-
-/*
- * The layout for the one-three-two template
- */
-.no-sidebars.panel-layout-onethreetwo {
-  #content,
-  .panel-top-row,
-  .panel-ternary-col1,
-  .panel-ternary-col2,
-  .panel-ternary-col3,
-  .panel-binary-left,
-  .panel-binary-right {
-    @include zen-grid-item-base();
-  }
-
-  #preface {
-    @include zen-grid-item(12, 1);
-  }
-
-  #content {
-    @include zen-grid-item(12, 1);
-    @include zen-nested-container()
-  }
-  .panel-top-row {
-    @include zen-clear(both);
-    @include zen-grid-item(12, 1);
-  }
-  .panel-ternary-col1 {
-    @include zen-clear(both);
-    @include zen-grid-item(4, 1);
-  }
-  .panel-ternary-col2 {
-    @include zen-grid-item(4, 5);
-  }
-  .panel-ternary-col3 {
-    @include zen-grid-item(4, 9);
-  }
-  .panel-binary-left {
-    @include zen-clear(both);
-    @include zen-grid-item(9, 1);
-  }
-  .panel-binary-right {
-    @include zen-grid-item(3, 10);
-  }
-}
-
-/*
- * The layout for the eight-four template
- */
-.no-sidebars.panel-layout-eightfour {
-  .panel-left,
-  .panel-right {
-    @include zen-grid-item-base();
-  }
-
-  #preface {
-    @include zen-grid-item(12, 1);
-  }
-
-  // #content {
-  //   @include zen-grid-item(12, 1);
-  //   @include zen-nested-container()
-  // }
-  .panel-left {
-    @include zen-clear(both);
-    @include zen-grid-item(8, 1);
-  }
-  .panel-right {
-    @include zen-grid-item(4, 9);
-  }
-}
-
-/*
- * The layout for the eight-four-two template
- */
-.no-sidebars.panel-layout-eightfourtwo {
-  .panel-main-col,
-  .panel-side-col,
-  .panel-left,
-  .panel-right,
-  .panel-bottom {
-    @include zen-grid-item-base();
-  }
-
-  #preface {
-    @include zen-grid-item(12, 1);
-  }
-
-  // #content {
-  //   // @include zen-grid-item(12, 1);
-  //   @include zen-nested-container()
-  // }
-  .panel-main-col {
-    @include zen-clear(both);
-    @include zen-grid-item(8, 1);
-  }
-  .panel-side-col {
-    @include zen-grid-item(4, 1, right);
-  }
-  .panel-left {
-    @include zen-clear(left);
-    @include zen-grid-item(4, 1);
-  }
-  .panel-right {
-    @include zen-grid-item(4, 5);
-  }
-  .panel-bottom {
-    @include zen-clear(left);
-    @include zen-grid-item(8, 1);
-  }
-}
+// #header,
+// #main,
+// #footer {
+//   @include zen-grid-container();
+// }

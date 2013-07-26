@@ -38,7 +38,7 @@ function hudson_preprocess_page(&$variables, $hook) {
     $breadcrumb = array();
     $breadcrumb[] = l('Home', '<front>');
 
-    if (arg(1) === 'login' || arg(1) == '') {
+    if (arg(1) === 'login') {
       drupal_set_title(t('User login'));
       drupal_set_breadcrumb($breadcrumb);
     }

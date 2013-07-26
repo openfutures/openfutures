@@ -253,7 +253,7 @@ function library_scenario_views_default_views() {
   );
 
   /* Display: Content pane */
-  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+  $handler = $view->new_display('panel_pane', 'Content pane', 'table_list');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['argument_input'] = array(
     'uid' => array(

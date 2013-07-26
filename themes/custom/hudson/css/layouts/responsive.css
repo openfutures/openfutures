@@ -1,0 +1,302 @@
+/**
+ * @file
+ * Positioning for responsive layout .
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+/*
+ * Zen grids setup =============================================================
+ */
+/* containers */
+/* line 52, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+#page:before, #page:after {
+  content: "";
+  display: table;
+}
+/* line 56, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+#page:after {
+  clear: both;
+}
+
+/* grid items */
+/* line 45, ../../sass/layouts/responsive.scss */
+#header,
+#main,
+#footer,
+#tabs,
+.breadcrumb,
+.site-messages,
+.site-page-title,
+#user-login,
+#user-register-form,
+#user-pass {
+  padding-left: 5px;
+  padding-right: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+@media all and (min-width: 960px) {
+  /*
+   * Use 12 grid columns for larger screens.
+   * The page stops being fluid past 960px. This is something to look at in
+   * the future.
+   */
+  /* line 59, ../../sass/layouts/responsive.scss */
+  #page {
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+  }
+
+  /* line 65, ../../sass/layouts/responsive.scss */
+  #header {
+    clear: left;
+    float: left;
+    width: 960px;
+    margin-left: 0px;
+    margin-right: -960px;
+  }
+
+  /* line 73, ../../sass/layouts/responsive.scss */
+  #tabs,
+  .breadcrumb,
+  .site-messages,
+  .site-page-title {
+    clear: left;
+    float: left;
+    width: 960px;
+    margin-left: 0px;
+    margin-right: -960px;
+  }
+
+  /* line 78, ../../sass/layouts/responsive.scss */
+  #main {
+    clear: left;
+    float: left;
+    width: 960px;
+    margin-left: 0px;
+    margin-right: -960px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* line 86, ../../sass/layouts/responsive.scss */
+  #user-login,
+  #user-register-form,
+  #user-pass {
+    clear: left;
+    float: left;
+    width: 960px;
+    margin-left: 0px;
+    margin-right: -960px;
+  }
+}
+/*
+ * One Three Two custom panels layout ==========================================
+ */
+/* line 102, ../../sass/layouts/responsive.scss */
+.onethreetwo-hero,
+.onethreetwo-col1,
+.onethreetwo-col2,
+.onethreetwo-col3,
+.onethreetwo-left,
+.onethreetwo-right {
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+@media all and (min-width: 960px) {
+  /* line 107, ../../sass/layouts/responsive.scss */
+  .onethreetwo-hero {
+    float: left;
+    width: 960px;
+    margin-left: 0px;
+    margin-right: -960px;
+  }
+
+  /* line 110, ../../sass/layouts/responsive.scss */
+  .onethreetwo-col1 {
+    clear: left;
+    float: left;
+    width: 320px;
+    margin-left: 0px;
+    margin-right: -320px;
+  }
+
+  /* line 114, ../../sass/layouts/responsive.scss */
+  .onethreetwo-col2 {
+    float: left;
+    width: 320px;
+    margin-left: 320px;
+    margin-right: -640px;
+  }
+
+  /* line 117, ../../sass/layouts/responsive.scss */
+  .onethreetwo-col3 {
+    float: left;
+    width: 320px;
+    margin-left: 640px;
+    margin-right: -960px;
+  }
+
+  /* line 120, ../../sass/layouts/responsive.scss */
+  .onethreetwo-left {
+    clear: left;
+    float: left;
+    width: 720px;
+    margin-left: 0px;
+    margin-right: -720px;
+  }
+
+  /* line 124, ../../sass/layouts/responsive.scss */
+  .onethreetwo-right {
+    float: left;
+    width: 240px;
+    margin-left: 720px;
+    margin-right: -960px;
+  }
+}
+/*
+ * Three Nine custom panels layout =============================================
+ */
+/* line 133, ../../sass/layouts/responsive.scss */
+.threenine-left,
+.threenine-right {
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+@media all and (min-width: 960px) {
+  /* line 138, ../../sass/layouts/responsive.scss */
+  .threenine-left {
+    clear: left;
+    float: left;
+    width: 320px;
+    margin-left: 0px;
+    margin-right: -320px;
+    padding-left: 5px;
+  }
+
+  /* line 143, ../../sass/layouts/responsive.scss */
+  .threenine-right {
+    float: left;
+    width: 640px;
+    margin-left: 320px;
+    margin-right: -960px;
+    padding-right: 5px;
+  }
+}
+/*
+ * Eight Four custom panels layout =============================================
+ */
+/* line 153, ../../sass/layouts/responsive.scss */
+.eightfour-left,
+.eightfour-right {
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+@media all and (min-width: 960px) {
+  /* line 158, ../../sass/layouts/responsive.scss */
+  .eightfour-left {
+    clear: left;
+    float: left;
+    width: 640px;
+    margin-left: 0px;
+    margin-right: -640px;
+    padding-left: 5px;
+  }
+
+  /* line 163, ../../sass/layouts/responsive.scss */
+  .eightfour-right {
+    float: left;
+    width: 320px;
+    margin-left: 640px;
+    margin-right: -960px;
+    padding-right: 5px;
+  }
+}
+/*
+ * Eight Four Two custom panels layout =========================================
+ */
+/* line 176, ../../sass/layouts/responsive.scss */
+.eightfourtwo-main,
+.eightfourtwo-side,
+.eightfourtwo-left,
+.eightfourtwo-right,
+.eightfourtwo-bottom {
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+@media all and (min-width: 960px) {
+  /* line 181, ../../sass/layouts/responsive.scss */
+  .eightfourtwo-side {
+    float: right;
+    width: 320px;
+    margin-right: 0px;
+    margin-left: -320px;
+  }
+
+  /* line 184, ../../sass/layouts/responsive.scss */
+  .eightfourtwo-main {
+    float: left;
+    width: 640px;
+    margin-left: 0px;
+    margin-right: -640px;
+  }
+
+  /* line 187, ../../sass/layouts/responsive.scss */
+  .eightfourtwo-left {
+    clear: left;
+    float: left;
+    width: 320px;
+    margin-left: 0px;
+    margin-right: -320px;
+  }
+
+  /* line 191, ../../sass/layouts/responsive.scss */
+  .eightfourtwo-right {
+    float: left;
+    width: 320px;
+    margin-left: 320px;
+    margin-right: -640px;
+  }
+
+  /* line 194, ../../sass/layouts/responsive.scss */
+  .eightfourtwo-bottom {
+    clear: left;
+    float: left;
+    width: 640px;
+    margin-left: 0px;
+    margin-right: -640px;
+  }
+}

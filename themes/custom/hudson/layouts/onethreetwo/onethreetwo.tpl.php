@@ -14,33 +14,21 @@
  *   - $content['right']: Content in the right column.
  */
 ?>
-<div class="panel-display panel-onethreetwo clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
-  <!-- begin top rop -->
-  <div class="panel-panel panel-top-row">
-    <div class="inside"><?php print $content['top']; ?></div>
-  </div>
-  <!-- end top row -->
-
-  <!-- begin three column row -->
-  <div class="panel-panel panel-ternary-col1">
-    <div class="inside"><?php print $content['col1']; ?></div>
-  </div>
-
-  <div class="panel-panel panel-ternary-col2">
-    <div class="inside"><?php print $content['col2']; ?></div>
-  </div>
-
-  <div class="panel-panel panel-ternary-col3">
-    <div class="inside"><?php print $content['col3']; ?></div>
-  </div>
-  <!-- end three column row -->
-
-  <!-- begin two column row -->
-  <div class="panel-panel panel-binary-left">
-    <div class="inside"><?php print $content['left']; ?></div>
-  </div>
-  <div class="panel-panel panel-binary-right">
-    <div class="inside"><?php print $content['right']; ?></div>
-  </div>
-  <!-- end two column row -->
-</div>
+<section class="panel-layout section onethreetwo-hero">
+  <?php print $content['top']; ?>
+</section>
+<section class="panel-layout section onethreetwo-col1">
+  <?php print $content['col1']; ?>
+</section>
+<section class="panel-layout section onethreetwo-col2">
+  <?php print $content['col2']; ?>
+</section>
+<section class="panel-layout section onethreetwo-col3">
+  <?php print $content['col3']; ?>
+</section>
+<section class="panel-layout section onethreetwo-left">
+  <?php print $content['left']; ?>
+</section>
+<section class="panel-layout section onethreetwo-right">
+  <?php print $content['right']; ?>
+</section>

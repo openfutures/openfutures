@@ -23,6 +23,9 @@ projects[admin_menu][version] = 3.0-rc4
 projects[backup_migrate][subdir] = contrib
 projects[backup_migrate][version] = 2.7
 
+projects[blockify][subdir] = contrib
+projects[blockify][version] = 1.2
+
 projects[captcha][subdir] = contrib
 projects[captcha][version] = 1.0
 
@@ -98,6 +101,9 @@ projects[node_vertical_tab_elements][version] = 3.0
 
 projects[panels][subdir] = contrib
 projects[panels][version] = 3.3
+
+projects[panels_breadcrumbs][subdir] = contrib
+projects[panels_breadcrumbs][version] = 2.1
 
 projects[panelizer][subdir] = contrib
 projects[panelizer][version] = 3.1

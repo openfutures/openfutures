@@ -48,7 +48,8 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area']['content'] = 'no results';
+  $handler->display->display_options['empty']['area']['content'] = '<h2>No results</h2>
+<p>We couldn\'t find any scenarios matching your filter criteria.</p>';
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -250,7 +251,8 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area']['content'] = 'Sorry, there were no results for that query. Reset your filters and try again.';
+  $handler->display->display_options['empty']['area']['content'] = '<h2>No results</h2>
+<p>We couldn\'t find any scenarios matching your filter criteria. Reset your filters and try again.</p>';
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
   /* Relationship: Taxonomy term: Content using Place name */
   $handler->display->display_options['relationships']['reverse_field_scenario_location_node']['id'] = 'reverse_field_scenario_location_node';
@@ -468,7 +470,8 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area']['content'] = 'no results';
+  $handler->display->display_options['empty']['area']['content'] = '<h2>No results</h2>
+<p>We couldn\'t find any scenarios matching your filter criteria.</p>';
   $handler->display->display_options['empty']['area']['format'] = 'full_html';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
