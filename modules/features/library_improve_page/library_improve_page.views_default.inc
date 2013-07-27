@@ -105,7 +105,7 @@ function library_improve_page_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'scenario' => 'scenario',
   );
-  /* Filter criterion: Content: Location (field_scenario_location) */
+  /* Filter criterion: Content: Place name (field_scenario_location) */
   $handler->display->display_options['filters']['field_scenario_location_tid']['id'] = 'field_scenario_location_tid';
   $handler->display->display_options['filters']['field_scenario_location_tid']['table'] = 'field_data_field_scenario_location';
   $handler->display->display_options['filters']['field_scenario_location_tid']['field'] = 'field_scenario_location_tid';
@@ -283,7 +283,7 @@ function library_improve_page_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'scenario' => 'scenario',
   );
-  /* Filter criterion: Content: Location (field_scenario_location) */
+  /* Filter criterion: Content: Place name (field_scenario_location) */
   $handler->display->display_options['filters']['field_scenario_location_tid']['id'] = 'field_scenario_location_tid';
   $handler->display->display_options['filters']['field_scenario_location_tid']['table'] = 'field_data_field_scenario_location';
   $handler->display->display_options['filters']['field_scenario_location_tid']['field'] = 'field_scenario_location_tid';

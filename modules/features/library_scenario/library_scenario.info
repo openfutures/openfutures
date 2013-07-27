@@ -62,6 +62,7 @@ features[node][] = scenario
 features[page_manager_handlers][] = node_edit_panel_context
 features[page_manager_handlers][] = node_edit_panel_context_2
 features[page_manager_handlers][] = node_edit_panel_context_3
+features[page_manager_handlers][] = node_view_panel_context
 features[taxonomy][] = rights
 features[taxonomy][] = subject
 features[taxonomy][] = type

@@ -57,7 +57,7 @@ function library_improve_page_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'flexible';
+  $display->layout = 'onethreetwo';
   $display->layout_settings = array(
     'items' => array(
       'canvas' => array(
@@ -138,6 +138,12 @@ function library_improve_page_default_page_manager_pages() {
       '1_' => NULL,
       2 => NULL,
       3 => NULL,
+      'top' => NULL,
+      'col1' => NULL,
+      'col2' => NULL,
+      'col3' => NULL,
+      'left' => NULL,
+      'right' => NULL,
     ),
     'center' => array(
       'style' => '-1',
@@ -149,9 +155,9 @@ function library_improve_page_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = '1_';
+    $pane->panel = 'col1';
     $pane->type = 'views_panes';
-    $pane->subtype = 'improve_scenarios-panel_pane_2';
+    $pane->subtype = 'improve_scenarios-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -164,10 +170,10 @@ function library_improve_page_default_page_manager_pages() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-1'] = $pane;
-    $display->panels['1_'][0] = 'new-1';
+    $display->panels['col1'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
-    $pane->panel = '2';
+    $pane->panel = 'col2';
     $pane->type = 'views_panes';
     $pane->subtype = 'improve_scenarios-panel_pane_3';
     $pane->shown = TRUE;
@@ -182,12 +188,12 @@ function library_improve_page_default_page_manager_pages() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-2'] = $pane;
-    $display->panels['2'][0] = 'new-2';
+    $display->panels['col2'][0] = 'new-2';
     $pane = new stdClass();
     $pane->pid = 'new-3';
-    $pane->panel = '3';
+    $pane->panel = 'col3';
     $pane->type = 'views_panes';
-    $pane->subtype = 'improve_scenarios-panel_pane_1';
+    $pane->subtype = 'improve_scenarios-panel_pane_2';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -200,27 +206,7 @@ function library_improve_page_default_page_manager_pages() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-3'] = $pane;
-    $display->panels['3'][0] = 'new-3';
-    $pane = new stdClass();
-    $pane->pid = 'new-4';
-    $pane->panel = 'center';
-    $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'fpid:3';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'view_mode' => 'full',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['center'][0] = 'new-4';
+    $display->panels['col3'][0] = 'new-3';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
