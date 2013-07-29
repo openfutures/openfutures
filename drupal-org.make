@@ -150,6 +150,6 @@ libraries[leaflet_markercluster][download][type] = file
 libraries[leaflet_markercluster][download][url] = https://github.com/Leaflet/Leaflet.markercluster/archive/master.zip
 libraries[leaflet_markercluster][directory_name] = leaflet_markercluster
 
-libraries[timeline][download][type] = "file"
-libraries[timeline][download][url] = "https://github.com/VeriteCo/TimelineJS/archive/v2.25.zip"
-libraries[timeline][directory_name] = "timeline"
+libraries[timeline][download][type] = file
+libraries[timeline][download][url] = https://github.com/VeriteCo/TimelineJS/archive/v2.25.zip
+libraries[timeline][directory_name] = timeline
