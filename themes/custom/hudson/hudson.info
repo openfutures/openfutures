@@ -4,33 +4,14 @@ description = A Zen sub-theme for the Open Futures installation profile.
 core        = 7.x
 base theme  = zen
 
-; This section controls the CSS files for your theme. There are 3 different
-; things you can do with a "stylesheets" line:
-; - Add a new stylesheet for your theme.
-; - Override a module's stylesheet. If the stylesheet you are adding uses the
-;   same filename as a stylesheet from a Drupal core or contrib module, your CSS
-;   file will be used instead of the module's file.
-; - Remove a module's stylesheet. If you specify the name of a Drupal core or
-;   contrib module's stylesheets, Drupal will remove that stylesheet if you do
-;   NOT include a file with that name with your theme.
-;
-; stylesheets[MEDIA][] = FILE
-;
-; The "FILE" is the name of the stylesheet to add/override/remove.
-; The "MEDIA" in the first set of brackets is a media type or a media query.
-; Typical CSS media types include "all", "screen", "print", and "handheld". A
-; typical media query is "screen and (max-width: 320px)".
-;
-; CSS2.1 media types: http://www.w3.org/TR/CSS21/media.html#media-types
-; CSS3 media queries: http://www.w3.org/TR/css3-mediaqueries/
-
 ; First we remove the system's menu styling since Zen has its own.
 stylesheets[all][] = system.menus.css
 
 ; Then we add our own stylesheets.
 stylesheets[all][] = css/normalize.css
 stylesheets[all][] = css/wireframes.css
-stylesheets[all][] = css/layouts/fixed-width.css
+;stylesheets[all][] = css/layouts/fixed-width.css
+stylesheets[all][] = css/layouts/responsive.css
 stylesheets[all][] = css/page-backgrounds.css
 stylesheets[all][] = css/tabs.css
 stylesheets[all][] = css/pages.css
@@ -46,7 +27,6 @@ stylesheets[all][] = css/print.css
 stylesheets[all][] = http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600
 
 ; Optionally add some JavaScripts to your theme.
-
 scripts[] = js/script.js
 
 ; This section lists the regions defined in Zen's default page.tpl.php and
@@ -65,12 +45,10 @@ scripts[] = js/script.js
 ;   <?php print $header_top; ?>
 
 regions[header]         = Header
-regions[highlighted]    = Highlighted
-regions[help]           = Help
-regions[content]        = Content
-regions[sidebar_first]  = First sidebar
+regions[main_prefix]    = Main Region Prefix
+regions[content]        = Main
+regions[main_suffix]    = Main Region Suffix
 regions[footer]         = Footer
-regions[bottom]         = Page bottom
 
 ; The page_top and page_bottom regions are hidden, which means they will not
 ; show up on the blocks administration page. But they are required in order for
@@ -78,8 +56,6 @@ regions[bottom]         = Page bottom
 
 regions[page_top]       = Page top
 regions[page_bottom]    = Page bottom
-
-
 
 ; Various page elements output by the theme can be toggled on and off. The
 ; "features" control which of these check boxes display on the
@@ -96,8 +72,6 @@ features[] = comment_user_picture
 features[] = favicon
 features[] = main_menu
 features[] = secondary_menu
-
-
 
 ; Set the default values of settings on the theme-settings.php form.
 

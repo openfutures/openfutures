@@ -23,7 +23,12 @@ function openfutures_install_tasks() {
     ),
     'openfutures_setup_ui' => array(
       'display_name' => st('Setup UI'),
-      'type' => 'normal')
+      'type' => 'normal',
+    ),
+    'openfutures_setup_mail' => array(
+      'display_name' => st('Setup Mail'),
+      'type' => 'normal',
+    ),
   );
   return $tasks;
 }
@@ -85,6 +90,29 @@ function openfutures_setup_ui() {
 }
 
 /**
+ * Install task: Setup Mail
+ *
+ * Can't setup mail vars in .install for some reason.
+ */
+function openfutures_setup_mail() {
+  // Setup mail options
+  $mail_vars = array(
+    'update_notify_emails' => array('info@openfutures.net'),
+    'site_mail' => 'info@openfutures.net',
+    'mail_system' => array(
+      'default-system' => 'MandrillMailSystem',
+      'mandrill_test' => 'MandrillMailSystem'
+    ),
+    'mandrill_api_key' => '4jADr1uN9GJaAvJettmS_w',
+  );
+
+  // Save mail options
+  foreach ($mail_vars as $var => $value) {
+    variable_set($var, $value);
+  }
+}
+
+/**
  * Create a new vocabulary and save some terms
  * @param $terms, an array of taxonomy terms
  * @param $vocabulary, a string representing the machine name of existing vocab
@@ -135,7 +163,7 @@ function _openfutures_get_theme_settings() {
     'toggle_main_menu' => 1,
     'toggle_secondary_menu' => 1,
     'default_logo' => 0,
-    'logo_path' => 'profiles/openfutures/themes/custom/hudson/images/openfutures-custom-logo.png',
+    'logo_path' => 'profiles/openfutures/themes/custom/hudson/images/openfutures-logo-scalable.svg',
     'logo_upload' => NULL,
     'default_favicon' => 1,
     'favicon_path' => NULL,

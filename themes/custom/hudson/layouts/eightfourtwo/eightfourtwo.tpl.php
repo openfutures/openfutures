@@ -14,20 +14,18 @@
  *   - $content['right']: Content in the right column.
  */
 ?>
-<div class="panel-display panel-eightfourtwo clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
-  <div class="panel-panel panel-main-col">
-    <div class="inside"><?php print $content['main']; ?></div>
-  </div>
-  <div class="panel-panel panel-side-col">
-    <div class="inside"><?php print $content['side']; ?></div>
-  </div>
-  <div class="panel-panel panel-left">
-    <div class="inside"><?php print $content['left']; ?></div>
-  </div>
-  <div class="panel-panel panel-right">
-    <div class="inside"><?php print $content['right']; ?></div>
-  </div>
-  <div class="panel-panel panel-bottom">
-    <div class="inside"><?php print $content['bottom']; ?></div>
-  </div>
-</div>
+<section class="panel-layout section eightfourtwo-side">
+  <?php print $content['side']; ?>
+</section>
+<section class="panel-layout section eightfourtwo-main">
+  <?php print $content['main']; ?>
+</section>
+<section class="panel-layout section eightfourtwo-left">
+  <?php print $content['left']; ?>
+</section>
+<section class="panel-layout section eightfourtwo-right">
+  <?php print $content['right']; ?>
+</section>
+<section class="panel-layout section eightfourtwo-bottom">
+  <?php print $content['bottom']; ?>
+</section>

@@ -14,13 +14,9 @@
  *   - $content['right']: Content in the right column.
  */
 ?>
-<div class="panel-display panel-eightfour clearfix" <?php if (!empty($css_id)) { print "id=\"$css_id\""; } ?>>
-  <!-- begin two column row -->
-  <div class="panel-panel panel-left">
-    <div class="inside"><?php print $content['left']; ?></div>
-  </div>
-  <div class="panel-panel panel-right">
-    <div class="inside"><?php print $content['right']; ?></div>
-  </div>
-  <!-- end two column row -->
-</div>
+<section class="panel-layout section eightfour-left">
+  <?php print $content['left']; ?>
+</section>
+<section class="panel-layout section eightfour-right">
+  <?php print $content['right']; ?>
+</section>

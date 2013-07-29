@@ -6,6 +6,10 @@
 
 include_once 'library_discover_page.features.inc';
 
+define('DISCOVER_SCENARIOS_TEXT_FORM', 'views-exposed-form-browse-scenarios-discover-mode-list');
+define('DISCOVER_SCENARIOS_TIMELINE_FORM', 'views-exposed-form-timeline-scenarios-discover-mode-time');
+define('DISCOVER_SCENARIOS_MAP_FORM', 'views-exposed-form-map-scenarios-discover-mode-map');
+
 /**
  * Implements hook_form_alter().
  * @see http://drupal.org/node/1079826 for more information on this code.
@@ -47,4 +51,81 @@ function library_discover_page_leaflet_map_info() {
       ),
     ),
   );
+}
+
+/**
+ * Implement hook_form_FORM_ID_alter(&$form, &$form_state, $form_id)
+ */
+function library_discover_page_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
+  // Changes to search/filter form for all Discover page modes
+  $text_mode = ($form['#id'] == DISCOVER_SCENARIOS_TEXT_FORM);
+  $map_mode = ($form['#id'] == DISCOVER_SCENARIOS_MAP_FORM);
+  $timeline_mode = ($form['#id'] == DISCOVER_SCENARIOS_TIMELINE_FORM);
+  // dpm($form);
+
+  if ($text_mode) {
+    $form['keys']['#attributes']['placeholder'] = t('Enter terms...');
+    $form['field_scenario_subject_tid']['#attributes']['placeholder'] = t('Add subjects...');
+    $form['field_scenario_location_tid']['#attributes']['placeholder'] = t('Add place names...');
+    $keys_filter_submit = $form['submit'];
+    $keys_filter_submit['#id'] = 'edit-submit-browse-scenarios2';
+    $keys_filter_submit['#value'] = t('Search');
+    $form['keys']['#suffix'] = drupal_render($keys_filter_submit);
+    $form['items_per_page']['#title'] = t('Items per page: ');
+    $items_per_page = $form['items_per_page'];
+    unset($form['items_per_page']);
+    $form['items_per_page'] = array(
+      '#type' => 'item',
+      '#title' => t('Options'),
+      '#attributes' => array('class' => array('form-item-options')),
+      'items_per_page_item' => $items_per_page,
+    );
+  }
+  if ($map_mode || $timeline_mode) {
+    $form['keys']['#attributes']['placeholder'] = t('Enter terms...');
+    $form['field_scenario_subject_tid']['#attributes']['placeholder'] = t('Add subjects...');
+    if ($timeline_mode) {
+      $form['field_scenario_location_tid']['#attributes']['placeholder'] = t('Add place names...');
+    }
+    else {
+      $form['tid']['#attributes']['placeholder'] = t('Add place names...');
+    }
+    $keys_filter_submit = $form['submit'];
+    $keys_filter_submit['#id'] = 'edit-submit-browse-scenarios2';
+    $keys_filter_submit['#value'] = t('Search');
+    $form['keys']['#suffix'] = drupal_render($keys_filter_submit);
+  }
+}
+
+/**
+ * Alter the date text field form elements being used in the views exposed filters
+ *
+ * The #id's we're altering include: edit-date-filter-1-min, edit-date-filter-1-max
+ */
+function library_discover_page_date_text_process_alter(&$element, &$form_state, $context) {
+  // Let's modify the edit-date-filter-1-min date field element.
+  if ($element['#id'] == 'edit-date-filter-1-min') {
+    $element['#title'] = t('Start year: ');
+    $element['date']['#size'] = 2;
+    $element['date']['#attributes']['placeholder'] = 'YYYY';
+    unset($element['date']['#description']);
+  }
+  if ($element['#id'] == 'edit-date-filter-1-max') {
+    $element['#title'] = t('to: ');
+    $element['date']['#size'] = 2;
+    $element['date']['#attributes']['placeholder'] = 'YYYY';
+    unset($element['date']['#description']);
+  }
+  if ($element['#id'] == 'edit-date-filter-min') {
+    $element['#title'] = t('Start year: ');
+    $element['date']['#size'] = 2;
+    $element['date']['#attributes']['placeholder'] = 'YYYY';
+    unset($element['date']['#description']);
+  }
+  if ($element['#id'] == 'edit-date-filter-max') {
+    $element['#title'] = t('to: ');
+    $element['date']['#size'] = 2;
+    $element['date']['#attributes']['placeholder'] = 'YYYY';
+    unset($element['date']['#description']);
+  }
 }

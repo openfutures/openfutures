@@ -29,6 +29,20 @@ function openfutures_install() {
 
   // Update the menu router information.
   menu_rebuild();
+
+  // Turn on all the blockify blocks
+  // $blockify_blocks = array(
+  //   'blockify-logo' => 'blockify-logo',
+  //   'blockify-site-name' => 'blockify-site-name',
+  //   'blockify-site-slogan' => 'blockify-site-slogan',
+  //   'blockify-page-title' => 'blockify-page-title',
+  //   'blockify-breadcrumb' => 'blockify-breadcrumb',
+  //   'blockify-tabs' => 'blockify-tabs',
+  //   'blockify-messages' => 'blockify-messages',
+  //   'blockify-actions' => 'blockify-actions',
+  //   'blockify-feed-icons' => 'blockify-feed-icons',
+  // );
+  // variable_set('blockify_blocks', $blockify_blocks);
 }
 
 /**

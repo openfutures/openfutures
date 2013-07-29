@@ -1,0 +1,17 @@
+name = Library Blocks and Layout
+description = Configuration and settings for layout of common blocks.
+core = 7.x
+package = Open Futures
+php = 5.2.4
+version = 7.x-3.0
+project = library_blocks_and_layout
+dependencies[] = blockify
+dependencies[] = context
+dependencies[] = ctools
+dependencies[] = strongarm
+features[context][] = header
+features[context][] = main_prefix
+features[ctools][] = context:context:3
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = blockify_blocks
