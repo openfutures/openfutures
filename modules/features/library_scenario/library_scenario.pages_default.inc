@@ -1363,16 +1363,22 @@ function library_scenario_default_page_manager_handlers() {
     $pane->pid = 'new-45';
     $pane->panel = 'left';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_scenario_creator';
+    $pane->subtype = 'node:field_scenario_date';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'above',
-      'formatter' => 'text_default',
+      'formatter' => 'date_default',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
+      'formatter_settings' => array(
+        'format_type' => 'short',
+        'multiple_number' => '',
+        'multiple_from' => '',
+        'multiple_to' => '',
+        'fromto' => 'both',
+      ),
       'context' => 'argument_entity_id:node_1',
       'override_title' => 0,
       'override_title_text' => '',
@@ -1391,7 +1397,7 @@ function library_scenario_default_page_manager_handlers() {
     $pane->pid = 'new-46';
     $pane->panel = 'left';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_scenario_publisher';
+    $pane->subtype = 'node:field_scenario_creator';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -1419,22 +1425,16 @@ function library_scenario_default_page_manager_handlers() {
     $pane->pid = 'new-47';
     $pane->panel = 'left';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_scenario_date';
+    $pane->subtype = 'node:field_scenario_publisher';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'above',
-      'formatter' => 'date_default',
+      'formatter' => 'text_default',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
-      'formatter_settings' => array(
-        'format_type' => 'short',
-        'multiple_number' => '',
-        'multiple_from' => '',
-        'multiple_to' => '',
-        'fromto' => 'both',
-      ),
+      'formatter_settings' => array(),
       'context' => 'argument_entity_id:node_1',
       'override_title' => 0,
       'override_title_text' => '',
@@ -1451,6 +1451,37 @@ function library_scenario_default_page_manager_handlers() {
     $display->panels['left'][4] = 'new-47';
     $pane = new stdClass();
     $pane->pid = 'new-48';
+    $pane->panel = 'left';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_scenario_image';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'image',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(
+        'image_style' => 'thumbnail',
+        'image_link' => '',
+      ),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 5;
+    $pane->locks = array();
+    $display->content['new-48'] = $pane;
+    $display->panels['left'][5] = 'new-48';
+    $pane = new stdClass();
+    $pane->pid = 'new-49';
     $pane->panel = 'left';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_scenario_rights';
@@ -1473,12 +1504,12 @@ function library_scenario_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 6;
     $pane->locks = array();
-    $display->content['new-48'] = $pane;
-    $display->panels['left'][5] = 'new-48';
+    $display->content['new-49'] = $pane;
+    $display->panels['left'][6] = 'new-49';
     $pane = new stdClass();
-    $pane->pid = 'new-49';
+    $pane->pid = 'new-50';
     $pane->panel = 'left';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_scenario_language';
@@ -1507,12 +1538,12 @@ function library_scenario_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 6;
+    $pane->position = 7;
     $pane->locks = array();
-    $display->content['new-49'] = $pane;
-    $display->panels['left'][6] = 'new-49';
+    $display->content['new-50'] = $pane;
+    $display->panels['left'][7] = 'new-50';
     $pane = new stdClass();
-    $pane->pid = 'new-50';
+    $pane->pid = 'new-51';
     $pane->panel = 'left';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_type';
@@ -1535,38 +1566,10 @@ function library_scenario_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 7;
-    $pane->locks = array();
-    $display->content['new-50'] = $pane;
-    $display->panels['left'][7] = 'new-50';
-    $pane = new stdClass();
-    $pane->pid = 'new-51';
-    $pane->panel = 'right';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_scenario_subject';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'above',
-      'formatter' => 'taxonomy_term_reference_link',
-      'delta_limit' => '0',
-      'delta_offset' => '0',
-      'delta_reversed' => 0,
-      'formatter_settings' => array(),
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 8;
     $pane->locks = array();
     $display->content['new-51'] = $pane;
-    $display->panels['right'][0] = 'new-51';
+    $display->panels['left'][8] = 'new-51';
     $pane = new stdClass();
     $pane->pid = 'new-52';
     $pane->panel = 'right';
@@ -1575,7 +1578,7 @@ function library_scenario_default_page_manager_handlers() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'above',
+      'label' => 'hidden',
       'formatter' => 'date_default',
       'delta_limit' => 0,
       'delta_offset' => '0',
@@ -1597,12 +1600,62 @@ function library_scenario_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
     $display->content['new-52'] = $pane;
-    $display->panels['right'][1] = 'new-52';
+    $display->panels['right'][0] = 'new-52';
     $pane = new stdClass();
     $pane->pid = 'new-53';
+    $pane->panel = 'right';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'scenario_locations_map-scenario_locations_map';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => array(
+        0 => 'argument_entity_id:node_1',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-53'] = $pane;
+    $display->panels['right'][1] = 'new-53';
+    $pane = new stdClass();
+    $pane->pid = 'new-54';
+    $pane->panel = 'right';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_scenario_subject';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'title',
+      'formatter' => 'taxonomy_term_reference_link',
+      'delta_limit' => '0',
+      'delta_offset' => '0',
+      'delta_reversed' => 0,
+      'formatter_settings' => array(),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-54'] = $pane;
+    $display->panels['right'][2] = 'new-54';
+    $pane = new stdClass();
+    $pane->pid = 'new-55';
     $pane->panel = 'right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_scenario_location';
@@ -1625,12 +1678,40 @@ function library_scenario_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-53'] = $pane;
-    $display->panels['right'][2] = 'new-53';
+    $display->content['new-55'] = $pane;
+    $display->panels['right'][3] = 'new-55';
+    $pane = new stdClass();
+    $pane->pid = 'new-56';
+    $pane->panel = 'right';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_scenario_global';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'above',
+      'formatter' => 'list_default',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 4;
+    $pane->locks = array();
+    $display->content['new-56'] = $pane;
+    $display->panels['right'][4] = 'new-56';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-51';
+  $display->title_pane = 'new-54';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context'] = $handler;
 

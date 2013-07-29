@@ -220,6 +220,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['style_options']['name_field'] = 'title';
   $handler->display->display_options['style_options']['description_field'] = 'title';
   $handler->display->display_options['style_options']['map'] = 'Custom OSM Mapnik';
+  $handler->display->display_options['style_options']['height'] = '480';
   $handler->display->display_options['style_options']['icon'] = array(
     'iconUrl' => '',
     'shadowUrl' => '',

@@ -91,6 +91,12 @@
   }
 }
 
+/*
+ * All nodes are given a node-FOO class that describes the type of content that
+ * it is. If you create a new content type called "my-custom-type", it will
+ * receive a "node-my-custom-type" class.
+ */
+
 .node-scenario { /* Scenario content node */
 }
 .node-scenario.node-teaser {
@@ -112,6 +118,34 @@
     }
   }
   // .field-name-field-scenario-subject
+}
+
+/* Custom panel page */
+.page-node.node-type-scenario {
+
+  .panel-pane {
+    margin-bottom: 1.5em;
+  }
+
+  .field-name-field-scenario-time-horizon {
+    color: $text-color-tertiary;
+    font-weight: bold;
+    font-size: 2.5em;
+    font-style: italic;
+    line-height: 2em;
+  }
+  .pane-node-field-scenario-subject {
+    .pane-title {
+      margin: 0;
+      font-size: 1.23em;
+      line-height: 1.5em;
+    }
+    .pane-content {
+      margin-top: 0.5em;
+      padding-top: 0.5em;
+      border-top: 1px solid #ccc;
+    }
+  }
 }
 
 .page-node-add-scenario,
