@@ -17,7 +17,7 @@ ul.secondary {
   list-style: none;
   padding: 0;
 }
-/* line 38, ../../../../../../../../../../../../usr/lib/ruby/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../../../../../../home/peter/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 ul.primary:after,
 ul.secondary:after {
   content: "";

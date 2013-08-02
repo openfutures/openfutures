@@ -336,12 +336,16 @@
   margin-top: 0;
   display: inline-block;
 }
-/* line 331, ../sass/panels.scss */
+/* line 328, ../sass/panels.scss */
+.page-discover .views-widget-filter-field_scenario_location_tid {
+  margin-bottom: 0.5em;
+}
+/* line 335, ../sass/panels.scss */
 .page-discover .views-widget-filter-date_filter_1 .container-inline-date .form-item .date-date input,
 .page-discover .views-widget-filter-date_filter .container-inline-date .form-item .date-date input {
   margin-right: 0;
 }
-/* line 334, ../sass/panels.scss */
+/* line 338, ../sass/panels.scss */
 .page-discover .views-widget-filter-date_filter_1 .container-inline-date label,
 .page-discover .views-widget-filter-date_filter .container-inline-date label {
   line-height: 1.5em;
@@ -349,31 +353,31 @@
   float: left;
   font-weight: normal;
 }
-/* line 342, ../sass/panels.scss */
+/* line 346, ../sass/panels.scss */
 .page-discover .views-widget-filter-date_filter_1 .container-inline-date .form-item-date-filter-min label,
 .page-discover .views-widget-filter-date_filter_1 .container-inline-date .form-item-date-filter-1-min label,
 .page-discover .views-widget-filter-date_filter .container-inline-date .form-item-date-filter-min label,
 .page-discover .views-widget-filter-date_filter .container-inline-date .form-item-date-filter-1-min label {
   padding-left: 0;
 }
-/* line 346, ../sass/panels.scss */
+/* line 350, ../sass/panels.scss */
 .page-discover .views-widget-filter-date_filter_1 .container-inline-date .form-item-date-filter-min,
 .page-discover .views-widget-filter-date_filter_1 .container-inline-date .form-item-date-filter-1-min,
 .page-discover .views-widget-filter-date_filter .container-inline-date .form-item-date-filter-min,
 .page-discover .views-widget-filter-date_filter .container-inline-date .form-item-date-filter-1-min {
   margin-right: 0;
 }
-/* line 353, ../sass/panels.scss */
+/* line 357, ../sass/panels.scss */
 .page-discover #edit-date-filter-min-wrapper,
 .page-discover #edit-date-filter-max-wrapper {
   display: inline-block;
 }
-/* line 359, ../sass/panels.scss */
+/* line 363, ../sass/panels.scss */
 .page-discover .views-widget-per-page .form-item.form-type-item > label {
   border-bottom: 1px solid #cccccc;
   margin-bottom: 0.5em;
 }
-/* line 364, ../sass/panels.scss */
+/* line 368, ../sass/panels.scss */
 .page-discover .views-widget-per-page .form-item.form-type-item .form-item-items-per-page-item label {
   font-weight: normal;
   line-height: 1.5em;
@@ -381,14 +385,14 @@
   float: left;
   font-weight: normal;
 }
-/* line 376, ../sass/panels.scss */
+/* line 380, ../sass/panels.scss */
 .page-discover .views-exposed-widget.views-submit-button,
 .page-discover .views-exposed-widget.views-reset-button {
   display: inline-block;
   float: right;
   margin: 0;
 }
-/* line 380, ../sass/panels.scss */
+/* line 384, ../sass/panels.scss */
 .page-discover .views-exposed-widget.views-submit-button .form-submit,
 .page-discover .views-exposed-widget.views-reset-button .form-submit {
   margin-top: 0;

@@ -13,10 +13,10 @@ function library_import_feeds_importer_default() {
   $feeds_importer = new stdClass();
   $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
   $feeds_importer->api_version = 1;
-  $feeds_importer->id = 'scenario_csv_import';
+  $feeds_importer->id = 'scenario_csv_import_beta1';
   $feeds_importer->config = array(
-    'name' => 'Scenario CSV import',
-    'description' => 'A feeds importer for bulk import of scenario data.',
+    'name' => 'Scenario CSV import beta1',
+    'description' => 'A scenario import compatible with the 7.x-3.0-beta1 schema.',
     'fetcher' => array(
       'plugin_key' => 'FeedsFileFetcher',
       'config' => array(
@@ -74,50 +74,57 @@ function library_import_feeds_importer_default() {
             'autocreate' => 1,
           ),
           6 => array(
+            'source' => 'global_context',
+            'target' => 'field_scenario_global',
+            'unique' => FALSE,
+          ),
+          7 => array(
             'source' => 'subject',
             'target' => 'field_scenario_subject',
             'term_search' => '0',
             'autocreate' => 1,
           ),
-          7 => array(
+          8 => array(
+            'source' => 'attachment',
+            'target' => 'field_scenario_attachment',
+            'unique' => FALSE,
+          ),
+          9 => array(
             'source' => 'image',
             'target' => 'field_scenario_image',
             'unique' => FALSE,
           ),
-          8 => array(
+          10 => array(
             'source' => 'creator',
             'target' => 'field_scenario_creator',
             'unique' => FALSE,
           ),
-          9 => array(
-            'source' => 'publisher',
-            'target' => 'field_scenario_publisher',
-            'unique' => FALSE,
-          ),
-          10 => array(
-            'source' => 'contributor',
-            'target' => 'field_scenario_contributor',
-            'unique' => FALSE,
-          ),
           11 => array(
+            'source' => 'publisher',
+            'target' => 'created',
+            'unique' => FALSE,
+          ),
+          12 => array(
             'source' => 'publish_date',
             'target' => 'field_scenario_date:start',
             'unique' => FALSE,
           ),
-          12 => array(
+          13 => array(
             'source' => 'type',
             'target' => 'field_type',
-            'unique' => FALSE,
+            'term_search' => '0',
+            'autocreate' => 0,
           ),
-          13 => array(
+          14 => array(
             'source' => 'language',
             'target' => 'field_scenario_language',
             'unique' => FALSE,
           ),
-          14 => array(
+          15 => array(
             'source' => 'rights',
             'target' => 'field_scenario_rights',
-            'unique' => FALSE,
+            'term_search' => '0',
+            'autocreate' => 0,
           ),
         ),
         'update_existing' => '0',
@@ -126,14 +133,14 @@ function library_import_feeds_importer_default() {
         'bundle' => 'scenario',
       ),
     ),
-    'content_type' => 'import_scenarios',
+    'content_type' => 'import_csv',
     'update' => 0,
     'import_period' => '-1',
     'expire_period' => 3600,
-    'import_on_create' => 0,
+    'import_on_create' => 1,
     'process_in_background' => 0,
   );
-  $export['scenario_csv_import'] = $feeds_importer;
+  $export['scenario_csv_import_beta1'] = $feeds_importer;
 
   return $export;
 }

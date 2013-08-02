@@ -1,6 +1,6 @@
 name = Open Futures
 description = Custom Drupal website for Marrickville Council
-version = "7.x-3.0-alpha1"
+version = "7.x-3.0-beta1"
 core = 7.x
 php = 5.3
 
