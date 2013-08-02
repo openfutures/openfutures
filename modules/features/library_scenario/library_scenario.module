@@ -11,9 +11,9 @@ include_once 'library_scenario.features.inc';
  */
 function library_scenario_form_scenario_node_form_alter(&$form, &$form_state, $form_id) {
   // Add some JS for progressive enhancement
-  // $form['#attached']['js'] = array(
-  //   drupal_get_path('module', 'library_scenario') . '/library_scenario.js',
-  // );
+  $form['#attached']['js'] = array(
+    drupal_get_path('module', 'library_scenario') . '/library_scenario.js',
+  );
 
   // Make some changes to the scenario location fields
   $language = $form['field_scenario_location']['#language'];
@@ -23,6 +23,13 @@ function library_scenario_form_scenario_node_form_alter(&$form, &$form_state, $f
   // Add a default value for location if there isn't an existing value
   $form['field_scenario_location'][$language]['#attributes']['placeholder'] = t('Enter place names separated by a comma...');
   $form['field_scenario_location']['#prefix'] = '<p class="form-field-prefix">Add place names or geographic areas that represents the spatial coverage of the scenario. Select global context for scenarios that do not have specific geographic reference.</p>';
+
+  // Disable the location field if the global context is selected
+  $form['field_scenario_location']['#states'] = array(
+    'disabled' => array(
+      ':input[name="field_scenario_global['.$language.']"]' => array('checked' => TRUE),
+    ),
+  );
 
   // Redirect back to node add form to streamline content authoring experience.
   $form['actions']['submit']['#submit'][] = '_library_scenario_submit';
