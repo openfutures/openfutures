@@ -105,13 +105,24 @@ function library_improve_page_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'scenario' => 'scenario',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Content: Place name (field_scenario_location) */
   $handler->display->display_options['filters']['field_scenario_location_tid']['id'] = 'field_scenario_location_tid';
   $handler->display->display_options['filters']['field_scenario_location_tid']['table'] = 'field_data_field_scenario_location';
   $handler->display->display_options['filters']['field_scenario_location_tid']['field'] = 'field_scenario_location_tid';
   $handler->display->display_options['filters']['field_scenario_location_tid']['operator'] = 'empty';
+  $handler->display->display_options['filters']['field_scenario_location_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_scenario_location_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_scenario_location_tid']['vocabulary'] = 'location';
+  /* Filter criterion: Content: Global coverage (field_scenario_global) */
+  $handler->display->display_options['filters']['field_scenario_global_value']['id'] = 'field_scenario_global_value';
+  $handler->display->display_options['filters']['field_scenario_global_value']['table'] = 'field_data_field_scenario_global';
+  $handler->display->display_options['filters']['field_scenario_global_value']['field'] = 'field_scenario_global_value';
+  $handler->display->display_options['filters']['field_scenario_global_value']['operator'] = 'not';
+  $handler->display->display_options['filters']['field_scenario_global_value']['value'] = array(
+    1 => '1',
+  );
+  $handler->display->display_options['filters']['field_scenario_global_value']['group'] = 1;
   $handler->display->display_options['path'] = 'improve/locations';
 
   /* Display: Time page */
@@ -290,6 +301,14 @@ function library_improve_page_views_default_views() {
   $handler->display->display_options['filters']['field_scenario_location_tid']['operator'] = 'empty';
   $handler->display->display_options['filters']['field_scenario_location_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_scenario_location_tid']['vocabulary'] = 'location';
+  /* Filter criterion: Content: Global coverage (field_scenario_global) */
+  $handler->display->display_options['filters']['field_scenario_global_value']['id'] = 'field_scenario_global_value';
+  $handler->display->display_options['filters']['field_scenario_global_value']['table'] = 'field_data_field_scenario_global';
+  $handler->display->display_options['filters']['field_scenario_global_value']['field'] = 'field_scenario_global_value';
+  $handler->display->display_options['filters']['field_scenario_global_value']['operator'] = 'not';
+  $handler->display->display_options['filters']['field_scenario_global_value']['value'] = array(
+    1 => '1',
+  );
 
   /* Display: Time pane */
   $handler = $view->new_display('panel_pane', 'Time pane', 'panel_pane_3');

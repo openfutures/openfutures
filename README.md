@@ -20,7 +20,41 @@ Once you've built the project you can quickly install it using Drush as well.
 NB: Replace all the database parameters with your own settings.
 
 
-Staging Site
-------------
+Development Scratch Pad
+-----------------------
 
 A staging site with the latest stable development version is live at: http://openfutures.staging.thislittleduck.com/
+
+
+Development Notes
+-----------------
+
+Discover modes query string comparisons:
+
+discover?
+	keys=
+	&field_scenario_subject_tid=
+	&field_scenario_location_tid=United+Kingdom
+	&date_filter_1%5Bmin%5D%5Bdate%5D=
+	&date_filter_1%5Bmax%5D%5Bdate%5D=
+	&date_filter%5Bmin%5D%5Bdate%5D=
+	&date_filter%5Bmax%5D%5Bdate%5D=
+	&items_per_page_item=10
+
+timeline?
+	keys=
+	&field_scenario_subject_tid=
+	&field_scenario_location_tid=United+Kingdom
+	&date_filter%5Bmin%5D%5Bdate%5D=
+	&date_filter%5Bmax%5D%5Bdate%5D=
+	&date_filter_1%5Bmin%5D%5Bdate%5D=
+	&date_filter_1%5Bmax%5D%5Bdate%5D=
+
+map?
+	keys=
+	&field_scenario_subject_tid=
+	&tid=United+Kingdom
+	&date_filter%5Bmin%5D%5Bdate%5D=
+	&date_filter%5Bmax%5D%5Bdate%5D=
+	&date_filter_1%5Bmin%5D%5Bdate%5D=
+	&date_filter_1%5Bmax%5D%5Bdate%5D=
