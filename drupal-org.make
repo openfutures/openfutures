@@ -13,7 +13,9 @@ projects[ctools][revision] = e81da7a57f63ca95d2c713afcec65a5659aada9e
 projects[views][version] = 3.7
 
 ; Get the 2.x branch of Features
-projects[features][version] = 2.0-rc1
+projects[features][version] = 2.0-rc2
+
+projects[context][version] = 3.0-beta7
 
 ; Contrib modules ============================================================
 
@@ -26,6 +28,9 @@ projects[backup_migrate][version] = 2.7
 projects[blockify][subdir] = contrib
 projects[blockify][version] = 1.2
 
+projects[boxes][subdir] = contrib
+projects[boxes][version] = 1.1
+
 projects[captcha][subdir] = contrib
 projects[captcha][version] = 1.0
 
@@ -33,7 +38,7 @@ projects[date][subdir] = contrib
 projects[date][version] = 2.6
 
 projects[entity][subdir] = contrib
-projects[entity][version] = 1.1
+projects[entity][version] = 1.2
 
 projects[feeds][subdir] = contrib
 projects[feeds][version] = 2.0-alpha8
@@ -53,6 +58,12 @@ projects[field_group][patch][] = "https://drupal.org/files/1278618_field_group_p
 
 projects[fieldable_panels_panes][subdir] = contrib
 projects[fieldable_panels_panes][version] = 1.4
+
+projects[flag][subdir] = contrib
+projects[flag][version] = 3.0
+
+projects[flag_abuse][subdir] = contrib
+projects[flag_abuse][version] = 2.0-alpha1
 
 projects[geocoder][subdir] = contrib
 projects[geocoder][version] = 1.2
@@ -114,8 +125,14 @@ projects[r4032login][version] = 1.5
 projects[recaptcha][subdir] = contrib
 projects[recaptcha][version] = 1.9
 
+projects[rules][subdir] = contrib
+projects[rules][version] = 2.3
+
 projects[simplified_menu_admin][subdir] = contrib
 projects[simplified_menu_admin][version] = 1.0-beta2
+
+projects[term_merge][subdir] = contrib
+projects[term_merge][version] = 1.0
 
 projects[token][subdir] = contrib
 projects[token][version] = 1.5

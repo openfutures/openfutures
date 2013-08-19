@@ -1,0 +1,15 @@
+name = Library Content Moderation
+description = Configuration and settings for content moderation.
+core = 7.x
+package = Open Futures
+dependencies[] = ctools
+dependencies[] = flag
+dependencies[] = flag
+dependencies[] = flag_abuse
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[flag][] = mark_as_abusive
+features[flag][] = mark_as_duplicate
+features[flag][] = mark_as_inaccurate
+features[variable][] = flag_abuse_flags

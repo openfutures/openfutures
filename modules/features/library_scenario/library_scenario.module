@@ -22,7 +22,7 @@ function library_scenario_form_scenario_node_form_alter(&$form, &$form_state, $f
 
   // Add a default value for location if there isn't an existing value
   $form['field_scenario_location'][$language]['#attributes']['placeholder'] = t('Enter place names separated by a comma...');
-  $form['field_scenario_location']['#prefix'] = '<p class="form-field-prefix">Add place names or geographic areas that represents the spatial coverage of the scenario. Select global context for scenarios that do not have specific geographic reference.</p>';
+  $form['field_scenario_location']['#prefix'] = '<p class="form-field-prefix">Add place names or geographic areas that represents the spatial coverage of the scenario. Multiple locations can be separated by a comma. Select global context for scenarios that do not have specific geographic reference.</p>';
 
   // Disable the location field if the global context is selected
   $form['field_scenario_location']['#states'] = array(
@@ -31,8 +31,31 @@ function library_scenario_form_scenario_node_form_alter(&$form, &$form_state, $f
     ),
   );
 
+  // Filter scenario language field by the most influential first.
+  $language_top_options = _library_scenario_top_language_options();
+  $remainder_options = array_diff_key($form['field_scenario_language'][$language]['#options'],$language_top_options);
+  $form['field_scenario_language'][$language]['#options'] = $language_top_options + $remainder_options;
+
+  // Add a cancel button.
+  $form['actions']['cancel'] = array(
+    '#type'   => 'submit',
+    '#value'  => t('Cancel'),
+    '#access' => TRUE,
+    '#weight' => 15,
+    '#submit' => array('_library_scenario_form_cancel', 'node_form_submit_build_node'),
+    '#limit_validation_errors' => array(),
+  );
+
   // Redirect back to node add form to streamline content authoring experience.
   $form['actions']['submit']['#submit'][] = '_library_scenario_submit';
+}
+
+/**
+ * Custom cancel button callback.
+ */
+function _library_scenario_form_cancel($form, &$form_state) {
+  $url = (isset($_GET['destination'])) ? $_GET['destination'] : '<front>';
+  drupal_goto('<front>');
 }
 
 /**
@@ -46,4 +69,24 @@ function _library_scenario_submit($form, &$form_state) {
     // redirect to either default or expanded scenario add form
     $form_state['redirect'] = $redirect;
   }
+}
+
+/**
+ * Custom function to filter scenario language field
+ */
+function _library_scenario_top_language_options() {
+  return array(
+    '_none' => '- None -',
+    'en' => 'English',
+    'en-gb' => 'English, British',
+    'fr' => 'French',
+    'es' => 'Spanish',
+    'ru' => 'Russian',
+    'ar' => 'Arabic',
+    'zh-hans' => 'Chinese, Simplified',
+    'de' => 'German',
+    'ja' => 'Japanese',
+    'pt-br' => 'Portuguese, Brazil',
+    'hi' => 'Hindi',
+  );
 }

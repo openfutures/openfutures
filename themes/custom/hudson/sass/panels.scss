@@ -44,6 +44,7 @@
   margin: 0 0 0.625em 0;
   padding-bottom: 0.625em;
   border-bottom: solid 1px #ccc;
+  font-weight: bold;
 }
 .pane-user-scenarios-table-list table,
 .pane-user-scenarios-table-list tbody {
@@ -113,6 +114,7 @@
   .onethreetwo-right .pane-views-panes .pane-title {
     margin: 0;
     font-size: 1.23em;
+    font-weight: bold;
   }
   .onethreetwo-right .pane-views-panes .pane-content {
     margin-top: 0.5em;
@@ -173,6 +175,7 @@
       border-bottom: solid 1px $rule-color;
       padding-bottom: 0.5em;
       margin-bottom: 0.5em;
+      font-weight: bold;
     }
 
     .view-header {
@@ -274,6 +277,16 @@
   }
 }
 
+.pane-timeline-scenarios-discover-mode-time .vco-storyjs * {
+  font-family: $opensans !important;
+  a {
+    color: $link-color;
+  }
+}
+.pane-timeline-scenarios-discover-mode-time .vco-storyjs h3 a {
+  color: $text-color-secondary;
+}
+
 /* Text mode */
 
 /* Exposed filter form */
@@ -326,7 +339,7 @@
   }
 
   .views-widget-filter-field_scenario_location_tid {
-    margin-bottom: 0.5em;
+    // margin-bottom: 0.5em;
   }
 
   .views-widget-filter-date_filter_1,

@@ -39,10 +39,7 @@ $zen-auto-include-item-base: false;
 #tabs, // blocks sitting in the main prefix region
 .breadcrumb,
 .site-messages,
-.site-page-title,
-#user-login,
-#user-register-form,
-#user-pass { // stuff that sits inside main
+.site-page-title { // stuff that sits inside main
   @include zen-grid-item-base();
 }
 
@@ -81,9 +78,12 @@ $zen-auto-include-item-base: false;
     @include zen-nested-container(); // All positioned descendents are their own grid items.
   }
 
-  #user-login,
-  #user-register-form,
-  #user-pass {
+  .main-nested-false #main {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  #footer {
     @include zen-clear();
     @include zen-grid-item(12,1);
   }

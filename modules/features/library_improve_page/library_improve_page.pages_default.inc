@@ -207,6 +207,30 @@ function library_improve_page_default_page_manager_pages() {
     $pane->locks = array();
     $display->content['new-3'] = $pane;
     $display->panels['col3'][0] = 'new-3';
+    $pane = new stdClass();
+    $pane->pid = 'new-4';
+    $pane->panel = 'top';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => 'Improve scenario meta-data',
+      'body' => 'Some scenarios that have been added only have the bare-basics. Another way to contribute to the library is to dig into existing scenarios and update their meta data to make them more findable.',
+      'format' => 'plain_text',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-4'] = $pane;
+    $display->panels['top'][0] = 'new-4';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
