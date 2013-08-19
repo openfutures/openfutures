@@ -87,6 +87,7 @@ function openfutures_setup_ui() {
 
   // Turn on our custom node edit form
   variable_set('page_manager_node_edit_disabled', FALSE);
+  variable_set('page_manager_node_view_disabled', FALSE);
 }
 
 /**

@@ -22,38 +22,6 @@ function hudson_preprocess_html(&$variables, $hook) {
 }
 
 /**
- * Override or insert variables into the page templates.
- *
- * @param $variables
- *   An array of variables to pass to the theme template.
- * @param $hook
- *   The name of the template being rendered ("page" in this case.)
- */
-function hudson_preprocess_page(&$variables, $hook) {
-  // Work around a perculier bug/feature(?) in Drupal 7 which incorrectly sets
-  // the page title to "User account" for all three of these pages.
-  if (arg(0) === 'user') {
-
-    // We need to fix the breadcrumbs at these paths too.
-    $breadcrumb = array();
-    $breadcrumb[] = l('Home', '<front>');
-
-    if (arg(1) === 'login') {
-      drupal_set_title(t('User login'));
-      drupal_set_breadcrumb($breadcrumb);
-    }
-    if (arg(1) === 'password') {
-      drupal_set_title(t('Request new password'));
-      drupal_set_breadcrumb($breadcrumb);
-    }
-    if (arg(1) === 'register') {
-      drupal_set_title(t('Create new account'));
-      drupal_set_breadcrumb($breadcrumb);
-    }
-  }
-}
-
-/**
  * Override or insert variables into the node templates.
  *
  * @param $variables

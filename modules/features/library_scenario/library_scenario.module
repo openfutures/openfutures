@@ -31,8 +31,26 @@ function library_scenario_form_scenario_node_form_alter(&$form, &$form_state, $f
     ),
   );
 
+  // Add a cancel button.
+  $form['actions']['cancel'] = array(
+    '#type'   => 'submit',
+    '#value'  => t('Cancel'),
+    '#access' => TRUE,
+    '#weight' => 15,
+    '#submit' => array('_library_scenario_form_cancel', 'node_form_submit_build_node'),
+    '#limit_validation_errors' => array(),
+  );
+
   // Redirect back to node add form to streamline content authoring experience.
   $form['actions']['submit']['#submit'][] = '_library_scenario_submit';
+}
+
+/**
+ * Custom cancel button callback.
+ */
+function _library_scenario_form_cancel($form, &$form_state) {
+  $url = (isset($_GET['destination'])) ? $_GET['destination'] : '<front>';
+  drupal_goto('<front>');
 }
 
 /**
