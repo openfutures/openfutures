@@ -63,6 +63,22 @@ function library_discover_page_form_views_exposed_form_alter(&$form, &$form_stat
   $timeline_mode = ($form['#id'] == DISCOVER_SCENARIOS_TIMELINE_FORM);
   // dpm($form);
 
+  // Add support text for all modes
+  if ($text_mode || $map_mode || $timeline_mode) {
+    $form['support_text'] = array(
+      '#markup' => '<p>Terms are ANDed. That is, results are true for multiple filters.</p>',
+    );
+    $filter_support_text = array(
+      'filter-support-text' => array(
+        'value' => 'support_text',
+      )
+    );
+    // $form['#info'] determines the order of form elements, https://drupal.org/node/893392
+    $filter_keys = $form['#info']['filter-keys'];
+    $filter_info_remainder = array_diff_key($form['#info'], array('filter-keys' => array()));
+    $form['#info'] = array('filter-keys' => $filter_keys) + $filter_support_text + $filter_info_remainder;
+  }
+
   if ($text_mode) {
     $form['keys']['#attributes']['placeholder'] = t('Enter terms...');
     $form['field_scenario_subject_tid']['#attributes']['placeholder'] = t('Add subjects...');
