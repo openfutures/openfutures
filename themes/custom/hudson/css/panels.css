@@ -282,9 +282,23 @@
   background-image: url("../images/glyphicons/glyphicons_370_globe_af.png");
 }
 
+/* line 280, ../sass/panels.scss */
+.pane-timeline-scenarios-discover-mode-time .vco-storyjs * {
+  font-family: "Open Sans", Arial, Helvetica, "Nimbus Sans L", sans-serif !important;
+}
+/* line 282, ../sass/panels.scss */
+.pane-timeline-scenarios-discover-mode-time .vco-storyjs * a {
+  color: #0678be;
+}
+
+/* line 286, ../sass/panels.scss */
+.pane-timeline-scenarios-discover-mode-time .vco-storyjs h3 a {
+  color: #555555;
+}
+
 /* Text mode */
 /* Exposed filter form */
-/* line 286, ../sass/panels.scss */
+/* line 296, ../sass/panels.scss */
 .page-discover #views-exposed-form-browse-scenarios-discover-mode-list,
 .page-discover #views-exposed-form-timeline-scenarios-discover-mode-time,
 .page-discover #views-exposed-form-map-scenarios-discover-mode-map {
@@ -296,55 +310,55 @@
   border-radius: 4px;
   padding: 1em;
 }
-/* line 291, ../sass/panels.scss */
+/* line 301, ../sass/panels.scss */
 .page-discover #views-exposed-form-browse-scenarios-discover-mode-list input[type="text"],
 .page-discover #views-exposed-form-timeline-scenarios-discover-mode-time input[type="text"],
 .page-discover #views-exposed-form-map-scenarios-discover-mode-map input[type="text"] {
   width: 100%;
 }
-/* line 295, ../sass/panels.scss */
+/* line 305, ../sass/panels.scss */
 .page-discover .views-exposed-widget {
   float: none;
   padding: 0;
   margin-bottom: 2em;
 }
-/* line 300, ../sass/panels.scss */
+/* line 310, ../sass/panels.scss */
 .page-discover .views-exposed-widget > label {
   border-bottom: 1px solid #cccccc;
   margin-bottom: 0.5em;
 }
-/* line 305, ../sass/panels.scss */
+/* line 315, ../sass/panels.scss */
 .page-discover .views-exposed-widget .description {
   font-size: 10.998px;
   color: #555555;
 }
-/* line 312, ../sass/panels.scss */
+/* line 322, ../sass/panels.scss */
 .page-discover .views-widget-filter-keys .views-widget {
   margin-bottom: 0.77em;
 }
-/* line 315, ../sass/panels.scss */
+/* line 325, ../sass/panels.scss */
 .page-discover .views-widget-filter-keys label {
   display: none;
 }
-/* line 318, ../sass/panels.scss */
+/* line 328, ../sass/panels.scss */
 .page-discover .views-widget-filter-keys .form-item-keys {
   display: inline-block;
 }
-/* line 321, ../sass/panels.scss */
+/* line 331, ../sass/panels.scss */
 .page-discover .views-widget-filter-keys .form-item-keys input {
   margin: 0;
 }
-/* line 323, ../sass/panels.scss */
+/* line 333, ../sass/panels.scss */
 .page-discover .views-widget-filter-keys .form-submit {
   margin-top: 0;
   display: inline-block;
 }
-/* line 338, ../sass/panels.scss */
+/* line 348, ../sass/panels.scss */
 .page-discover .views-widget-filter-date_filter_1 .container-inline-date .form-item .date-date input,
 .page-discover .views-widget-filter-date_filter .container-inline-date .form-item .date-date input {
   margin-right: 0;
 }
-/* line 341, ../sass/panels.scss */
+/* line 351, ../sass/panels.scss */
 .page-discover .views-widget-filter-date_filter_1 .container-inline-date label,
 .page-discover .views-widget-filter-date_filter .container-inline-date label {
   line-height: 1.5em;
@@ -352,31 +366,31 @@
   float: left;
   font-weight: normal;
 }
-/* line 349, ../sass/panels.scss */
+/* line 359, ../sass/panels.scss */
 .page-discover .views-widget-filter-date_filter_1 .container-inline-date .form-item-date-filter-min label,
 .page-discover .views-widget-filter-date_filter_1 .container-inline-date .form-item-date-filter-1-min label,
 .page-discover .views-widget-filter-date_filter .container-inline-date .form-item-date-filter-min label,
 .page-discover .views-widget-filter-date_filter .container-inline-date .form-item-date-filter-1-min label {
   padding-left: 0;
 }
-/* line 353, ../sass/panels.scss */
+/* line 363, ../sass/panels.scss */
 .page-discover .views-widget-filter-date_filter_1 .container-inline-date .form-item-date-filter-min,
 .page-discover .views-widget-filter-date_filter_1 .container-inline-date .form-item-date-filter-1-min,
 .page-discover .views-widget-filter-date_filter .container-inline-date .form-item-date-filter-min,
 .page-discover .views-widget-filter-date_filter .container-inline-date .form-item-date-filter-1-min {
   margin-right: 0;
 }
-/* line 360, ../sass/panels.scss */
+/* line 370, ../sass/panels.scss */
 .page-discover #edit-date-filter-min-wrapper,
 .page-discover #edit-date-filter-max-wrapper {
   display: inline-block;
 }
-/* line 366, ../sass/panels.scss */
+/* line 376, ../sass/panels.scss */
 .page-discover .views-widget-per-page .form-item.form-type-item > label {
   border-bottom: 1px solid #cccccc;
   margin-bottom: 0.5em;
 }
-/* line 371, ../sass/panels.scss */
+/* line 381, ../sass/panels.scss */
 .page-discover .views-widget-per-page .form-item.form-type-item .form-item-items-per-page-item label {
   font-weight: normal;
   line-height: 1.5em;
@@ -384,14 +398,14 @@
   float: left;
   font-weight: normal;
 }
-/* line 383, ../sass/panels.scss */
+/* line 393, ../sass/panels.scss */
 .page-discover .views-exposed-widget.views-submit-button,
 .page-discover .views-exposed-widget.views-reset-button {
   display: inline-block;
   float: right;
   margin: 0;
 }
-/* line 387, ../sass/panels.scss */
+/* line 397, ../sass/panels.scss */
 .page-discover .views-exposed-widget.views-submit-button .form-submit,
 .page-discover .views-exposed-widget.views-reset-button .form-submit {
   margin-top: 0;

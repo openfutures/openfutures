@@ -277,6 +277,16 @@
   }
 }
 
+.pane-timeline-scenarios-discover-mode-time .vco-storyjs * {
+  font-family: $opensans !important;
+  a {
+    color: $link-color;
+  }
+}
+.pane-timeline-scenarios-discover-mode-time .vco-storyjs h3 a {
+  color: $text-color-secondary;
+}
+
 /* Text mode */
 
 /* Exposed filter form */
