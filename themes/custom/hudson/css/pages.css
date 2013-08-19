@@ -265,24 +265,10 @@ span.field-label {
 }
 
 /*
- * First sidebar (on left in LTR languages, on right in RTL)
- *
- * Remember to NOT add padding or margin to your .region-sidebar-first
- * (see the layout.css file.)
- */
-/*
- * Second sidebar (on right in LTR languages, on left in RTL)
- *
- * Remember to NOT add padding or margin to your .region-sidebar-second
- * (see the layout.css file.)
- */
-/*
  * Footer
  */
-/*
- * Page bottom
- */
-/* line 248, ../sass/pages.scss */
-.region-bottom {
-  /* Wrapper for any blocks placed in the page bottom region */
+/* line 221, ../sass/pages.scss */
+#footer {
+  color: #555555;
+  font-size: 10.998px;
 }

@@ -28,6 +28,9 @@ projects[backup_migrate][version] = 2.7
 projects[blockify][subdir] = contrib
 projects[blockify][version] = 1.2
 
+projects[boxes][subdir] = contrib
+projects[boxes][version] = 1.1
+
 projects[captcha][subdir] = contrib
 projects[captcha][version] = 1.0
 

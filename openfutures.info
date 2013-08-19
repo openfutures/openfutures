@@ -26,6 +26,7 @@ dependencies[] = taxonomy
 dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
 dependencies[] = backup_migrate
+dependencies[] = boxes
 dependencies[] = blockify
 dependencies[] = captcha
 dependencies[] = coder

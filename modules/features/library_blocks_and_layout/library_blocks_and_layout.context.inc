@@ -13,6 +13,39 @@ function library_blocks_and_layout_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'footer';
+  $context->description = 'Block layout for the footer region.';
+  $context->tag = 'layout';
+  $context->conditions = array(
+    'sitewide' => array(
+      'values' => array(
+        1 => 1,
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'boxes-openfutures_colophon' => array(
+          'module' => 'boxes',
+          'delta' => 'openfutures_colophon',
+          'region' => 'footer',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Block layout for the footer region.');
+  t('layout');
+  $export['footer'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'header';
   $context->description = 'Header block elements.';
   $context->tag = 'layout';
@@ -66,6 +99,33 @@ function library_blocks_and_layout_context_default_contexts() {
   t('Header block elements.');
   t('layout');
   $export['header'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'main_nested_false';
+  $context->description = 'Context for when main is not a nested grid container.';
+  $context->tag = 'layout';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'user' => 'user',
+        'user/*' => 'user/*',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'theme_html' => array(
+      'class' => 'main-nested-false',
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Context for when main is not a nested grid container.');
+  t('layout');
+  $export['main_nested_false'] = $context;
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
