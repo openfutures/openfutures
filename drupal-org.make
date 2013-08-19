@@ -59,6 +59,12 @@ projects[field_group][patch][] = "https://drupal.org/files/1278618_field_group_p
 projects[fieldable_panels_panes][subdir] = contrib
 projects[fieldable_panels_panes][version] = 1.4
 
+projects[flag][subdir] = contrib
+projects[flag][version] = 3.0
+
+projects[flag_abuse][subdir] = contrib
+projects[flag_abuse][version] = 2.0-alpha1
+
 projects[geocoder][subdir] = contrib
 projects[geocoder][version] = 1.2
 
@@ -118,6 +124,9 @@ projects[r4032login][version] = 1.5
 
 projects[recaptcha][subdir] = contrib
 projects[recaptcha][version] = 1.9
+
+projects[rules][subdir] = contrib
+projects[rules][version] = 2.3
 
 projects[simplified_menu_admin][subdir] = contrib
 projects[simplified_menu_admin][version] = 1.0-beta2
