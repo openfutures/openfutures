@@ -16,7 +16,10 @@ function library_help_page_default_page_manager_pages() {
   $page->admin_title = 'Help and Feedback page';
   $page->admin_description = 'A landing page for help information and links to feedback forms.';
   $page->path = 'help';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array(
     'type' => 'normal',
     'title' => 'Help and Feedback',

@@ -50,11 +50,11 @@ function library_content_moderation_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
-    'api_version' => 3,
     'module' => 'library_content_moderation',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   // Exported flag: "Mark as duplicate".
   $flags['mark_as_duplicate'] = array(
@@ -88,11 +88,11 @@ function library_content_moderation_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
-    'api_version' => 3,
     'module' => 'library_content_moderation',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   // Exported flag: "Mark as inaccurate".
   $flags['mark_as_inaccurate'] = array(
@@ -126,11 +126,11 @@ function library_content_moderation_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
-    'api_version' => 3,
     'module' => 'library_content_moderation',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   return $flags;
 

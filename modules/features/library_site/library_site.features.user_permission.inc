@@ -10,7 +10,7 @@
 function library_site_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: access administration pages.
+  // Exported permission: 'access administration pages'.
   $permissions['access administration pages'] = array(
     'name' => 'access administration pages',
     'roles' => array(
@@ -19,7 +19,7 @@ function library_site_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: access content.
+  // Exported permission: 'access content'.
   $permissions['access content'] = array(
     'name' => 'access content',
     'roles' => array(
@@ -29,7 +29,7 @@ function library_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: access site in maintenance mode.
+  // Exported permission: 'access site in maintenance mode'.
   $permissions['access site in maintenance mode'] = array(
     'name' => 'access site in maintenance mode',
     'roles' => array(
@@ -38,7 +38,7 @@ function library_site_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: access site reports.
+  // Exported permission: 'access site reports'.
   $permissions['access site reports'] = array(
     'name' => 'access site reports',
     'roles' => array(
@@ -47,7 +47,7 @@ function library_site_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: administer menu.
+  // Exported permission: 'administer menu'.
   $permissions['administer menu'] = array(
     'name' => 'administer menu',
     'roles' => array(
@@ -56,7 +56,7 @@ function library_site_user_default_permissions() {
     'module' => 'menu',
   );
 
-  // Exported permission: administer nodes.
+  // Exported permission: 'administer nodes'.
   $permissions['administer nodes'] = array(
     'name' => 'administer nodes',
     'roles' => array(
@@ -65,7 +65,7 @@ function library_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: administer site configuration.
+  // Exported permission: 'administer site configuration'.
   $permissions['administer site configuration'] = array(
     'name' => 'administer site configuration',
     'roles' => array(
@@ -74,7 +74,7 @@ function library_site_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: administer taxonomy.
+  // Exported permission: 'administer taxonomy'.
   $permissions['administer taxonomy'] = array(
     'name' => 'administer taxonomy',
     'roles' => array(
@@ -83,7 +83,7 @@ function library_site_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: administer themes.
+  // Exported permission: 'administer themes'.
   $permissions['administer themes'] = array(
     'name' => 'administer themes',
     'roles' => array(
@@ -92,7 +92,7 @@ function library_site_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: administer users.
+  // Exported permission: 'administer users'.
   $permissions['administer users'] = array(
     'name' => 'administer users',
     'roles' => array(
@@ -101,7 +101,7 @@ function library_site_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: view the administration theme.
+  // Exported permission: 'view the administration theme'.
   $permissions['view the administration theme'] = array(
     'name' => 'view the administration theme',
     'roles' => array(

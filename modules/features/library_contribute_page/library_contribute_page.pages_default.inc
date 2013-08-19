@@ -18,6 +18,8 @@ function library_contribute_page_default_page_manager_pages() {
   $page->path = 'contribute';
   $page->access = array(
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'normal',

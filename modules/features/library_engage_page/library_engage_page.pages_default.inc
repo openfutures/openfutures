@@ -18,6 +18,8 @@ function library_engage_page_default_page_manager_pages() {
   $page->path = 'engage';
   $page->access = array(
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'none',
