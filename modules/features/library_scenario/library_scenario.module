@@ -31,6 +31,11 @@ function library_scenario_form_scenario_node_form_alter(&$form, &$form_state, $f
     ),
   );
 
+  // Filter scenario language field by the most influential first.
+  $language_top_options = _library_scenario_top_language_options();
+  $remainder_options = array_diff_key($form['field_scenario_language'][$language]['#options'],$language_top_options);
+  $form['field_scenario_language'][$language]['#options'] = $language_top_options + $remainder_options;
+
   // Add a cancel button.
   $form['actions']['cancel'] = array(
     '#type'   => 'submit',
@@ -64,4 +69,24 @@ function _library_scenario_submit($form, &$form_state) {
     // redirect to either default or expanded scenario add form
     $form_state['redirect'] = $redirect;
   }
+}
+
+/**
+ * Custom function to filter scenario language field
+ */
+function _library_scenario_top_language_options() {
+  return array(
+    '_none' => '- None -',
+    'en' => 'English',
+    'en-gb' => 'English, British',
+    'fr' => 'French',
+    'es' => 'Spanish',
+    'ru' => 'Russian',
+    'ar' => 'Arabic',
+    'zh-hans' => 'Chinese, Simplified',
+    'de' => 'German',
+    'ja' => 'Japanese',
+    'pt-br' => 'Portuguese, Brazil',
+    'hi' => 'Hindi',
+  );
 }
