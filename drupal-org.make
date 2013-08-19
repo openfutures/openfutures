@@ -13,7 +13,9 @@ projects[ctools][revision] = e81da7a57f63ca95d2c713afcec65a5659aada9e
 projects[views][version] = 3.7
 
 ; Get the 2.x branch of Features
-projects[features][version] = 2.0-rc1
+projects[features][version] = 2.0-rc2
+
+projects[context][version] = 3.0-beta7
 
 ; Contrib modules ============================================================
 
@@ -33,7 +35,7 @@ projects[date][subdir] = contrib
 projects[date][version] = 2.6
 
 projects[entity][subdir] = contrib
-projects[entity][version] = 1.1
+projects[entity][version] = 1.2
 
 projects[feeds][subdir] = contrib
 projects[feeds][version] = 2.0-alpha8
@@ -116,6 +118,9 @@ projects[recaptcha][version] = 1.9
 
 projects[simplified_menu_admin][subdir] = contrib
 projects[simplified_menu_admin][version] = 1.0-beta2
+
+projects[term_merge][subdir] = contrib
+projects[term_merge][version] = 1.0
 
 projects[token][subdir] = contrib
 projects[token][version] = 1.5
