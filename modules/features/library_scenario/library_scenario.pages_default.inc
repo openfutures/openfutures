@@ -1314,7 +1314,7 @@ function library_scenario_default_page_manager_handlers() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'above',
+      'label' => 'inline',
       'formatter' => 'url_default',
       'delta_limit' => 0,
       'delta_offset' => '0',
@@ -1346,7 +1346,7 @@ function library_scenario_default_page_manager_handlers() {
     $pane->access = array();
     $pane->configuration = array(
       'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
+      'override_title' => 1,
       'override_title_text' => '',
     );
     $pane->cache = array();
@@ -1367,7 +1367,7 @@ function library_scenario_default_page_manager_handlers() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'above',
+      'label' => 'inline',
       'formatter' => 'date_default',
       'delta_limit' => 0,
       'delta_offset' => '0',
@@ -1401,7 +1401,7 @@ function library_scenario_default_page_manager_handlers() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'above',
+      'label' => 'inline',
       'formatter' => 'text_default',
       'delta_limit' => 0,
       'delta_offset' => '0',
@@ -1429,7 +1429,7 @@ function library_scenario_default_page_manager_handlers() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'above',
+      'label' => 'inline',
       'formatter' => 'text_default',
       'delta_limit' => 0,
       'delta_offset' => '0',
@@ -1463,7 +1463,7 @@ function library_scenario_default_page_manager_handlers() {
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
-        'image_style' => 'thumbnail',
+        'image_style' => 'medium',
         'image_link' => '',
       ),
       'context' => 'argument_entity_id:node_1',
@@ -1488,7 +1488,7 @@ function library_scenario_default_page_manager_handlers() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'above',
+      'label' => 'inline',
       'formatter' => 'taxonomy_term_reference_plain',
       'delta_limit' => 0,
       'delta_offset' => '0',
@@ -1516,7 +1516,7 @@ function library_scenario_default_page_manager_handlers() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'above',
+      'label' => 'inline',
       'formatter' => 'language_default',
       'delta_limit' => 0,
       'delta_offset' => '0',
@@ -1550,7 +1550,7 @@ function library_scenario_default_page_manager_handlers() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'above',
+      'label' => 'inline',
       'formatter' => 'taxonomy_term_reference_plain',
       'delta_limit' => 0,
       'delta_offset' => '0',
@@ -1572,6 +1572,53 @@ function library_scenario_default_page_manager_handlers() {
     $display->panels['left'][8] = 'new-51';
     $pane = new stdClass();
     $pane->pid = 'new-52';
+    $pane->panel = 'left';
+    $pane->type = 'node_comment_form';
+    $pane->subtype = 'node_comment_form';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'anon_links' => 1,
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => 'Add comment to discussion',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 9;
+    $pane->locks = array();
+    $display->content['new-52'] = $pane;
+    $display->panels['left'][9] = 'new-52';
+    $pane = new stdClass();
+    $pane->pid = 'new-53';
+    $pane->panel = 'left';
+    $pane->type = 'node_comments';
+    $pane->subtype = 'node_comments';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'mode' => '1',
+      'comments_per_page' => '50',
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => 'Discussion',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 10;
+    $pane->locks = array();
+    $display->content['new-53'] = $pane;
+    $display->panels['left'][10] = 'new-53';
+    $pane = new stdClass();
+    $pane->pid = 'new-54';
     $pane->panel = 'right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_scenario_time_horizon';
@@ -1602,10 +1649,10 @@ function library_scenario_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-52'] = $pane;
-    $display->panels['right'][0] = 'new-52';
+    $display->content['new-54'] = $pane;
+    $display->panels['right'][0] = 'new-54';
     $pane = new stdClass();
-    $pane->pid = 'new-53';
+    $pane->pid = 'new-55';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'scenario_locations_map-scenario_locations_map';
@@ -1624,10 +1671,10 @@ function library_scenario_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-53'] = $pane;
-    $display->panels['right'][1] = 'new-53';
+    $display->content['new-55'] = $pane;
+    $display->panels['right'][1] = 'new-55';
     $pane = new stdClass();
-    $pane->pid = 'new-54';
+    $pane->pid = 'new-56';
     $pane->panel = 'right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_scenario_subject';
@@ -1652,17 +1699,17 @@ function library_scenario_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-54'] = $pane;
-    $display->panels['right'][2] = 'new-54';
+    $display->content['new-56'] = $pane;
+    $display->panels['right'][2] = 'new-56';
     $pane = new stdClass();
-    $pane->pid = 'new-55';
+    $pane->pid = 'new-57';
     $pane->panel = 'right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_scenario_location';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'label' => 'above',
+      'label' => 'inline',
       'formatter' => 'taxonomy_term_reference_plain',
       'delta_limit' => '0',
       'delta_offset' => '0',
@@ -1680,38 +1727,10 @@ function library_scenario_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-55'] = $pane;
-    $display->panels['right'][3] = 'new-55';
-    $pane = new stdClass();
-    $pane->pid = 'new-56';
-    $pane->panel = 'right';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_scenario_global';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'above',
-      'formatter' => 'list_default',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 4;
-    $pane->locks = array();
-    $display->content['new-56'] = $pane;
-    $display->panels['right'][4] = 'new-56';
+    $display->content['new-57'] = $pane;
+    $display->panels['right'][3] = 'new-57';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-54';
+  $display->title_pane = 'new-56';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context'] = $handler;
 

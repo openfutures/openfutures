@@ -336,10 +336,6 @@
   margin-top: 0;
   display: inline-block;
 }
-/* line 328, ../sass/panels.scss */
-.page-discover .views-widget-filter-field_scenario_location_tid {
-  margin-bottom: 0.5em;
-}
 /* line 335, ../sass/panels.scss */
 .page-discover .views-widget-filter-date_filter_1 .container-inline-date .form-item .date-date input,
 .page-discover .views-widget-filter-date_filter .container-inline-date .form-item .date-date input {
