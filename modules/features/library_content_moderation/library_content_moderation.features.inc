@@ -34,7 +34,7 @@ function library_content_moderation_flag_default_flags() {
     'unflag_long' => '',
     'unflag_message' => '',
     'unflag_denied_text' => '',
-    'link_type' => 'toggle',
+    'link_type' => 'confirm',
     'weight' => 0,
     'show_in_links' => array(
       'full' => 'full',
@@ -50,6 +50,8 @@ function library_content_moderation_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
+    'flag_confirmation' => 'Choose a category that best matches the violation',
+    'unflag_confirmation' => 'Are you sure you want to unmark this as abuse?',
     'module' => 'library_content_moderation',
     'locked' => array(
       0 => 'name',
@@ -60,7 +62,7 @@ function library_content_moderation_flag_default_flags() {
   $flags['mark_as_duplicate'] = array(
     'entity_type' => 'node',
     'title' => 'Mark as duplicate',
-    'global' => 1,
+    'global' => 0,
     'types' => array(
       0 => 'scenario',
     ),
@@ -72,7 +74,7 @@ function library_content_moderation_flag_default_flags() {
     'unflag_long' => '',
     'unflag_message' => '',
     'unflag_denied_text' => '',
-    'link_type' => 'toggle',
+    'link_type' => 'confirm',
     'weight' => 0,
     'show_in_links' => array(
       'full' => 'full',
@@ -88,6 +90,8 @@ function library_content_moderation_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
+    'flag_confirmation' => 'Please add the duplicate URL',
+    'unflag_confirmation' => 'Are you sure you want to unmark this as a duplicate',
     'module' => 'library_content_moderation',
     'locked' => array(
       0 => 'name',
@@ -110,7 +114,7 @@ function library_content_moderation_flag_default_flags() {
     'unflag_long' => '',
     'unflag_message' => '',
     'unflag_denied_text' => '',
-    'link_type' => 'toggle',
+    'link_type' => 'confirm',
     'weight' => 0,
     'show_in_links' => array(
       'full' => 'full',
@@ -126,6 +130,8 @@ function library_content_moderation_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
+    'flag_confirmation' => 'Please add additional information',
+    'unflag_confirmation' => 'Are you sure you want to unmark this content as inaccurate?',
     'module' => 'library_content_moderation',
     'locked' => array(
       0 => 'name',

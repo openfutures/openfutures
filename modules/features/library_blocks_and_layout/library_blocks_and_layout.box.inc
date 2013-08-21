@@ -22,6 +22,7 @@ function library_blocks_and_layout_default_box() {
       'value' => 'The Open Futures Library is developed and hosted by the Services 2020 project of the Smart Services CRC in Australia. The content of the library is contributed and maintained by a global community of foresight practitioners, researchers, students and interested people just like you. The Library will always stay open and free for public use.',
       'format' => 'plain_text',
     ),
+    'additional_classes' => '',
   );
   $export['openfutures_colophon'] = $box;
 
