@@ -210,16 +210,12 @@ function library_improve_page_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-4';
     $pane->panel = 'top';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'fieldable_panels_pane';
+    $pane->subtype = 'fpid:4';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => '',
-      'title' => 'Improve scenario meta-data',
-      'body' => 'Some scenarios that have been added only have the bare-basics. Another way to contribute to the library is to dig into existing scenarios and update their meta data to make them more findable.',
-      'format' => 'plain_text',
-      'substitute' => TRUE,
+      'view_mode' => 'full',
     );
     $pane->cache = array();
     $pane->style = array(

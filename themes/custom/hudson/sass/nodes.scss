@@ -198,6 +198,10 @@
 .page-node-add-scenario,
 .page-node-edit {
   .node-scenario-form {
+    .pane-edit-mode {
+      position: relative;
+    }
+
     .form-item-title {
       font-size: 1.23em;
       margin-bottom: 0;

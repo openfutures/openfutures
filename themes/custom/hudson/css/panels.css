@@ -183,26 +183,26 @@
   margin-bottom: 1em;
 }
 /* line 186, ../sass/panels.scss */
-.page-improve .panel-row-top {
+.page-improve .onethreetwo-hero {
   /* top row region */
 }
 /* line 187, ../sass/panels.scss */
-.page-improve .panel-row-top .pane-title {
+.page-improve .onethreetwo-hero .pane-title {
   font-weight: normal;
 }
 /* line 193, ../sass/panels.scss */
-.page-improve .panel-row-top .pane-title,
-.page-improve .panel-row-top .field-name-field-image-feature-text,
-.page-improve .panel-row-top .field-name-field-image-feature-image {
+.page-improve .onethreetwo-hero .pane-title,
+.page-improve .onethreetwo-hero .field-name-field-image-feature-text,
+.page-improve .onethreetwo-hero .field-name-field-image-feature-image {
   width: 50%;
   float: left;
 }
 /* line 198, ../sass/panels.scss */
-.page-improve .panel-row-top .field-name-field-image-feature-text {
+.page-improve .onethreetwo-hero .field-name-field-image-feature-text {
   clear: left;
 }
 /* line 201, ../sass/panels.scss */
-.page-improve .panel-row-top .field-name-field-image-feature-text p {
+.page-improve .onethreetwo-hero .field-name-field-image-feature-text p {
   margin-top: 0;
 }
 
