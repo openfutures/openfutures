@@ -8,8 +8,8 @@
 api = 2
 core = 7.x
 
-; Include Buildkit profile so we've got a Ctools ready Drupal core:
-includes[] = http://drupalcode.org/project/buildkit.git/blob_plain/refs/heads/7.x-2.x:/drupal-org-core.make
+; Include Drupal core and any core patches.
+includes[] = drupal-org-core.make
 
 projects[openfutures][type] = profile
 projects[openfutures][download][type] = git

@@ -1,21 +1,40 @@
-; Include Build Kit install profile makefile via URL
-includes[] = http://drupalcode.org/project/buildkit.git/blob_plain/refs/heads/7.x-2.x:/drupal-org.make
+api = 2
+core = 7.x
 
-; Build Kit overrides =========================================================
+; Required contrib ===========================================================
 
-; Get CTools security update while we wait for Build Kit to get updated
+projects[admin][subdir] = contrib
+projects[admin][version] = 2.0-beta3
+
+projects[coder][subdir] = contrib
+projects[coder][version] = 1.2
+
+projects[context][subdir] = contrib
+projects[context][version] = 3.0-beta7
+
+projects[ctools][subdir] = contrib
 ; projects[ctools][version] = 1.3
 ; Was getting errors related to a views exposed filter block, this issue pointed
 ; to a solution: https://drupal.org/node/1962838
 projects[ctools][revision] = e81da7a57f63ca95d2c713afcec65a5659aada9e
 
-; Get View security update while we wait for Build Kit to get updated
-projects[views][version] = 3.7
+projects[devel][subdir] = contrib
+projects[devel][version] = 1.3
 
-; Get the 2.x branch of Features
+projects[diff][subdir] = contrib
+projects[diff][version] = 3.2
+
+projects[features][subdir] = contrib
 projects[features][version] = 2.0-rc2
 
-projects[context][version] = 3.0-beta7
+projects[openidadmin][subdir] = contrib
+projects[openidadmin][version] = 1.0
+
+projects[strongarm][subdir] = contrib
+projects[strongarm][version] = 2.0
+
+projects[views][subdir] = contrib
+projects[views][version] = 3.7
 
 ; Contrib modules ============================================================
 
