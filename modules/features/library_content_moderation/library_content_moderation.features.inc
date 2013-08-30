@@ -30,7 +30,7 @@ function library_content_moderation_flag_default_flags() {
     'flag_short' => 'Mark as abusive',
     'flag_long' => '',
     'flag_message' => '',
-    'unflag_short' => 'Mark as abusive',
+    'unflag_short' => 'Unmark as abusive',
     'unflag_long' => '',
     'unflag_message' => '',
     'unflag_denied_text' => '',
