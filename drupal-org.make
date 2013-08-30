@@ -147,6 +147,9 @@ projects[recaptcha][version] = 1.9
 projects[rules][subdir] = contrib
 projects[rules][version] = 2.3
 
+projects[shield][subdir] = contrib
+projects[shield][version] = 1.2
+
 projects[simplified_menu_admin][subdir] = contrib
 projects[simplified_menu_admin][version] = 1.0-beta2
 
