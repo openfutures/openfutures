@@ -148,7 +148,8 @@ projects[rules][subdir] = contrib
 projects[rules][version] = 2.3
 
 projects[shield][subdir] = contrib
-projects[shield][version] = 1.2
+projects[shield][revision] = 83ed5bf77650940bba8c1a852b9c31f0b4b1265c
+projects[shield][patch][] = "https://drupal.org/files/authentication-vars-as-url-parameters-2078697-2.patch"
 
 projects[simplified_menu_admin][subdir] = contrib
 projects[simplified_menu_admin][version] = 1.0-beta2
