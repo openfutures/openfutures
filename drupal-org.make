@@ -142,6 +142,9 @@ projects[panels_breadcrumbs][version] = 2.1
 projects[panelizer][subdir] = contrib
 projects[panelizer][version] = 3.1
 
+projects[prepopulate][subdir] = contrib
+projects[prepopulate][version] = 2.x-dev
+
 projects[r4032login][subdir] = contrib
 projects[r4032login][version] = 1.6
 

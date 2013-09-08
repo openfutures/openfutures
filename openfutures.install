@@ -50,7 +50,11 @@ function openfutures_install() {
  */
 function openfutures_update_7001() {
   module_enable(array('library_import'));
+}
 
-  // Revert features.
-  features_revert();
+/**
+ * Enable Prepopulate module for bookmarklet
+ */
+function openfutures_update_7002() {
+  module_enable(array('prepopulate'));
 }

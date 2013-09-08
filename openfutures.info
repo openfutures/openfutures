@@ -67,6 +67,7 @@ dependencies[] = module_filter
 dependencies[] = node_vertical_tab_elements
 dependencies[] = page_manager
 dependencies[] = panels
+dependencies[] = prepopulate
 dependencies[] = r4032login
 dependencies[] = recaptcha
 dependencies[] = rules
