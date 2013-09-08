@@ -6,6 +6,9 @@ core = 7.x
 projects[admin][subdir] = contrib
 projects[admin][version] = 2.0-beta3
 
+projects[advanced_help][subdir] = contrib
+projects[advanced_help][version] = 1.0
+
 projects[coder][subdir] = contrib
 projects[coder][version] = 1.2
 
@@ -25,7 +28,7 @@ projects[diff][subdir] = contrib
 projects[diff][version] = 3.2
 
 projects[features][subdir] = contrib
-projects[features][version] = 2.0-rc2
+projects[features][version] = 2.0-rc3
 
 projects[openidadmin][subdir] = contrib
 projects[openidadmin][version] = 1.0
@@ -76,13 +79,14 @@ projects[field_group][revision] = c90651e80a8c4d3495dfd8476eaf83b6cd38175f
 projects[field_group][patch][] = "https://drupal.org/files/1278618_field_group_panels-48.patch"
 
 projects[fieldable_panels_panes][subdir] = contrib
-projects[fieldable_panels_panes][version] = 1.4
+projects[fieldable_panels_panes][version] = 1.5
 
 projects[flag][subdir] = contrib
-projects[flag][version] = 3.0
+projects[flag][version] = 3.1
 
 projects[flag_abuse][subdir] = contrib
 projects[flag_abuse][version] = 2.0-alpha1
+projects[flag_abuse][patch][] = "https://drupal.org/files/undefined-property-2057901-3.patch"
 
 projects[geocoder][subdir] = contrib
 projects[geocoder][version] = 1.2
@@ -124,7 +128,7 @@ projects[menu_block][subdir] = contrib
 projects[menu_block][version] = 2.3
 
 projects[module_filter][subdir] = contrib
-projects[module_filter][version] = 1.7
+projects[module_filter][version] = 1.8
 
 projects[node_vertical_tab_elements][subdir] = contrib
 projects[node_vertical_tab_elements][version] = 3.0
@@ -139,10 +143,10 @@ projects[panelizer][subdir] = contrib
 projects[panelizer][version] = 3.1
 
 projects[r4032login][subdir] = contrib
-projects[r4032login][version] = 1.5
+projects[r4032login][version] = 1.6
 
 projects[recaptcha][subdir] = contrib
-projects[recaptcha][version] = 1.9
+projects[recaptcha][version] = 1.10
 
 projects[rules][subdir] = contrib
 projects[rules][version] = 2.3
@@ -169,12 +173,12 @@ projects[views_timelinejs][subdir] = contrib
 projects[views_timelinejs][revision] = b9308d0fe7a8576e15bbb63680501561dbbf3248
 
 projects[webform][subdir] = contrib
-projects[webform][version] = 4.0-alpha8
+projects[webform][version] = 4.0-alpha10
 
 ; Themes =====================================================================
 
 projects[zen][subdir] = base
-projects[zen][version] = 5.1
+projects[zen][version] = 5.4
 
 projects[tao][subdir] = base
 projects[rubik][subdir] = base

@@ -11,6 +11,13 @@ define('DISCOVER_SCENARIOS_TIMELINE_FORM', 'views-exposed-form-timeline-scenario
 define('DISCOVER_SCENARIOS_MAP_FORM', 'views-exposed-form-map-scenarios-discover-mode-map');
 
 /**
+ * Implements hook_ctools_plugin_directory().
+ */
+function library_discover_page_ctools_plugin_directory($module, $plugin) {
+  return 'plugins/' . $plugin;
+}
+
+/**
  * Implements hook_form_alter().
  * @see http://drupal.org/node/1079826 for more information on this code.
  */
@@ -80,13 +87,13 @@ function library_discover_page_form_views_exposed_form_alter(&$form, &$form_stat
   }
 
   if ($text_mode) {
-    $form['keys']['#attributes']['placeholder'] = t('Enter terms...');
-    $form['field_scenario_subject_tid']['#attributes']['placeholder'] = t('Add subjects...');
-    $form['field_scenario_location_tid']['#attributes']['placeholder'] = t('Add place names...');
+    $form['search']['#attributes']['placeholder'] = t('Enter terms...');
+    $form['subject']['#attributes']['placeholder'] = t('Add subjects...');
+    $form['place']['#attributes']['placeholder'] = t('Add place names...');
     $keys_filter_submit = $form['submit'];
     $keys_filter_submit['#id'] = 'edit-submit-browse-scenarios2';
     $keys_filter_submit['#value'] = t('Search');
-    $form['keys']['#suffix'] = drupal_render($keys_filter_submit);
+    $form['search']['#suffix'] = drupal_render($keys_filter_submit);
     $form['items_per_page']['#title'] = t('Items per page: ');
     $items_per_page = $form['items_per_page'];
     unset($form['items_per_page']);
@@ -98,18 +105,13 @@ function library_discover_page_form_views_exposed_form_alter(&$form, &$form_stat
     );
   }
   if ($map_mode || $timeline_mode) {
-    $form['keys']['#attributes']['placeholder'] = t('Enter terms...');
-    $form['field_scenario_subject_tid']['#attributes']['placeholder'] = t('Add subjects...');
-    if ($timeline_mode) {
-      $form['field_scenario_location_tid']['#attributes']['placeholder'] = t('Add place names...');
-    }
-    else {
-      $form['tid']['#attributes']['placeholder'] = t('Add place names...');
-    }
+    $form['search']['#attributes']['placeholder'] = t('Enter terms...');
+    $form['subject']['#attributes']['placeholder'] = t('Add subjects...');
+    $form['place']['#attributes']['placeholder'] = t('Add place names...');
     $keys_filter_submit = $form['submit'];
     $keys_filter_submit['#id'] = 'edit-submit-browse-scenarios2';
     $keys_filter_submit['#value'] = t('Search');
-    $form['keys']['#suffix'] = drupal_render($keys_filter_submit);
+    $form['search']['#suffix'] = drupal_render($keys_filter_submit);
   }
 }
 
@@ -120,25 +122,25 @@ function library_discover_page_form_views_exposed_form_alter(&$form, &$form_stat
  */
 function library_discover_page_date_text_process_alter(&$element, &$form_state, $context) {
   // Let's modify the edit-date-filter-1-min date field element.
-  if ($element['#id'] == 'edit-date-filter-1-min') {
+  if ($element['#id'] == 'edit-horizon-min') {
     $element['#title'] = t('Start year: ');
     $element['date']['#size'] = 2;
     $element['date']['#attributes']['placeholder'] = 'YYYY';
     unset($element['date']['#description']);
   }
-  if ($element['#id'] == 'edit-date-filter-1-max') {
+  if ($element['#id'] == 'edit-horizon-max') {
     $element['#title'] = t('to: ');
     $element['date']['#size'] = 2;
     $element['date']['#attributes']['placeholder'] = 'YYYY';
     unset($element['date']['#description']);
   }
-  if ($element['#id'] == 'edit-date-filter-min') {
+  if ($element['#id'] == 'edit-published-min') {
     $element['#title'] = t('Start year: ');
     $element['date']['#size'] = 2;
     $element['date']['#attributes']['placeholder'] = 'YYYY';
     unset($element['date']['#description']);
   }
-  if ($element['#id'] == 'edit-date-filter-max') {
+  if ($element['#id'] == 'edit-published-max') {
     $element['#title'] = t('to: ');
     $element['date']['#size'] = 2;
     $element['date']['#attributes']['placeholder'] = 'YYYY';
