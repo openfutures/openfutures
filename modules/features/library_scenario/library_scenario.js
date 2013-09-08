@@ -5,6 +5,28 @@
   Drupal.behaviors.enhanceScenarioForm = {
     attach: function(context, settings) {
       // add form js here
+      $("a.mode-quick").click(function() {
+        var title = $("#edit-title").val();
+        var source = $("#edit-field-scenario-source-und-0-value").val();
+        // alert("Just took over quick mode. Your title is: "+source);
+        if (!window.location.origin)
+          window.location.origin = window.location.protocol+"//"+window.location.host;
+        var base = window.location.origin;
+        var path = "/node/add/scenario/quick";
+        window.location.href = base+path+"?edit[title]="+encodeURIComponent(title)+"&edit[field_scenario_source][und][0][value]="+encodeURIComponent(source);
+        return false;
+      });
+      $("a.mode-expanded").click(function() {
+        var title = $("#edit-title").val();
+        var source = $("#edit-field-scenario-source-und-0-value").val();
+        // alert("Just took over quick mode. Your title is: "+source);
+        if (!window.location.origin)
+          window.location.origin = window.location.protocol+"//"+window.location.host;
+        var base = window.location.origin;
+        var path = "/node/add/scenario";
+        window.location.href = base+path+"?edit[title]="+encodeURIComponent(title)+"&edit[field_scenario_source][und][0][value]="+encodeURIComponent(source);
+        return false;
+      });
       // when the checkbox is changed, see if it is checked, if it's checked,
       // clear the value of the location and update the placeholder attribute
       var updateLocation = function() {

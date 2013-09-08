@@ -5,3 +5,10 @@
  */
 
 include_once 'library_help_page.features.inc';
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function library_help_page_ctools_plugin_directory($module, $plugin) {
+  return 'plugins/' . $plugin;
+}

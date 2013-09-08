@@ -54,7 +54,20 @@ function library_discover_page_default_page_manager_pages() {
     'body_classes_to_add' => '',
     'css_id' => '',
     'css' => '',
-    'contexts' => array(),
+    'contexts' => array(
+      0 => array(
+        'identifier' => 'String',
+        'keyword' => 'jabanga',
+        'name' => 'string',
+        'id' => 1,
+      ),
+      1 => array(
+        'identifier' => 'Token',
+        'keyword' => 'token',
+        'name' => 'token',
+        'id' => 1,
+      ),
+    ),
     'relationships' => array(),
     'access' => array(
       'plugins' => array(
@@ -111,23 +124,11 @@ function library_discover_page_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-2';
     $pane->panel = 'right';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'discover_page_mode_pane';
+    $pane->subtype = 'discover_page_mode_pane';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'Display mode toggle',
-      'title' => '',
-      'body' => '<div class="display-mode">
-<ul>
-<li><a class="mode-list" href="/discover" title="List display mode"><span class="label">list</span></a></li>
-<li><a class="mode-timeline" href="/discover/timeline" title="Timeline display mode"><span class="label">timeline</span></a></li>
-<li><a class="active mode-map" href="/discover/map" title="Map display mode"><span class="label">map</span></a></li>
-</ul>
-</div>',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -157,7 +158,7 @@ function library_discover_page_default_page_manager_pages() {
     $display->content['new-3'] = $pane;
     $display->panels['right'][1] = 'new-3';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-2';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $handler = new stdClass();
@@ -233,23 +234,11 @@ function library_discover_page_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-5';
     $pane->panel = 'right';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'discover_page_mode_pane';
+    $pane->subtype = 'discover_page_mode_pane';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'Display mode toggle',
-      'title' => '',
-      'body' => '<div class="display-mode">
-<ul>
-<li><a class="mode-list" href="/discover" title="List display mode"><span class="label">list</span></a></li>
-<li><a class=" active mode-timeline" href="/discover/timeline" title="Timeline display mode"><span class="label">timeline</span></a></li>
-<li><a class="mode-map" href="/discover/map" title="Map display mode"><span class="label">map</span></a></li>
-</ul>
-</div>',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -345,23 +334,11 @@ function library_discover_page_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-8';
     $pane->panel = 'right';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'discover_page_mode_pane';
+    $pane->subtype = 'discover_page_mode_pane';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'admin_title' => 'Display mode toggle',
-      'title' => '',
-      'body' => '<div class="display-mode">
-<ul>
-<li><a class="active mode-list" href="/discover" title="List display mode"><span class="label">list</span></a></li>
-<li><a class="mode-timeline" href="/discover/timeline" title="Timeline display mode"><span class="label">timeline</span></a></li>
-<li><a class="mode-map" href="/discover/map" title="Map display mode"><span class="label">map</span></a></li>
-</ul>
-</div>',
-      'format' => 'full_html',
-      'substitute' => TRUE,
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,

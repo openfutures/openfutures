@@ -88,7 +88,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['keys']['expose']['label'] = 'Search';
   $handler->display->display_options['filters']['keys']['expose']['description'] = 'Full text search for scenario titles and descriptions.';
   $handler->display->display_options['filters']['keys']['expose']['operator'] = 'keys_op';
-  $handler->display->display_options['filters']['keys']['expose']['identifier'] = 'keys';
+  $handler->display->display_options['filters']['keys']['expose']['identifier'] = 'search';
   $handler->display->display_options['filters']['keys']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
@@ -105,7 +105,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['label'] = 'Filter by subject';
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['description'] = 'Separate multiple subjects with a comma.';
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['operator'] = 'field_scenario_subject_tid_op';
-  $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['identifier'] = 'field_scenario_subject_tid';
+  $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['identifier'] = 'subject';
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['multiple'] = TRUE;
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['remember_roles'] = array(
     2 => '2',
@@ -124,7 +124,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['label'] = 'Filter by location';
   $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['description'] = 'Separate multiple place names with a comma.';
   $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['operator'] = 'field_scenario_location_tid_op';
-  $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['identifier'] = 'field_scenario_location_tid';
+  $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['identifier'] = 'place';
   $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['multiple'] = TRUE;
   $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['remember_roles'] = array(
     2 => '2',
@@ -143,7 +143,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['date_filter_1']['expose']['label'] = 'Filter by time horizon';
   $handler->display->display_options['filters']['date_filter_1']['expose']['description'] = 'Displays all scenarios with a time horizon within the range specified.';
   $handler->display->display_options['filters']['date_filter_1']['expose']['operator'] = 'date_filter_1_op';
-  $handler->display->display_options['filters']['date_filter_1']['expose']['identifier'] = 'date_filter_1';
+  $handler->display->display_options['filters']['date_filter_1']['expose']['identifier'] = 'horizon';
   $handler->display->display_options['filters']['date_filter_1']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
@@ -166,7 +166,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['date_filter']['expose']['label'] = 'Filter by publish date';
   $handler->display->display_options['filters']['date_filter']['expose']['description'] = 'Displays all scenarios with a publish date between the range specified.';
   $handler->display->display_options['filters']['date_filter']['expose']['operator'] = 'date_filter_op';
-  $handler->display->display_options['filters']['date_filter']['expose']['identifier'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['expose']['identifier'] = 'published';
   $handler->display->display_options['filters']['date_filter']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
@@ -305,7 +305,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['keys']['expose']['label'] = 'Search';
   $handler->display->display_options['filters']['keys']['expose']['description'] = 'Full text search for scenario titles and descriptions.';
   $handler->display->display_options['filters']['keys']['expose']['operator'] = 'keys_op';
-  $handler->display->display_options['filters']['keys']['expose']['identifier'] = 'keys';
+  $handler->display->display_options['filters']['keys']['expose']['identifier'] = 'search';
   $handler->display->display_options['filters']['keys']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
@@ -323,7 +323,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['label'] = 'Filter by subject';
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['description'] = 'Separate multiple subjects with a comma.';
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['operator'] = 'field_scenario_subject_tid_op';
-  $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['identifier'] = 'field_scenario_subject_tid';
+  $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['identifier'] = 'subject';
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['multiple'] = TRUE;
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['remember_roles'] = array(
     2 => '2',
@@ -342,7 +342,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['tid']['expose']['label'] = 'Filter by location';
   $handler->display->display_options['filters']['tid']['expose']['description'] = 'Separate multiple place names with a comma.';
   $handler->display->display_options['filters']['tid']['expose']['operator'] = 'tid_op';
-  $handler->display->display_options['filters']['tid']['expose']['identifier'] = 'tid';
+  $handler->display->display_options['filters']['tid']['expose']['identifier'] = 'place';
   $handler->display->display_options['filters']['tid']['expose']['multiple'] = TRUE;
   $handler->display->display_options['filters']['tid']['expose']['remember_roles'] = array(
     2 => '2',
@@ -362,7 +362,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['date_filter']['expose']['label'] = 'Time Horizon';
   $handler->display->display_options['filters']['date_filter']['expose']['description'] = 'Displays all scenarios with a time horizon within the range specified.';
   $handler->display->display_options['filters']['date_filter']['expose']['operator'] = 'date_filter_op';
-  $handler->display->display_options['filters']['date_filter']['expose']['identifier'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['expose']['identifier'] = 'horizon';
   $handler->display->display_options['filters']['date_filter']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
@@ -386,7 +386,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['date_filter_1']['expose']['label'] = 'Filter by publish date';
   $handler->display->display_options['filters']['date_filter_1']['expose']['description'] = 'Displays all scenarios with a publish date between the range specified.';
   $handler->display->display_options['filters']['date_filter_1']['expose']['operator'] = 'date_filter_1_op';
-  $handler->display->display_options['filters']['date_filter_1']['expose']['identifier'] = 'date_filter_1';
+  $handler->display->display_options['filters']['date_filter_1']['expose']['identifier'] = 'published';
   $handler->display->display_options['filters']['date_filter_1']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
@@ -573,7 +573,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['keys']['expose']['label'] = 'Search';
   $handler->display->display_options['filters']['keys']['expose']['description'] = 'Full text search for scenario titles and descriptions.';
   $handler->display->display_options['filters']['keys']['expose']['operator'] = 'keys_op';
-  $handler->display->display_options['filters']['keys']['expose']['identifier'] = 'keys';
+  $handler->display->display_options['filters']['keys']['expose']['identifier'] = 'search';
   $handler->display->display_options['filters']['keys']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
@@ -590,7 +590,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['label'] = 'Filter by subject';
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['description'] = 'Separate multiple subjects with a comma.';
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['operator'] = 'field_scenario_subject_tid_op';
-  $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['identifier'] = 'field_scenario_subject_tid';
+  $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['identifier'] = 'subject';
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['multiple'] = TRUE;
   $handler->display->display_options['filters']['field_scenario_subject_tid']['expose']['remember_roles'] = array(
     2 => '2',
@@ -609,7 +609,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['label'] = 'Filter by location';
   $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['description'] = 'Separate multiple place names with a comma.';
   $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['operator'] = 'field_scenario_location_tid_op';
-  $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['identifier'] = 'field_scenario_location_tid';
+  $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['identifier'] = 'place';
   $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['multiple'] = TRUE;
   $handler->display->display_options['filters']['field_scenario_location_tid']['expose']['remember_roles'] = array(
     2 => '2',
@@ -634,7 +634,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['date_filter']['expose']['label'] = 'Filter by time horizon';
   $handler->display->display_options['filters']['date_filter']['expose']['description'] = 'Displays all scenarios with a time horizon within the range specified.';
   $handler->display->display_options['filters']['date_filter']['expose']['operator'] = 'date_filter_op';
-  $handler->display->display_options['filters']['date_filter']['expose']['identifier'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['expose']['identifier'] = 'horizon';
   $handler->display->display_options['filters']['date_filter']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
@@ -657,7 +657,7 @@ function library_discover_page_views_default_views() {
   $handler->display->display_options['filters']['date_filter_1']['expose']['label'] = 'Filter by publish date';
   $handler->display->display_options['filters']['date_filter_1']['expose']['description'] = 'Displays all scenarios with a publish date between the range specified.';
   $handler->display->display_options['filters']['date_filter_1']['expose']['operator'] = 'date_filter_1_op';
-  $handler->display->display_options['filters']['date_filter_1']['expose']['identifier'] = 'date_filter_1';
+  $handler->display->display_options['filters']['date_filter_1']['expose']['identifier'] = 'published';
   $handler->display->display_options['filters']['date_filter_1']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,

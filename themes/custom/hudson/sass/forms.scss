@@ -276,3 +276,21 @@ html.js input.throbbing {
   margin: 2px;
   width: 29px;
 }
+
+.webform-pane {
+  h2.pane-title {
+    font-size: 15.99px;
+    border-bottom: solid 1px #cccccc;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    margin-top: 0;
+    font-weight: bold;
+  }
+}
+.webform-client-form {
+  .webform-component-textfield {
+    input[type="text"] {
+      width: 100%;
+    }
+  }
+}
