@@ -1760,6 +1760,34 @@ function library_scenario_default_page_manager_handlers() {
     $pane->locks = array();
     $display->content['new-58'] = $pane;
     $display->panels['right'][3] = 'new-58';
+    $pane = new stdClass();
+    $pane->pid = 'new-59';
+    $pane->panel = 'right';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_scenario_attachment';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'inline',
+      'formatter' => 'file_default',
+      'delta_limit' => '0',
+      'delta_offset' => '0',
+      'delta_reversed' => 0,
+      'formatter_settings' => array(),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 4;
+    $pane->locks = array();
+    $display->content['new-59'] = $pane;
+    $display->panels['right'][4] = 'new-59';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-57';
   $handler->conf['display'] = $display;
