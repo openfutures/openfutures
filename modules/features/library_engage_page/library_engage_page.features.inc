@@ -43,6 +43,7 @@ function library_engage_page_image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'library_landing_460',
   );
 
   return $styles;

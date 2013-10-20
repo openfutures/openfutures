@@ -10,6 +10,7 @@ dependencies[] = context
 dependencies[] = ctools
 dependencies[] = strongarm
 features[box][] = openfutures_colophon
+features[box][] = smart_services_logo
 features[context][] = footer
 features[context][] = header
 features[context][] = main_nested_false

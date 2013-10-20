@@ -222,3 +222,16 @@ span.field-label { /* The inline field label used by the Fences module */
   color: $text-color-secondary;
   font-size: $small-font-size;
 }
+
+#block-boxes-smart-services-logo {
+  float: right;
+}
+
+#block-boxes-openfutures-colophon {
+  margin-bottom: 0;
+  .boxes-box-content {
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

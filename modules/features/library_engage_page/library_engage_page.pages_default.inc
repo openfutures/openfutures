@@ -54,7 +54,14 @@ function library_engage_page_default_page_manager_pages() {
     'body_classes_to_add' => '',
     'css_id' => '',
     'css' => '',
-    'contexts' => array(),
+    'contexts' => array(
+      0 => array(
+        'identifier' => 'Token',
+        'keyword' => 'token',
+        'name' => 'token',
+        'id' => 1,
+      ),
+    ),
     'relationships' => array(),
     'access' => array(
       'logic' => 'and',
@@ -223,12 +230,22 @@ function library_engage_page_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-7';
     $pane->panel = 'top';
-    $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'fpid:1';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'view_mode' => 'full',
+      'admin_title' => 'Welcome text',
+      'title' => '',
+      'body' => '<div class="custom-page-left">
+<h1>Welcome to Open Futures</h1>
+<p>The Open Futures Library is a publicly-contributed, indexed, searchable collection of future scenarios and other images of the future. Hundreds of futures projects worldwide each year generate depictions of the future in the form of scenarios, story sketches, artist’s impressions, videos and so on and publish them online, but finding and reusing these depictions is very difficult. Our goal is to provide a repository which indexes each depiction of the future by the kinds of criteria that makes it reusable.</p>
+</div>
+<div class="custom-page-right">
+<img src="//%token:site:url-brief/profiles/openfutures/modules/features/library_engage_page/images/engage.png" />
+</div>',
+      'format' => 'full_html',
+      'substitute' => 1,
     );
     $pane->cache = array();
     $pane->style = array(
