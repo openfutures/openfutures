@@ -18,19 +18,18 @@ function library_content_moderation_ctools_plugin_api($module = NULL, $api = NUL
  */
 function library_content_moderation_flag_default_flags() {
   $flags = array();
-  // Exported flag: "Mark as abusive".
+  // Exported flag: "Mark as abuse".
   $flags['mark_as_abusive'] = array(
     'entity_type' => 'node',
-    'title' => 'Mark as abusive',
+    'title' => 'Mark as abuse',
     'global' => 0,
     'types' => array(
       0 => 'scenario',
     ),
-    'errors' => array(),
-    'flag_short' => 'Mark as abusive',
+    'flag_short' => 'Mark as abuse',
     'flag_long' => '',
     'flag_message' => '',
-    'unflag_short' => 'Unmark as abusive',
+    'unflag_short' => 'Unmark as abuse',
     'unflag_long' => '',
     'unflag_message' => '',
     'unflag_denied_text' => '',
@@ -66,7 +65,6 @@ function library_content_moderation_flag_default_flags() {
     'types' => array(
       0 => 'scenario',
     ),
-    'errors' => array(),
     'flag_short' => 'Mark as duplicate',
     'flag_long' => '',
     'flag_message' => '',
@@ -106,7 +104,6 @@ function library_content_moderation_flag_default_flags() {
     'types' => array(
       0 => 'scenario',
     ),
-    'errors' => array(),
     'flag_short' => 'Mark as inaccurate',
     'flag_long' => '',
     'flag_message' => '',
