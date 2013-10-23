@@ -6,14 +6,19 @@
     attach: function(context, settings) {
       // add form js here
       $("a.mode-quick").click(function() {
-        var title = $("#edit-title").val();
-        var source = $("#edit-field-scenario-source-und-0-value").val();
+        var raw_title = $("#edit-title").val();
+        var title = $.trim(raw_title);
+        var raw_source = $("#edit-field-scenario-source-und-0-value").val();
+        var source = $.trim(raw_source);
         // alert("Just took over quick mode. Your title is: "+source);
         if (!window.location.origin)
           window.location.origin = window.location.protocol+"//"+window.location.host;
         var base = window.location.origin;
         var path = "/node/add/scenario/quick";
-        window.location.href = base+path+"?edit[title]="+encodeURIComponent(title)+"&edit[field_scenario_source][und][0][value]="+encodeURIComponent(source);
+        var query_string = '';
+
+        // window.location.href = base+path+"?edit[title]="+encodeURIComponent(title)+"&edit[field_scenario_source][und][0][value]="+encodeURIComponent(source);
+        window.location.href = base+path+query_string;
         return false;
       });
       $("a.mode-expanded").click(function() {

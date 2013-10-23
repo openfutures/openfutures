@@ -165,6 +165,32 @@
  */
 
 .page-improve {
+
+  .onethreetwo-hero {
+    margin: 3em 0 4em 0;
+
+    h1 {
+      font-size: 1.85em;
+      font-weight: normal;
+      margin: 0 0 0.54em 0;
+    }
+  }
+
+  .custom-page-left,
+  .custom-page-right {
+    width: 50%;
+    float: left;
+
+    p {
+      margin-top: 0;
+      font-size: 1.23em;
+      line-height: 1.5em;
+    }
+
+    img {
+      margin-top: -2em;
+    }
+  }
   .pane-views-panes {
     .pane-title {
       font-size: $h5-font-size;
@@ -176,27 +202,6 @@
 
     .view-header {
       margin-bottom: 1em;
-    }
-  }
-
-  .onethreetwo-hero { /* top row region */
-    .pane-title {
-      font-weight: normal;
-    }
-
-    .pane-title,
-    .field-name-field-image-feature-text,
-    .field-name-field-image-feature-image {
-      width: 50%;
-      float: left;
-    }
-
-    .field-name-field-image-feature-text {
-      clear: left;
-
-      p {
-        margin-top: 0;
-      }
     }
   }
 }

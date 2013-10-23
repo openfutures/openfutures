@@ -53,7 +53,14 @@ function library_improve_page_default_page_manager_pages() {
     'body_classes_to_add' => '',
     'css_id' => '',
     'css' => '',
-    'contexts' => array(),
+    'contexts' => array(
+      0 => array(
+        'identifier' => 'Token',
+        'keyword' => 'token',
+        'name' => 'token',
+        'id' => 1,
+      ),
+    ),
     'relationships' => array(),
   );
   $display = new panels_display();
@@ -210,12 +217,22 @@ function library_improve_page_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-4';
     $pane->panel = 'top';
-    $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'fpid:4';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'view_mode' => 'full',
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<div class="custom-page-left">
+<h1>Improve scenario meta-data</h1>
+<p>Some scenarios that have been added only have the bare-basics. Another way to contribute to the library is to dig into existing scenarios and update their meta data to make them more findable.</p>
+</div>
+<div class="custom-page-right">
+<img src="//%token:site:url-brief/profiles/openfutures/modules/features/library_improve_page/images/improve.png" />
+</div>',
+      'format' => 'full_html',
+      'substitute' => 1,
     );
     $pane->cache = array();
     $pane->style = array(
