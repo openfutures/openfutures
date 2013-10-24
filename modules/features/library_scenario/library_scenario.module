@@ -46,6 +46,13 @@ function library_scenario_form_scenario_node_form_alter(&$form, &$form_state, $f
     '#limit_validation_errors' => array(),
   );
 
+  // Remove the prepoluate query string to avoid validation/submission problems.
+  $query = strpos($form['#action'], '?');
+  if ($query) {
+    list($path, $query_string) = explode('?', $form['#action']);
+    $form['#action'] = $path;
+  }
+
   // Redirect back to node add form to streamline content authoring experience.
   $form['actions']['submit']['#submit'][] = '_library_scenario_submit';
 }
