@@ -22,14 +22,7 @@ function library_scenario_form_scenario_node_form_alter(&$form, &$form_state, $f
 
   // Add a default value for location if there isn't an existing value
   $form['field_scenario_location'][$language]['#attributes']['placeholder'] = t('Enter place names separated by a comma...');
-  $form['field_scenario_location']['#prefix'] = '<p class="form-field-prefix">Add place names or geographic areas that represents the spatial coverage of the scenario. Multiple locations can be separated by a comma. Select global context for scenarios that do not have specific geographic reference.</p>';
-
-  // Disable the location field if the global context is selected
-  $form['field_scenario_location']['#states'] = array(
-    'disabled' => array(
-      ':input[name="field_scenario_global['.$language.']"]' => array('checked' => TRUE),
-    ),
-  );
+  $form['field_scenario_location']['#prefix'] = '<p class="form-field-prefix">Add place names or geographic areas that represents the spatial coverage of the scenario. Multiple locations can be separated by a comma. For scenarios that have a global focus enter "Global" as a subject instead of using a location.</p>';
 
   // Filter scenario language field by the most influential first.
   $language_top_options = _library_scenario_top_language_options();
