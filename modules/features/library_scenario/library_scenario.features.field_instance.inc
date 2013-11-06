@@ -67,7 +67,7 @@ function library_scenario_field_default_field_instances() {
   $field_instances['node-scenario-field_scenario_attachment'] = array(
     'bundle' => 'scenario',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Only upload attachments for which you have the appropriate rights (it\'s yours or in the public domain).',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -775,6 +775,7 @@ function library_scenario_field_default_field_instances() {
   t('Global coverage');
   t('Image');
   t('Language');
+  t('Only upload attachments for which you have the appropriate rights (it\'s yours or in the public domain).');
   t('Place name');
   t('Publish Date');
   t('Publisher');

@@ -25,6 +25,7 @@ dependencies[] = taxonomy
 ; Contrib
 dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
+dependencies[] = admin_views
 dependencies[] = backup_migrate
 dependencies[] = boxes
 dependencies[] = blockify
@@ -77,6 +78,7 @@ dependencies[] = term_merge
 dependencies[] = token
 dependencies[] = token_filter
 dependencies[] = views
+dependencies[] = views_bulk_operations
 dependencies[] = views_content
 dependencies[] = views_ui
 dependencies[] = views_timelinejs

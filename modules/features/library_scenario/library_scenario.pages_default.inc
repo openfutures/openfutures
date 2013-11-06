@@ -1369,6 +1369,34 @@ function library_scenario_default_page_manager_handlers() {
     $pane->pid = 'new-45';
     $pane->panel = 'left';
     $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_scenario_attachment';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'inline',
+      'formatter' => 'file_default',
+      'delta_limit' => '0',
+      'delta_offset' => '0',
+      'delta_reversed' => 0,
+      'formatter_settings' => array(),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-45'] = $pane;
+    $display->panels['left'][2] = 'new-45';
+    $pane = new stdClass();
+    $pane->pid = 'new-46';
+    $pane->panel = 'left';
+    $pane->type = 'entity_field';
     $pane->subtype = 'node:field_scenario_date';
     $pane->shown = TRUE;
     $pane->access = array();
@@ -1395,34 +1423,6 @@ function library_scenario_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-45'] = $pane;
-    $display->panels['left'][2] = 'new-45';
-    $pane = new stdClass();
-    $pane->pid = 'new-46';
-    $pane->panel = 'left';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_scenario_creator';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'inline',
-      'formatter' => 'text_default',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
     $display->content['new-46'] = $pane;
@@ -1431,7 +1431,7 @@ function library_scenario_default_page_manager_handlers() {
     $pane->pid = 'new-47';
     $pane->panel = 'left';
     $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_scenario_publisher';
+    $pane->subtype = 'node:field_scenario_creator';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -1459,6 +1459,34 @@ function library_scenario_default_page_manager_handlers() {
     $pane->pid = 'new-48';
     $pane->panel = 'left';
     $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_scenario_publisher';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'inline',
+      'formatter' => 'text_default',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 5;
+    $pane->locks = array();
+    $display->content['new-48'] = $pane;
+    $display->panels['left'][5] = 'new-48';
+    $pane = new stdClass();
+    $pane->pid = 'new-49';
+    $pane->panel = 'left';
+    $pane->type = 'entity_field';
     $pane->subtype = 'node:field_scenario_image';
     $pane->shown = TRUE;
     $pane->access = array();
@@ -1482,12 +1510,12 @@ function library_scenario_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 6;
     $pane->locks = array();
-    $display->content['new-48'] = $pane;
-    $display->panels['left'][5] = 'new-48';
+    $display->content['new-49'] = $pane;
+    $display->panels['left'][6] = 'new-49';
     $pane = new stdClass();
-    $pane->pid = 'new-49';
+    $pane->pid = 'new-50';
     $pane->panel = 'left';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_scenario_rights';
@@ -1510,12 +1538,12 @@ function library_scenario_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 6;
+    $pane->position = 7;
     $pane->locks = array();
-    $display->content['new-49'] = $pane;
-    $display->panels['left'][6] = 'new-49';
+    $display->content['new-50'] = $pane;
+    $display->panels['left'][7] = 'new-50';
     $pane = new stdClass();
-    $pane->pid = 'new-50';
+    $pane->pid = 'new-51';
     $pane->panel = 'left';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_scenario_language';
@@ -1544,12 +1572,12 @@ function library_scenario_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 7;
+    $pane->position = 8;
     $pane->locks = array();
-    $display->content['new-50'] = $pane;
-    $display->panels['left'][7] = 'new-50';
+    $display->content['new-51'] = $pane;
+    $display->panels['left'][8] = 'new-51';
     $pane = new stdClass();
-    $pane->pid = 'new-51';
+    $pane->pid = 'new-52';
     $pane->panel = 'left';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_type';
@@ -1572,12 +1600,12 @@ function library_scenario_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 8;
+    $pane->position = 9;
     $pane->locks = array();
-    $display->content['new-51'] = $pane;
-    $display->panels['left'][8] = 'new-51';
+    $display->content['new-52'] = $pane;
+    $display->panels['left'][9] = 'new-52';
     $pane = new stdClass();
-    $pane->pid = 'new-52';
+    $pane->pid = 'new-53';
     $pane->panel = 'left';
     $pane->type = 'node_links';
     $pane->subtype = 'node_links';
@@ -1597,12 +1625,12 @@ function library_scenario_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 9;
+    $pane->position = 10;
     $pane->locks = array();
-    $display->content['new-52'] = $pane;
-    $display->panels['left'][9] = 'new-52';
+    $display->content['new-53'] = $pane;
+    $display->panels['left'][10] = 'new-53';
     $pane = new stdClass();
-    $pane->pid = 'new-53';
+    $pane->pid = 'new-54';
     $pane->panel = 'left';
     $pane->type = 'node_comment_form';
     $pane->subtype = 'node_comment_form';
@@ -1620,12 +1648,12 @@ function library_scenario_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 10;
+    $pane->position = 11;
     $pane->locks = array();
-    $display->content['new-53'] = $pane;
-    $display->panels['left'][10] = 'new-53';
+    $display->content['new-54'] = $pane;
+    $display->panels['left'][11] = 'new-54';
     $pane = new stdClass();
-    $pane->pid = 'new-54';
+    $pane->pid = 'new-55';
     $pane->panel = 'left';
     $pane->type = 'node_comments';
     $pane->subtype = 'node_comments';
@@ -1644,12 +1672,12 @@ function library_scenario_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 11;
+    $pane->position = 12;
     $pane->locks = array();
-    $display->content['new-54'] = $pane;
-    $display->panels['left'][11] = 'new-54';
+    $display->content['new-55'] = $pane;
+    $display->panels['left'][12] = 'new-55';
     $pane = new stdClass();
-    $pane->pid = 'new-55';
+    $pane->pid = 'new-56';
     $pane->panel = 'right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_scenario_time_horizon';
@@ -1680,10 +1708,10 @@ function library_scenario_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-55'] = $pane;
-    $display->panels['right'][0] = 'new-55';
+    $display->content['new-56'] = $pane;
+    $display->panels['right'][0] = 'new-56';
     $pane = new stdClass();
-    $pane->pid = 'new-56';
+    $pane->pid = 'new-57';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'scenario_locations_map-scenario_locations_map';
@@ -1702,10 +1730,10 @@ function library_scenario_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-56'] = $pane;
-    $display->panels['right'][1] = 'new-56';
+    $display->content['new-57'] = $pane;
+    $display->panels['right'][1] = 'new-57';
     $pane = new stdClass();
-    $pane->pid = 'new-57';
+    $pane->pid = 'new-58';
     $pane->panel = 'right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_scenario_subject';
@@ -1730,10 +1758,10 @@ function library_scenario_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-57'] = $pane;
-    $display->panels['right'][2] = 'new-57';
+    $display->content['new-58'] = $pane;
+    $display->panels['right'][2] = 'new-58';
     $pane = new stdClass();
-    $pane->pid = 'new-58';
+    $pane->pid = 'new-59';
     $pane->panel = 'right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_scenario_location';
@@ -1758,10 +1786,10 @@ function library_scenario_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-58'] = $pane;
-    $display->panels['right'][3] = 'new-58';
+    $display->content['new-59'] = $pane;
+    $display->panels['right'][3] = 'new-59';
     $pane = new stdClass();
-    $pane->pid = 'new-59';
+    $pane->pid = 'new-60';
     $pane->panel = 'right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_scenario_attachment';
@@ -1786,10 +1814,10 @@ function library_scenario_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 4;
     $pane->locks = array();
-    $display->content['new-59'] = $pane;
-    $display->panels['right'][4] = 'new-59';
+    $display->content['new-60'] = $pane;
+    $display->panels['right'][4] = 'new-60';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-57';
+  $display->title_pane = 'new-58';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context'] = $handler;
 
