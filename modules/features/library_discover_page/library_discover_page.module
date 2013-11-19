@@ -71,29 +71,29 @@ function library_discover_page_form_views_exposed_form_alter(&$form, &$form_stat
   // dpm($form);
 
   // Add support text for all modes
-  if ($text_mode || $map_mode || $timeline_mode) {
-    $form['support_text'] = array(
-      '#markup' => '<p>Terms are ANDed. That is, results are true for multiple filters.</p>',
-    );
-    $filter_support_text = array(
-      'filter-support-text' => array(
-        'value' => 'support_text',
-      )
-    );
-    // $form['#info'] determines the order of form elements, https://drupal.org/node/893392
-    $filter_keys = $form['#info']['filter-keys'];
-    $filter_info_remainder = array_diff_key($form['#info'], array('filter-keys' => array()));
-    $form['#info'] = array('filter-keys' => $filter_keys) + $filter_support_text + $filter_info_remainder;
-  }
+  // if ($text_mode || $map_mode || $timeline_mode) {
+  //   $form['support_text'] = array(
+  //     '#markup' => '<p>Terms are ANDed. That is, results are true for multiple filters.</p>',
+  //   );
+  //   $filter_support_text = array(
+  //     'filter-support-text' => array(
+  //       'value' => 'support_text',
+  //     )
+  //   );
+  //   // $form['#info'] determines the order of form elements, https://drupal.org/node/893392
+  //   $filter_keys = $form['#info']['filter-keys'];
+  //   $filter_info_remainder = array_diff_key($form['#info'], array('filter-keys' => array()));
+  //   $form['#info'] = array('filter-keys' => $filter_keys) + $filter_support_text + $filter_info_remainder;
+  // }
 
   if ($text_mode) {
-    $form['search']['#attributes']['placeholder'] = t('Enter terms...');
+    // $form['search']['#attributes']['placeholder'] = t('Enter terms...');
     $form['subject']['#attributes']['placeholder'] = t('Add subjects...');
     $form['place']['#attributes']['placeholder'] = t('Add place names...');
-    $keys_filter_submit = $form['submit'];
-    $keys_filter_submit['#id'] = 'edit-submit-browse-scenarios2';
-    $keys_filter_submit['#value'] = t('Search');
-    $form['search']['#suffix'] = drupal_render($keys_filter_submit);
+    // $keys_filter_submit = $form['submit'];
+    // $keys_filter_submit['#id'] = 'edit-submit-browse-scenarios2';
+    // $keys_filter_submit['#value'] = t('Search');
+    // $form['search']['#suffix'] = drupal_render($keys_filter_submit);
     $form['items_per_page']['#title'] = t('Items per page: ');
     $items_per_page = $form['items_per_page'];
     unset($form['items_per_page']);
@@ -105,13 +105,13 @@ function library_discover_page_form_views_exposed_form_alter(&$form, &$form_stat
     );
   }
   if ($map_mode || $timeline_mode) {
-    $form['search']['#attributes']['placeholder'] = t('Enter terms...');
+    // $form['search']['#attributes']['placeholder'] = t('Enter terms...');
     $form['subject']['#attributes']['placeholder'] = t('Add subjects...');
     $form['place']['#attributes']['placeholder'] = t('Add place names...');
-    $keys_filter_submit = $form['submit'];
-    $keys_filter_submit['#id'] = 'edit-submit-browse-scenarios2';
-    $keys_filter_submit['#value'] = t('Search');
-    $form['search']['#suffix'] = drupal_render($keys_filter_submit);
+    // $keys_filter_submit = $form['submit'];
+    // $keys_filter_submit['#id'] = 'edit-submit-browse-scenarios2';
+    // $keys_filter_submit['#value'] = t('Search');
+    // $form['search']['#suffix'] = drupal_render($keys_filter_submit);
   }
 }
 

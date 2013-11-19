@@ -269,7 +269,7 @@ You can add a record to the Library which describes a copyright work, such as a 
       'admin_title' => 'Register action',
       'title' => 'Start adding scenarios',
       'body' => '<p>For the Library to be more useful to searchers than simply using Google, the items need to be indexed and classified as future depictions. The form allows you to enter a lot of metadata, but the only items which as mandatory are Title and URL. The Library will work better if you try to enter as much of the rest as you can, but if you can\'t find some of the information it\'s OK to leave it out.</p>
-<p><a href="http://%token:site:url-brief/user/register" class="action submit-scenario">Submit new scenario</a></p>
+<p><a href="//%token:site:url-brief/node/add/scenario/quick" class="action submit-scenario">Submit new scenario</a></p>
 ',
       'format' => 'full_html',
       'substitute' => 1,
@@ -287,12 +287,22 @@ You can add a record to the Library which describes a copyright work, such as a 
     $pane = new stdClass();
     $pane->pid = 'new-4';
     $pane->panel = 'top';
-    $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'fpid:2';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'view_mode' => 'full',
+      'admin_title' => 'Contribute intro text',
+      'title' => '',
+      'body' => '<div class="custom-page-left">
+<h1>Contribute to the Library</h1>
+<p>Everyone is welcome to contribute to Open Futures. This is a community of academics, futurists, researchers, planners and students. We’re aiming to create an open and inclusive platform where people can collate, discover and contribute their scenario work.</p>
+</div>
+<div class="custom-page-right">
+<img src="//%token:site:url-brief/profiles/openfutures/modules/features/library_contribute_page/images/contribute.png" />
+</div>',
+      'format' => 'full_html',
+      'substitute' => 1,
     );
     $pane->cache = array();
     $pane->style = array(
@@ -317,7 +327,7 @@ You can add a record to the Library which describes a copyright work, such as a 
   $handler->handler = 'panel_context';
   $handler->weight = -29;
   $handler->conf = array(
-    'title' => 'Panel',
+    'title' => 'Anonymous users',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
@@ -545,12 +555,22 @@ You can add a record to the Library which describes a copyright work, such as a 
     $pane = new stdClass();
     $pane->pid = 'new-8';
     $pane->panel = 'top';
-    $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'fpid:2';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'view_mode' => 'full',
+      'admin_title' => 'Contribute intro text',
+      'title' => '',
+      'body' => '<div class="custom-page-left">
+<h1>Contribute to the Library</h1>
+<p>Everyone is welcome to contribute to Open Futures. This is a community of academics, futurists, researchers, planners and students. We’re aiming to create an open and inclusive platform where people can collate, discover and contribute their scenario work.</p>
+</div>
+<div class="custom-page-right">
+<img src="//%token:site:url-brief/profiles/openfutures/modules/features/library_contribute_page/images/contribute.png" />
+</div>',
+      'format' => 'full_html',
+      'substitute' => 1,
     );
     $pane->cache = array();
     $pane->style = array(

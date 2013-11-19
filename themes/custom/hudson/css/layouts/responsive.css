@@ -171,9 +171,87 @@
   }
 }
 /*
+ * One Four Two custom panels layout ==========================================
+ */
+/* line 139, ../../sass/layouts/responsive.scss */
+.onefourtwo-hero,
+.onefourtwo-col1,
+.onefourtwo-col2,
+.onefourtwo-col3,
+.onefourtwo-left,
+.onefourtwo-right {
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+@media all and (min-width: 960px) {
+  /* line 144, ../../sass/layouts/responsive.scss */
+  .onefourtwo-hero {
+    float: left;
+    width: 960px;
+    margin-left: 0px;
+    margin-right: -960px;
+  }
+
+  /* line 147, ../../sass/layouts/responsive.scss */
+  .onefourtwo-col1 {
+    clear: left;
+    float: left;
+    width: 240px;
+    margin-left: 0px;
+    margin-right: -240px;
+  }
+
+  /* line 151, ../../sass/layouts/responsive.scss */
+  .onefourtwo-col2 {
+    float: left;
+    width: 240px;
+    margin-left: 240px;
+    margin-right: -480px;
+  }
+
+  /* line 154, ../../sass/layouts/responsive.scss */
+  .onefourtwo-col3 {
+    float: left;
+    width: 240px;
+    margin-left: 480px;
+    margin-right: -720px;
+  }
+
+  /* line 157, ../../sass/layouts/responsive.scss */
+  .onefourtwo-col4 {
+    float: left;
+    width: 240px;
+    margin-left: 720px;
+    margin-right: -960px;
+  }
+
+  /* line 160, ../../sass/layouts/responsive.scss */
+  .onefourtwo-left {
+    clear: left;
+    float: left;
+    width: 720px;
+    margin-left: 0px;
+    margin-right: -720px;
+  }
+
+  /* line 164, ../../sass/layouts/responsive.scss */
+  .onefourtwo-right {
+    float: left;
+    width: 240px;
+    margin-left: 720px;
+    margin-right: -960px;
+  }
+}
+/*
  * Three Nine custom panels layout =============================================
  */
-/* line 133, ../../sass/layouts/responsive.scss */
+/* line 173, ../../sass/layouts/responsive.scss */
 .threenine-left,
 .threenine-right {
   padding-left: 10px;
@@ -186,7 +264,7 @@
 }
 
 @media all and (min-width: 960px) {
-  /* line 138, ../../sass/layouts/responsive.scss */
+  /* line 178, ../../sass/layouts/responsive.scss */
   .threenine-left {
     clear: left;
     float: left;
@@ -196,7 +274,7 @@
     padding-left: 5px;
   }
 
-  /* line 143, ../../sass/layouts/responsive.scss */
+  /* line 183, ../../sass/layouts/responsive.scss */
   .threenine-right {
     float: left;
     width: 640px;
@@ -208,7 +286,7 @@
 /*
  * Eight Four custom panels layout =============================================
  */
-/* line 153, ../../sass/layouts/responsive.scss */
+/* line 193, ../../sass/layouts/responsive.scss */
 .eightfour-left,
 .eightfour-right {
   padding-left: 10px;
@@ -221,7 +299,7 @@
 }
 
 @media all and (min-width: 960px) {
-  /* line 158, ../../sass/layouts/responsive.scss */
+  /* line 198, ../../sass/layouts/responsive.scss */
   .eightfour-left {
     clear: left;
     float: left;
@@ -231,7 +309,7 @@
     padding-left: 5px;
   }
 
-  /* line 163, ../../sass/layouts/responsive.scss */
+  /* line 203, ../../sass/layouts/responsive.scss */
   .eightfour-right {
     float: left;
     width: 320px;
@@ -243,7 +321,7 @@
 /*
  * Eight Four Two custom panels layout =========================================
  */
-/* line 176, ../../sass/layouts/responsive.scss */
+/* line 216, ../../sass/layouts/responsive.scss */
 .eightfourtwo-main,
 .eightfourtwo-side,
 .eightfourtwo-left,
@@ -259,7 +337,7 @@
 }
 
 @media all and (min-width: 960px) {
-  /* line 181, ../../sass/layouts/responsive.scss */
+  /* line 221, ../../sass/layouts/responsive.scss */
   .eightfourtwo-side {
     float: right;
     width: 320px;
@@ -267,7 +345,7 @@
     margin-left: -320px;
   }
 
-  /* line 184, ../../sass/layouts/responsive.scss */
+  /* line 224, ../../sass/layouts/responsive.scss */
   .eightfourtwo-main {
     float: left;
     width: 640px;
@@ -275,7 +353,7 @@
     margin-right: -640px;
   }
 
-  /* line 187, ../../sass/layouts/responsive.scss */
+  /* line 227, ../../sass/layouts/responsive.scss */
   .eightfourtwo-left {
     clear: left;
     float: left;
@@ -284,7 +362,7 @@
     margin-right: -320px;
   }
 
-  /* line 191, ../../sass/layouts/responsive.scss */
+  /* line 231, ../../sass/layouts/responsive.scss */
   .eightfourtwo-right {
     float: left;
     width: 320px;
@@ -292,7 +370,7 @@
     margin-right: -640px;
   }
 
-  /* line 194, ../../sass/layouts/responsive.scss */
+  /* line 234, ../../sass/layouts/responsive.scss */
   .eightfourtwo-bottom {
     clear: left;
     float: left;

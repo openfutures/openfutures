@@ -67,7 +67,7 @@ function library_scenario_field_default_field_instances() {
   $field_instances['node-scenario-field_scenario_attachment'] = array(
     'bundle' => 'scenario',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Only upload attachments for which you have the appropriate rights (it\'s yours or in the public domain).',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -225,57 +225,6 @@ function library_scenario_field_default_field_instances() {
       ),
       'type' => 'date_text',
       'weight' => 12,
-    ),
-  );
-
-  // Exported field_instance: 'node-scenario-field_scenario_global'
-  $field_instances['node-scenario-field_scenario_global'] = array(
-    'bundle' => 'scenario',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 17,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 17,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'fences_wrapper' => 'div',
-    'field_name' => 'field_scenario_global',
-    'label' => 'Global coverage',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 6,
     ),
   );
 
@@ -772,9 +721,9 @@ function library_scenario_field_default_field_instances() {
   t('Creator');
   t('Description');
   t('Enter the target year for the scenario. Use range of years to enter a start and end target range.');
-  t('Global coverage');
   t('Image');
   t('Language');
+  t('Only upload attachments for which you have the appropriate rights (it\'s yours or in the public domain).');
   t('Place name');
   t('Publish Date');
   t('Publisher');

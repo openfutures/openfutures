@@ -272,3 +272,17 @@ span.field-label {
   color: #555555;
   font-size: 10.998px;
 }
+
+/* line 226, ../sass/pages.scss */
+#block-boxes-smart-services-logo {
+  float: right;
+}
+
+/* line 230, ../sass/pages.scss */
+#block-boxes-openfutures-colophon {
+  margin-bottom: 0;
+}
+/* line 233, ../sass/pages.scss */
+#block-boxes-openfutures-colophon .boxes-box-content p {
+  margin-bottom: 0;
+}

@@ -9,6 +9,34 @@ include_once 'library_scenario.features.inc';
 /**
  * Implement hook_form_FORM_ID_alter(&$form, &$form_state, $form_id)
  */
+function library_scenario_form_search_form_alter(&$form, &$form_state, $form_id) {
+  $form['basic']['scenario_search'] = array(
+    '#type' => 'checkbox',
+    '#title' => t("Search scenarios only."),
+    '#weight' => 0,
+  );
+  // We need to add our own form submission handler here
+  // array_unshift($form['#submit'], 'library_scenario_custom_submission');
+  $form['#submit'][] = 'library_scenario_custom_submission';
+}
+
+/**
+ * Custom submit handler from library_scenario_form_search_form_alter
+ */
+function library_scenario_custom_submission($form, &$form_state) {
+  // Add "type:scenario" to the query string
+  $search_scenarios_checkbox = $form_state['values']['scenario_search'];
+  $keys_clean = (strpos($form_state['redirect'], 'type:scenario') === false);
+
+  if ($search_scenarios_checkbox && $keys_clean) {
+    $form_state['redirect'] = $form_state['redirect'] . ' type:scenario';
+  }
+
+}
+
+/**
+ * Implement hook_form_FORM_ID_alter(&$form, &$form_state, $form_id)
+ */
 function library_scenario_form_scenario_node_form_alter(&$form, &$form_state, $form_id) {
   // Add some JS for progressive enhancement
   $form['#attached']['js'] = array(
@@ -22,14 +50,7 @@ function library_scenario_form_scenario_node_form_alter(&$form, &$form_state, $f
 
   // Add a default value for location if there isn't an existing value
   $form['field_scenario_location'][$language]['#attributes']['placeholder'] = t('Enter place names separated by a comma...');
-  $form['field_scenario_location']['#prefix'] = '<p class="form-field-prefix">Add place names or geographic areas that represents the spatial coverage of the scenario. Multiple locations can be separated by a comma. Select global context for scenarios that do not have specific geographic reference.</p>';
-
-  // Disable the location field if the global context is selected
-  $form['field_scenario_location']['#states'] = array(
-    'disabled' => array(
-      ':input[name="field_scenario_global['.$language.']"]' => array('checked' => TRUE),
-    ),
-  );
+  $form['field_scenario_location']['#prefix'] = '<p class="form-field-prefix">Add place names or geographic areas that represents the spatial coverage of the scenario. Multiple locations can be separated by a comma. For scenarios that have a global focus enter "Global" as a subject instead of using a location.</p>';
 
   // Filter scenario language field by the most influential first.
   $language_top_options = _library_scenario_top_language_options();
@@ -45,6 +66,13 @@ function library_scenario_form_scenario_node_form_alter(&$form, &$form_state, $f
     '#submit' => array('_library_scenario_form_cancel', 'node_form_submit_build_node'),
     '#limit_validation_errors' => array(),
   );
+
+  // Remove the prepoluate query string to avoid validation/submission problems.
+  $query = strpos($form['#action'], '?');
+  if ($query) {
+    list($path, $query_string) = explode('?', $form['#action']);
+    $form['#action'] = $path;
+  }
 
   // Redirect back to node add form to streamline content authoring experience.
   $form['actions']['submit']['#submit'][] = '_library_scenario_submit';

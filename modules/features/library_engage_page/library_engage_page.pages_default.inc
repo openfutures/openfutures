@@ -54,14 +54,21 @@ function library_engage_page_default_page_manager_pages() {
     'body_classes_to_add' => '',
     'css_id' => '',
     'css' => '',
-    'contexts' => array(),
+    'contexts' => array(
+      0 => array(
+        'identifier' => 'Token',
+        'keyword' => 'token',
+        'name' => 'token',
+        'id' => 1,
+      ),
+    ),
     'relationships' => array(),
     'access' => array(
       'logic' => 'and',
     ),
   );
   $display = new panels_display();
-  $display->layout = 'onethreetwo';
+  $display->layout = 'onefourtwo';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -73,6 +80,7 @@ function library_engage_page_default_page_manager_pages() {
       'col3' => NULL,
       'left' => NULL,
       'right' => NULL,
+      'col4' => NULL,
     ),
   );
   $display->cache = array();
@@ -91,10 +99,10 @@ function library_engage_page_default_page_manager_pages() {
       'title' => '',
       'body' => '<a href="/discover" class="action-large discover">
 <h3>Discover</h3>
-<p>Find scenarios for your project</p>
+<p>Explore scenarios through time and place.</p>
 </a>',
       'format' => 'full_html',
-      'substitute' => TRUE,
+      'substitute' => 1,
     );
     $pane->cache = array();
     $pane->style = array(
@@ -109,6 +117,33 @@ function library_engage_page_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-2';
     $pane->panel = 'col2';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Search call to action',
+      'title' => '',
+      'body' => '<a href="/search" class="action-large search">
+<h3>Search</h3>
+<p>Find scenarios for your project</p>
+</a>',
+      'format' => 'full_html',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-2'] = $pane;
+    $display->panels['col2'][0] = 'new-2';
+    $pane = new stdClass();
+    $pane->pid = 'new-3';
+    $pane->panel = 'col3';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
     $pane->shown = TRUE;
@@ -131,11 +166,11 @@ function library_engage_page_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['col2'][0] = 'new-2';
+    $display->content['new-3'] = $pane;
+    $display->panels['col3'][0] = 'new-3';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'col3';
+    $pane->pid = 'new-4';
+    $pane->panel = 'col4';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
     $pane->shown = TRUE;
@@ -158,10 +193,10 @@ function library_engage_page_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['col3'][0] = 'new-3';
+    $display->content['new-4'] = $pane;
+    $display->panels['col4'][0] = 'new-4';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-5';
     $pane->panel = 'left';
     $pane->type = 'views_panes';
     $pane->subtype = 'recent_scenarios-panel_pane_1';
@@ -176,10 +211,10 @@ function library_engage_page_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['left'][0] = 'new-4';
+    $display->content['new-5'] = $pane;
+    $display->panels['left'][0] = 'new-5';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-6';
     $pane->panel = 'right';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -200,10 +235,10 @@ function library_engage_page_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['right'][0] = 'new-5';
+    $display->content['new-6'] = $pane;
+    $display->panels['right'][0] = 'new-6';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-7';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'subject_terms-panel_pane_1';
@@ -218,17 +253,27 @@ function library_engage_page_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['right'][1] = 'new-6';
+    $display->content['new-7'] = $pane;
+    $display->panels['right'][1] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-8';
     $pane->panel = 'top';
-    $pane->type = 'fieldable_panels_pane';
-    $pane->subtype = 'fpid:1';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'view_mode' => 'full',
+      'admin_title' => 'Welcome text',
+      'title' => '',
+      'body' => '<div class="custom-page-left">
+<h1>Welcome to Open Futures</h1>
+<p>The Open Futures Library is a publicly-contributed, indexed, searchable collection of future scenarios and other images of the future. Hundreds of futures projects worldwide each year generate depictions of the future in the form of scenarios, story sketches, artist’s impressions, videos and so on and publish them online, but finding and reusing these depictions is very difficult. Our goal is to provide a repository which indexes each depiction of the future by the kinds of criteria that makes it reusable.</p>
+</div>
+<div class="custom-page-right">
+<img src="//%token:site:url-brief/profiles/openfutures/modules/features/library_engage_page/images/engage.png" />
+</div>',
+      'format' => 'full_html',
+      'substitute' => 1,
     );
     $pane->cache = array();
     $pane->style = array(
@@ -238,8 +283,8 @@ function library_engage_page_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['top'][0] = 'new-7';
+    $display->content['new-8'] = $pane;
+    $display->panels['top'][0] = 'new-8';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

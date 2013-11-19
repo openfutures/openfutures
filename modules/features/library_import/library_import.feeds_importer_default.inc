@@ -101,7 +101,7 @@ function library_import_feeds_importer_default() {
           ),
           11 => array(
             'source' => 'publisher',
-            'target' => 'created',
+            'target' => 'field_scenario_publisher',
             'unique' => FALSE,
           ),
           12 => array(

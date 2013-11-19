@@ -26,5 +26,21 @@ function library_blocks_and_layout_default_box() {
   );
   $export['openfutures_colophon'] = $box;
 
+  $box = new stdClass();
+  $box->disabled = FALSE; /* Edit this to true to make a default box disabled initially */
+  $box->api_version = 1;
+  $box->delta = 'smart_services_logo';
+  $box->plugin_key = 'simple';
+  $box->title = '';
+  $box->description = 'Smart Services CRC Logo';
+  $box->options = array(
+    'body' => array(
+      'value' => '<a href="http://www.smartservicescrc.com.au/"><img src="/profiles/openfutures/modules/features/library_site/images/smart-services-crc-logo.png" /></a>',
+      'format' => 'full_html',
+    ),
+    'additional_classes' => '',
+  );
+  $export['smart_services_logo'] = $box;
+
   return $export;
 }
