@@ -89,6 +89,13 @@ li a.active {
     }
   }
 
+  li:nth-child(2) {
+    a.active,
+    a:hover {
+      color: $brand-color-quaternary;
+    }
+  }
+
   li.last {
     a.active,
     a:hover {
@@ -169,6 +176,9 @@ a.action-large:hover {
 
 a.action-large.discover {
   border-color: $brand-color-primary;
+}
+a.action-large.search {
+  border-color: $brand-color-quaternary;
 }
 a.action-large.contribute {
   border-color: $brand-color-secondary;

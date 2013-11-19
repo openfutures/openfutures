@@ -126,6 +126,46 @@ $zen-auto-include-item-base: false;
   }
 }
 
+
+/*
+ * One Four Two custom panels layout ==========================================
+ */
+
+.onefourtwo-hero, // custom panels layout
+.onefourtwo-col1,
+.onefourtwo-col2,
+.onefourtwo-col3,
+.onefourtwo-left,
+.onefourtwo-right {
+  @include zen-grid-item-base();
+}
+
+@media all and (min-width: 960px) {
+  .onefourtwo-hero {
+    @include zen-grid-item(12, 1);
+  }
+  .onefourtwo-col1 {
+    @include zen-clear();
+    @include zen-grid-item(3, 1);
+  }
+  .onefourtwo-col2 {
+    @include zen-grid-item(3, 4);
+  }
+  .onefourtwo-col3 {
+    @include zen-grid-item(3, 7);
+  }
+  .onefourtwo-col4 {
+    @include zen-grid-item(3, 10);
+  }
+  .onefourtwo-left {
+    @include zen-clear();
+    @include zen-grid-item(9, 1);
+  }
+  .onefourtwo-right {
+    @include zen-grid-item(3, 10);
+  }
+}
+
 /*
  * Three Nine custom panels layout =============================================
  */
