@@ -24,7 +24,6 @@ function library_scenario_field_group_info() {
     'weight' => '4',
     'children' => array(
       0 => 'field_scenario_location',
-      1 => 'field_scenario_global',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
