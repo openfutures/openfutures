@@ -13,7 +13,7 @@ projects[coder][subdir] = contrib
 projects[coder][version] = 1.2
 
 projects[context][subdir] = contrib
-projects[context][version] = 3.1
+projects[context][version] = 3.2
 
 projects[ctools][subdir] = contrib
 projects[ctools][version] = 1.4
@@ -21,7 +21,7 @@ projects[ctools][version] = 1.4
 ; to a solution: https://drupal.org/node/1962838
 
 projects[devel][subdir] = contrib
-projects[devel][version] = 1.3
+projects[devel][version] = 1.5
 
 projects[diff][subdir] = contrib
 projects[diff][version] = 3.2
@@ -47,7 +47,7 @@ projects[admin_views][subdir] = contrib
 projects[admin_views][version] = 1.2
 
 projects[backup_migrate][subdir] = contrib
-projects[backup_migrate][version] = 2.7
+projects[backup_migrate][version] = 2.8
 
 projects[blockify][subdir] = contrib
 projects[blockify][version] = 1.2
@@ -59,10 +59,10 @@ projects[captcha][subdir] = contrib
 projects[captcha][version] = 1.0
 
 projects[date][subdir] = contrib
-projects[date][version] = 2.6
+projects[date][version] = 2.7
 
 projects[entity][subdir] = contrib
-projects[entity][version] = 1.2
+projects[entity][version] = 1.5
 
 projects[feeds][subdir] = contrib
 projects[feeds][version] = 2.0-alpha8
@@ -83,11 +83,10 @@ projects[fieldable_panels_panes][subdir] = contrib
 projects[fieldable_panels_panes][version] = 1.5
 
 projects[flag][subdir] = contrib
-projects[flag][version] = 3.2
+projects[flag][version] = 3.5
 
 projects[flag_abuse][subdir] = contrib
-projects[flag_abuse][version] = 2.0-alpha1
-projects[flag_abuse][patch][] = "https://drupal.org/files/undefined-property-2057901-3.patch"
+projects[flag_abuse][version] = 2.0
 
 projects[geocoder][subdir] = contrib
 projects[geocoder][version] = 1.2
@@ -102,22 +101,19 @@ projects[job_scheduler][subdir] = contrib
 projects[job_scheduler][version] = 2.0-alpha3
 
 projects[jquery_update][subdir] = contrib
-projects[jquery_update][version] = 2.3
+projects[jquery_update][version] = 2.4
 
 projects[languagefield][subdir] = contrib
 projects[languagefield][version] = 1.2
 
 projects[leaflet][subdir] = contrib
-projects[leaflet][version] = 1.0-beta3
-
-; Leaflet stack got broken somewhere along the way. https://drupal.org/node/1954942#comment-7643639
-projects[leaflet][patch][] = "https://drupal.org/files/leaflet-fix_leaflet_library_location-1954942-11_0.patch"
+projects[leaflet][version] = 1.1
 
 projects[leaflet_markercluster][subdir] = contrib
-projects[leaflet_markercluster][version] = 1.0-beta1
+projects[leaflet_markercluster][version] = 1.0
 
 projects[libraries][subdir] = contrib
-projects[libraries][version] = 2.1
+projects[libraries][version] = 2.2
 
 projects[maillog][subdir] = contrib
 projects[maillog][version] = 1.x-dev
