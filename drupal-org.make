@@ -16,10 +16,9 @@ projects[context][subdir] = contrib
 projects[context][version] = 3.1
 
 projects[ctools][subdir] = contrib
-; projects[ctools][version] = 1.3
+projects[ctools][version] = 1.4
 ; Was getting errors related to a views exposed filter block, this issue pointed
 ; to a solution: https://drupal.org/node/1962838
-projects[ctools][revision] = e81da7a57f63ca95d2c713afcec65a5659aada9e
 
 projects[devel][subdir] = contrib
 projects[devel][version] = 1.3
