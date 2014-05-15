@@ -75,10 +75,9 @@ projects[fences][subdir] = contrib
 projects[fences][version] = 1.0
 
 projects[field_group][subdir] = contrib
-; projects[field_group][version] = 1.1
-projects[field_group][revision] = c90651e80a8c4d3495dfd8476eaf83b6cd38175f
+projects[field_group][version] = 1.3
 ; https://drupal.org/node/1278618 Panels integration for field groups on the node edit form.
-projects[field_group][patch][] = "https://drupal.org/files/1278618_field_group_panels-48.patch"
+; projects[field_group][patch][] = "https://drupal.org/files/1278618_field_group_panels-48.patch"
 
 projects[fieldable_panels_panes][subdir] = contrib
 projects[fieldable_panels_panes][version] = 1.5
