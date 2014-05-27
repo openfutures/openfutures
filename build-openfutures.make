@@ -10,7 +10,7 @@ core = 7.x
 
 ; Include Drupal core and any core patches.
 projects[drupal][type] = core
-projects[drupal][version] = 7.23
+projects[drupal][version] = 7.28
 
 ; Use vocabulary machine name for permissions
 ; http://drupal.org/node/995156

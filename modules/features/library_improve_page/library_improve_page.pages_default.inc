@@ -225,8 +225,8 @@ function library_improve_page_default_page_manager_pages() {
       'admin_title' => '',
       'title' => '',
       'body' => '<div class="custom-page-left">
-<h1>Improve scenario meta-data</h1>
-<p>Some scenarios that have been added only have the bare-basics. Another way to contribute to the library is to dig into existing scenarios and update their meta data to make them more findable.</p>
+<h1>Improve scenario metadata</h1>
+<p>Some scenarios that have been added only have the bare basics. Another way to contribute to the library is to dig into existing scenarios and update their metadata to make them more findable. As the library grows, we rely on our community to help maintain the quality of the corpus.</p>
 </div>
 <div class="custom-page-right">
 <img src="//%token:site:url-brief/profiles/openfutures/modules/features/library_improve_page/images/improve.png" />

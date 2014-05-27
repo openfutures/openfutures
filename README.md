@@ -18,13 +18,3 @@ Once you've built the project you can quickly install it using Drush as well.
   drush si --db-su=root --db-su-pw=password --db-url=mysql://openfutures:openfutures@localhost/openfuturesdb openfutures
 
 NB: Replace all the database parameters with your own settings.
-
-
-Development Scratch Pad
------------------------
-
-A staging site with the latest stable development version is live at: http://openfutures.staging.thislittleduck.com/
-
-
-Development Notes
------------------

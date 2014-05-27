@@ -13,16 +13,15 @@ projects[coder][subdir] = contrib
 projects[coder][version] = 1.2
 
 projects[context][subdir] = contrib
-projects[context][version] = 3.1
+projects[context][version] = 3.2
 
 projects[ctools][subdir] = contrib
-; projects[ctools][version] = 1.3
+projects[ctools][version] = 1.4
 ; Was getting errors related to a views exposed filter block, this issue pointed
 ; to a solution: https://drupal.org/node/1962838
-projects[ctools][revision] = e81da7a57f63ca95d2c713afcec65a5659aada9e
 
 projects[devel][subdir] = contrib
-projects[devel][version] = 1.3
+projects[devel][version] = 1.5
 
 projects[diff][subdir] = contrib
 projects[diff][version] = 3.2
@@ -37,7 +36,7 @@ projects[strongarm][subdir] = contrib
 projects[strongarm][version] = 2.0
 
 projects[views][subdir] = contrib
-projects[views][version] = 3.7
+projects[views][version] = 3.8
 
 ; Contrib modules ============================================================
 
@@ -48,7 +47,7 @@ projects[admin_views][subdir] = contrib
 projects[admin_views][version] = 1.2
 
 projects[backup_migrate][subdir] = contrib
-projects[backup_migrate][version] = 2.7
+projects[backup_migrate][version] = 2.8
 
 projects[blockify][subdir] = contrib
 projects[blockify][version] = 1.2
@@ -60,10 +59,10 @@ projects[captcha][subdir] = contrib
 projects[captcha][version] = 1.0
 
 projects[date][subdir] = contrib
-projects[date][version] = 2.6
+projects[date][version] = 2.7
 
 projects[entity][subdir] = contrib
-projects[entity][version] = 1.2
+projects[entity][version] = 1.5
 
 projects[feeds][subdir] = contrib
 projects[feeds][version] = 2.0-alpha8
@@ -76,20 +75,18 @@ projects[fences][subdir] = contrib
 projects[fences][version] = 1.0
 
 projects[field_group][subdir] = contrib
-; projects[field_group][version] = 1.1
-projects[field_group][revision] = c90651e80a8c4d3495dfd8476eaf83b6cd38175f
+projects[field_group][version] = 1.3
 ; https://drupal.org/node/1278618 Panels integration for field groups on the node edit form.
-projects[field_group][patch][] = "https://drupal.org/files/1278618_field_group_panels-48.patch"
+; projects[field_group][patch][] = "https://drupal.org/files/1278618_field_group_panels-48.patch"
 
 projects[fieldable_panels_panes][subdir] = contrib
 projects[fieldable_panels_panes][version] = 1.5
 
 projects[flag][subdir] = contrib
-projects[flag][version] = 3.2
+projects[flag][version] = 3.5
 
 projects[flag_abuse][subdir] = contrib
-projects[flag_abuse][version] = 2.0-alpha1
-projects[flag_abuse][patch][] = "https://drupal.org/files/undefined-property-2057901-3.patch"
+projects[flag_abuse][version] = 2.0
 
 projects[geocoder][subdir] = contrib
 projects[geocoder][version] = 1.2
@@ -104,22 +101,19 @@ projects[job_scheduler][subdir] = contrib
 projects[job_scheduler][version] = 2.0-alpha3
 
 projects[jquery_update][subdir] = contrib
-projects[jquery_update][version] = 2.3
+projects[jquery_update][version] = 2.4
 
 projects[languagefield][subdir] = contrib
 projects[languagefield][version] = 1.2
 
 projects[leaflet][subdir] = contrib
-projects[leaflet][version] = 1.0-beta3
-
-; Leaflet stack got broken somewhere along the way. https://drupal.org/node/1954942#comment-7643639
-projects[leaflet][patch][] = "https://drupal.org/files/leaflet-fix_leaflet_library_location-1954942-11_0.patch"
+projects[leaflet][version] = 1.1
 
 projects[leaflet_markercluster][subdir] = contrib
-projects[leaflet_markercluster][version] = 1.0-beta1
+projects[leaflet_markercluster][version] = 1.0
 
 projects[libraries][subdir] = contrib
-projects[libraries][version] = 2.1
+projects[libraries][version] = 2.2
 
 projects[maillog][subdir] = contrib
 projects[maillog][version] = 1.x-dev
@@ -128,10 +122,10 @@ projects[mailsystem][subdir] = contrib
 projects[mailsystem][version] = 2.34
 
 projects[mandrill][subdir] = contrib
-projects[mandrill][version] = 1.5
+projects[mandrill][version] = 1.6
 
 projects[menu_block][subdir] = contrib
-projects[menu_block][version] = 2.3
+projects[menu_block][version] = 2.4
 
 projects[module_filter][subdir] = contrib
 projects[module_filter][version] = 1.8
@@ -140,7 +134,7 @@ projects[node_vertical_tab_elements][subdir] = contrib
 projects[node_vertical_tab_elements][version] = 3.0
 
 projects[panels][subdir] = contrib
-projects[panels][version] = 3.3
+projects[panels][version] = 3.4
 
 projects[panels_breadcrumbs][subdir] = contrib
 projects[panels_breadcrumbs][version] = 2.1
@@ -155,10 +149,10 @@ projects[r4032login][subdir] = contrib
 projects[r4032login][version] = 1.7
 
 projects[recaptcha][subdir] = contrib
-projects[recaptcha][version] = 1.10
+projects[recaptcha][version] = 1.11
 
 projects[rules][subdir] = contrib
-projects[rules][version] = 2.6
+projects[rules][version] = 2.7
 
 projects[shield][subdir] = contrib
 projects[shield][version] = 1.2
@@ -179,18 +173,18 @@ projects[url][subdir] = contrib
 projects[url][version] = 1.0
 
 projects[views_bulk_operations][subdir] = contrib
-projects[views_bulk_operations][version] = 3.1
+projects[views_bulk_operations][version] = 3.2
 
 projects[views_timelinejs][subdir] = contrib
 projects[views_timelinejs][revision] = b9308d0fe7a8576e15bbb63680501561dbbf3248
 
 projects[webform][subdir] = contrib
-projects[webform][version] = 4.0-beta1
+projects[webform][version] = 4.0-rc3
 
 ; Themes =====================================================================
 
 projects[zen][subdir] = base
-projects[zen][version] = 5.4
+projects[zen][version] = 5.5
 
 projects[tao][subdir] = base
 projects[rubik][subdir] = base
