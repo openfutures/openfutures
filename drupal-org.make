@@ -36,7 +36,7 @@ projects[strongarm][subdir] = contrib
 projects[strongarm][version] = 2.0
 
 projects[views][subdir] = contrib
-projects[views][version] = 3.7
+projects[views][version] = 3.8
 
 ; Contrib modules ============================================================
 
@@ -122,10 +122,10 @@ projects[mailsystem][subdir] = contrib
 projects[mailsystem][version] = 2.34
 
 projects[mandrill][subdir] = contrib
-projects[mandrill][version] = 1.5
+projects[mandrill][version] = 1.6
 
 projects[menu_block][subdir] = contrib
-projects[menu_block][version] = 2.3
+projects[menu_block][version] = 2.4
 
 projects[module_filter][subdir] = contrib
 projects[module_filter][version] = 1.8
@@ -134,7 +134,7 @@ projects[node_vertical_tab_elements][subdir] = contrib
 projects[node_vertical_tab_elements][version] = 3.0
 
 projects[panels][subdir] = contrib
-projects[panels][version] = 3.3
+projects[panels][version] = 3.4
 
 projects[panels_breadcrumbs][subdir] = contrib
 projects[panels_breadcrumbs][version] = 2.1
@@ -149,10 +149,10 @@ projects[r4032login][subdir] = contrib
 projects[r4032login][version] = 1.7
 
 projects[recaptcha][subdir] = contrib
-projects[recaptcha][version] = 1.10
+projects[recaptcha][version] = 1.11
 
 projects[rules][subdir] = contrib
-projects[rules][version] = 2.6
+projects[rules][version] = 2.7
 
 projects[shield][subdir] = contrib
 projects[shield][version] = 1.2
@@ -173,18 +173,18 @@ projects[url][subdir] = contrib
 projects[url][version] = 1.0
 
 projects[views_bulk_operations][subdir] = contrib
-projects[views_bulk_operations][version] = 3.1
+projects[views_bulk_operations][version] = 3.2
 
 projects[views_timelinejs][subdir] = contrib
 projects[views_timelinejs][revision] = b9308d0fe7a8576e15bbb63680501561dbbf3248
 
 projects[webform][subdir] = contrib
-projects[webform][version] = 4.0-beta1
+projects[webform][version] = 4.0-rc3
 
 ; Themes =====================================================================
 
 projects[zen][subdir] = base
-projects[zen][version] = 5.4
+projects[zen][version] = 5.5
 
 projects[tao][subdir] = base
 projects[rubik][subdir] = base
