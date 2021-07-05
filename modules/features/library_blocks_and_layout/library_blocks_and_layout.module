@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Library Blocks and Layout feature.
- */
-
-include_once 'library_blocks_and_layout.features.inc';

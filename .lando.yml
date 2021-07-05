@@ -1,0 +1,14 @@
+name: openfutures
+recipe: drupal7
+config:
+  webroot: web
+  php: 7.4
+services:
+  appserver:
+    type: php
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - appserver
+env_file:
+  - dev.env

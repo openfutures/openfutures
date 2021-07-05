@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Library Contribute Page feature.
- */
-
-include_once 'library_contribute_page.features.inc';
