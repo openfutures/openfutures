@@ -25,8 +25,7 @@
 /web/sites/*/*.settings.php
 /web/sites/*/settings*.php
 
-# Keep certain paths
-!/web/sites/default/settings.php
+# Keep custom profile path
 !/web/profiles/openfutures
 
 # Ignore paths that contain user-generated content.
