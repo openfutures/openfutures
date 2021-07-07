@@ -27,6 +27,8 @@
 
 # Keep custom profile path
 !/web/profiles/openfutures
+!/web/sites/all/modules/features
+!/web/sites/all/themes/custom/hudson
 
 # Ignore paths that contain user-generated content.
 /web/sites/*/files

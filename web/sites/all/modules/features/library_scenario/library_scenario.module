@@ -1,0 +1,120 @@
+<?php
+/**
+ * @file
+ * Code for the Library Scenario feature.
+ */
+
+include_once 'library_scenario.features.inc';
+
+/**
+ * Implement hook_form_FORM_ID_alter(&$form, &$form_state, $form_id)
+ */
+function library_scenario_form_search_form_alter(&$form, &$form_state, $form_id) {
+  $form['basic']['scenario_search'] = array(
+    '#type' => 'checkbox',
+    '#title' => t("Search scenarios only."),
+    '#weight' => 0,
+  );
+  // We need to add our own form submission handler here
+  // array_unshift($form['#submit'], 'library_scenario_custom_submission');
+  $form['#submit'][] = 'library_scenario_custom_submission';
+}
+
+/**
+ * Custom submit handler from library_scenario_form_search_form_alter
+ */
+function library_scenario_custom_submission($form, &$form_state) {
+  // Add "type:scenario" to the query string
+  $search_scenarios_checkbox = $form_state['values']['scenario_search'];
+  $keys_clean = (strpos($form_state['redirect'], 'type:scenario') === false);
+
+  if ($search_scenarios_checkbox && $keys_clean) {
+    $form_state['redirect'] = $form_state['redirect'] . ' type:scenario';
+  }
+
+}
+
+/**
+ * Implement hook_form_FORM_ID_alter(&$form, &$form_state, $form_id)
+ */
+function library_scenario_form_scenario_node_form_alter(&$form, &$form_state, $form_id) {
+  // Add some JS for progressive enhancement
+  $form['#attached']['js'] = array(
+    drupal_get_path('module', 'library_scenario') . '/library_scenario.js',
+  );
+
+  // Make some changes to the scenario location fields
+  $language = $form['field_scenario_location']['#language'];
+  unset($form['field_scenario_location'][$language]['#title']);
+  unset($form['field_scenario_location'][$language]['#description']); // unsetting this here for cosmetic purposes instead of removing it from the field configuration.
+
+  // Add a default value for location if there isn't an existing value
+  $form['field_scenario_location'][$language]['#attributes']['placeholder'] = t('Enter place names separated by a comma...');
+  $form['field_scenario_location']['#prefix'] = '<p class="form-field-prefix">Add place names or geographic areas that represents the spatial coverage of the scenario. Multiple locations can be separated by a comma. For scenarios that have a global focus enter "Global" as a subject instead of using a location.</p>';
+
+  // Filter scenario language field by the most influential first.
+  $language_top_options = _library_scenario_top_language_options();
+  $remainder_options = array_diff_key($form['field_scenario_language'][$language]['#options'],$language_top_options);
+  $form['field_scenario_language'][$language]['#options'] = $language_top_options + $remainder_options;
+
+  // Add a cancel button.
+  $form['actions']['cancel'] = array(
+    '#type'   => 'submit',
+    '#value'  => t('Cancel'),
+    '#access' => TRUE,
+    '#weight' => 15,
+    '#submit' => array('_library_scenario_form_cancel', 'node_form_submit_build_node'),
+    '#limit_validation_errors' => array(),
+  );
+
+  // Remove the prepoluate query string to avoid validation/submission problems.
+  $query = strpos($form['#action'], '?');
+  if ($query) {
+    list($path, $query_string) = explode('?', $form['#action']);
+    $form['#action'] = $path;
+  }
+
+  // Redirect back to node add form to streamline content authoring experience.
+  $form['actions']['submit']['#submit'][] = '_library_scenario_submit';
+}
+
+/**
+ * Custom cancel button callback.
+ */
+function _library_scenario_form_cancel($form, &$form_state) {
+  $url = (isset($_GET['destination'])) ? $_GET['destination'] : '<front>';
+  drupal_goto('<front>');
+}
+
+/**
+ * Custom function on submission of scenario node form
+ */
+function _library_scenario_submit($form, &$form_state) {
+  // Before we redirect what's the path we're coming from?
+  $path = arg();
+  if ($path[1] == "add") {
+    $redirect = implode('/', $path);
+    // redirect to either default or expanded scenario add form
+    $form_state['redirect'] = $redirect;
+  }
+}
+
+/**
+ * Custom function to filter scenario language field
+ */
+function _library_scenario_top_language_options() {
+  return array(
+    '_none' => '- None -',
+    'en' => 'English',
+    'en-gb' => 'English, British',
+    'fr' => 'French',
+    'es' => 'Spanish',
+    'ru' => 'Russian',
+    'ar' => 'Arabic',
+    'zh-hans' => 'Chinese, Simplified',
+    'de' => 'German',
+    'ja' => 'Japanese',
+    'pt-br' => 'Portuguese, Brazil',
+    'hi' => 'Hindi',
+  );
+}

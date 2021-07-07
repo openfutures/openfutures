@@ -1,0 +1,149 @@
+<?php
+/**
+ * @file
+ * Code for the Library Discover Page feature.
+ */
+
+include_once 'library_discover_page.features.inc';
+
+define('DISCOVER_SCENARIOS_TEXT_FORM', 'views-exposed-form-browse-scenarios-discover-mode-list');
+define('DISCOVER_SCENARIOS_TIMELINE_FORM', 'views-exposed-form-timeline-scenarios-discover-mode-time');
+define('DISCOVER_SCENARIOS_MAP_FORM', 'views-exposed-form-map-scenarios-discover-mode-map');
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function library_discover_page_ctools_plugin_directory($module, $plugin) {
+  return 'plugins/' . $plugin;
+}
+
+/**
+ * Implements hook_form_alter().
+ * @see http://drupal.org/node/1079826 for more information on this code.
+ */
+function library_discover_page_form_alter(&$form, $form_state, $form_id) {
+  if ($form_id == 'views_exposed_form' && $form_state['view']->name == 'browse_scenarios') {
+    // dpm($form);
+  }
+}
+
+function library_discover_page_leaflet_map_info() {
+  return array(
+    'Custom OSM Mapnik' =>
+    array(
+      'label' => 'Custom OSM Mapnik',
+      'description' => t('Modified Leaflet default map.'),
+      'settings' => array(
+        'zoom' => 0,
+        'minZoom' => 0,
+        'maxZoom' => 5,
+        'dragging' => TRUE,
+        'touchZoom' => TRUE,
+        'scrollWheelZoom' => TRUE,
+        'doubleClickZoom' => TRUE,
+        'zoomControl' => TRUE,
+        'attributionControl' => TRUE,
+        'trackResize' => TRUE,
+        'fadeAnimation' => TRUE,
+        'zoomAnimation' => TRUE,
+        'closePopupOnClick' => TRUE,
+      ),
+      'layers' => array(
+        'earth' => array(
+          'urlTemplate' => 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+          'options' => array(
+            'attribution' => 'OSM Mapnik'
+          )
+        ),
+      ),
+    ),
+  );
+}
+
+/**
+ * Implement hook_form_FORM_ID_alter(&$form, &$form_state, $form_id)
+ */
+function library_discover_page_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
+  // Changes to search/filter form for all Discover page modes
+  $text_mode = ($form['#id'] == DISCOVER_SCENARIOS_TEXT_FORM);
+  $map_mode = ($form['#id'] == DISCOVER_SCENARIOS_MAP_FORM);
+  $timeline_mode = ($form['#id'] == DISCOVER_SCENARIOS_TIMELINE_FORM);
+  // dpm($form);
+
+  // Add support text for all modes
+  // if ($text_mode || $map_mode || $timeline_mode) {
+  //   $form['support_text'] = array(
+  //     '#markup' => '<p>Terms are ANDed. That is, results are true for multiple filters.</p>',
+  //   );
+  //   $filter_support_text = array(
+  //     'filter-support-text' => array(
+  //       'value' => 'support_text',
+  //     )
+  //   );
+  //   // $form['#info'] determines the order of form elements, https://drupal.org/node/893392
+  //   $filter_keys = $form['#info']['filter-keys'];
+  //   $filter_info_remainder = array_diff_key($form['#info'], array('filter-keys' => array()));
+  //   $form['#info'] = array('filter-keys' => $filter_keys) + $filter_support_text + $filter_info_remainder;
+  // }
+
+  if ($text_mode) {
+    // $form['search']['#attributes']['placeholder'] = t('Enter terms...');
+    $form['subject']['#attributes']['placeholder'] = t('Add subjects...');
+    $form['place']['#attributes']['placeholder'] = t('Add place names...');
+    // $keys_filter_submit = $form['submit'];
+    // $keys_filter_submit['#id'] = 'edit-submit-browse-scenarios2';
+    // $keys_filter_submit['#value'] = t('Search');
+    // $form['search']['#suffix'] = drupal_render($keys_filter_submit);
+    $form['items_per_page']['#title'] = t('Items per page: ');
+    $items_per_page = $form['items_per_page'];
+    unset($form['items_per_page']);
+    $form['items_per_page'] = array(
+      '#type' => 'item',
+      '#title' => t('Options'),
+      '#attributes' => array('class' => array('form-item-options')),
+      'items_per_page_item' => $items_per_page,
+    );
+  }
+  if ($map_mode || $timeline_mode) {
+    // $form['search']['#attributes']['placeholder'] = t('Enter terms...');
+    $form['subject']['#attributes']['placeholder'] = t('Add subjects...');
+    $form['place']['#attributes']['placeholder'] = t('Add place names...');
+    // $keys_filter_submit = $form['submit'];
+    // $keys_filter_submit['#id'] = 'edit-submit-browse-scenarios2';
+    // $keys_filter_submit['#value'] = t('Search');
+    // $form['search']['#suffix'] = drupal_render($keys_filter_submit);
+  }
+}
+
+/**
+ * Alter the date text field form elements being used in the views exposed filters
+ *
+ * The #id's we're altering include: edit-date-filter-1-min, edit-date-filter-1-max
+ */
+function library_discover_page_date_text_process_alter(&$element, &$form_state, $context) {
+  // Let's modify the edit-date-filter-1-min date field element.
+  if ($element['#id'] == 'edit-horizon-min') {
+    $element['#title'] = t('Start year: ');
+    $element['date']['#size'] = 2;
+    $element['date']['#attributes']['placeholder'] = 'YYYY';
+    unset($element['date']['#description']);
+  }
+  if ($element['#id'] == 'edit-horizon-max') {
+    $element['#title'] = t('to: ');
+    $element['date']['#size'] = 2;
+    $element['date']['#attributes']['placeholder'] = 'YYYY';
+    unset($element['date']['#description']);
+  }
+  if ($element['#id'] == 'edit-published-min') {
+    $element['#title'] = t('Start year: ');
+    $element['date']['#size'] = 2;
+    $element['date']['#attributes']['placeholder'] = 'YYYY';
+    unset($element['date']['#description']);
+  }
+  if ($element['#id'] == 'edit-published-max') {
+    $element['#title'] = t('to: ');
+    $element['date']['#size'] = 2;
+    $element['date']['#attributes']['placeholder'] = 'YYYY';
+    unset($element['date']['#description']);
+  }
+}

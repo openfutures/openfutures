@@ -1,0 +1,238 @@
+/**
+ * @file
+ * Positioning for responsive layout .
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+
+@import "base";
+
+
+// We're starting with a mobile first grid setup but all the small screen styles
+// are still missing - at the moment the all the CSS is optimised for a
+// desktop browser experience.
+$zen-column-count:  5;
+$zen-gutter-width:  10px;
+
+// You can generate more efficient CSS if you manually apply the
+// zen-grid-item-base mixin to all grid items from within a single ruleset.
+$zen-auto-include-item-base: false;
+
+// Mobile setup #TODO
+
+/*
+ * Zen grids setup =============================================================
+ */
+/* containers */
+#page {
+  @include zen-grid-container();
+}
+
+/* grid items */
+#header,
+#main,
+#footer,
+#tabs, // blocks sitting in the main prefix region
+.breadcrumb,
+.site-messages,
+.site-page-title { // stuff that sits inside main
+  @include zen-grid-item-base();
+}
+
+@media all and (min-width: 960px) {
+  /*
+   * Use 12 grid columns for larger screens.
+   * The page stops being fluid past 960px. This is something to look at in
+   * the future.
+   */
+  $zen-column-count:  12;
+  $zen-gutter-width:  20px;
+  $zen-grid-width: 960px; // we're using this in a fixed width fashion for desktop displays
+
+  #page {
+    margin-left: auto;
+    margin-right: auto;
+    width: $zen-grid-width;
+  }
+
+  #header {
+    @include zen-clear();
+    @include zen-grid-item(12,1);
+  }
+
+  #tabs,
+  .breadcrumb,
+  .site-messages,
+  .site-page-title {
+    @include zen-clear();
+    @include zen-grid-item(12,1);
+  }
+
+  #main {
+    @include zen-clear();
+    @include zen-grid-item(12,1);
+    @include zen-nested-container(); // All positioned descendents are their own grid items.
+  }
+
+  .main-nested-false #main {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  #footer {
+    @include zen-clear();
+    @include zen-grid-item(12,1);
+  }
+
+}
+
+/*
+ * One Three Two custom panels layout ==========================================
+ */
+
+.onethreetwo-hero, // custom panels layout
+.onethreetwo-col1,
+.onethreetwo-col2,
+.onethreetwo-col3,
+.onethreetwo-left,
+.onethreetwo-right {
+  @include zen-grid-item-base();
+}
+
+@media all and (min-width: 960px) {
+  .onethreetwo-hero {
+    @include zen-grid-item(12, 1);
+  }
+  .onethreetwo-col1 {
+    @include zen-clear();
+    @include zen-grid-item(4, 1);
+  }
+  .onethreetwo-col2 {
+    @include zen-grid-item(4, 5);
+  }
+  .onethreetwo-col3 {
+    @include zen-grid-item(4, 9);
+  }
+  .onethreetwo-left {
+    @include zen-clear();
+    @include zen-grid-item(9, 1);
+  }
+  .onethreetwo-right {
+    @include zen-grid-item(3, 10);
+  }
+}
+
+
+/*
+ * One Four Two custom panels layout ==========================================
+ */
+
+.onefourtwo-hero, // custom panels layout
+.onefourtwo-col1,
+.onefourtwo-col2,
+.onefourtwo-col3,
+.onefourtwo-left,
+.onefourtwo-right {
+  @include zen-grid-item-base();
+}
+
+@media all and (min-width: 960px) {
+  .onefourtwo-hero {
+    @include zen-grid-item(12, 1);
+  }
+  .onefourtwo-col1 {
+    @include zen-clear();
+    @include zen-grid-item(3, 1);
+  }
+  .onefourtwo-col2 {
+    @include zen-grid-item(3, 4);
+  }
+  .onefourtwo-col3 {
+    @include zen-grid-item(3, 7);
+  }
+  .onefourtwo-col4 {
+    @include zen-grid-item(3, 10);
+  }
+  .onefourtwo-left {
+    @include zen-clear();
+    @include zen-grid-item(9, 1);
+  }
+  .onefourtwo-right {
+    @include zen-grid-item(3, 10);
+  }
+}
+
+/*
+ * Three Nine custom panels layout =============================================
+ */
+.threenine-left,
+.threenine-right {
+  @include zen-grid-item-base();
+}
+
+@media all and (min-width: 960px) {
+  .threenine-left {
+    @include zen-clear();
+    @include zen-grid-item(4, 1);
+    padding-left: 5px;
+  }
+  .threenine-right {
+    @include zen-grid-item(8, 5);
+    padding-right: 5px;
+  }
+}
+
+/*
+ * Eight Four custom panels layout =============================================
+ */
+.eightfour-left,
+.eightfour-right {
+  @include zen-grid-item-base();
+}
+
+@media all and (min-width: 960px) {
+  .eightfour-left {
+    @include zen-clear();
+    @include zen-grid-item(8, 1);
+    padding-left: 5px;
+  }
+  .eightfour-right {
+    @include zen-grid-item(4, 9);
+    padding-right: 5px;
+  }
+}
+
+/*
+ * Eight Four Two custom panels layout =========================================
+ */
+.eightfourtwo-main,
+.eightfourtwo-side,
+.eightfourtwo-left,
+.eightfourtwo-right,
+.eightfourtwo-bottom {
+  @include zen-grid-item-base();
+}
+
+@media all and (min-width: 960px) {
+  .eightfourtwo-side {
+    @include zen-grid-item(4, 1, right);
+  }
+  .eightfourtwo-main {
+    @include zen-grid-item(8, 1);
+  }
+  .eightfourtwo-left {
+    @include zen-clear(left);
+    @include zen-grid-item(4, 1);
+  }
+  .eightfourtwo-right {
+    @include zen-grid-item(4, 5);
+  }
+  .eightfourtwo-bottom {
+    @include zen-clear(left);
+    @include zen-grid-item(8, 1);
+  }
+}

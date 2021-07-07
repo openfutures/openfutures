@@ -1,0 +1,142 @@
+/**
+ * @file
+ * Tabs Styling
+ *
+ * Adds styles for the primary and secondary tabs.
+ *
+ * Compare this with default CSS found in the system module's stylesheet (a copy
+ * of which is in drupal7-reference.css.)
+ */
+
+@import "base";
+
+
+// Some variables to make altering the styling easier.
+$tabs-page-bg: $bg-color;
+$tabs-border: #ddd;
+$tabs-hover-bg: #eee;
+
+
+
+/*
+ * Basic positioning styles shared by primary and secondary tabs.
+ */
+
+ul.primary,
+ul.secondary {
+  @include pie-clearfix;
+  border-bottom: 1px solid $tabs-border;
+  list-style: none;
+  padding: 0;
+  // margin: 1em 0 1.5em;
+  // padding: 0 2px;
+  // white-space: nowrap;
+
+  li {
+    float: left;
+    // margin: 0.5em 3px 0;
+  }
+
+  a {
+    display: block;
+    line-height: 1.5em;
+    padding: 8px 12px;
+    // border: 1px solid #e9e9e9;
+    // border-right: 0;
+    // border-bottom: 0;
+    // display: block;
+    // line-height: 1.5em;
+    // text-decoration: none;
+  }
+}
+
+/*
+ * Primary tabs
+ */
+
+ul.primary {
+  li {
+    margin-bottom: -1px;
+    // @include single-text-shadow(#fff, 1px, 1px, 0);
+    // border: 1px solid $tabs-border;
+    // border-bottom: 0;
+    // margin: 0.5em 0 0 3px; /* LTR */
+  }
+  li.active {
+    // border-bottom: 1px solid red;
+    // margin-bottom: -1px; /* Overlap the ul's border. */
+  }
+
+  a:link,
+  a:visited {
+    @include border-top-radius(4px);
+    margin-right: 2px;
+    border: 1px solid transparent;
+    // @include border-top-radius(4px);
+    // @include transition(background-color 0.3s);
+    // color: #333;
+    // background-color: #dedede;
+    // letter-spacing: 1px;
+    // padding: 0 1em;
+    // text-align: center;
+  }
+  a:hover,
+  a:focus {
+    background-color: $tabs-hover-bg;
+    border-color: $tabs-page-bg;
+    border-bottom-color: $tabs-border;
+    text-decoration: none;
+  }
+  a.active,
+  a.active:hover {
+    border: 1px solid $tabs-border;
+    border-bottom-color: $tabs-page-bg;
+    cursor: default;
+    background-color: $tabs-page-bg;
+    // border-bottom-color: green;
+  }
+}
+
+/*
+ * Secondary tabs
+ */
+
+ul.secondary {
+  font-size: .9em;
+  margin-top: -1.5em; /* Collapse bottom margin of ul.primary. */
+  padding-bottom: .5em;
+
+  a:link,
+  a:visited {
+    @include border-radius(.75em);
+    @include transition(background-color 0.3s);
+    @include single-text-shadow(#fff, 1px, 1px, 0);
+    background-color: #f2f2f2;
+    color: #666;
+    padding: 0 .5em;
+  }
+  a:hover,
+  a:focus {
+    background-color: #dedede;
+    border-color: #999;
+    color: #333;
+  }
+  a.active,
+  a:active {
+    @include single-text-shadow(#333, 1px, 1px, 0);
+    background-color: #666;
+    border-color: #000;
+    color: #fff;
+  }
+}
+
+/*
+ * Vertical tabs
+ */
+.vertical-tabs ul.vertical-tabs-list li.selected {
+  background-color: $bg-color;
+}
+
+.vertical-tabs .form-type-textfield input {
+  height: 2.12em;
+}

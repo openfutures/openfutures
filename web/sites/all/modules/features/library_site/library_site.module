@@ -1,0 +1,60 @@
+<?php
+/**
+ * @file
+ * Drupal needs this blank file.
+ */
+
+/**
+ * Modify form elements on the scenario node form.
+ */
+function library_site_form_user_register_form_alter(&$form, &$form_state, $form_id) {
+
+  // Add a checkbox to registration form about agreeing to terms of use.
+  $form['terms_of_use'] = array(
+    '#type' => 'checkbox',
+    '#title' => t("I agree with the website's <a href=\"/terms\">terms and conditions</a>."),
+    '#required' => TRUE,
+  );
+}
+
+/**
+ * Implement hook_block_view_alter
+ *
+ * Blockify turns certain page elements into blocks and to override them we need
+ * to do it from this hook.
+ */
+function library_site_block_view_alter(&$data, $block) {
+  // swellnet_blocks_and_layout_block_view_blockify_breadcrumb_alter
+  // swellnet_blocks_and_layout_block_view_blockify_page_title_alter
+  $page_title = ($block->delta === 'blockify-page-title');
+  $breadcrumb = ($block->delta === 'blockify-breadcrumb');
+
+  // Fix breadcrumbs for certain user pages
+  if ($breadcrumb || arg(0) === 'user') {
+    $arg = arg(1);
+    $paths = ($arg === 'login' || $arg === 'password' || $arg === 'register');
+
+    $breadcrumb = array();
+    $breadcrumb[] = l('Home', '<front>');
+
+    if ($paths) {
+      drupal_set_breadcrumb($breadcrumb);
+    }
+  }
+
+  // Fix page titles for certain user pages
+  if ($page_title || arg(0) === 'user') {
+    $arg = arg(1);
+
+    if ($arg === 'login') {
+      drupal_set_title(t('User login'));
+    }
+    if ($arg === 'password') {
+      drupal_set_title(t('Request new password'));
+    }
+    if ($arg === 'register') {
+      drupal_set_title(t('Create new account'));
+    }
+  }
+
+}

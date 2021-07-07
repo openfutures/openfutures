@@ -1,0 +1,341 @@
+/**
+ * @file
+ * Node Styling
+ *
+ * Style anything that isn't in the $content variable.
+ */
+/* line 11, ../sass/nodes.scss */
+.node {
+  /* Node wrapper */
+}
+/* line 13, ../sass/nodes.scss */
+.preview .node {
+  /* Preview of the content before submitting new or updated content */
+  /* background-color: #ffffea; */
+  /* Drupal core uses a #ffffea background */
+}
+/* line 17, ../sass/nodes.scss */
+.node .node-title {
+  /* Node title */
+}
+/* line 20, ../sass/nodes.scss */
+.node .user-picture {
+  /* The picture of the node author */
+}
+/* line 23, ../sass/nodes.scss */
+.node .submitted {
+  /* The "posted by" information */
+}
+/* line 26, ../sass/nodes.scss */
+.node .content {
+  /* Node's content wrapper */
+}
+/* line 29, ../sass/nodes.scss */
+.node ul.links {
+  /* Node links. See also the ul.links declaration in the pages.css. */
+}
+
+/* line 34, ../sass/nodes.scss */
+.node-promoted {
+  /* A node that has been promoted to the front page */
+}
+
+/* line 37, ../sass/nodes.scss */
+.node-sticky {
+  /* A sticky node (displayed before others in a list) */
+}
+
+/* line 40, ../sass/nodes.scss */
+.node-by-viewer {
+  /* A node created by the current user */
+}
+
+/* line 43, ../sass/nodes.scss */
+.node-teaser {
+  /* A node displayed as teaser */
+  border-bottom: solid 1px #cccccc;
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+}
+/* line 48, ../sass/nodes.scss */
+.node-teaser .node-title {
+  font-size: 13px;
+  margin: 0;
+}
+/* line 52, ../sass/nodes.scss */
+.node-teaser .field-name-body {
+  margin-bottom: 1em;
+}
+/* line 55, ../sass/nodes.scss */
+.node-teaser .field-name-body p {
+  margin-top: 0;
+}
+/* line 59, ../sass/nodes.scss */
+.node-teaser span.field-label {
+  display: inline-block;
+  padding: 0;
+  color: #999999;
+}
+/* line 64, ../sass/nodes.scss */
+.node-teaser .field-label-inline {
+  display: inline-block;
+}
+/* line 67, ../sass/nodes.scss */
+.node-teaser .links.inline {
+  display: block;
+  margin: 0;
+  text-align: right;
+}
+
+/*
+ * All nodes are given a node-FOO class that describes the type of content that
+ * it is. If you create a new content type called "my-custom-type", it will
+ * receive a "node-my-custom-type" class.
+ */
+/* line 80, ../sass/nodes.scss */
+.node-page {
+  /* Page content node */
+}
+
+/* line 83, ../sass/nodes.scss */
+.node-article {
+  /* Article content node */
+}
+
+/* line 86, ../sass/nodes.scss */
+.node-unpublished {
+  /* Unpublished nodes */
+  /* background-color: #fff4f4; */
+  /* Drupal core uses a #fff4f4 background */
+}
+/* line 89, ../sass/nodes.scss */
+.node-unpublished p.unpublished {
+  /* The word "Unpublished" displayed underneath the content. */
+  height: 0;
+  overflow: visible;
+  color: #d8d8d8;
+  font-size: 75px;
+  line-height: 1;
+  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+/*
+ * All nodes are given a node-FOO class that describes the type of content that
+ * it is. If you create a new content type called "my-custom-type", it will
+ * receive a "node-my-custom-type" class.
+ */
+/* line 100, ../sass/nodes.scss */
+.node-scenario {
+  /* Scenario content node */
+}
+
+/* line 104, ../sass/nodes.scss */
+.node-scenario.node-teaser .field-label + .field-name-field-scenario-subject:before {
+  content: none;
+}
+/* line 107, ../sass/nodes.scss */
+.node-scenario.node-teaser .field-name-field-scenario-subject:before {
+  content: ",";
+  color: #999999;
+}
+/* line 111, ../sass/nodes.scss */
+.node-scenario.node-teaser .body-missing {
+  margin: 0 0 1em 0;
+  color: #999999;
+}
+/* line 116, ../sass/nodes.scss */
+.node-scenario.node-teaser .body-missing a:link,
+.node-scenario.node-teaser .body-missing a:visited {
+  color: #999999;
+  font-style: italic;
+}
+
+/* Custom panel page */
+/* line 127, ../sass/nodes.scss */
+.page-node.node-type-scenario div.inline {
+  display: inline;
+}
+/* line 130, ../sass/nodes.scss */
+.page-node.node-type-scenario .field-label {
+  font-weight: bold;
+}
+/* line 134, ../sass/nodes.scss */
+.page-node.node-type-scenario .panel-pane {
+  margin-bottom: 1.5em;
+}
+/* line 138, ../sass/nodes.scss */
+.page-node.node-type-scenario .field-name-field-scenario-time-horizon {
+  color: #999999;
+  font-weight: bold;
+  font-size: 2.5em;
+  font-style: italic;
+  line-height: 2em;
+}
+/* line 147, ../sass/nodes.scss */
+.page-node.node-type-scenario .pane-node-field-scenario-subject .pane-title,
+.page-node.node-type-scenario .pane-node-comments .pane-title {
+  margin: 0;
+  font-size: 1.23em;
+  line-height: 1.5em;
+}
+/* line 152, ../sass/nodes.scss */
+.page-node.node-type-scenario .pane-node-field-scenario-subject .pane-content,
+.page-node.node-type-scenario .pane-node-comments .pane-content {
+  margin-top: 0.5em;
+  padding-top: 0.5em;
+  border-top: 1px solid #ccc;
+}
+/* line 160, ../sass/nodes.scss */
+.page-node.node-type-scenario .pane-node-comments .comment .new {
+  color: white;
+}
+/* line 163, ../sass/nodes.scss */
+.page-node.node-type-scenario .pane-node-comments mark {
+  background: #14cc9e;
+  color: #000;
+  padding: 0.33em;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 170, ../sass/nodes.scss */
+.page-node.node-type-scenario .pane-node-comment-form {
+  margin-top: 3em;
+  padding: 1em;
+  border: 1px solid transparent;
+  background: #eeeeee;
+  border-radius: 4px;
+  color: #555555;
+}
+/* line 178, ../sass/nodes.scss */
+.page-node.node-type-scenario .pane-node-comment-form .pane-title {
+  font-size: 1.23em;
+  line-height: 1.5em;
+}
+/* line 184, ../sass/nodes.scss */
+.page-node.node-type-scenario .pane-node-comment-form .comment-form .form-type-item label {
+  display: inline;
+}
+/* line 190, ../sass/nodes.scss */
+.page-node.node-type-scenario #comment-body-add-more-wrapper .filter-wrapper {
+  display: none;
+}
+/* line 193, ../sass/nodes.scss */
+.page-node.node-type-scenario .admin-menu #comment-body-add-more-wrapper .filter-wrapper {
+  display: block;
+}
+
+/* line 201, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .pane-edit-mode,
+.page-node-edit .node-scenario-form .pane-edit-mode {
+  position: relative;
+}
+/* line 205, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-item-title,
+.page-node-edit .node-scenario-form .form-item-title {
+  font-size: 1.23em;
+  margin-bottom: 0;
+}
+/* line 211, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-item-title input,
+.page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-source input,
+.page-node-edit .node-scenario-form .form-item-title input,
+.page-node-edit .node-scenario-form .form-field-name-field-scenario-source input {
+  width: 100%;
+  height: 2.12em;
+}
+/* line 216, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-source .form-wrapper,
+.page-node-edit .node-scenario-form .form-field-name-field-scenario-source .form-wrapper {
+  margin-top: 0;
+}
+/* line 220, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .field-type-text-with-summary .filter-wrapper,
+.page-node-edit .node-scenario-form .field-type-text-with-summary .filter-wrapper {
+  padding: 0.5em 0;
+}
+/* line 224, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-actions,
+.page-node-edit .node-scenario-form .form-actions {
+  margin-top: 3em;
+  padding: 1em;
+  font-size: 1.23em;
+  border: 1px solid transparent;
+  background: #eeeeee;
+  border-radius: 4px;
+}
+/* line 232, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-actions input[type="submit"],
+.page-node-edit .node-scenario-form .form-actions input[type="submit"] {
+  margin-bottom: 1em;
+}
+/* line 238, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-time-horizon .date-float,
+.page-node-edit .node-scenario-form .form-field-name-field-scenario-time-horizon .date-float {
+  float: right;
+  width: 30%;
+  text-align: right;
+}
+/* line 243, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-time-horizon .start-date-wrapper,
+.page-node-edit .node-scenario-form .form-field-name-field-scenario-time-horizon .start-date-wrapper {
+  float: left;
+  clear: none;
+  width: 25%;
+}
+/* line 248, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-time-horizon .container-inline-date .form-item, .page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-time-horizon .container-inline-date .form-item input,
+.page-node-edit .node-scenario-form .form-field-name-field-scenario-time-horizon .container-inline-date .form-item,
+.page-node-edit .node-scenario-form .form-field-name-field-scenario-time-horizon .container-inline-date .form-item input {
+  width: 100%;
+}
+/* line 251, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-time-horizon .end-date-wrapper,
+.page-node-edit .node-scenario-form .form-field-name-field-scenario-time-horizon .end-date-wrapper {
+  float: left;
+  clear: none;
+  width: 30%;
+}
+/* line 256, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-time-horizon .end-date-wrapper label,
+.page-node-edit .node-scenario-form .form-field-name-field-scenario-time-horizon .end-date-wrapper label {
+  margin: 1em 0;
+  float: left;
+}
+/* line 260, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-time-horizon .end-date-wrapper .date-padding,
+.page-node-edit .node-scenario-form .form-field-name-field-scenario-time-horizon .end-date-wrapper .date-padding {
+  width: 70%;
+  float: left;
+}
+/* line 268, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .group-location .form-field-prefix,
+.page-node-edit .node-scenario-form .group-location .form-field-prefix {
+  margin-top: 0;
+}
+/* line 271, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .group-location .form-field-name-field-scenario-location .form-item,
+.page-node-edit .node-scenario-form .group-location .form-field-name-field-scenario-location .form-item {
+  margin-bottom: 0;
+}
+/* line 274, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .group-location .form-field-name-field-scenario-global .form-item,
+.page-node-edit .node-scenario-form .group-location .form-field-name-field-scenario-global .form-item {
+  margin-top: 0;
+}
+/* line 280, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form .form-field-name-field-scenario-attachment fieldset.form-wrapper,
+.page-node-edit .node-scenario-form .form-field-name-field-scenario-attachment fieldset.form-wrapper {
+  margin: 0;
+}
+/* line 285, ../sass/nodes.scss */
+.page-node-add-scenario .node-scenario-form div.vertical-tabs,
+.page-node-edit .node-scenario-form div.vertical-tabs {
+  margin-top: 2em;
+}
