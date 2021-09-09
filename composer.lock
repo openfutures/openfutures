@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5b76ff5b7f3323e061ccf5aaa023b984",
+    "content-hash": "0b9d481fc5a848119848204ef1c52c9a",
     "packages": [
         {
             "name": "composer/installers",
@@ -750,28 +750,28 @@
         },
         {
             "name": "drupal/admin_views",
-            "version": "1.2.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/admin_views.git",
-                "reference": "7.x-1.2"
+                "reference": "7.x-1.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/admin_views-7.x-1.2.zip",
-                "reference": "7.x-1.2",
-                "shasum": "ed7db7fc909b5f1690b0f6aecd309decb2584cc3"
+                "url": "https://ftp.drupal.org/files/projects/admin_views-7.x-1.7.zip",
+                "reference": "7.x-1.7",
+                "shasum": "26db1aa6e7a6888b33d17800df1b6d45c19e0b16"
             },
             "require": {
                 "drupal/drupal": "~7.0",
                 "drupal/views": "*",
-                "drupal/views_bulk_operations": "*"
+                "drupal/views_bulk_operations": "^3.2"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "7.x-1.2",
-                    "datestamp": "1533185792",
+                    "version": "7.x-1.7",
+                    "datestamp": "1574192284",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1189,17 +1189,17 @@
         },
         {
             "name": "drupal/context",
-            "version": "3.2.0",
+            "version": "3.10.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/context.git",
-                "reference": "7.x-3.2"
+                "reference": "7.x-3.10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/context-7.x-3.2.zip",
-                "reference": "7.x-3.2",
-                "shasum": "9fdfd3d539b5289f8fbda41db0ba023bc642cf4d"
+                "url": "https://ftp.drupal.org/files/projects/context-7.x-3.10.zip",
+                "reference": "7.x-3.10",
+                "shasum": "87699be2ce130c5d332ed4e4d1d54b0e2edde127"
             },
             "require": {
                 "drupal/ctools": "*",
@@ -1208,8 +1208,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "7.x-3.2",
-                    "datestamp": "1533185792",
+                    "version": "7.x-3.10",
+                    "datestamp": "1551291108",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2676,28 +2676,36 @@
         },
         {
             "name": "drupal/fieldable_panels_panes",
-            "version": "1.5.0",
+            "version": "1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/fieldable_panels_panes.git",
-                "reference": "7.x-1.5"
+                "reference": "7.x-1.10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/fieldable_panels_panes-7.x-1.5.zip",
-                "reference": "7.x-1.5",
-                "shasum": "4fd621a45e563fea50fba3dd66d38c5ed40b557e"
+                "url": "https://ftp.drupal.org/files/projects/fieldable_panels_panes-7.x-1.10.zip",
+                "reference": "7.x-1.10",
+                "shasum": "70e78b59f172c61ad3b1f93482f68c7b925bec24"
             },
             "require": {
+                "drupal/ctools": "^1.8",
                 "drupal/drupal": "~7.0",
-                "drupal/panels": "*",
+                "drupal/panels": "^3.5",
                 "drupal/views": "*"
+            },
+            "require-dev": {
+                "drupal/devel": "*",
+                "drupal/entity": "*",
+                "drupal/panelizer": "*",
+                "drupal/panels": "*",
+                "drupal/revisioning": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "7.x-1.5",
-                    "datestamp": "1533185792",
+                    "version": "7.x-1.10",
+                    "datestamp": "1478371740",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3100,129 +3108,6 @@
             "homepage": "https://www.drupal.org/project/geophp",
             "support": {
                 "source": "https://git.drupalcode.org/project/geophp"
-            }
-        },
-        {
-            "name": "drupal/google_analytics",
-            "version": "2.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/google_analytics.git",
-                "reference": "7.x-2.6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/google_analytics-7.x-2.6.zip",
-                "reference": "7.x-2.6",
-                "shasum": "a66b8cd58f74ba30aad42835367ea800e0999dc2"
-            },
-            "require": {
-                "drupal/drupal": "~7.0"
-            },
-            "require-dev": {
-                "drupal/token": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "7.x-2.6",
-                    "datestamp": "1548968580",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/7/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "andyrigby",
-                    "homepage": "https://www.drupal.org/user/2679687"
-                },
-                {
-                    "name": "budda",
-                    "homepage": "https://www.drupal.org/user/13164"
-                },
-                {
-                    "name": "ixismark",
-                    "homepage": "https://www.drupal.org/user/3632333"
-                },
-                {
-                    "name": "japerry",
-                    "homepage": "https://www.drupal.org/user/45640"
-                },
-                {
-                    "name": "pfaocle",
-                    "homepage": "https://www.drupal.org/user/9740"
-                },
-                {
-                    "name": "roberto.rivera.ixis",
-                    "homepage": "https://www.drupal.org/user/3632325"
-                }
-            ],
-            "homepage": "https://www.drupal.org/project/google_analytics",
-            "support": {
-                "source": "https://git.drupalcode.org/project/google_analytics"
-            }
-        },
-        {
-            "name": "drupal/googleanalytics",
-            "version": "2.6.0",
-            "require": {
-                "drupal/drupal": "~7.0",
-                "drupal/google_analytics": "^2"
-            },
-            "require-dev": {
-                "drupal/token": "*"
-            },
-            "type": "metapackage",
-            "extra": {
-                "drupal": {
-                    "version": "7.x-2.6",
-                    "datestamp": "1548968580",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/7/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "andyrigby",
-                    "homepage": "https://www.drupal.org/user/2679687"
-                },
-                {
-                    "name": "budda",
-                    "homepage": "https://www.drupal.org/user/13164"
-                },
-                {
-                    "name": "ixismark",
-                    "homepage": "https://www.drupal.org/user/3632333"
-                },
-                {
-                    "name": "japerry",
-                    "homepage": "https://www.drupal.org/user/45640"
-                },
-                {
-                    "name": "pfaocle",
-                    "homepage": "https://www.drupal.org/user/9740"
-                },
-                {
-                    "name": "roberto.rivera.ixis",
-                    "homepage": "https://www.drupal.org/user/3632325"
-                }
-            ],
-            "description": "Allows your site to be tracked by Google Analytics by adding a Javascript tracking code to every page.",
-            "homepage": "https://www.drupal.org/project/google_analytics",
-            "support": {
-                "source": "https://git.drupalcode.org/project/google_analytics"
             }
         },
         {
@@ -4119,20 +4004,20 @@
         },
         {
             "name": "drupal/panels",
-            "version": "3.4.0",
+            "version": "3.10.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/panels.git",
-                "reference": "7.x-3.4"
+                "reference": "7.x-3.10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/panels-7.x-3.4.zip",
-                "reference": "7.x-3.4",
-                "shasum": "8464299710b14fe6eeea41b52310e65a09d317f2"
+                "url": "https://ftp.drupal.org/files/projects/panels-7.x-3.10.zip",
+                "reference": "7.x-3.10",
+                "shasum": "9d9a1c7820dd64a6daec3ecd1cd01243ef00597c"
             },
             "require": {
-                "drupal/ctools": "^1.4",
+                "drupal/ctools": "*",
                 "drupal/drupal": "~7.0"
             },
             "require-dev": {
@@ -4143,8 +4028,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "7.x-3.4",
-                    "datestamp": "1533185792",
+                    "version": "7.x-3.10",
+                    "datestamp": "1593990785",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5280,17 +5165,17 @@
         },
         {
             "name": "drupal/views",
-            "version": "3.8.0",
+            "version": "3.24.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/views.git",
-                "reference": "7.x-3.8"
+                "reference": "7.x-3.24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/views-7.x-3.8.zip",
-                "reference": "7.x-3.8",
-                "shasum": "2045ddb4ba34ea9b2d02bdbcf221b6ef4a53ed41"
+                "url": "https://ftp.drupal.org/files/projects/views-7.x-3.24.zip",
+                "reference": "7.x-3.24",
+                "shasum": "2169872cbdfabdf6595aa77b48230314c3fcb97c"
             },
             "require": {
                 "drupal/ctools": "*",
@@ -5299,8 +5184,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "7.x-3.8",
-                    "datestamp": "1533185792",
+                    "version": "7.x-3.24",
+                    "datestamp": "1583615729",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5365,28 +5250,28 @@
         },
         {
             "name": "drupal/views_bulk_operations",
-            "version": "3.2.0",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/views_bulk_operations.git",
-                "reference": "7.x-3.2"
+                "reference": "7.x-3.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/views_bulk_operations-7.x-3.2.zip",
-                "reference": "7.x-3.2",
-                "shasum": "415a8cf8351df2a497e1bb5e8dc1153a509f1b44"
+                "url": "https://ftp.drupal.org/files/projects/views_bulk_operations-7.x-3.6.zip",
+                "reference": "7.x-3.6",
+                "shasum": "b4c0c32ccbff7286f6019ec9ad1065cde4b1c0fa"
             },
             "require": {
                 "drupal/drupal": "~7.0",
                 "drupal/entity": "*",
-                "drupal/views": "*"
+                "drupal/views": "^3.12"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "7.x-3.2",
-                    "datestamp": "1533185792",
+                    "version": "7.x-3.6",
+                    "datestamp": "1591196777",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
