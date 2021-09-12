@@ -157,6 +157,9 @@
         "patches": {
             "cweagans/composer-patches": {
                 "Call the preserve paths hooks" : "https://github.com/jcnventura/composer-patches/compare/1.x...jcnventura:fix-preserve-paths.diff"
+            },
+            "drupal/url": {
+                "Add feeds module support" : "https://www.drupal.org/files/issues/url-field-feeds-support-2013238-33.patch"
             }
         },
         "preserve-paths": [
