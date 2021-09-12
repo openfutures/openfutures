@@ -96,7 +96,7 @@
         "drupal/views_bulk_operations": "3.6",
         "drupal/views_content": "^1.19",
         "drupal/views_data_export": "^3.2",
-        "drupal/views_timelinejs": "^3.1",
+        "drupal/views_timelinejs": "1.1",
         "drupal/views_ui": "^3.24",
         "drupal/webform": "^4.24",
         "drupal/zen": "5.6",
@@ -160,7 +160,8 @@
             }
         },
         "preserve-paths": [
-            "web/sites"
+            "web/sites",
+            "web/profiles/openfutures"
         ]
     }
 }

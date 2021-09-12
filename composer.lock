@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0b9d481fc5a848119848204ef1c52c9a",
+    "content-hash": "30888976b14af9e16f03f50ab13196c7",
     "packages": [
         {
             "name": "composer/installers",
@@ -5452,27 +5452,34 @@
         },
         {
             "name": "drupal/views_timelinejs",
-            "version": "3.1.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/views_timelinejs.git",
-                "reference": "7.x-3.1"
+                "reference": "7.x-1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/views_timelinejs-7.x-3.1.zip",
-                "reference": "7.x-3.1",
-                "shasum": "c0b06af36206964159636c5ed7ca9d05c8ceacfe"
+                "url": "https://ftp.drupal.org/files/projects/views_timelinejs-7.x-1.1.zip",
+                "reference": "7.x-1.1",
+                "shasum": "cfda4c0c0cb819edb7ac6d1d2f17e879b7fd3eae"
             },
             "require": {
                 "drupal/drupal": "~7.0",
+                "drupal/libraries": "~2.0",
+                "drupal/views": "*"
+            },
+            "require-dev": {
+                "drupal/date": "*",
+                "drupal/features": "*",
+                "drupal/link": "*",
                 "drupal/views": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "7.x-3.1",
-                    "datestamp": "1507646944",
+                    "version": "7.x-1.1",
+                    "datestamp": "1609650881",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
